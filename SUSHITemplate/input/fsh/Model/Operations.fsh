@@ -1,4 +1,4 @@
-RuleSet: actionOperationFfb(number)
+RuleSet: actionOperationCAreCouminication(number)
 * test[+].id = "ffb-{number}" //TODO change name
 * test[=].name = "{number} Post xxtype" //TODO change name
 * test[=].description = "Post ffb-report"  //TODO change name

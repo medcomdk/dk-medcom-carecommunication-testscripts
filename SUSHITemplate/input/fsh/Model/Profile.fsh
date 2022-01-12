@@ -1,3 +1,3 @@
-RuleSet: profileFfb
-* profile.id = "kl-ffb-reporting-profile" //TODO change name
-* profile.reference = "http://ffb/reporting/kl.dk/1.0/StructureDefinition/kl-reporting-ffb-deliveryReport" //TODO change name
+RuleSet: profileCareCouminication
+* profile.id = "carecommunication" //TODO change name
+* profile.reference = "http://medcomfhir.dk/fhir/core/1.0/StructureDefinition/medcom-careCommunication-message" //TODO change name

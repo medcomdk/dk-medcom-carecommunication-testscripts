@@ -1,12 +1,12 @@
 //opstart testscript med meta information og beskrivelse
 
-Instance: xxxTestScriptName //TODO change name
+Instance: CreateCareCommunication //TODO change name
 InstanceOf: TestScript
 * insert Metadata
-* id = "ffb-encounter-2-3" //TODO change name
-* name = "Encounter phase 2-3" //TODO change name
-* title = "Encounter phase 2-3" //TODO change name
-* description = "Testing correct use of encounter phase 2-7" //TODO change name
+* id = "CC-CREATE" //TODO change name
+* name = "CareCommunication" //TODO change name
+* title = "CareCommunication create new" //TODO change name
+* description = "Testing bundle contains one Patient" //TODO change name
 
 //*2nd documentation phase*/
-* insert  CreateFfbReportCaseinsightTest( 2, /FHIRSandbox/MedCom/401-ffb-reporting/IG-0-9-0/_reference/resources/02Encounter.xml) //TODO change name
+* insert  CreateCAreCommunicationTest( 1, /FHIRSandbox/MedCom/CareCommunicationANders/carecommunication.xml) //TODO change name

@@ -1,10 +1,5 @@
-<<<<<<< Updated upstream
-RuleSet: actionOperationCAreCouminication(number)
-* test[+].id = "ffb-{number}" //TODO change name
-=======
 RuleSet: actionOperationCareCommunication(number)
 * test[+].id = "CC-{number}" //TODO change name
->>>>>>> Stashed changes
 * test[=].name = "{number} Post xxtype" //TODO change name
 * test[=].description = "Post CC-report"  //TODO change name
 * test[=].action[+].operation.type.system = "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"

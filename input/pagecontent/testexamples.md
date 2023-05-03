@@ -1,6 +1,6 @@
 > Include this page if relevant. E.g:
 
-The examples presented below are intended to be used in the test protocol for receiving HospitalNotification. Testprotocols can be found on the [GitHub pages for HospitalNotificaton](https://medcomdk.github.io/dk-medcom-hospitalnotification/#2-test-and-certification). All test examples are created by MedCom. 
+The examples presented below are intended to be used in the test protocol for receiving carecommunication. Testprotocols can be found on the [GitHub pages for HospitalNotificaton](https://medcomdk.github.io/dk-medcom-carecommunication/#2-test-and-certification). All test examples are created by MedCom. 
 
 #### Test patient/citizens
 All examples include, except TEK_LOV are based on the test patient:
@@ -10,7 +10,7 @@ For the example TEK_LOV, the follwoing patient is used:
 * Name: Kaje Test Hansen
 * CPR-nr.: 210300-9996 
 
-#### Test examples for receiving HospitalNotification
+#### Test examples for receiving carecommunication
 
 |  Test example     |     Description     |
 |---|---|

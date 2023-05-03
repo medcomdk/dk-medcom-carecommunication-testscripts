@@ -14,7 +14,7 @@ Beskriver anvendte fixtures
 /* 
 Beskriver den profil, der valideres op mod
 */
-* insert profileHospitalNotificationMessage
+* insert profilecarecommunicationMessage
 
 /* 
 Beskriver anvendte variable

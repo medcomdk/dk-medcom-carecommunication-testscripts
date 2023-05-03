@@ -9,7 +9,7 @@ Beskriver server og client for dette testsetup
 /* 
 Beskriver den profil, der valideres op mod
 */
-* insert profileHospitalNotificationMessage
+* insert profilecarecommunicationMessage
 
 /* 
 Beskriver de operationer der udføres i denne test. Her er det kun setup operationer

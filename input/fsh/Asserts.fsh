@@ -21,9 +21,9 @@ RuleSet: assertResponseNotFound //kan bruges til at bekræfte, at en meddelelse 
 * test[=].action[=].assert.warningOnly = false
 
 RuleSet: assertValidateProfiles
-* test[=].action[+].assert.description = "Validates the bundle against http://medcomfhir.dk/ig/hospitalnotification/ImplementationGuide/dk.fhir.ig.dk-medcom-hospitalnotification" 
+* test[=].action[+].assert.description = "Validates the bundle against http://medcomfhir.dk/ig/carecommunication/ImplementationGuide/dk.fhir.ig.dk-medcom-carecommunication" 
 * test[=].action[=].assert.direction = #request
-* test[=].action[=].assert.validateProfileId = "hospitalnotification"
+* test[=].action[=].assert.validateProfileId = "carecommunication"
 * test[=].action[=].assert.warningOnly = false
 
 RuleSet: assertMessageHeaderid(messageHeaderid)
@@ -77,7 +77,7 @@ RuleSet: assertEncounterStatus(encounterStatus)
 RuleSet: assertMessageHeaderReportOfAdmission(reportOfAdmission)
 * test[=].action[+].assert.description = "Confirm that the report of admission flag is {reportOfAdmission}."
 * test[=].action[=].assert.direction = #request
-* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(MessageHeader).extension.where(url='http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-messaging-reportOfAdmissionExtension').value"
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(MessageHeader).extension.where(url='http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-messaging-reportOfAdmissionExtension').value"
 * test[=].action[=].assert.operator = #equals
 * test[=].action[=].assert.value = "{reportOfAdmission}"
 * test[=].action[=].assert.warningOnly = false
@@ -85,7 +85,7 @@ RuleSet: assertMessageHeaderReportOfAdmission(reportOfAdmission)
 RuleSet: assertMessageHeaderReportOfAdmissionReceiver(reportOfAdmission)
 * test[=].action[+].assert.description = "Confirm that the a receiver of the report of admission exists, when the flag is true, and doesn't exists when the flag is false."
 * test[=].action[=].assert.direction = #request
-* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(MessageHeader).extension.where(url='http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-messaging-reportOfAdmissionRecipientExtension').exists() = {reportOfAdmission}"
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(MessageHeader).extension.where(url='http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-messaging-reportOfAdmissionRecipientExtension').exists() = {reportOfAdmission}"
 * test[=].action[=].assert.warningOnly = false
 
 

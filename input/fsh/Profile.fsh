@@ -1,3 +1,3 @@
-RuleSet: profileHospitalNotificationMessage
-* profile.id = "hospitalnotification" //TODO change name
-* profile.reference = "http://medcomfhir.dk/ig/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message" 
+RuleSet: profilecarecommunicationMessage
+* profile.id = "carecommunication" //TODO change name
+* profile.reference = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-message" 

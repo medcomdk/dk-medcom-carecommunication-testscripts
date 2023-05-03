@@ -3,13 +3,13 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: medcom.fhir.dk.name         # e.g. medcom.fhir.dk.hospitalnotificationtestscripts
-canonical: http://example.org   # e.g. http://medcomfhir.dk/ig/hospitalnotificationtestscripts 
-name: IG Test scripts           # e.g. HospitalNotification Test scripts
-title: IG Test scripts          # e.g. HospitalNotification Test scripts
-description: Test scripts for IG v. ?.?.? # Test scripts for HospitalNotification v. 3.0.0
+id: medcom.fhir.dk.carecommunicationtestscripts
+canonical: http://medcomfhir.dk/ig/carecommunicationtestscripts 
+name: CareCommunication Test scripts
+title: CareCommunication Test scripts
+description: Test scripts for CareCommunication v. 2.1.0
 status: draft # draft | active | retired | unknown # choose 'active' before release
-version: 0.1.0
+version: 2.1.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2022+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -90,10 +90,6 @@ menu:
 # │ input/includes. To use a provided input/includes/menu.xml file, delete the "menu"              │
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-menu:
-  Home: index.html
-  Artifacts: artifacts.html
-
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
 # │  resource. These properties are less commonly needed than those above.                         │

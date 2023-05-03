@@ -3,22 +3,28 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: dk.fhir.ig.sushitemplate
-canonical: http://example.org
-name: SUSHITemplate
-# title: Example Title
-# description: Example Implementation Guide for getting started with SUSHI
-status: draft # draft | active | retired | unknown
+id: medcom.fhir.dk.name         # e.g. medcom.fhir.dk.hospitalnotificationtestscripts
+canonical: http://example.org   # e.g. http://medcomfhir.dk/ig/hospitalnotificationtestscripts 
+name: IG Test scripts           # e.g. HospitalNotification Test scripts
+title: IG Test scripts          # e.g. HospitalNotification Test scripts
+description: Test scripts for IG v. ?.?.? # Test scripts for HospitalNotification v. 3.0.0
+status: draft # draft | active | retired | unknown # choose 'active' before release
 version: 0.1.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2022+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
-# license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
+license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
-publisher:
-  name: medcomsushitemplate
-  url: http://example.org/example-publisher
-  # email: test@example.org
+publisher: MedCom
+contact:
+  - name: MedCom
+    telecom:
+      - system: email
+        value: "mailto:fhir@medcom.dk"
+parameters:
+  apply-publisher: true
+  apply-contact: true
+  show-inherited-invariants: false
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
@@ -30,6 +36,18 @@ publisher:
 #     id: mcode
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
 #     version: 1.0.0
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  IG Home: index.html
+  Test scripts: testscripts.html
+  Test examples: testexamples.html # if relevant
+  Artifacts Summary: artifacts.html
+  Download: downloads.html
+
+
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can

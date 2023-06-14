@@ -43,7 +43,7 @@ parameters:
 menu:
   IG Home: index.html
   Test scripts: testscripts.html
-  Test examples: testexamples.html # if relevant
+  Test examples for test protocols: testexamples.html # if relevant
   Artifacts Summary: artifacts.html
   Download: downloads.html
 

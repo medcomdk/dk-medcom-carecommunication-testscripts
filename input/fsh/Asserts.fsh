@@ -41,13 +41,13 @@ RuleSet: assertPayload
 RuleSet: assertMessageHeaderEventCoding
 * test[=].action[+].assert.description = "Confirm that the request resource contains the expected eventCoding.code."
 * test[=].action[=].assert.direction = #request
-* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(MessageHeader).event.as(Coding).select(code = 'hospital-notification-message').allTrue()"
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(MessageHeader).event.as(Coding).select(code = 'care-communication-message').allTrue()"
 * test[=].action[=].assert.warningOnly = false
 
-RuleSet: assertProvenanceActivityCode(activityCode)
+RuleSet: assertProvenanceActivityCode(type)
 * test[=].action[+].assert.description = "Confirm that the request resource contains the expected activity code."
 * test[=].action[=].assert.direction = #request
-* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Provenance).where(activity.coding.code = '{activityCode}').exists()"
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Provenance).where(activity.coding.code = '{type}').exists()"
 * test[=].action[=].assert.warningOnly = false
 
 RuleSet: assertEncounterClass(encounterClass)
@@ -95,12 +95,12 @@ RuleSet: assertProvenanceTarget
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Provenance).where(target.reference = %resource.entry[0].fullUrl).exists()"
 * test[=].action[=].assert.warningOnly = false
 
-RuleSet: assertProvenanceEntityCount(countProvenances)
-* test[=].action[+].assert.description = "Confirm that the {countProvenances} Provenance instances exists."
+RuleSet: assertProvenanceEntityCount(noProvenances)
+* test[=].action[+].assert.description = "Confirm that the {noProvenances} Provenance instances exists."
 * test[=].action[=].assert.direction = #request
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Provenance).count()"
 * test[=].action[=].assert.operator = #equals
-* test[=].action[=].assert.value = "{countProvenances}"
+* test[=].action[=].assert.value = "{noProvenances}"
 * test[=].action[=].assert.warningOnly = false 
 
 RuleSet: assertProvenanceEntityRole(role)
@@ -145,23 +145,6 @@ RuleSet: assertSenderGLN(hospitalGLN)
 * test[=].action[=].assert.expression = "Bundle.entry.where(fullUrl = %resource.entry.resource[0].sender.reference).resource.identifier.where(system = 'https://www.gs1.org/gln').value != ${{hospitalGLN}}"
 * test[=].action[=].assert.warningOnly = true
 
-RuleSet: assertEncounterDateTime(encounterDateTime)
-* test[=].action[+].assert.description = "Confirm that Encounter.period.start has been updated."
-* test[=].action[=].assert.direction = #request
-* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Encounter).period.start != ${{encounterDateTime}}"
-* test[=].action[=].assert.warningOnly = false
-
-RuleSet: assertEncounterStartTimeZone
-* test[=].action[+].assert.description = "Confirm that the time zone is +01 or +02."
-* test[=].action[=].assert.direction = #request
-* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Encounter).period.start.where(substring(19,3) = '+01').exists() or Bundle.entry.resource.ofType(Encounter).period.start.where(substring(19,3) = '+02').exists()"
-* test[=].action[=].assert.warningOnly = false
-
-RuleSet: assertEncounterEndTimeZone
-* test[=].action[+].assert.description = "Confirm that the time zone is +01 or +02."
-* test[=].action[=].assert.direction = #request
-* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Encounter).period.end.where(substring(19,3) = '+01').exists() or Bundle.entry.resource.ofType(Encounter).period.end.where(substring(19,3) = '+02').exists()"
-* test[=].action[=].assert.warningOnly = false
 
 RuleSet: assertCompareTimeZone(encounterTimeZone)
 * test[=].action[+].assert.description = "Confirm that Encounter.period.start and Encounter.period.end has different timezones."
@@ -183,3 +166,97 @@ RuleSet: assertEncounterLeapYear
 * test[=].action[=].assert.operator = #notFound
 * test[=].action[=].assert.value = "{deceased}"
 * test[=].action[=].assert.warningOnly = false */
+
+RuleSet: assertMimetype(mimetype)
+* test[=].action[+].assert.description = "Confirm that an attachment of the type '{mimetype}' is included"
+* test[=].action[=].assert.direction = #request 
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).payload.content.where(contentType = '{mimetype}').data.exists()"
+* test[=].action[=].assert.warningOnly = false
+
+RuleSet: assertAttachmentURL
+* test[=].action[+].assert.description = "Confirm that an attachment with a link is included"
+* test[=].action[=].assert.direction = #request 
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).payload.content.url.exists()"
+* test[=].action[=].assert.warningOnly = false
+
+
+RuleSet: assertTopicIncluded
+* test[=].action[+].assert.description = "Confirm that the topic is included"
+* test[=].action[=].assert.direction = #request 
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).topic.exists()"
+* test[=].action[=].assert.warningOnly = false
+
+
+RuleSet: assertCategory(category)
+* test[=].action[+].assert.description = "Confirm that the category is '{category}'"
+* test[=].action[=].assert.direction = #request 
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).category.coding.code = '{category}'"
+* test[=].action[=].assert.warningOnly = false
+
+RuleSet: assertContentChanged(info1, info2)
+* test[=].action[+].assert.description = "Confirm that the content is different in the two messages"
+* test[=].action[=].assert.direction = #request 
+* test[=].action[=].assert.expression = "'${{info1}}' != '${{info2}}'"
+* test[=].action[=].assert.warningOnly = false
+
+RuleSet: assertPriorityExists
+* test[=].action[+].assert.description = "Confirm that priority exists"
+* test[=].action[=].assert.direction = #request 
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).priority.exists()"
+* test[=].action[=].assert.warningOnly = false
+
+RuleSet: assertSenderExists
+* test[=].action[+].assert.description = "Confirm that a specific sender is included"
+* test[=].action[=].assert.direction = #request 
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).extension.where(url = 'http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-sender-extension').exists()"
+* test[=].action[=].assert.warningOnly = false
+
+RuleSet: assertOrganisationIdentifier(orgsystem, orgid)
+* test[=].action[+].assert.description = "Confirm that the Organization identifier, with system = {orgsystem}, is {orgid}"
+* test[=].action[=].assert.direction = #request 
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(MessageHeader).destination.receiver.reference.resolve().identifier.where(system = '{orgsystem}').value = '{orgid}'"
+* test[=].action[=].assert.warningOnly = false
+
+
+RuleSet: assertStructuredSignatur 
+* test[=].action[+].assert.description = "Confirm that {sign} is included in the message text"
+* test[=].action[=].assert.direction = #request 
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).payload.where(content.data.exists()).extention(url = 'http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-author-extension')"
+* test[=].action[=].assert.warningOnly = false
+
+RuleSet: assertXHTMLCheck
+* test[=].action[+].assert.description = "Confirm that content of the message text conforms to XHTML"
+* test[=].action[=].assert.direction = #request 
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).payload.content.htmlChecks()"
+* test[=].action[=].assert.warningOnly = false
+ 
+RuleSet: assertRecipientExists
+* test[=].action[+].assert.description = "Confirm that a specific recipient is included"
+* test[=].action[=].assert.direction = #request 
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).recipient.exists()"
+* test[=].action[=].assert.warningOnly = false
+
+
+RuleSet: assertPayloadCount(noCommunicationPayloads)
+* test[=].action[+].assert.description = "Confirm that number of payloads is '{noCommunicationPayloads}'"
+* test[=].action[=].assert.direction = #request 
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).payload.count() = '{noCommunicationPayloads}'"
+* test[=].action[=].assert.warningOnly = false
+
+RuleSet: assertCommunications(noCommunications)
+* test[=].action[+].assert.description = "Confirm that number of Communication instances is '{noCommunications}'"
+* test[=].action[=].assert.direction = #request 
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).count() = '{noCommunications}'"
+* test[=].action[=].assert.warningOnly = false
+
+RuleSet: assertCommunicationStatus(status)
+* test[=].action[+].assert.description = "Confirm that number of Communication instances is '{status}'"
+* test[=].action[=].assert.direction = #request 
+* test[=].action[=].assert.expression = "Bundle.entry.where(resource.ofType(Communication).status = '{status}').exists()"
+* test[=].action[=].assert.warningOnly = false
+
+RuleSet: assertCancallationReason(status, reason)
+* test[=].action[+].assert.description = "Confirm that the reason for cancellation is '{reason}'. Only gives a warning is false."
+* test[=].action[=].assert.direction = #request 
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).where(status = '{status}').payload.content = '{reason}'"
+* test[=].action[=].assert.warningOnly = true

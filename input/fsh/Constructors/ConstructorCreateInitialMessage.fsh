@@ -1,4 +1,4 @@
-RuleSet: createInitialMessage(type, number, fixture, activityCode, encounterClass, encounterStatus, reportOfAdmission)
+RuleSet: createInitialMessage(type, number, fixture)
 
 /* 
 Beskriver server og client for dette testsetup
@@ -20,10 +20,8 @@ Beskriver anvendte fixtures
 Beskriver anvendte variable
 */ 
 //* insert variableEncounterResourceIdentifier({type}, {number})
-* insert variableMessageHeaderId({type})
-* insert variableEpisodeOfCareIdentifier({type})
+* insert variableMessageHeaderId({type}, {number})
 * insert variableSearchParamIdentifier({type})
-* insert variableOccurredDateTime({type})
 
 /* 
 Beskriver den operation der udføres i denne test.
@@ -33,15 +31,10 @@ Beskriver den operation der udføres i denne test.
 /* 
 Beskriver den vurdering der sker af operationen
 */
+* insert assertValidateProfiles
 * insert assertResponseCodeTest
 * insert assertPayload
 * insert assertMessageHeaderEventCoding
-* insert assertEncounterClass({encounterClass})
-* insert assertEncounterStatus({encounterStatus})
-* insert assertProvenanceActivityCode({activityCode})
-* insert assertMessageHeaderReportOfAdmission({reportOfAdmission})
+* insert assertProvenanceActivityCode({type})
 * insert assertProvenanceTarget
-* insert assertStructureEpisodeOfCareID
-* insert assertMessageHeaderReportOfAdmissionReceiver({reportOfAdmission})
-
 

@@ -14,13 +14,13 @@ Before getting started with test script execution, it is necessary to have an ac
 #### Test script naming
 When executing send and receive test scripts it is required that SUT has executed one or more use cases in advance. These use cases are listed in the 'Precondition' columns in the tables. 
 
-**Use cases:** The name of the test scripts is constituted by CareCommunication_Testscript_[send/receive]-[type], describing the type of messages being sent, or recieved. 'CareCommunication_Testscript_[send/receive]-' is not shown in the tables below.
+**Use cases:** The name of the test scripts is constituted by CareCommunication_Testscript_[send/receive]-[type], describing the type of messages being sent, or received. For instance CareCommunication_Testscript_send-new-message. 'CareCommunication_Testscript_[send/receive]-' is not shown in the tables below.
 
-**Technical cases:** The name of the test scripts is constituted by CareCommunication_Testscript_[send/receive]-[tec]-[number]. 'CareCommunication_Testscript_[send/receive]-' is not shown in the tables below. 
+**Technical cases:** The name of the test scripts is constituted by CareCommunication_Testscript_[send/receive]-[tec]-[number]. For instance CareCommunication_Testscript_send-tec-02. 'CareCommunication_Testscript_[send/receive]-' is not shown in the tables below. 
 
 #### Test examples/fixtures 
 
-Test examples are, in TouchStone testing, called fixtures. When testing the CareCommunication standard, the fixtures will be previously send CareCommunications or an OIOXML message in few cases. The fixtures are already uploaded to TouchStone. During setup of a test, all relevant fixtures will automatically be uploadet to the server used during test. From an API it is possible to request relevant fixture. This is a part of the send and receive test scripts.  
+Test examples are, in TouchStone testing, called fixtures. When testing the CareCommunication standard, the fixtures will be previously sent CareCommunications or an OIOXML message in few cases. The fixtures are already uploaded to TouchStone. During setup of a test, all relevant fixtures will automatically be uploaded to the server that is used during test. From an API it is possible to request relevant fixture. This is a part of the send and receive test scripts.  
 
 Timestamps in most fixtures are sent between the DD-MM-YYYY and DD-MM-YYYY. All corrections and cancellation messages are sent one hour after the message it revises or cancels.
 
@@ -47,7 +47,7 @@ Which results in the following being generated during setup. For instance:
 #### Operations
 
 **POST:** 
-When sending a CareCommunication, a POST operation is required for all types of messages, and is therefore valid for both the precondition messages and actual messages being tested. The POST operation is used from the API and each posted message will be validated against the CareCommunication IG and different asserts for the given use case.  
+When sending a CareCommunication, a POST operation is required for all types of messages and is therefore valid for both the precondition messages and actual messages being tested. The POST operation is used from the API and each posted message will be validated against the CareCommunication IG and different asserts for the given use case.  
 
 **GET:**
 When searching for a CareCommunication message, the GET operation requires a variable to search for a specific message. The variable used in the request is constituted by client information and two search parameters 1) the MessageHeader.destination.endpoint with placeholder ${D6}, and 2) the Bundle.id. 
@@ -72,53 +72,51 @@ To execute all the test scripts below, both POST and GET operations must be used
 | [new-attachment]() | S1.A1 | Send CareCommunication with attached files [^1] | new-message |  |
 | [new-topic]() | S1.A2 | Send CareCommunication with topic | new-message |  |
 | [new-formatted-text]()[^2] | S1.A3 | Send CareCommunication with formatted text and table | new-message |  |
-| [new-topiclist]()[^2] | S1.A4 | Send CareCommunication with topic from a regional agreed <br> topic list | new-message |  |
-| [new-catetogy-other]() | S1.A5 | Send CareCommunication with category 'Other'| new-message | |
+| [new-category-other]() | S1.A5 | Send CareCommunication with category 'Other'| new-message | |
 | [new-priority]() | S1.A6 | Send CareCommunication with category 'Regarding referral' <br> and included priority| new-message |  |
 | **Reply** |  |  |  |  |
 | [reply-message]() | S2 | Reply CareCommunication | reply-message | R1 |
-| [reply-attachment]() | S2.A1 | Reply CareCommunication with attached files | reply-message | R1 |
+| [reply-attachment]() | S2.A1 | Reply CareCommunication with attached files [^1] | reply-message | R1 |
 | [reply-changecategory]() | S2.A2 | Reply CareCommunication with changed category | reply-message | R1 |
 | [reply-changetopic]() | S2.A2 | Reply CareCommunication with changed topic | reply-message | R1 |
-| [reply-oioxmlmessage]() | S2.A3 | Reply to OIOXML | reply-message | R1 (OIOXML-message) |
-| [reply-edifactmessage]() | S2.A3 | Reply to EDIFACT | reply-message | R1 (EDIFACT-message) |
-| [reply-fhirmessage]() | S2.A3 | Reply to FHIR message | reply-message | R1 (FHIR-message) |
+| <span style="color: grey;">reply-oioxmlmessage</span> | <span style="color: grey;">S2.A3</span>  | <span style="color: grey;">Reply to OIOXML</span> | <span style="color: grey;">reply-message</span> | <span style="color: grey;">R1 (OIOXML-message)</span> |
+| <span style="color: grey;">reply-fhirmessage</span> | <span style="color: grey;">S2.A3</span>  | <span style="color: grey;">Reply to FHIR message</span> | <span style="color: grey;">reply-message</span> | <span style="color: grey;">R1 (FHIR-message)</span> |
 | **Forward** |  |  |  |  |
 | [forward-message]() | S3 | Forward CareCommunication | forward-message | R1 |
-| [forward-attachment]() | S3.A1 | Forward CareCommunication with attached files | forward-message | R1 |
+| [forward-attachment]() | S3.A1 | Forward CareCommunication with attached files [^1] | forward-message | R1 |
 | [forward-changecategory]() | S3.A2 | Forward CareCommunication with changed category | forward-message | R1 |
 | [forward-changetopic]() | S3.A2 | Forward CareCommunication with changed topic | forward-message | R1 |
 | [forward-partialthread]()[^2] | S3.A3 | Forward a part of the CareCommunication thread | forward-message | R1 |
 | **Modify** |  |  |  |  |
-| [modify-new]() | S.CORR | Correct new CareCommunication | modify-message | S1 |
-| [modify-new-attachment]() | S.CORR | Correct new CareCommunication with attached files | modify-message | S1.A1 |
-| [modify-new-topic]() | S.CORR | Correct new CareCommunication with topic | modify-message | S1.A2 |
-| [modify-new-formatted-text]()[^2] | S.CORR | Correct new CareCommunication with formatted text and table | modify-message | S1.A3 |
-| [modify-new-topiclist]()[^2] | S.CORR | Correct new CareCommunication with topic from a regional agreed | modify-message | S1.A4 |
-| [modify-new-catetogy-other]() | S.CORR | Correct new CareCommunication with category 'Other' | modify-message | S1.A5 |
-| [modify-new-priority]() | S.CORR | Correct new CareCommunication with category 'Regarding referral' | modify-message | S1.A6 |
-| [modify-reply-message]() | S.CORR | Correct reply CareCommunication | modify-message | R1, S2 |
-| [modify-reply-attachment]() | S.CORR | Correct reply CareCommunication with attached files | modify-message | R1, S2.A1 |
-| [modify-reply-changecategory]() | S.CORR | Correct reply CareCommunication with changed category | modify-message | R1, S2.A2 |
-| [modify-reply-changetopic]() | S.CORR | Correct reply CareCommunication with changed topic | modify-message | R1, S2.A2 |
-| [modify-reply-oioxmlmessage]() | S.CORR | Correct reply OIOXML | modify-message | R1, S2.A3 |
-| [modify-reply-edifactmessage]()[^2] | S.CORR | Correct reply EDIFACT | modify-message | R1, S2.A3 |
-| [modify-reply-fhirmessage]() | S.CORR | Correct reply FHIR message | modify-message | R1, S2.A3 |
-| [modify-forward-message]() | S.CORR | Correct forward CareCommunication| modify-message | R1, S3 |
-| [modify-forward-attachment]() | S.CORR | Correct forward CareCommunication with attached files | modify-message | R1, S3.A1 |
-| [modify-forward-changecategory]() | S.CORR | Correct forward CareCommunication with changed category | modify-message | R1, S3.A2 |
-| [modify-forward-changetopic]() | S.CORR | Correct forward CareCommunication with changed topic | modify-message | R1, S3.A2 |
-| [modify-forward-partialthread]()[^2] | S.CORR | Correct a forwarded part of the CareCommunication thread | modify-message | R1, S3.A3 |
+| [modify-new]() | S.CORR | Correct text of a new CareCommunication  | modify-message | S1 |
+| [modify-new-category]() | S.CORR | Correct category of a new CareCommunication  | modify-message | S1 |
+| [modify-new-topic]() | S.CORR | Correct topic of a new CareCommunication  | modify-message | S1.A2 |
+| [modify-new-attachment]() | S.CORR | Correct with attached files of a new CareCommunication | modify-message | S1.A1 |
+| [modify-new-formatted-text]()[^2] | S.CORR | Correct formatted text and table of a new CareCommunication | modify-message | S1.A3 |
+| [modify-new-catetogy-other]() | S.CORR | Correct category of a new CareCommunication from 'Other'  | modify-message | S1.A5 |
+| [modify-new-priority]() | S.CORR | Correct category from 'Regarding referral'  | modify-message | S1.A6 |
+| [modify-new-to-catetogy-other]() | S.CORR | Correct category of a new CareCommunication to 'Other'  | modify-message | S1.A5 |
+| [modify-new-to-priority]() | S.CORR | Correct priority of a new CareCommunication to 'Regarding referral'  | modify-message | S1.A6 |
+| [modify-reply]() | S.CORR | Correct text of a reply CareCommunication | modify-message | R1, S2 |
+| [modify-reply-changecategory]() | S.CORR | Correct category of a reply CareCommunication| modify-message | R1, S2.A2 |
+| [modify-reply-changetopic]() | S.CORR | Correct topic of a reply CareCommunication | modify-message | R1, S2.A2 |
+| [modify-reply-attachment]() | S.CORR | Correct attached files of a reply CareCommunication | modify-message | R1, S2.A1 |
+| <span style="color: grey;">modify-reply-oioxmlmessage</span> | <span style="color: grey;">S.CORR</span>  | <span style="color: grey;">Correct reply to OIOXML</span> | <span style="color: grey;">modify-message</span> | <span style="color: grey;">R1 (OIOXML-message), S2.A3</span> |
+| <span style="color: grey;">modify-reply-fhirmessage</span> | <span style="color: grey;">S.CORR</span>  | <span style="color: grey;">Correct reply to FHIR message</span> | <span style="color: grey;">modify-message</span> | <span style="color: grey;">R1 (FHIR-message), S2.A3</span> |
+| [modify-forward-message]() | S.CORR | Correct text of a forward CareCommunication | modify-message | R1, S3 |
+| [modify-forward-attachment]() | S.CORR | Correct attaches files of a forward CareCommunication | modify-message | R1, S3.A1 |
+| [modify-forward-changecategory]() | S.CORR |Correct category of a forward CareCommunication | modify-message | R1, S3.A2 |
+| [modify-forward-changetopic]() | S.CORR | Correct topic of a forward CareCommunication | modify-message | R1, S3.A2 |
 | **Retract** |  |  |  |  |
-| [retract-new]() | S.CANC | Cancel CareCommunication due to incorrect CPR-number | retract-message | S1 |
-| [retract-new]() | S.CANC | Cancel CareCommunication due to incorrect receiver | retract-message | S1 |
-| [retract-new]() | S.CANC | Cancel CareCommunication due to attachment with content <br> concerning a incorrect CPR-number | retract-message | S1.A1 |
-| [retract-reply-message]() | S.CANC | Cancel CareCommunication due to incorrect CPR-number | retract-message | R1, S2 |
-| [retract-reply-message]() | S.CANC | Cancel CareCommunication due to incorrect receiver | retract-message | R1, S2 |
-| [retract-reply-message]() | S.CANC | Cancel CareCommunication due to incorrect attachment with content <br>concerning a incorrect CPR-number | retract-message | R1, S2.A1 |
-| [retract-forward-message]() | S.CANC | Cancel CareCommunication due to incorrect CPR-number| retract-message | R1, S3 |
-| [retract-forward-message]() | S.CANC | Cancel CareCommunication due to incorrect receiver| retract-message | R1, S3 |
-| [retract-forward-message]() | S.CANC | Cancel CareCommunication due to incorrect attachment with content <br> concerning a incorrect CPR-number | retract-message | R1, S3.A1 |
+| [retract-new-cpr]() | S.CANC | Cancel a new CareCommunication due to incorrect CPR-number | retract-message | S1 |
+| [retract-new-receiver]() | S.CANC | Cancel a new CareCommunication due to incorrect receiver | retract-message | S1 |
+| [retract-new-attachment]() | S.CANC | Cancel a new CareCommunication due to attachment with content <br> concerning an incorrect CPR-number | retract-message | S1.A1 |
+| [retract-reply-cpr]() | S.CANC | Cancel a reply CareCommunication due to incorrect CPR-number | retract-message | R1, S2 |
+| [retract-reply-receiver]() | S.CANC | Cancel a reply CareCommunication due to incorrect receiver | retract-message | R1, S2 |
+| [retract-reply-attachment]() | S.CANC | Cancel a reply CareCommunication due to incorrect attachment with content <br>concerning an incorrect CPR-number | retract-message | R1, S2.A1 |
+| [retract-forward-cpr]() | S.CANC | Cancel a forward CareCommunication due to incorrect CPR-number| retract-message | R1, S3 |
+| [retract-forward-receiver]() | S.CANC | Cancel a forward CareCommunication due to incorrect receiver| retract-message | R1, S3 |
+| [retract-forward-attachment]() | S.CANC | Cancel a forward CareCommunication due to incorrect attachment with content <br> concerning an incorrect CPR-number | retract-message | R1, S3.A1 |
 
 
 #### Technical cases
@@ -129,20 +127,24 @@ To execute all the test scripts below, both POST and GET operations must be used
 |---|---|---|
 | [tec-01]() | Send CareCommunication with sender and recipient | S1 |
 | [tec-02]() | Send CareCommunication, where the receive is 'Plejecenter Herlev' with GLN-number '5790001348120' | S1 |
-| [tec-03]() | Send CareCommunication with the maximum length in the text of the message segment | S1 |
-| [tec-04]() | Send CareCommunication with special signs, including #!%{[]}<>*^@"' | S1 |
-| [tec-05]()[^2] | Send CareCommunication with attachment and an associated structured signature | S1.A1 |
-| [tec-06]() | Reply to CareCommunication, where episodeOfCare-identifier is correctly transfered in the communication | S2 |
-| [tec-07]() | Cancel CareCommunication which has already been corrected | S1, S.CORR, S.CANC |
+| <span style="color: grey;">tec-03</span> | <span style="color: grey;">Send CareCommunication with the maximum length in the text of the message segment</span> | <span style="color: grey;">S1</span> |
+| [tec-04]()[^2] | Send CareCommunication with attachment and an associated structured signature | S1.A1 |
+| [tec-05]() | Send CareCommunication with episodeOfCareID | S1 |
+| [tec-06]() | Reply to CareCommunication, where episodeOfCare-identifier is correctly transfered in the communication | R1, S2 |
+| [tec-07]() | Cancel CareCommunication which has already been corrected. Expected to cancel the entire thread. | S1, S.CORR, S.CANC |
 | [tec-08]() | Send CareCommunication, send CareCommunication as the first wasn't acknowledged | S1, S1 |
+| [tec-09]() | Send CareCommunication, including a messagesegment as a URL to a website | S1|
+| [tec-10]() | Send CareCommunication concerning a deceased patient | S1|
 
+
+<!-- | [tec-04]() | Send CareCommunication with special signs, including #!%{[]}<>*^@"' | S1 | -->
 
 [^1]: Include one attachment of each mimetype.
 [^2]: This test script is only relevant, if the system supports the given use case.
 
 
 ### Receive CareCommunication message
-When receiving a carecommunication, a GET operation is required for all types of messages, valid for both the precondition messages and actual messages being tested. 
+When receiving a CareCommunication, a GET operation is required for all types of messages, valid for both the precondition messages and actual messages being tested. 
 
 #### Use Cases
 
@@ -163,15 +165,15 @@ When receiving a carecommunication, a GET operation is required for all types of
 | [receive-reply-attachment]() | R1 | Receive reply to CareCommunication with attached files | reply-message | S2.A1 |
 | [receive-reply-changecategory]() | R1 | Receive reply to CareCommunication with changed category | reply-message | S2.A2 |
 | [receive-reply-changetopic]() | R1 | Receive reply to CareCommunication with changed topic | reply-message | S2.A2 |
-| [receive-reply-oioxmlmessage]() | R1 | Reply to OIOXML | reply-message | S2.A3 (OIOXML-message) |
-| [receive-reply-edifactmessage]() | R1 | Reply to EDIFACT | reply-message | S2.A3 (EDIFACT-message) |
-| [receive-reply-fhirmessage]() | R1 | Reply to FHIR message | reply-message | S2.A3 (FHIR-message) |
+| [receive-reply-oioxmlmessage]() | R1 | Receive reply to OIOXML | reply-message | S2.A3 (OIOXML-message) |
+| [receive-reply-edifactmessage]() | R1 | Receive reply to EDIFACT | reply-message | S2.A3 (EDIFACT-message) |
+| [receive-reply-fhirmessage]() | R1 | Receive reply to FHIR message | reply-message | S2.A3 (FHIR-message) |
 | **Forward** |  |  |  |  |
 | [receive-forward-message]() | R1 | Receive forward of CareCommunication | forward-message | R1 |
 | [receive-forward-attachment]() | R1 | Receive forward of CareCommunication with attached files | forward-message | S3.A1 |
 | [receive-forward-changecategory]() | R1 | Receive forward of CareCommunication with changed category | forward-message | S3.A1 |
 | [receive-forward-changetopic]() | R1 | Receive forward of CareCommunication with changed topic | forward-message | S3.A1 |
-| [receive-forward-partialthread]() | R1 | Forward a part of the CareCommunication thread | forward-message | S3.A1 |
+| [receive-forward-partialthread]() | R1 | Receive forward a part of the CareCommunication thread | forward-message | S3.A1 |
 | **Modify** |  |  |  |  |
 | [receive-modify-new]() | R.CORR | Receive correction of a new CareCommunication | modify-message | S1 |
 | [receive-modify-new-attachment]() | R.CORR | Receive correction of a new CareCommunication with attached files | modify-message | S1.A1 |
@@ -206,7 +208,7 @@ When receiving a carecommunication, a GET operation is required for all types of
 
 #### Technical cases
 
-[Test scripts for test of the recieving technical cases, can be found here in TouchStone.](https://touchstone.aegis.net/touchstone/)
+[Test scripts for test of the receiving technical cases, can be found here in TouchStone.](https://touchstone.aegis.net/touchstone/)
 
 | **Type** | **Description** | **Type** |
 |---|---|---|
@@ -214,3 +216,4 @@ When receiving a carecommunication, a GET operation is required for all types of
 | [tec-02]() | Receive invalid CareCommunication, receive invalid CareCommunication (negative dublet) | - |
 | [tec-03]() | Receive messages in wrong order | R.CORR, R.1 |
 
++ hvor pt. er afgået ved døden. 

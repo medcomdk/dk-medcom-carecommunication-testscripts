@@ -1,4 +1,4 @@
-RuleSet: createMessage(type, number, fixture, activityCode, encounterClass, encounterStatus, role, messageHeaderid, countProvenances, episodeOfCareID)
+RuleSet: createMessage(type, number, fixture, role, messageHeaderid, noProvenances, noCommunicationPayloads)
 
 /* 
 Beskriver server og client for dette testsetup
@@ -20,8 +20,8 @@ Beskriver den profil, der valideres op mod
 Beskriver anvendte variable
 */
 //* insert variableEncounterResourceIdentifier({type}, {number})
-* insert variableMessageHeaderId({type})
-* insert variableEpisodeOfCareIdentifier({type})
+* insert variableMessageHeaderId({type}, {number})
+//* insert variableEpisodeOfCareIdentifier({type})
 //* insert variableSearchParamIdentifier({type})
 
 /* 
@@ -32,15 +32,12 @@ Beskriver den operation der udføres i denne test.
 /* 
 Beskriver den vurdering der sker af operationen.
 */
+* insert assertValidateProfiles
 * insert assertResponseCodeTest
 * insert assertPayload
 * insert assertMessageHeaderid({messageHeaderid})
 * insert assertMessageHeaderEventCoding
 * insert assertProvenanceEntityRole({role})
-* insert assertEncounterClass({encounterClass})
-* insert assertEncounterStatus({encounterStatus})
-* insert assertProvenanceActivityCode({activityCode})
 * insert assertProvenanceTarget
-* insert assertProvenanceEntityCount({countProvenances})
-* insert assertEpisodeOfCareID({episodeOfCareID})
-//* insert assertOccurredTimeStamp({occurredDateTime})
+* insert assertProvenanceEntityCount({noProvenances})
+* insert assertPayloadCount({noCommunicationPayloads})

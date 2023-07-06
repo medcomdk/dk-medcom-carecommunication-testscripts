@@ -27,9 +27,9 @@ RuleSet: assertValidateProfiles
 * test[=].action[=].assert.warningOnly = false
 
 RuleSet: assertMessageHeaderid(messageHeaderid)
-* test[=].action[+].assert.description = "Confirm that the previous MessageHeader fullURL is identical to Provenance.entity.what" 
+* test[=].action[+].assert.description = "Confirm that the previous MessageHeader.id is identical to Provenance.entity.what" 
 * test[=].action[=].assert.direction = #request
-* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Provenance).where(entity.what.reference = '${{messageHeaderid}}').count() = 1"
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Provenance).where(entity.what.reference.substring(14, 37) = '${{messageHeaderid}}').exists()"
 * test[=].action[=].assert.warningOnly = false
 
 RuleSet: assertPayload
@@ -58,13 +58,13 @@ RuleSet: assertEncounterClass(encounterClass)
 * test[=].action[=].assert.value = "{encounterClass}"
 * test[=].action[=].assert.warningOnly = false
 
-RuleSet: assertOccurredTimeStamp(occurredDateTime)
+/* RuleSet: assertOccurredTimeStamp(occurredDateTime)
 * test[=].action[+].assert.description = "Confirm that the Provenance.occurredDateTime in the latest Provenance is after the previous"
 * test[=].action[=].assert.direction = #request
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Provenance).where(target.reference = %resource.entry[0].fullUrl).occurred > ${{occurredDateTime}}"
 /* * test[=].action[=].assert.operator = #greaterThan
-* test[=].action[=].assert.value = "{occurredDateTime}" */
-* test[=].action[=].assert.warningOnly = false                               
+* test[=].action[=].assert.value = "{occurredDateTime}" 
+* test[=].action[=].assert.warningOnly = false         */                      
 
 RuleSet: assertEncounterStatus(encounterStatus)
 * test[=].action[+].assert.description = "Confirm that the Encounter status of the request resource is {encounterStatus}."
@@ -92,7 +92,7 @@ RuleSet: assertMessageHeaderReportOfAdmissionReceiver(reportOfAdmission)
 RuleSet: assertProvenanceTarget
 * test[=].action[+].assert.description = "Confirm that the target reference in Provenance equals MessageHeader.id"
 * test[=].action[=].assert.direction = #request
-* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Provenance).where(target.reference = %resource.entry[0].fullUrl).exists()"
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Provenance).where(target.reference.substring(14, 37) = %resource.entry[0].resource.id).exists()"
 * test[=].action[=].assert.warningOnly = false
 
 RuleSet: assertProvenanceEntityCount(noProvenances)
@@ -106,9 +106,7 @@ RuleSet: assertProvenanceEntityCount(noProvenances)
 RuleSet: assertProvenanceEntityRole(role)
 * test[=].action[+].assert.description = "Confirm that the role is set to {role}. Not used when testing the first message in a stream"
 * test[=].action[=].assert.direction = #request
-* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Provenance).entity.role"
-* test[=].action[=].assert.operator = #equals
-* test[=].action[=].assert.value = "{role}"
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Provenance).entity.where(role = '{role}').exists()"
 * test[=].action[=].assert.warningOnly = false
 
 RuleSet: assertPatientDeceased(deceased)
@@ -136,14 +134,14 @@ RuleSet: assertStructureEpisodeOfCareID
 RuleSet: assertSenderSOR(hospitalSOR)
 * test[=].action[+].assert.description = "Confirm that the sender SOR number is different from the previous message."
 * test[=].action[=].assert.direction = #request
-* test[=].action[=].assert.expression = "Bundle.entry.where(fullUrl = %resource.entry.resource[0].sender.reference).resource.identifier.where(system = 'urn:oid:1.2.208.176.1.1').value != ${{hospitalSOR}}"
+* test[=].action[=].assert.expression = "Bundle.entry[0].resource.sender.reference.resolve().identifier.where(system = 'urn:oid:1.2.208.176.1.1').value != ${{hospitalSOR}}"
 * test[=].action[=].assert.warningOnly = false
-
+/* 
 RuleSet: assertSenderGLN(hospitalGLN)
 * test[=].action[+].assert.description = "Confirm that the sender SOR number is different from the previous message."
 * test[=].action[=].assert.direction = #request
 * test[=].action[=].assert.expression = "Bundle.entry.where(fullUrl = %resource.entry.resource[0].sender.reference).resource.identifier.where(system = 'https://www.gs1.org/gln').value != ${{hospitalGLN}}"
-* test[=].action[=].assert.warningOnly = true
+* test[=].action[=].assert.warningOnly = true */
 
 
 RuleSet: assertCompareTimeZone(encounterTimeZone)

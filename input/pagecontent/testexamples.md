@@ -1,9 +1,5 @@
 The examples presented below are intended to be used in the test protocol for sending and receiving CareCommunication. Testprotocols can be found on the [GitHub pages for CareCommunication](https://medcomdk.github.io/dk-medcom-carecommunication/#2-test-and-certification). 
 
-[Download test](./TestExamples/CareCommunication_Ex_send.zip)
-
-[TEST of getting testexamples](./TestExamples/CareCommunication_Ex_receive.zip)
-
 
 #### Test patient/citizens
 All examples include are based on the test patient:
@@ -11,6 +7,8 @@ All examples include are based on the test patient:
 * CPR-nr.: 250947-9989
 
 #### Test examples for sending a CareCommunication
+
+[Download test examples for sending a CareCommunication (.zip)](./TestExamples/CareCommunication_Ex_send.zip)
 
 |  Test example     |     Description     | Used for test of use case |
 |---|---|
@@ -29,6 +27,8 @@ All examples include are based on the test patient:
 
 #### Test examples for receiving a CareCommunication
 
+[Download test examples for sending a CareCommunication (.zip)](./TestExamples/CareCommunication_Ex_receive.zip)
+
 |  Test example     |     Description     | Used for test of use case |
 |---|---|---|
 | [receive-new-message_A](./Bundle-408bc1bd-1b11-45df-be3b-cce46896129b) | A new CareCommunication  | R1 Receive CareCommunication|
@@ -42,19 +42,16 @@ All examples include are based on the test patient:
 | [receive-new-message_F](./Bundle-4274d7f5-5e54-492c-acdd-d0d091f497f1) | A new CareCommunication | R.CANC Receive a cancellation of a previous CareCommunication|
 | [receive-modify-message_F](./Bundle-470b33f5-0fad-4dd0-a478-fa01d0281284) | A correction message | R.CANC Receive a cancellation of a previous CareCommunication|
 | [receive-retract-message_F](./Bundle-1dfc2652-0720-4d18-859d-fc0ed20c3be6) | A cancellation message| R.CANC Receive a cancellation of a previous CareCommunication |
-| [receive-new-message_G](./Bundle-a4c0dfda-cc56-4b7b-8646-fa9904c429c4) | A new CareCommunication |R.CORR Receive a correction of a previous CareCommunication |
+| [receive-new-message_G](./Bundle-a4c0dfda-cc56-4b7b-8646-fa9904c429c4) | A new CareCommunication | R.CORR Receive a correction of a previous CareCommunication |
 | [receive-modify-message_G](./Bundle-3ed65285-99ee-4479-86b5-360cc475a9a8) | A correction message | R.CORR Receive a correction of a previous CareCommunication|
-| [receive-TEK_new-message_A](./Bundle-8d60b469-b679-42ea-9539-d88075881e8e) | A new CareCommunication |receiving a CareCommunication and sending an Acknowledgement |
-| [receive-TEK_retract-message_B](./Bundle-51083675-92ea-4bb0-872d-10ad047253fa) | A cancellation message  |received before the cancelled message has arrived |
-| [receive-TEK_New_B](./Bundle-5dd78bc4-4db6-4ddb-894c-5fe492c21ac4) | A new CareCommunication  | received after the cancellation message has arrived|
-| [receive-TEK_Modify_C](./Bundle-ddc3894e-6139-4ce7-a090-2c0c4871f341) | A correction message  | received before the corrected message has arrived|
-| [receive-TEK_New_C](./Bundle-43627b1b-dcc8-42a4-a095-99ae60d515e9) | A new CareCommunication  | received after the correction message has arrived|
-| [receive-TEK_DUB1_D](./Bundle-51a74b4a-18a7-442b-aea3-b8788ee88588) | A new CareCommunication  | receivedtest of dublicates|
-| [receive-TEK_DUB2_D](./Bundle-50e8918d-b361-4b14-938f-4874e10f3948) | A new CareCommunication  |receivedtest of dublicates |
-| [receive-TEK_DUB1_E](./Bundle-591a64d8-495f-417a-9835-934c7da8bbf6) | An invalid new CareCommunication |receivedtest of dublicates |
-| [receive-TEK_DUB2_E](./Bundle-09ac721c-8c40-4fe9-a8b6-180e7e392ea7) | An invalid new CareCommunication | receivedtest of dublicates|
-| [receive-TEK_FCC_E](./Bundle-eb9381ba-8cb4-4103-b38e-5087894adc72) | A new CareCommunication  | received without the element Communication.category|
+| [receive-TEK_new-message_A](./Bundle-8d60b469-b679-42ea-9539-d88075881e8e) | A new CareCommunication | R1 Receive a CareCommunication and sending an Acknowledgement |
+| [receive-TEK_retract-message_B](./Bundle-51083675-92ea-4bb0-872d-10ad047253fa) | A cancellation message  |R.CANC Receive before the cancelled message has arrived |
+| [receive-TEK_new-message_B](./Bundle-5dd78bc4-4db6-4ddb-894c-5fe492c21ac4) | A new CareCommunication  | R.CANC Receive after the cancellation message has arrived|
+| [receive-TEK_modify-message_C](./Bundle-ddc3894e-6139-4ce7-a090-2c0c4871f341) | A correction message  | R.CORR Receive before the corrected message has arrived|
+| [receive-TEK_new-message_C](./Bundle-43627b1b-dcc8-42a4-a095-99ae60d515e9) | A new CareCommunication  | R.CORR Receive after the correction message has arrived|
+| [receive-TEK_DUB1_D](./Bundle-51a74b4a-18a7-442b-aea3-b8788ee88588) | A new CareCommunication  | Receive test of dublicates|
+| [receive-TEK_DUB2_D](./Bundle-50e8918d-b361-4b14-938f-4874e10f3948) | A new CareCommunication  | Receive test of dublicates |
+| [receive-TEK_DUB1_E](./Bundle-591a64d8-495f-417a-9835-934c7da8bbf6) | An invalid new CareCommunication | Receive test of dublicates |
+| [receive-TEK_DUB2_E](./Bundle-09ac721c-8c40-4fe9-a8b6-180e7e392ea7) | An invalid new CareCommunication | Receive test of dublicates|
+| [receive-TEK_FCC_E](./Bundle-eb9381ba-8cb4-4103-b38e-5087894adc72) | A new CareCommunication  | Receive without the element Communication.category|
 
-
-
-| [testtesttest](./Bundle-789339d0-e19b-4570-ae93-4ce4897f3199.html) | 789339d0-e19b-4570-ae93-4ce4897f3199   | S2 Reply CareCommunication|

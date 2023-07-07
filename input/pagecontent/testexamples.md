@@ -1,8 +1,8 @@
 The examples presented below are intended to be used in the test protocol for sending and receiving CareCommunication. Testprotocols can be found on the [GitHub pages for CareCommunication](https://medcomdk.github.io/dk-medcom-carecommunication/#2-test-and-certification). 
 
-[TEST of getting testexamples](./CareCommunication_Ex_send.zip)
+[TEST of getting testexamples](./TestExamples/CareCommunication_Ex_send.zip)
 
-[TEST of getting testexamples](CareCommunication_Ex_receive.zip)
+[TEST of getting testexamples](./TestExamples/CareCommunication_Ex_receive.zip)
 
 
 #### Test patient/citizens

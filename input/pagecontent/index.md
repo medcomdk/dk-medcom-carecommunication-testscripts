@@ -2,13 +2,12 @@
 
 This Implementation Guide (IG) has two purposes: 1) to present test scripts for sending and receiving CareCommunication v. 2.1.0, and 2) to present test examples used in the testprotocol for sending and receiving CareCommunication. Both test scripts and test examples are developed by MedCom. 
 
-
-The purpose of the CareCommunication is to support digital communication between parties within healthcare, including amongst others the psychiatric and social area. The CareCommunication is used to ensure secure electronic communication of personally identifiable information and is most often used for ad hoc communication.
+The purpose of the CareCommunication standard is to support digital communication between parties within healthcare, including amongst others the psychiatric and social area. The CareCommunication is used to ensure secure electronic communication of personally identifiable information and is most often used for ad hoc communication.
 
 
 #### Relevant references
 
-The following pages are important when implementing CareCommunications, as they contain relevant information:
+The following pages contains important information when implementing CareCommunications, as they contain relevant information:
 * [GitHub-pages for CareCommunications](https://medcomdk.github.io/dk-medcom-carecommunication)
   * [Testprotocol for sending and receiving CareCommunications](https://medcomdk.github.io/dk-medcom-carecommunication/#2-test-and-certification)
 * [Implementation Guide for CareCommunication v. 2.1.0](https://medcomfhir.dk/ig/carecommunication/2.1.0)
@@ -22,7 +21,7 @@ Content in this IG can be downloaded under the tab [Download](downloads.html). T
 
 #### Quality Assurance Report
 
-In the Quality Assurance report (QA-report) for this IG there are some errors and warnings. An instance of the errors are: *Unable to resolve resource with reference '/FHIRSandbox/MedCom/carecommunicationTMS/carecommunication-fixture-new-message.xml* and *Unable to resolve resource with reference 'http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-message'*. The errors occur when creating a test script, as the fixture and profile are not reachable in the IG. However, they are reachable from TouchStone, why it is of less concern. Vendors who uses the test scripts locally should be aware of the error and e.g. create the fixtures and define the profile locally.
+In the Quality Assurance report (QA-report) for this IG there are some errors and warnings. An instance of the errors are: *Unable to resolve resource with reference '/Fixture/CareCommunication-fixture-new-message.xml* and *Unable to resolve resource with reference 'http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-message'*. The errors occur when creating a test script, as the fixture and profile are not reachable in the IG. However, they are reachable from TouchStone, why it is of less concern. Vendors who uses the test scripts locally should be aware of the error and e.g. create the fixtures and define the profile locally.
 
 #### Contact
 <a href="https://www.medcom.dk/">MedCom</a> is responsible for this IG.

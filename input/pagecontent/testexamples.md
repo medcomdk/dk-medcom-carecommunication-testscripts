@@ -2,7 +2,7 @@ The examples presented below are intended to be used in the test protocol for se
 
 [TEST of getting testexamples](./CareCommunication_Ex_send.zip)
 
-[TEST of getting testexamples](./CareCommunication_Ex_receive.zip)
+[TEST of getting testexamples](CareCommunication_Ex_receive.zip)
 
 
 #### Test patient/citizens

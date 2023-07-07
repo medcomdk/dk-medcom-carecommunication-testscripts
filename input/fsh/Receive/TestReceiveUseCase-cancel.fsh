@@ -7,8 +7,8 @@ InstanceOf: TestScript
 * title = "Receive cancellation of CareCommunication due to incorrect CPR-number"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-receive-retract-new-cpr" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
-* insert createMessageSetup(retract-message, 02, ../Fixtures/CareCommunication-fixture-retract-new-cpr.xml, bundleid-retract-message-02)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createMessageSetup(retract-message, 02, /Fixtures/CareCommunication-fixture-retract-new-cpr.xml, bundleid-retract-message-02)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
 * insert readMessage(retract-message, 02, bundleid-retract-message-02)
 
@@ -21,8 +21,8 @@ InstanceOf: TestScript
 * title = "Receive cancellation of CareCommunication due to incorrect receiver"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-receive-retract-new-receiver" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
-* insert createMessageSetup(retract-message, 02, ../Fixtures/CareCommunication-fixture-retract-new-receiver.xml, bundleid-retract-message-02)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createMessageSetup(retract-message, 02, /Fixtures/CareCommunication-fixture-retract-new-receiver.xml, bundleid-retract-message-02)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
 * insert readMessage(retract-message, 02, bundleid-retract-message-02)
 
@@ -35,8 +35,8 @@ InstanceOf: TestScript
 * title = "Receive cancellation of CareCommunication due to attachment with content concerning a incorrect CPR-number"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-receive-retract-new-attachment" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
-* insert createMessageSetup(retract-message, 02, ../Fixtures/CareCommunication-fixture-retract-new-attachment.xml, bundleid-retract-message-02)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createMessageSetup(retract-message, 02, /Fixtures/CareCommunication-fixture-retract-new-attachment.xml, bundleid-retract-message-02)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
 * insert readMessage(retract-message, 02, bundleid-retract-message-02)
 
@@ -50,8 +50,8 @@ InstanceOf: TestScript
 * title = "Receive cancellation of CareCommunication due to incorrect CPR-number"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-receive-retract-reply-cpr" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(reply-message, 01, ../Fixtures/CareCommunication-fixture-reply-message.xml, destinationUri-reply-message, bundleid-reply-message-01)
-* insert createMessageSetup(retract-message, 02, ../Fixtures/CareCommunication-fixture-retract-reply-cpr.xml, bundleid-retract-message-02)
+* insert createInitialMessageSetup(reply-message, 01, /Fixtures/CareCommunication-fixture-reply-message.xml, destinationUri-reply-message, bundleid-reply-message-01)
+* insert createMessageSetup(retract-message, 02, /Fixtures/CareCommunication-fixture-retract-reply-cpr.xml, bundleid-retract-message-02)
 * insert readMessage(reply-message, 01, bundleid-reply-message-01)
 * insert readMessage(retract-message, 02, bundleid-retract-message-02)
 
@@ -64,8 +64,8 @@ InstanceOf: TestScript
 * title = "Receive cancellation of CareCommunication due to incorrect receiver"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-receive-retract-reply-receiver" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(reply-message, 01, ../Fixtures/CareCommunication-fixture-reply-message.xml, destinationUri-reply-message, bundleid-reply-message-01)
-* insert createMessageSetup(retract-message, 02, ../Fixtures/CareCommunication-fixture-retract-reply-receiver.xml, bundleid-retract-message-02)
+* insert createInitialMessageSetup(reply-message, 01, /Fixtures/CareCommunication-fixture-reply-message.xml, destinationUri-reply-message, bundleid-reply-message-01)
+* insert createMessageSetup(retract-message, 02, /Fixtures/CareCommunication-fixture-retract-reply-receiver.xml, bundleid-retract-message-02)
 * insert readMessage(reply-message, 01, bundleid-reply-message-01)
 * insert readMessage(retract-message, 02, bundleid-retract-message-02)
 
@@ -78,8 +78,8 @@ InstanceOf: TestScript
 * title = "Receive cancellation of CareCommunication due to attachment with content concerning a incorrect CPR-number"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-receive-retract-reply-attachment" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(reply-message, 01, ../Fixtures/CareCommunication-fixture-reply-message.xml, destinationUri-reply-message, bundleid-reply-message-01)
-* insert createMessageSetup(retract-message, 02, ../Fixtures/CareCommunication-fixture-retract-reply-attachment.xml, bundleid-retract-message-02)
+* insert createInitialMessageSetup(reply-message, 01, /Fixtures/CareCommunication-fixture-reply-message.xml, destinationUri-reply-message, bundleid-reply-message-01)
+* insert createMessageSetup(retract-message, 02, /Fixtures/CareCommunication-fixture-retract-reply-attachment.xml, bundleid-retract-message-02)
 * insert readMessage(reply-message, 01, bundleid-reply-message-01)
 * insert readMessage(retract-message, 02, bundleid-retract-message-02)
 
@@ -92,8 +92,8 @@ InstanceOf: TestScript
 * title = "Receive cancellation of CareCommunication due to incorrect CPR-number"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-receive-retract-forward-cpr" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(forward-message, 01, ../Fixtures/CareCommunication-fixture-forward-message.xml, destinationUri-forward-message, bundleid-forward-message-01)
-* insert createMessageSetup(retract-message, 02, ../Fixtures/CareCommunication-fixture-retract-forward-cpr.xml, bundleid-retract-message-02)
+* insert createInitialMessageSetup(forward-message, 01, /Fixtures/CareCommunication-fixture-forward-message.xml, destinationUri-forward-message, bundleid-forward-message-01)
+* insert createMessageSetup(retract-message, 02, /Fixtures/CareCommunication-fixture-retract-forward-cpr.xml, bundleid-retract-message-02)
 * insert readMessage(forward-message, 01, bundleid-forward-message-01)
 * insert readMessage(retract-message, 02, bundleid-retract-message-02)
 
@@ -106,8 +106,8 @@ InstanceOf: TestScript
 * title = "Receive cancellation of CareCommunication due to incorrect receiver"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-receive-retract-forward-receiver" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(forward-message, 01, ../Fixtures/CareCommunication-fixture-forward-message.xml, destinationUri-forward-message, bundleid-forward-message-01)
-* insert createMessageSetup(retract-message, 02, ../Fixtures/CareCommunication-fixture-retract-forward-receiver.xml, bundleid-retract-message-02)
+* insert createInitialMessageSetup(forward-message, 01, /Fixtures/CareCommunication-fixture-forward-message.xml, destinationUri-forward-message, bundleid-forward-message-01)
+* insert createMessageSetup(retract-message, 02, /Fixtures/CareCommunication-fixture-retract-forward-receiver.xml, bundleid-retract-message-02)
 * insert readMessage(forward-message, 01, bundleid-forward-message-01)
 * insert readMessage(retract-message, 02, bundleid-retract-message-02)
 
@@ -120,7 +120,7 @@ InstanceOf: TestScript
 * title = "Receive cancellation of CareCommunication due to attachment with content concerning a incorrect CPR-number"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-receive-retract-forward-attachment" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(forward-message, 01, ../Fixtures/CareCommunication-fixture-forward-message.xml, destinationUri-forward-message, bundleid-forward-message-01)
-* insert createMessageSetup(retract-message, 02, ../Fixtures/CareCommunication-fixture-retract-forward-attachment.xml, bundleid-retract-message-02)
+* insert createInitialMessageSetup(forward-message, 01, /Fixtures/CareCommunication-fixture-forward-message.xml, destinationUri-forward-message, bundleid-forward-message-01)
+* insert createMessageSetup(retract-message, 02, /Fixtures/CareCommunication-fixture-retract-forward-attachment.xml, bundleid-retract-message-02)
 * insert readMessage(forward-message, 01, bundleid-forward-message-01)
 * insert readMessage(retract-message, 02, bundleid-retract-message-02)

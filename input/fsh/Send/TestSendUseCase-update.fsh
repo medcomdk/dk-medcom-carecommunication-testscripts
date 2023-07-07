@@ -7,11 +7,11 @@ InstanceOf: TestScript
 * title = "Correct text of a new CareCommunication"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-modify-new" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
 // * insert variableText(new-message, 01)
 //* insert variableText(modified-message, 02)
-* insert createMessage(modified-message, 02, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 1) 
+* insert createMessage(modified-message, 02, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 1) 
 //* insert assertContentChanged(text-new-message-01, text-modified-message-02)
 
 
@@ -24,10 +24,10 @@ InstanceOf: TestScript
 * title = "Correct the category of a new CareCommunication"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-modify-new-category" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
+* insert createInitialMessage(new-message, 01, /Fixtures/CareCommunication-fixture.xml) 
 * insert variableDestinationUri(new-message, 01)
 * insert variableBundleidSetup(new-message, 01)
-* insert createMessage(modified-message, 02, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
+* insert createMessage(modified-message, 02, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
 * insert variableCategorySetup(new-message, 01)
 * insert variableCategory(modified-message, 02)
 * insert assertContentChanged(category-new-message-01, category-modified-message-02)
@@ -41,7 +41,7 @@ InstanceOf: TestScript
 * title = "Correct the attached files of a new CareCommunication"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-modify-new-attachment" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
+* insert createInitialMessage(new-message, 01, /Fixtures/CareCommunication-fixture.xml) 
 * insert variableDestinationUri(new-message, 01)
 * insert variableBundleidSetup(new-message, 01)
 * insert assertMimetype(application/pdf)
@@ -49,7 +49,7 @@ InstanceOf: TestScript
 * insert assertMimetype(image/jpeg)
 * insert assertMimetype(image/png)
 * insert assertMimetype(image/tiff)
-* insert createMessage(modified-message, 02, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 7) 
+* insert createMessage(modified-message, 02, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 7) 
 * insert variableAttachmentIdentifier(new-message, 01, application/pdf)
 * insert variableAttachmentIdentifier(modified-message, 02, application/pdf)
 * insert assertContentChanged(identifier-new-message-01-application/pdf, identifier-modified-message-02-application/pdf)
@@ -75,10 +75,10 @@ InstanceOf: TestScript
 * title = "Correct topic of a new CareCommunication"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-modify-new-topic" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
+* insert createInitialMessage(new-message, 01, /Fixtures/CareCommunication-fixture.xml) 
 * insert variableDestinationUri(new-message, 01)
 * insert variableBundleidSetup(new-message, 01)
-* insert createMessage(modified-message, 02, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
+* insert createMessage(modified-message, 02, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
 * insert variableTopicSetup(new-message, 01)
 * insert variableTopic(modified-message, 02)
 * insert assertContentChanged(topic-new-message-01, topic-reply-message-02)
@@ -92,10 +92,10 @@ InstanceOf: TestScript
 * title = "Correct formatted text and table of a new CareCommunication"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-modify-new-formatted-text" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
+* insert createInitialMessage(new-message, 01, /Fixtures/CareCommunication-fixture.xml) 
 * insert variableDestinationUri(new-message, 01)
 * insert variableBundleidSetup(new-message, 01)
-* insert createMessage(modified-message, 02, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
+* insert createMessage(modified-message, 02, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
 //????
 
 
@@ -107,12 +107,12 @@ InstanceOf: TestScript
 * title = "Correct category from 'Other' of a new CareCommunication"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-modify-new-category-other" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
+* insert createInitialMessage(new-message, 01, /Fixtures/CareCommunication-fixture.xml) 
 * insert variableDestinationUri(new-message, 01)
 * insert variableBundleidSetup(new-message, 01)
 * insert assertCategory(other)
 * insert assertTopicIncluded
-* insert createMessage(modified-message, 02, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
+* insert createMessage(modified-message, 02, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
 * insert variableCategorySetup(new-message, 01)
 * insert variableCategory(modified-message, 02)
 * insert assertContentChanged(category-new-message-01, category-modified-message-02)
@@ -125,10 +125,10 @@ InstanceOf: TestScript
 * title = "Correct category to 'Other' of a new CareCommunication"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-modify-new-to-category-other" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
+* insert createInitialMessage(new-message, 01, /Fixtures/CareCommunication-fixture.xml) 
 * insert variableDestinationUri(new-message, 01)
 * insert variableBundleidSetup(new-message, 01)
-* insert createMessage(modified-message, 02, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
+* insert createMessage(modified-message, 02, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
 * insert assertCategory(other)
 * insert assertTopicIncluded
 * insert variableCategorySetup(new-message, 01)
@@ -143,12 +143,12 @@ InstanceOf: TestScript
 * title = "Correct category from 'Regarding referral'"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-modify-new-priority" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml) 
+* insert createInitialMessage(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml) 
 * insert variableDestinationUri(new-message, 01)
 * insert variableBundleidSetup(new-message, 01)
 * insert assertCategory(regarding-referral)
 * insert assertPriorityExists
-* insert createMessage(modified-message, 02, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
+* insert createMessage(modified-message, 02, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
 * insert variableCategorySetup(new-message, 01)
 * insert variableCategory(modified-message, 02)
 * insert assertContentChanged(category-new-message-01, category-modified-message-02)
@@ -161,10 +161,10 @@ InstanceOf: TestScript
 * title = "Correct category to 'Regarding referal' of a new CareCommunication"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-modify-new-to-priority" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
+* insert createInitialMessage(new-message, 01, /Fixtures/CareCommunication-fixture.xml) 
 * insert variableDestinationUri(new-message, 01)
 * insert variableBundleidSetup(new-message, 01)
-* insert createMessage(modified-message, 02, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
+* insert createMessage(modified-message, 02, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
 * insert assertCategory(regarding-referral)
 * insert assertPriorityExists
 * insert variableCategorySetup(new-message, 01)
@@ -181,12 +181,12 @@ InstanceOf: TestScript
 * title = "Correct text of a reply CareCommunication"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-modify-reply" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
 // * insert variableText(reply-message, 02)
 // * insert variableText(modified-message, 03) 
-* insert createMessage(reply-message, 02, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
-* insert createMessage(modified-message, 03, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-reply-message-02, 3, 3) 
+* insert createMessage(reply-message, 02, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
+* insert createMessage(modified-message, 03, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-reply-message-02, 3, 3) 
 //* insert assertContentChanged(text-reply-message-02, text-modified-message-03)
 
 //modify Reply with changed category
@@ -198,12 +198,12 @@ InstanceOf: TestScript
 * title = "Correct category of a reply CareCommunication"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-modify-reply-changecategory" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
-* insert createMessage(reply-message, 02, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
+* insert createMessage(reply-message, 02, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
 * insert variableCategory(reply-message, 02)
 * insert variableCategory(modified-message, 03)
-* insert createMessage(modified-message, 03, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-reply-message-02, 3, 3) 
+* insert createMessage(modified-message, 03, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-reply-message-02, 3, 3) 
 * insert assertContentChanged(category-reply-message-02, category-modified-message-03)
 
 //modify Reply with changed topic
@@ -215,12 +215,12 @@ InstanceOf: TestScript
 * title = "Correct topic of a reply CareCommunication"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-modify-reply-changetopic" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
-* insert createMessage(reply-message, 02, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
+* insert createMessage(reply-message, 02, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
 * insert variableTopic(reply-message, 02)
 * insert variableTopic(modified-message, 03)
-* insert createMessage(modified-message, 03, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-reply-message-02, 3, 3) 
+* insert createMessage(modified-message, 03, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-reply-message-02, 3, 3) 
 * insert assertContentChanged(topic-reply-message-02, topic-modified-message-03)
 
 //modify Reply with changed attachment
@@ -232,15 +232,15 @@ InstanceOf: TestScript
 * title = "Correct attached files of a reply CareCommunication"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-modify-reply-attachment" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
-* insert createMessage(reply-message, 02, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 8) 
+* insert createMessage(reply-message, 02, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 8) 
 * insert assertMimetype(application/pdf)
 * insert assertMimetype(image/gif)
 * insert assertMimetype(image/jpeg)
 * insert assertMimetype(image/png)
 * insert assertMimetype(image/tiff)
-* insert createMessage(modified-message, 03, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-reply-message-02, 3, 8) 
+* insert createMessage(modified-message, 03, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-reply-message-02, 3, 8) 
 * insert variableAttachmentIdentifier(reply-message, 02, application/pdf)
 * insert variableAttachmentIdentifier(modified-message, 03, application/pdf)
 * insert assertContentChanged(identifier-reply-message-02-application/pdf, identifier-modified-message-03-application/pdf)
@@ -267,12 +267,12 @@ InstanceOf: TestScript
 * title = "Correct text of a forward CareCommunication"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-modify-forward" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
 // * insert variableText(forward-message, 02)
 // * insert variableText(modified-message, 03)
-* insert createMessage(forward-message, 02, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
-* insert createMessage(modified-message, 03, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-forward-message-02, 3, 3) 
+* insert createMessage(forward-message, 02, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
+* insert createMessage(modified-message, 03, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-forward-message-02, 3, 3) 
 //* insert assertContentChanged(text-forward-message-02, text-modified-message-03)
 
 //modify forward with changed category
@@ -284,12 +284,12 @@ InstanceOf: TestScript
 * title = "Correct category of a forward CareCommunication"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-modify-forward-changecategory" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
-* insert createMessage(forward-message, 02, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
+* insert createMessage(forward-message, 02, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
 * insert variableCategory(forward-message, 02)
 * insert variableCategory(modified-message, 03)
-* insert createMessage(modified-message, 03, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-forward-message-02, 3, 3) 
+* insert createMessage(modified-message, 03, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-forward-message-02, 3, 3) 
 * insert assertContentChanged(category-forward-message-02, category-modified-message-03)
 
 //modify forward with changed topic
@@ -301,12 +301,12 @@ InstanceOf: TestScript
 * title = "Correct topic of a forward CareCommunication"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-modify-forward-changetopic" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
-* insert createMessage(forward-message, 02, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
+* insert createMessage(forward-message, 02, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
 * insert variableTopic(forward-message, 02)
 * insert variableTopic(modified-message, 03)
-* insert createMessage(modified-message, 03, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-forward-message-02, 3, 3) 
+* insert createMessage(modified-message, 03, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-forward-message-02, 3, 3) 
 * insert assertContentChanged(topic-forward-message-02, topic-modified-message-03)
 
 //modify forward with changed attachment
@@ -318,15 +318,15 @@ InstanceOf: TestScript
 * title = "Correct attaches files of a forward CareCommunication"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-modify-forward-attachment" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
-* insert createMessage(forward-message, 02, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 8) 
+* insert createMessage(forward-message, 02, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 8) 
 * insert assertMimetype(application/pdf)
 * insert assertMimetype(image/gif)
 * insert assertMimetype(image/jpeg)
 * insert assertMimetype(image/png)
 * insert assertMimetype(image/tiff)
-* insert createMessage(modified-message, 03, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-forward-message-02, 3, 8) 
+* insert createMessage(modified-message, 03, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-forward-message-02, 3, 8) 
 * insert variableAttachmentIdentifier(forward-message, 02, application/pdf)
 * insert variableAttachmentIdentifier(modified-message, 03, application/pdf)
 * insert assertContentChanged(identifier-forward-message-02-application/pdf, identifier-modified-message-03-application/pdf)

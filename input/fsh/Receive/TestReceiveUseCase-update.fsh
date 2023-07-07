@@ -7,8 +7,8 @@ InstanceOf: TestScript
 * title = "Receive correction of a new CareCommunication"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-receive-modify-new-message" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
-* insert createMessageSetup(modify-message, 02, ../Fixtures/CareCommunication-fixture-modify-new-message.xml, bundleid-modify-message-02)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createMessageSetup(modify-message, 02, /Fixtures/CareCommunication-fixture-modify-new-message.xml, bundleid-modify-message-02)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
 * insert readMessage(modify-message, 02, bundleid-modify-message-02)
 
@@ -21,8 +21,8 @@ InstanceOf: TestScript
 * title = "Receive correction of a new CareCommunication with attached files"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-receive-modify-new-attachment" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
-* insert createMessageSetup(modify-message, 02, ../Fixtures/CareCommunication-fixture-modify-new-attachment.xml, bundleid-modify-message-02)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createMessageSetup(modify-message, 02, /Fixtures/CareCommunication-fixture-modify-new-attachment.xml, bundleid-modify-message-02)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
 * insert readMessage(modify-message, 02, bundleid-modify-message-02)
 
@@ -35,8 +35,8 @@ InstanceOf: TestScript
 * title = "Receive correction of a new CareCommunication with topic"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-receive-modify-new-topic" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
-* insert createMessageSetup(modify-message, 02, ../Fixtures/CareCommunication-fixture-modify-new-topic.xml, bundleid-modify-message-02)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createMessageSetup(modify-message, 02, /Fixtures/CareCommunication-fixture-modify-new-topic.xml, bundleid-modify-message-02)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
 * insert readMessage(modify-message, 02, bundleid-modify-message-02)
 
@@ -50,8 +50,8 @@ InstanceOf: TestScript
 * title = "Receive correction of a new CareCommunication with formatted with category 'Other'"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-receive-modify-new-category-other" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
-* insert createMessageSetup(modify-message, 02, ../Fixtures/CareCommunication-fixture-modify-new-category-other.xml, bundleid-modify-message-02)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createMessageSetup(modify-message, 02, /Fixtures/CareCommunication-fixture-modify-new-category-other.xml, bundleid-modify-message-02)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
 * insert readMessage(modify-message, 02, bundleid-modify-message-02)
 
@@ -64,8 +64,8 @@ InstanceOf: TestScript
 * title = "Receive correction of a new CareCommunication with category 'Regarding referral' and included priority"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-receive-modify-new-priority" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
-* insert createMessageSetup(modify-message, 02, ../Fixtures/CareCommunication-fixture-modify-new-priority.xml, bundleid-modify-message-02)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createMessageSetup(modify-message, 02, /Fixtures/CareCommunication-fixture-modify-new-priority.xml, bundleid-modify-message-02)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
 * insert readMessage(modify-message, 02, bundleid-modify-message-02)
 
@@ -79,9 +79,9 @@ InstanceOf: TestScript
 * title = "Receive correction of a reply to CareCommunication"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-receive-modify-reply-message" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
-* insert createMessageSetup(reply-message, 02, ../Fixtures/CareCommunication-fixture-reply-message.xml, bundleid-reply-message-02)
-* insert createMessageSetup(modify-message, 03, ../Fixtures/CareCommunication-fixture-modify-reply-message.xml, bundleid-modify-message-03)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createMessageSetup(reply-message, 02, /Fixtures/CareCommunication-fixture-reply-message.xml, bundleid-reply-message-02)
+* insert createMessageSetup(modify-message, 03, /Fixtures/CareCommunication-fixture-modify-reply-message.xml, bundleid-modify-message-03)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
 * insert readMessage(reply-message, 02, bundleid-reply-message-02)
 * insert readMessage(modify-message, 03, bundleid-modify-message-03)
@@ -96,9 +96,9 @@ InstanceOf: TestScript
 * title = "Receive correction of a reply to CareCommunication with attached files"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-receive-modify-reply-attachment" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
-* insert createMessageSetup(reply-message, 02, ../Fixtures/CareCommunication-fixture-reply-message.xml, bundleid-reply-message-02)
-* insert createMessageSetup(modify-message, 03, ../Fixtures/CareCommunication-fixture-modify-reply-attachment.xml, bundleid-modify-message-03)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createMessageSetup(reply-message, 02, /Fixtures/CareCommunication-fixture-reply-message.xml, bundleid-reply-message-02)
+* insert createMessageSetup(modify-message, 03, /Fixtures/CareCommunication-fixture-modify-reply-attachment.xml, bundleid-modify-message-03)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
 * insert readMessage(reply-message, 02, bundleid-reply-message-02)
 * insert readMessage(modify-message, 03, bundleid-modify-message-03)
@@ -112,9 +112,9 @@ InstanceOf: TestScript
 * title = "Receive correction of a reply to CareCommunication with changed category"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-receive-modify-reply-changecategory" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
-* insert createMessageSetup(reply-message, 02, ../Fixtures/CareCommunication-fixture-reply-message.xml, bundleid-reply-message-02)
-* insert createMessageSetup(modify-message, 03, ../Fixtures/CareCommunication-fixture-modify-reply-changecategory.xml, bundleid-modify-message-03)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createMessageSetup(reply-message, 02, /Fixtures/CareCommunication-fixture-reply-message.xml, bundleid-reply-message-02)
+* insert createMessageSetup(modify-message, 03, /Fixtures/CareCommunication-fixture-modify-reply-changecategory.xml, bundleid-modify-message-03)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
 * insert readMessage(reply-message, 02, bundleid-reply-message-02)
 * insert readMessage(modify-message, 03, bundleid-modify-message-03)
@@ -128,9 +128,9 @@ InstanceOf: TestScript
 * title = "Receive correction of a reply to CareCommunication with changed topic"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-receive-modify-reply-changetopic" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
-* insert createMessageSetup(reply-message, 02, ../Fixtures/CareCommunication-fixture-reply-message.xml, bundleid-reply-message-02)
-* insert createMessageSetup(modify-message, 03, ../Fixtures/CareCommunication-fixture-modify-reply-changetopic.xml, bundleid-modify-message-03)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createMessageSetup(reply-message, 02, /Fixtures/CareCommunication-fixture-reply-message.xml, bundleid-reply-message-02)
+* insert createMessageSetup(modify-message, 03, /Fixtures/CareCommunication-fixture-modify-reply-changetopic.xml, bundleid-modify-message-03)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
 * insert readMessage(reply-message, 02, bundleid-reply-message-02)
 * insert readMessage(modify-message, 03, bundleid-modify-message-03)
@@ -145,9 +145,9 @@ InstanceOf: TestScript
 * title = "Receive correction of a forward of CareCommunication"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-receive-modify-forward-message" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
-* insert createMessageSetup(forward-message, 02, ../Fixtures/CareCommunication-fixture-forward-message.xml, bundleid-forward-message-02)
-* insert createMessageSetup(modify-message, 03, ../Fixtures/CareCommunication-fixture-modify-forward-message.xml, bundleid-modify-message-03)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createMessageSetup(forward-message, 02, /Fixtures/CareCommunication-fixture-forward-message.xml, bundleid-forward-message-02)
+* insert createMessageSetup(modify-message, 03, /Fixtures/CareCommunication-fixture-modify-forward-message.xml, bundleid-modify-message-03)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
 * insert readMessage(forward-message, 02, bundleid-forward-message-02)
 * insert readMessage(modify-message, 03, bundleid-modify-message-03)
@@ -161,9 +161,9 @@ InstanceOf: TestScript
 * title = "Receive correction of a forward of CareCommunication with attached files"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-receive-modify-forward-attachment" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
-* insert createMessageSetup(forward-message, 02, ../Fixtures/CareCommunication-fixture-forward-message.xml, bundleid-forward-message-02)
-* insert createMessageSetup(modify-message, 03, ../Fixtures/CareCommunication-fixture-modify-forward-attachment.xml, bundleid-modify-message-03)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createMessageSetup(forward-message, 02, /Fixtures/CareCommunication-fixture-forward-message.xml, bundleid-forward-message-02)
+* insert createMessageSetup(modify-message, 03, /Fixtures/CareCommunication-fixture-modify-forward-attachment.xml, bundleid-modify-message-03)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
 * insert readMessage(forward-message, 02, bundleid-forward-message-02)
 * insert readMessage(modify-message, 03, bundleid-modify-message-03)
@@ -177,9 +177,9 @@ InstanceOf: TestScript
 * title = "Receive correction of a forward of CareCommunication with changed category"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-receive-modify-forward-changecategory" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
-* insert createMessageSetup(forward-message, 02, ../Fixtures/CareCommunication-fixture-forward-message.xml, bundleid-forward-message-02)
-* insert createMessageSetup(modify-message, 03, ../Fixtures/CareCommunication-fixture-modify-forward-changecategory.xml, bundleid-modify-message-03)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createMessageSetup(forward-message, 02, /Fixtures/CareCommunication-fixture-forward-message.xml, bundleid-forward-message-02)
+* insert createMessageSetup(modify-message, 03, /Fixtures/CareCommunication-fixture-modify-forward-changecategory.xml, bundleid-modify-message-03)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
 * insert readMessage(forward-message, 02, bundleid-forward-message-02)
 * insert readMessage(modify-message, 03, bundleid-modify-message-03)
@@ -193,9 +193,9 @@ InstanceOf: TestScript
 * title = "Receive correction of a forward of CareCommunication with changed topic"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-receive-modify-forward-changetopic" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
-* insert createMessageSetup(forward-message, 02, ../Fixtures/CareCommunication-fixture-forward-message.xml, bundleid-forward-message-02)
-* insert createMessageSetup(modify-message, 03, ../Fixtures/CareCommunication-fixture-modify-forward-changetopic.xml, bundleid-modify-message-03)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createMessageSetup(forward-message, 02, /Fixtures/CareCommunication-fixture-forward-message.xml, bundleid-forward-message-02)
+* insert createMessageSetup(modify-message, 03, /Fixtures/CareCommunication-fixture-modify-forward-changetopic.xml, bundleid-modify-message-03)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
 * insert readMessage(forward-message, 02, bundleid-forward-message-02)
 * insert readMessage(modify-message, 03, bundleid-modify-message-03)

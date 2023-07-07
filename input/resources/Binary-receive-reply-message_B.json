@@ -1,0 +1,290 @@
+{
+  "entry": [
+    {
+      "resource": {
+        "focus": [
+          {
+            "reference": "Communication/01149036-5372-47f1-917d-9eb7b59a31fb"
+          }
+        ],
+        "eventCoding": {
+          "system": "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes",
+          "code": "care-communication-message"
+        },
+        "resourceType": "MessageHeader",
+        "sender": {
+          "reference": "Organization/9bedfe8a-dfd4-47d1-8718-d0316fe0a4b1"
+        },
+        "text": {
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>\n  <p>\n    <b>Generated Narrative: MessageHeader</b>\n    <a name='d6d667e7-c37b-4ea0-94ca-343bc32462e2'/>\n  </p>\n  <div style='display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%'>\n    <p style='margin-bottom: 0px'>Resource MessageHeader \"d6d667e7-c37b-4ea0-94ca-343bc32462e2\"</p>\n    <p style='margin-bottom: 0px'>Profile:<a href='StructureDefinition-medcom-careCommunication-messageHeader.html'>MedComCareCommunicationMessageHeader</a>\n    </p>\n  </div>\n  <p>\n    <b>event</b>: Care Communication Message (Details: http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes code care-communication-message = &apos;Care Communication Message&apos;, stated as &apos;null&apos;)</p>\n  <h3>Destinations</h3>\n  <table class='grid'>\n    <tr>\n      <td>-</td>\n      <td>\n        <b>Extension</b>\n      </td>\n      <td>\n        <b>Endpoint</b>\n      </td>\n      <td>\n        <b>Receiver</b>\n      </td>\n    </tr>\n    <tr>\n      <td>*</td>\n      <td/>\n      <td>\n        <a href='https://sor2.sum.dsdn.dk/#id=953741000016009'>https://sor2.sum.dsdn.dk/#id=953741000016009</a>\n      </td>\n      <td>\n        <a href='#Organization_dfde7421-46b7-4ce0-9b98-8bcc94565ab4'>See above (Organization/dfde7421-46b7-4ce0-9b98-8bcc94565ab4)</a>\n      </td>\n    </tr>\n  </table>\n  <p>\n    <b>sender</b>:<a href='#Organization_9bedfe8a-dfd4-47d1-8718-d0316fe0a4b1'>See above (Organization/9bedfe8a-dfd4-47d1-8718-d0316fe0a4b1)</a>\n  </p>\n  <h3>Sources</h3>\n  <table class='grid'>\n    <tr>\n      <td>-</td>\n      <td>\n        <b>Endpoint</b>\n      </td>\n    </tr>\n    <tr>\n      <td>*</td>\n      <td>\n        <a href='https://sor2.sum.dsdn.dk/#id=265161000016000'>https://sor2.sum.dsdn.dk/#id=265161000016000</a>\n      </td>\n    </tr>\n  </table>\n  <p>\n    <b>focus</b>:<a href='#Communication_01149036-5372-47f1-917d-9eb7b59a31fb'>See above (Communication/01149036-5372-47f1-917d-9eb7b59a31fb)</a>\n  </p>\n</div>",
+          "status": "generated"
+        },
+        "destination": [
+          {
+            "endpoint": "https://sor2.sum.dsdn.dk/#id=953741000016009",
+            "extension": [
+              {
+                "url": "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension",
+                "valueCoding": {
+                  "system": "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-destinationUse",
+                  "code": "primary"
+                }
+              }
+            ],
+            "receiver": {
+              "reference": "Organization/dfde7421-46b7-4ce0-9b98-8bcc94565ab4"
+            }
+          }
+        ],
+        "id": "d6d667e7-c37b-4ea0-94ca-343bc32462e2",
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader"
+          ]
+        },
+        "source": {
+          "endpoint": "https://sor2.sum.dsdn.dk/#id=265161000016000"
+        }
+      },
+      "fullUrl": "MessageHeader/d6d667e7-c37b-4ea0-94ca-343bc32462e2"
+    },
+    {
+      "resource": {
+        "name": [
+          {
+            "family": "Elmer",
+            "use": "official"
+          }
+        ],
+        "id": "05b6d43f-5832-4c3f-a416-d428e821e1e8",
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.208.176.1.2",
+            "value": "2509479989"
+          }
+        ],
+        "resourceType": "Patient",
+        "text": {
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>\n  <p>\n    <b>Generated Narrative: Patient</b>\n    <a name='05b6d43f-5832-4c3f-a416-d428e821e1e8'/>\n  </p>\n  <div style='display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%'>\n    <p style='margin-bottom: 0px'>Resource Patient \"05b6d43f-5832-4c3f-a416-d428e821e1e8\"</p>\n    <p style='margin-bottom: 0px'>Profile:<a href='http://medcomfhir.dk/ig/core/2.1.0/StructureDefinition-medcom-core-patient.html'>MedComCorePatient</a>\n    </p>\n  </div>\n  <p>\n    <b>identifier</b>: id: 2509479989</p>\n  <p>\n    <b>name</b>: Elmer (OFFICIAL)</p>\n</div>",
+          "status": "generated"
+        }
+      },
+      "fullUrl": "Patient/05b6d43f-5832-4c3f-a416-d428e821e1e8"
+    },
+    {
+      "resource": {
+        "payload": [
+          {
+            "extension": [
+              {
+                "url": "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-datetime-extension",
+                "valueDateTime": "2023-03-01T12:00:00+01:00"
+              },
+              {
+                "url": "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-author-extension",
+                "valueReference": {
+                  "reference": "PractitionerRole/442662f9-80cc-4570-bc98-cf5bf65aa9f9"
+                }
+              },
+              {
+                "url": "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-author-contact-extension",
+                "valueContactPoint": {
+                  "system": "phone",
+                  "value": "38683868"
+                }
+              }
+            ],
+            "contentString": "Regarding the rehabilitation plan, please notice that..."
+          }
+        ],
+        "status": "unknown",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-careCommunication-categoryCodes",
+                "code": "carecoordination"
+              }
+            ]
+          }
+        ],
+        "id": "01149036-5372-47f1-917d-9eb7b59a31fb",
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication"
+          ]
+        },
+        "resourceType": "Communication",
+        "subject": {
+          "reference": "Patient/05b6d43f-5832-4c3f-a416-d428e821e1e8"
+        },
+        "text": {
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>\n  <p>\n    <b>Generated Narrative: Communication</b>\n    <a name='01149036-5372-47f1-917d-9eb7b59a31fb'/>\n  </p>\n  <div style='display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%'>\n    <p style='margin-bottom: 0px'>Resource Communication \"01149036-5372-47f1-917d-9eb7b59a31fb\"</p>\n    <p style='margin-bottom: 0px'>Profile:<a href='StructureDefinition-medcom-careCommunication-communication.html'>MedComCareCommunication</a>\n    </p>\n  </div>\n  <p>\n    <b>status</b>: unknown</p>\n  <p>\n    <b>category</b>: Care Coordination<span style='background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki'>(<a href='http://medcomfhir.dk/ig/terminology/1.3.0/CodeSystem-medcom-careCommunication-categoryCodes.html'>MedComCareCommunicationCategories</a>#carecoordination)</span>\n  </p>\n  <p>\n    <b>subject</b>:<a href='#Patient_05b6d43f-5832-4c3f-a416-d428e821e1e8'>See above (Patient/05b6d43f-5832-4c3f-a416-d428e821e1e8)</a>\n  </p>\n  <h3>Payloads</h3>\n  <table class='grid'>\n    <tr>\n      <td>-</td>\n      <td>\n        <b>Extension</b>\n      </td>\n      <td>\n        <b>Content[x]</b>\n      </td>\n    </tr>\n    <tr>\n      <td>*</td>\n      <td>, ,</td>\n      <td>Regarding the rehabilitation plan, please notice that...</td>\n    </tr>\n  </table>\n</div>",
+          "status": "generated"
+        }
+      },
+      "fullUrl": "Communication/01149036-5372-47f1-917d-9eb7b59a31fb"
+    },
+    {
+      "resource": {
+        "practitioner": {
+          "reference": "Practitioner/d505aad2-8b1a-4688-9dc6-423e7e304393"
+        },
+        "id": "442662f9-80cc-4570-bc98-cf5bf65aa9f9",
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole"
+          ]
+        },
+        "code": [
+          {
+            "coding": [
+              {
+                "system": "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesSKSadministrativ",
+                "code": "sygeplejerske"
+              }
+            ]
+          }
+        ],
+        "resourceType": "PractitionerRole",
+        "text": {
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>\n  <p>\n    <b>Generated Narrative: PractitionerRole</b>\n    <a name='442662f9-80cc-4570-bc98-cf5bf65aa9f9'/>\n  </p>\n  <div style='display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%'>\n    <p style='margin-bottom: 0px'>Resource PractitionerRole \"442662f9-80cc-4570-bc98-cf5bf65aa9f9\"</p>\n    <p style='margin-bottom: 0px'>Profile:<a href='http://medcomfhir.dk/ig/core/2.1.0/StructureDefinition-medcom-core-practitionerrole.html'>MedComCorePractitionerRole</a>\n    </p>\n  </div>\n  <p>\n    <b>practitioner</b>:<a href='#Practitioner_d505aad2-8b1a-4688-9dc6-423e7e304393'>See above (Practitioner/d505aad2-8b1a-4688-9dc6-423e7e304393)</a>\n  </p>\n  <p>\n    <b>code</b>: Sygeplejerske<span style='background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki'>(<a href='http://medcomfhir.dk/ig/terminology/1.3.0/CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html'>MedComCorePractitionerRolesSKSadministrativ</a>#sygeplejerske)</span>\n  </p>\n</div>",
+          "status": "generated"
+        }
+      },
+      "fullUrl": "PractitionerRole/442662f9-80cc-4570-bc98-cf5bf65aa9f9"
+    },
+    {
+      "resource": {
+        "id": "d505aad2-8b1a-4688-9dc6-423e7e304393",
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner"
+          ]
+        },
+        "name": [
+          {
+            "family": "Burns",
+            "given": [
+              "Michael"
+            ]
+          }
+        ],
+        "resourceType": "Practitioner",
+        "text": {
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>\n  <p>\n    <b>Generated Narrative: Practitioner</b>\n    <a name='d505aad2-8b1a-4688-9dc6-423e7e304393'/>\n  </p>\n  <div style='display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%'>\n    <p style='margin-bottom: 0px'>Resource Practitioner \"d505aad2-8b1a-4688-9dc6-423e7e304393\"</p>\n    <p style='margin-bottom: 0px'>Profile:<a href='http://medcomfhir.dk/ig/core/2.1.0/StructureDefinition-medcom-core-practitioner.html'>MedComCorePractitioner</a>\n    </p>\n  </div>\n  <p>\n    <b>name</b>: Michael Burns</p>\n</div>",
+          "status": "generated"
+        }
+      },
+      "fullUrl": "Practitioner/d505aad2-8b1a-4688-9dc6-423e7e304393"
+    },
+    {
+      "resource": {
+        "name": "Plejecenter Herlev",
+        "id": "dfde7421-46b7-4ce0-9b98-8bcc94565ab4",
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://www.gs1.org/gln",
+            "value": "5790001348120"
+          },
+          {
+            "system": "urn:oid:1.2.208.176.1.1",
+            "value": "953741000016009"
+          }
+        ],
+        "resourceType": "Organization",
+        "text": {
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>\n  <p>\n    <b>Generated Narrative: Organization</b>\n    <a name='dfde7421-46b7-4ce0-9b98-8bcc94565ab4'/>\n  </p>\n  <div style='display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%'>\n    <p style='margin-bottom: 0px'>Resource Organization \"dfde7421-46b7-4ce0-9b98-8bcc94565ab4\"</p>\n    <p style='margin-bottom: 0px'>Profile:<a href='http://medcomfhir.dk/ig/messaging/2.0.0/StructureDefinition-medcom-messaging-organization.html'>MedComMessagingOrganization</a>\n    </p>\n  </div>\n  <p>\n    <b>identifier</b>: id: 5790001348120, id: 953741000016009</p>\n  <p>\n    <b>name</b>: Plejecenter Herlev</p>\n</div>",
+          "status": "generated"
+        }
+      },
+      "fullUrl": "Organization/dfde7421-46b7-4ce0-9b98-8bcc94565ab4"
+    },
+    {
+      "resource": {
+        "name": "Hjerteafdelingen på Herlev og Gentofte hospital",
+        "id": "9bedfe8a-dfd4-47d1-8718-d0316fe0a4b1",
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://www.gs1.org/gln",
+            "value": "5790000209354"
+          },
+          {
+            "system": "urn:oid:1.2.208.176.1.1",
+            "value": "265161000016000"
+          }
+        ],
+        "resourceType": "Organization",
+        "text": {
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>\n  <p>\n    <b>Generated Narrative: Organization</b>\n    <a name='9bedfe8a-dfd4-47d1-8718-d0316fe0a4b1'/>\n  </p>\n  <div style='display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%'>\n    <p style='margin-bottom: 0px'>Resource Organization \"9bedfe8a-dfd4-47d1-8718-d0316fe0a4b1\"</p>\n    <p style='margin-bottom: 0px'>Profile:<a href='http://medcomfhir.dk/ig/messaging/2.0.0/StructureDefinition-medcom-messaging-organization.html'>MedComMessagingOrganization</a>\n    </p>\n  </div>\n  <p>\n    <b>identifier</b>: id: 5790000209354, id: 265161000016000</p>\n  <p>\n    <b>name</b>: Hjerteafdelingen på Herlev og Gentofte hospital</p>\n</div>",
+          "status": "generated"
+        }
+      },
+      "fullUrl": "Organization/9bedfe8a-dfd4-47d1-8718-d0316fe0a4b1"
+    },
+    {
+      "resource": {
+        "occurredDateTime": "2023-03-01T12:00:00+01:00",
+        "activity": {
+          "coding": [
+            {
+              "system": "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes",
+              "code": "new-message"
+            }
+          ]
+        },
+        "target": [
+          {
+            "reference": "MessageHeader/d6d667e7-c37b-4ea0-94ca-343bc32462e2"
+          }
+        ],
+        "text": {
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>\n  <p>\n    <b>Generated Narrative: Provenance</b>\n    <a name='53fa05a9-86a1-4f3b-8437-c31a5786073c'/>\n  </p>\n  <div style='display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%'>\n    <p style='margin-bottom: 0px'>Resource Provenance \"53fa05a9-86a1-4f3b-8437-c31a5786073c\"</p>\n    <p style='margin-bottom: 0px'>Profile:<a href='http://medcomfhir.dk/ig/messaging/2.0.0/StructureDefinition-medcom-messaging-provenance.html'>MedComMessagingProvenance</a>\n    </p>\n  </div>\n  <p>\n    <b>target</b>:<a href='#MessageHeader_d6d667e7-c37b-4ea0-94ca-343bc32462e2'>See above (MessageHeader/d6d667e7-c37b-4ea0-94ca-343bc32462e2)</a>\n  </p>\n  <p>\n    <b>occurred</b>: 2023-03-01 12:00:00+0100</p>\n  <p>\n    <b>recorded</b>: 1. mar. 2023 12.00.00</p>\n  <p>\n    <b>activity</b>: A new message has been sent<span style='background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki'>(<a href='http://medcomfhir.dk/ig/terminology/1.3.0/CodeSystem-medcom-messaging-activityCodes.html'>MedComMessagingActivityCodes</a>#new-message)</span>\n  </p>\n  <h3>Agents</h3>\n  <table class='grid'>\n    <tr>\n      <td>-</td>\n      <td>\n        <b>Who</b>\n      </td>\n    </tr>\n    <tr>\n      <td>*</td>\n      <td>\n        <a href='#Organization_9bedfe8a-dfd4-47d1-8718-d0316fe0a4b1'>See above (Organization/9bedfe8a-dfd4-47d1-8718-d0316fe0a4b1)</a>\n      </td>\n    </tr>\n  </table>\n</div>",
+          "status": "generated"
+        },
+        "recorded": "2023-03-01T12:00:00+01:00",
+        "agent": [
+          {
+            "who": {
+              "reference": "Organization/9bedfe8a-dfd4-47d1-8718-d0316fe0a4b1"
+            }
+          }
+        ],
+        "id": "53fa05a9-86a1-4f3b-8437-c31a5786073c",
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance"
+          ]
+        },
+        "resourceType": "Provenance"
+      },
+      "fullUrl": "Provenance/53fa05a9-86a1-4f3b-8437-c31a5786073c"
+    }
+  ],
+  "id": "ad3c34d7-6413-4432-b48d-3422fc5a4ce5",
+  "meta": {
+    "lastUpdated": "2023-07-06T09:28:43.418-04:00",
+    "versionId": "1",
+    "profile": [
+      "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message"
+    ]
+  },
+  "type": "message",
+  "timestamp": "2023-03-01T12:00:00+01:00",
+  "resourceType": "Bundle"
+}

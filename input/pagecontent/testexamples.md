@@ -27,7 +27,7 @@ All examples include are based on the test patient:
 
 #### Test examples for receiving a CareCommunication
 
-[Download test examples for sending a CareCommunication (.zip)](./TestExamples/CareCommunication_Ex_receive.zip)
+[Download test examples for receiving a CareCommunication (.zip)](./TestExamples/CareCommunication_Ex_receive.zip)
 
 |  Test example     |     Description     | Used for test of use case |
 |---|---|---|

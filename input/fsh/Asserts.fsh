@@ -29,7 +29,7 @@ RuleSet: assertValidateProfiles
 RuleSet: assertMessageHeaderid(messageHeaderid)
 * test[=].action[+].assert.description = "Confirm that the previous MessageHeader.id is identical to Provenance.entity.what" 
 * test[=].action[=].assert.direction = #request
-* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Provenance).where(entity.what.reference.substring(14, 37) = '${{messageHeaderid}}').exists()"
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Provenance).where(entity.what.reference.contains('${{messageHeaderid}}')).exists()"
 * test[=].action[=].assert.warningOnly = false
 
 RuleSet: assertPayload
@@ -88,11 +88,10 @@ RuleSet: assertMessageHeaderReportOfAdmissionReceiver(reportOfAdmission)
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(MessageHeader).extension.where(url='http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-messaging-reportOfAdmissionRecipientExtension').exists() = {reportOfAdmission}"
 * test[=].action[=].assert.warningOnly = false
 
-
 RuleSet: assertProvenanceTarget
 * test[=].action[+].assert.description = "Confirm that the target reference in Provenance equals MessageHeader.id"
 * test[=].action[=].assert.direction = #request
-* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Provenance).where(target.reference.substring(14, 37) = %resource.entry[0].resource.id).exists()"
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Provenance).where(target.reference.contains(%resource.entry[0].resource.id)).exists()"
 * test[=].action[=].assert.warningOnly = false
 
 RuleSet: assertProvenanceEntityCount(noProvenances)
@@ -127,7 +126,7 @@ RuleSet: assertEpisodeOfCareID(episodeOfCareID)
 RuleSet: assertStructureEpisodeOfCareID
 * test[=].action[+].assert.description = "Confirm that the episodeOfCare-identifier has the structure of an UUID"
 * test[=].action[=].assert.direction = #request
-* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Encounter).episodeOfCare.identifier.value.matches('[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}')"
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Encounter).episodeOfCare.identifier.value.matches('^[0-9(a-f|A-F)]{8}-[0-9(a-f|A-F)]{4}-4[0-9(a-f|A-F)]{3}-[89ab][0-9(a-f|A-F)]{3}-[0-9(a-f|A-F)]{12}$') or Bundle.entry.resource.ofType(Encounter).episodeOfCare.identifier.value.matches('urn:uuid:[0-9(a-f|A-F)]{8}-[0-9(a-f|A-F)]{4}-4[0-9(a-f|A-F)]{3}-[89ab][0-9(a-f|A-F)]{3}-[0-9(a-f|A-F)]{12}')"
 * test[=].action[=].assert.warningOnly = false
 
 

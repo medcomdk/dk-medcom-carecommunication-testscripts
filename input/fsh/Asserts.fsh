@@ -126,7 +126,7 @@ RuleSet: assertEpisodeOfCareID(episodeOfCareID)
 RuleSet: assertStructureEpisodeOfCareID
 * test[=].action[+].assert.description = "Confirm that the episodeOfCare-identifier has the structure of an UUID"
 * test[=].action[=].assert.direction = #request
-* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Encounter).episodeOfCare.identifier.value.matches('^[0-9(a-f|A-F)]{8}-[0-9(a-f|A-F)]{4}-4[0-9(a-f|A-F)]{3}-[89ab][0-9(a-f|A-F)]{3}-[0-9(a-f|A-F)]{12}$') or Bundle.entry.resource.ofType(Encounter).episodeOfCare.identifier.value.matches('urn:uuid:[0-9(a-f|A-F)]{8}-[0-9(a-f|A-F)]{4}-4[0-9(a-f|A-F)]{3}-[89ab][0-9(a-f|A-F)]{3}-[0-9(a-f|A-F)]{12}')"
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Encounter).episodeOfCare.identifier.value.matches('^[0-9(a-f|A-F)]{8}-[0-9(a-f|A-F)]{4}-4[0-9(a-f|A-F)]{3}-[89ab][0-9(a-f|A-F)]{3}-[0-9(a-f|A-F)]{12}$') or Bundle.entry.resource.ofType(Encounter).episodeOfCare.identifier.system = 'https://www.esundhed.dk/Registre/Landspatientregisteret'"
 * test[=].action[=].assert.warningOnly = false
 
 

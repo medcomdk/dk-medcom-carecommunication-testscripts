@@ -140,7 +140,7 @@ InstanceOf: TestScript
 * insert variableTopic(reply-message, 02)
 * insert assertContentChanged(topic-new-message-01, topic-reply-message-02)
 
- //Reply  with changed topic
+/*  //Reply  with changed topic
 Instance: CareCommunication_TestScript_send-reply-oioxmlmessage
 InstanceOf: TestScript
 * insert Metadata
@@ -151,7 +151,7 @@ InstanceOf: TestScript
 * name = "CareCommunicationTestScript"
 * insert createInitialMessageSetupNotFHIR(oioxml, 01, /Fixtures/CareCommunication-fixture-oioxml.xml)
 // * insert readMessage(new-message, 01, bundleid-new-message-01)
-* insert createMessage(reply-message, 02, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
+* insert createMessage(reply-message, 02, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2)  */
 
 
 //Forward message

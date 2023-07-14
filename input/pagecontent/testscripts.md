@@ -43,7 +43,7 @@ To execute all the test scripts below, both POST and GET operations must be used
 
 #### Use Cases
 
-[Test scripts for test of sending use cases, can be found here in TouchStone.](https://touchstone.aegis.net/touchstone/)
+[Test scripts for test of the sending use cases, can be found here in TouchStone.](https://touchstone.aegis.net/touchstone/testdefinitions?selectedTestGrp=/FHIRSandbox/MedCom/CareCommunication/v210-send&activeOnly=false&contentEntry=TEST_SCRIPTS) or in the [conformance test suite](https://touchstone.aegis.net/touchstone/conformance/current?suite=FHIR4-0-1-CareCommunication-v210-Send-Server), which will be used for test and certification. 
 
 | **Type** | **Use case <br> code** | **Description** | **Activity** | **Precondition use case** |
 |---|---|---|---|---|
@@ -126,7 +126,7 @@ When receiving a CareCommunication, a GET operation is required for all messages
 
 #### Use Cases
 
-[Test scripts for test of the recieving use cases, can be found here in TouchStone.](https://touchstone.aegis.net/touchstone/)
+[Test scripts for test of the recieving use cases, can be found here in TouchStone.](https://touchstone.aegis.net/touchstone/testdefinitions?selectedTestGrp=/FHIRSandbox/MedCom/CareCommunication/v210-receive&activeOnly=false&contentEntry=TEST_SCRIPTS) or in the [conformance test suite](https://touchstone.aegis.net/touchstone/conformance/current?suite=FHIR4-0-1-CareCommunication-v210-Receive-Server), which will be used for test and certification. 
 
 | **Type** | **Use case <br> code** | **Description** | **Activity** | **Precondition use case** |
 |---|---|---|---|---|

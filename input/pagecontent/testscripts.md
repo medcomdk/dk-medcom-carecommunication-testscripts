@@ -16,8 +16,6 @@ Before getting started with test script execution, it is necessary to have an ac
 
 **Technical cases:** The name of the test scripts is constituted by CareCommunication_TestScript_[send/receive]-[tec]-[number]. For instance CareCommunication_Testscript_send-tec-02. 'CareCommunication_TestScript_' is not shown in the tables below. 
 
-When executingsome of the send and receive test scripts it is required that SUT has executed one or more use cases in advance by sending a message. These use cases are listed in the 'Precondition' columns in the tables. 
-
 #### Test examples 
 
 Test examples are, in TouchStone testing, called fixtures. When testing the CareCommunication standard, the fixtures are previously sent CareCommunications. The fixtures are already uploaded to TouchStone. During setup of a test, all relevant fixtures will automatically be uploaded to the server that is used during test. From an API it is possible to request relevant fixtures. 
@@ -41,9 +39,11 @@ The endpoint of the GET operation depends on the setup of the testscript, but it
 ### Send CareCommunication test scripts
 To execute all the test scripts below, both POST and GET operations must be used. Since it is optional to support sending forwarded, modification and retraction of messages, a the test scripts testing these functionalities are marked with *.  
 
+When executing some of the send test scripts it is required that SUT has executed one or more use cases in advance by sending a message. These use cases are listed in the 'Precondition' columns in the tables. 
+
 #### Use Cases
 
-[Test scripts for test of the sending use cases, can be found here in TouchStone.](https://touchstone.aegis.net/touchstone/testdefinitions?selectedTestGrp=/FHIRSandbox/MedCom/CareCommunication/v210-send&activeOnly=false&contentEntry=TEST_SCRIPTS) or in the [conformance test suite](https://touchstone.aegis.net/touchstone/conformance/current?suite=FHIR4-0-1-CareCommunication-v210-Send-Server), which will be used for test and certification. 
+[Test scripts for test of the sending use cases, can be found here in TouchStone.](https://touchstone.aegis.net/touchstone/testdefinitions?selectedTestGrp=/FHIRSandbox/MedCom/CareCommunication/v210-send&activeOnly=false&contentEntry=TEST_SCRIPTS) or or see all receiving test scripts in the [conformance test suite](https://touchstone.aegis.net/touchstone/conformance/current?suite=FHIR4-0-1-CareCommunication-v210-Send-Client), which will be used for test and certification. 
 
 | **Type** | **Use case <br> code** | **Description** | **Activity** | **Precondition use case** |
 |---|---|---|---|---|
@@ -107,7 +107,7 @@ To execute all the test scripts below, both POST and GET operations must be used
 |---|---|---|
 | [send-tec-01](./TestScript-carecommunication-send-tec-01) | Send CareCommunication with sender and recipient | S1 |
 | [send-tec-02](./TestScript-carecommunication-send-tec-02) | Send CareCommunication, where the receive is 'Plejecenter Herlev' with GLN-number '5790001348120' | S1 |
-| <span style="color: grey;">tec-03</span> | <span style="color: grey;">Send CareCommunication with the maximum length in the text of the message segment</span> | <span style="color: grey;">S1</span> |
+| <span style="color: grey;">send-tec-03</span> | <span style="color: grey;">Send CareCommunication with the maximum length in the text of the message segment</span> | <span style="color: grey;">S1</span> |
 | [send-tec-04](./TestScript-carecommunication-send-tec-04)[^2] | Send CareCommunication with attachment and an associated structured signature | S1.A1 |
 | [send-tec-05](./TestScript-carecommunication-send-tec-05) | Send CareCommunication with episodeOfCareID | S1 |
 | [send-tec-06](./TestScript-carecommunication-send-tec-06) | Reply to CareCommunication, where episodeOfCare-identifier is correctly transfered in the communication | R1, S2 |
@@ -126,7 +126,7 @@ When receiving a CareCommunication, a GET operation is required for all messages
 
 #### Use Cases
 
-[Test scripts for test of the recieving use cases, can be found here in TouchStone.](https://touchstone.aegis.net/touchstone/testdefinitions?selectedTestGrp=/FHIRSandbox/MedCom/CareCommunication/v210-receive&activeOnly=false&contentEntry=TEST_SCRIPTS) or in the [conformance test suite](https://touchstone.aegis.net/touchstone/conformance/current?suite=FHIR4-0-1-CareCommunication-v210-Receive-Server), which will be used for test and certification. 
+[Test scripts for test of the receiving use cases, can be found here in TouchStone.](https://touchstone.aegis.net/touchstone/testdefinitions?selectedTestGrp=/FHIRSandbox/MedCom/CareCommunication/v210-receive&activeOnly=false&contentEntry=TEST_SCRIPTS) or see all receiving test scripts in the [conformance test suite](https://touchstone.aegis.net/touchstone/conformance/current?suite=FHIR4-0-1-CareCommunication-v210-Receive-Client), which will be used for test and certification. 
 
 | **Type** | **Use case <br> code** | **Description** | **Activity** | **Precondition use case** |
 |---|---|---|---|---|

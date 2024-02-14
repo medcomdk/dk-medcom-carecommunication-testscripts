@@ -1,4 +1,4 @@
-//Get new
+/* //Get new
 Instance: CareCommunication_TestScript_receive-new-message
 InstanceOf: TestScript
 * insert Metadata
@@ -162,3 +162,4 @@ InstanceOf: TestScript
 * insert createInitialMessageSetup(forward-message, 01, /Fixtures/CareCommunication-fixture-forward-topic.xml, destinationUri-forward-message, bundleid-forward-message-01)
 * insert readMessage(forward-message, 01, bundleid-forward-message-01)
 
+ */

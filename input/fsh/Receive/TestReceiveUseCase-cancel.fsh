@@ -1,4 +1,4 @@
-//Get cancel-new-cpr
+/* //Get cancel-new-cpr
 Instance: CareCommunication_TestScript_receive-retract-new-cpr
 InstanceOf: TestScript
 * insert Metadata
@@ -123,4 +123,4 @@ InstanceOf: TestScript
 * insert createInitialMessageSetup(forward-message, 01, /Fixtures/CareCommunication-fixture-forward-message.xml, destinationUri-forward-message, bundleid-forward-message-01)
 * insert createMessageSetup(retract-message, 02, /Fixtures/CareCommunication-fixture-retract-forward-attachment.xml, bundleid-retract-message-02)
 * insert readMessage(forward-message, 01, bundleid-forward-message-01)
-* insert readMessage(retract-message, 02, bundleid-retract-message-02)
+* insert readMessage(retract-message, 02, bundleid-retract-message-02) */

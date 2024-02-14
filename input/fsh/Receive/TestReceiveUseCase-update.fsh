@@ -1,4 +1,4 @@
-//Get modify-new
+/* //Get modify-new
 Instance: CareCommunication_TestScript_receive-modify-new-message
 InstanceOf: TestScript
 * insert Metadata
@@ -198,4 +198,4 @@ InstanceOf: TestScript
 * insert createMessageSetup(modify-message, 03, /Fixtures/CareCommunication-fixture-modify-forward-changetopic.xml, bundleid-modify-message-03)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
 * insert readMessage(forward-message, 02, bundleid-forward-message-02)
-* insert readMessage(modify-message, 03, bundleid-modify-message-03)
+* insert readMessage(modify-message, 03, bundleid-modify-message-03) */

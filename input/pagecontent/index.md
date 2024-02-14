@@ -1,6 +1,6 @@
 ### Background
 
-This Implementation Guide (IG) has two purposes: 1) to present test scripts for sending and receiving CareCommunication v. 2.1.0, and 2) to present test examples used in the testprotocol for sending and receiving CareCommunication. Both test scripts and test examples are developed by MedCom. 
+This Implementation Guide (IG) has two purposes: 1) to present test scripts for sending CareCommunication v. 3.0.0, and 2) to present test examples used in the testprotocol for sending and receiving CareCommunication. Both test scripts and test examples are developed by MedCom. 
 
 The purpose of the CareCommunication standard is to support digital communication between parties within healthcare, including amongst others the psychiatric and social area. The CareCommunication is used to ensure secure electronic communication of personally identifiable information and is most often used for ad hoc communication.
 
@@ -10,8 +10,9 @@ The purpose of the CareCommunication standard is to support digital communicatio
 The following pages contains important information when implementing CareCommunications, as they contain relevant information:
 * [GitHub-pages for CareCommunications](https://medcomdk.github.io/dk-medcom-carecommunication)
   * [Testprotocol for sending and receiving CareCommunications](https://medcomdk.github.io/dk-medcom-carecommunication/#2-test-and-certification)
-* [Implementation Guide for CareCommunication v. 2.1.0](https://medcomfhir.dk/ig/carecommunication/2.1.0)
+* [Implementation Guide for CareCommunication v. 3.0.0](https://medcomfhir.dk/ig/carecommunication/3.0.0)
 * [Governance for MedCom FHIR messaging](https://medcomdk.github.io/MedCom-FHIR-Communication/)
+  * [Governance for CareCommunication](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/documents/governance-for-careCommunication.html)
 
 ### Governance
 A description of <a href="https://medcomdk.github.io/MedComLandingPage/#4-change-management-and-versioning">governance concerning change management and versioning of MedComs FHIR artefacts, can be found on here</a>.

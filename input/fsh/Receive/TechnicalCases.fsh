@@ -1,4 +1,4 @@
-//Get tec-01
+/* //Get tec-01
 Instance: CareCommunication_TestScript_receive-tec-01
 InstanceOf: TestScript
 * insert Metadata
@@ -90,4 +90,4 @@ InstanceOf: TestScript
 * insert createInitialMessageSetup(retract-message, 01, /Fixtures/CareCommunication-fixture-retract-new-cpr.xml, destinationUri-retract-message, bundleid-retract-message-01)
 * insert createMessageSetup(new-message, 02, /Fixtures/CareCommunication-fixture-new-message.xml, bundleid-new-message-02)
 * insert readMessage(retract-message, 01, bundleid-retract-message-01)
-* insert readMessage(new-message, 02, bundleid-new-message-02)
+* insert readMessage(new-message, 02, bundleid-new-message-02) */

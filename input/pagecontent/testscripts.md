@@ -31,10 +31,10 @@ All fixtures are based on the test patient:
 **Send:** 
 When sending a CareCommunication, a POST operation is required for all types of messages, and must be used for both the preconditional messages and actual messages being sent. The POST operation should be used from the API or SUT, and each posted message will be validated against the CareCommunication IG. Further, a number of asserts will test for correct concent of the CareCommunication message. The endpoint of the POST operation depends on the setup of the testscript, but it migth be similar to: `http://touchstone.aegis.net:49917/fhir4-0-1/Bundle`
 
-**Receive:**
+<!-- **Receive:**
 When receiving a CareCommunication, a GET operation must be used from the API or SUT. When using the GET operation a fixture will send from the server, which can be visualized in SUT.
 The endpoint of the GET operation depends on the setup of the testscript, but it will be composed by ther server endpoint, Resource type and Bundle.id. It migth be similar to `http://touchstone.aegis.net:49917/fhir4-0-1/Bundle/b10620cb-e2e6-436e-9185-c35f7e196cea`.
-
+ -->
 
 ### Send CareCommunication test scripts
 To execute all the test scripts below, both POST and GET operations must be used. Since it is optional to support sending forwarded, modification and retraction of messages, a the test scripts testing these functionalities are marked with *.  
@@ -120,7 +120,7 @@ When executing some of the send test scripts it is required that SUT has execute
 [^1]: Include one attachment of each mimetype.
 [^2]: This test script is only relevant, if the system supports the given use case.
 
-
+<!-- 
 ### Receive CareCommunication test scripts
 When receiving a CareCommunication, a GET operation is required for all messages. When receiving a reply, modification of reply or retraction of reply, the receiver would - in a real world scenario - have sent a new CareCommunication in advance. However, it is not possible to create such a setup in TouchStone, as it doesn't have the logic to take some of the content from the sent message and include it in a fixture. Therefore, isn't it a part of the test script to send a CareCommunication before receving a reply. 
 
@@ -192,3 +192,4 @@ When receiving a CareCommunication, a GET operation is required for all messages
 | [receive-tec-07](./TestScript-carecommunication-receive-tec-07) | Receive new CareCommunication with specific sender and recipient included | R1 |
 
 
+ -->

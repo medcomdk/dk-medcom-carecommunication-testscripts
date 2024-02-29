@@ -1,4 +1,4 @@
-//modify Reply with changed text
+/* //modify Reply with changed text
 Instance: CareCommunication_TestScript_send-modify-new
 InstanceOf: TestScript
 * insert Metadata
@@ -342,3 +342,4 @@ InstanceOf: TestScript
 * insert variableAttachmentIdentifier(forward-message, 02, image/tiff)
 * insert variableAttachmentIdentifier(modified-message, 03, image/tiff)
 * insert assertContentChanged(identifier-forward-message-02-image/tiff, identifier-modified-message-03-image/tiff)
+ */

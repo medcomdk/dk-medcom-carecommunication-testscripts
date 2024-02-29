@@ -22,7 +22,6 @@ Beskriver anvendte variable
 //* insert variableEncounterResourceIdentifier({type}, {number})
 * insert variableMessageHeaderId({type}, {number})
 * insert variableSearchParamIdentifier({type})
-
 /* 
 Beskriver den operation der udføres i denne test.
 */

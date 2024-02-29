@@ -18,6 +18,11 @@ RuleSet: variableBundleid(type, number)
 * variable[=].expression = "Bundle.id"
 * variable[=].sourceId = "create-message-{type}-{number}" 
 
+RuleSet: variableReceiverSOR(type, number)
+* variable[+].name = "receiver-sor"
+* variable[=].expression = "Bundle.entry[0].resource.sender.reference.resolve().identifier.where(system = 'urn:oid:1.2.208.176.1.1').value"
+* variable[=].sourceId = "create-message-{type}-{number}" 
+
 RuleSet: variableBundleidSetup(type, number)
 * variable[+].name = "bundleid-{type}-{number}"
 * variable[=].expression = "Bundle.id"

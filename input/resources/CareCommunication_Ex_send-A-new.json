@@ -1,0 +1,297 @@
+{
+  "meta": {
+    "profile": [
+      "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message"
+    ]
+  },
+  "resourceType": "Bundle",
+  "entry": [
+    {
+      "resource": {
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>\n  <p>\n    <b>Generated Narrative: MessageHeader</b>\n    <a name='5bf0661f-875d-40ae-b5bd-e9b323d6ebc0'/>\n  </p>\n  <div style='display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%'>\n    <p style='margin-bottom: 0px'>Resource MessageHeader \"5bf0661f-875d-40ae-b5bd-e9b323d6ebc0\"</p>\n    <p style='margin-bottom: 0px'>Profile:<a href='StructureDefinition-medcom-careCommunication-messageHeader.html'>MedComCareCommunicationMessageHeader</a>\n    </p>\n  </div>\n  <p>\n    <b>event</b>: Care Communication Message (Details: http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes code care-communication-message = &apos;Care Communication Message&apos;, stated as &apos;null&apos;)</p>\n  <h3>Destinations</h3>\n  <table class='grid'>\n    <tr>\n      <td style='display: none'>-</td>\n      <td>\n        <b>Extension</b>\n      </td>\n      <td>\n        <b>Endpoint</b>\n      </td>\n      <td>\n        <b>Receiver</b>\n      </td>\n    </tr>\n    <tr>\n      <td style='display: none'>*</td>\n      <td/>\n      <td>\n        <a href='https://sor2.sum.dsdn.dk/#id=953741000016009'>https://sor2.sum.dsdn.dk/#id=953741000016009</a>\n      </td>\n      <td>\n        <a href='#Organization_8b45d851-681e-415a-a3b9-ae54c58ccb42'>See above (Organization/8b45d851-681e-415a-a3b9-ae54c58ccb42)</a>\n      </td>\n    </tr>\n  </table>\n  <p>\n    <b>sender</b>:<a href='#Organization_de70f14b-0512-4db7-bca6-7a903b264320'>See above (Organization/de70f14b-0512-4db7-bca6-7a903b264320)</a>\n  </p>\n  <h3>Sources</h3>\n  <table class='grid'>\n    <tr>\n      <td style='display: none'>-</td>\n      <td>\n        <b>Endpoint</b>\n      </td>\n    </tr>\n    <tr>\n      <td style='display: none'>*</td>\n      <td>\n        <a href='https://sor2.sum.dsdn.dk/#id=265161000016000'>https://sor2.sum.dsdn.dk/#id=265161000016000</a>\n      </td>\n    </tr>\n  </table>\n  <p>\n    <b>focus</b>:<a href='#Communication_00485377-a8e6-49ad-909e-ffb4b0d4636c'>See above (Communication/00485377-a8e6-49ad-909e-ffb4b0d4636c)</a>\n  </p>\n</div>"
+        },
+        "resourceType": "MessageHeader",
+        "sender": {
+          "reference": "Organization/de70f14b-0512-4db7-bca6-7a903b264320"
+        },
+        "focus": [
+          {
+            "reference": "Communication/00485377-a8e6-49ad-909e-ffb4b0d4636c"
+          }
+        ],
+        "eventCoding": {
+          "code": "care-communication-message",
+          "system": "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes"
+        },
+        "source": {
+          "endpoint": "https://sor2.sum.dsdn.dk/#id=265161000016000"
+        },
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader"
+          ]
+        },
+        "destination": [
+          {
+            "endpoint": "https://sor2.sum.dsdn.dk/#id=953741000016009",
+            "receiver": {
+              "reference": "Organization/8b45d851-681e-415a-a3b9-ae54c58ccb42"
+            },
+            "extension": [
+              {
+                "valueCoding": {
+                  "code": "primary",
+                  "system": "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-destinationUse"
+                },
+                "url": "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension"
+              }
+            ]
+          }
+        ],
+        "id": "5bf0661f-875d-40ae-b5bd-e9b323d6ebc0"
+      },
+      "fullUrl": "MessageHeader/5bf0661f-875d-40ae-b5bd-e9b323d6ebc0"
+    },
+    {
+      "resource": {
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient"
+          ]
+        },
+        "resourceType": "Patient",
+        "name": [
+          {
+            "family": "Elmer",
+            "use": "official"
+          }
+        ],
+        "identifier": [
+          {
+            "value": "2509479989",
+            "system": "urn:oid:1.2.208.176.1.2"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>\n  <p>\n    <b>Generated Narrative: Patient</b>\n    <a name='e3393fb1-bc8f-4bca-a715-b9332a648d36'/>\n  </p>\n  <div style='display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%'>\n    <p style='margin-bottom: 0px'>Resource Patient \"e3393fb1-bc8f-4bca-a715-b9332a648d36\"</p>\n    <p style='margin-bottom: 0px'>Profile:<a href='http://medcomfhir.dk/ig/core/2.2.0/StructureDefinition-medcom-core-patient.html'>MedComCorePatient</a>\n    </p>\n  </div>\n  <p>\n    <b>identifier</b>: id: 2509479989</p>\n  <p>\n    <b>name</b>: Elmer (OFFICIAL)</p>\n</div>"
+        },
+        "id": "e3393fb1-bc8f-4bca-a715-b9332a648d36"
+      },
+      "fullUrl": "Patient/e3393fb1-bc8f-4bca-a715-b9332a648d36"
+    },
+    {
+      "resource": {
+        "status": "unknown",
+        "payload": [
+          {
+            "contentString": "Til rette vedkommende på Plejecenter Herlev. Vedr. overdragelse af Elmer fra udskrivelse ønsker, vi at gøre jer opmærksomme på hans kritiske tilstand, som beskrevet i epikrisen. Hi, I've attached the following journal note. It contains the information you requested over the phone: <br/> Proin aliquet sit amet justo quis auctor. Integer malesuada tempor purus sit amet dictum. Nulla dictum pharetra erat sit amet faucibus. Fusce porttitor, lectus sed volutpat pulvinar, tortor leo sodales elit, non mattis ligula enim dignissim ex. Donec ornare laoreet elit dapibus maximus. Mauris malesuada enim vitae ligula feugiat, eget rutrum orci auctor. Aenean feugiat volutpat magna ut venenatis. Proin eu ornare metus, in pretium sem. Aenean id bibendum urna. Sed ultricies mauris in erat bibendum rhoncus. Suspendisse ac porttitor tellus. Sed molestie pharetra turpis, pellentesque ultrices tortor sodales sit amet. Integer et nulla luctus, fermentum felis eget, consequat est. Curabitur sed blandit nunc. Etiam cursus neque id diam consequat pharetra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <br/> Nulla vitae lectus ut ipsum lobortis porttitor id eu purus. In finibus erat vitae orci volutpat, in euismod lorem dignissim. Vivamus volutpat orci sit amet velit pulvinar, id elementum lacus placerat. Donec scelerisque ligula at risus auctor venenatis ac et nibh. Donec eget cursus ipsum. Etiam interdum, velit vitae pulvinar egestas, quam risus interdum nisi, ut porta odio magna at diam. Cras dignissim tempor urna id condimentum. Cras molestie sagittis venenatis. Aenean at rutrum tellus, sit amet mollis elit. <br/> Praesent dictum lacinia enim sit amet scelerisque. Proin cursus enim luctus mi fringilla rhoncus. Praesent sagittis, erat vel auctor pretium, elit leo vulputate quam, a tincidunt ante justo sit amet eros. Duis condimentum, dui sed finibus convallis, ipsum neque dictum mauris, quis pulvinar mauris mi feugiat enim. Proin ullamcorper nibh lorem, nec consequat erat rhoncus ut. Praesent nisi ligula, molestie in nulla a, interdum sagittis neque. Nulla viverra elit ac eros mattis ultricies. Pellentesque a iaculis tellus. <br/> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo nibh nulla, sit amet interdum ex condimentum ac. Mauris sodales placerat mollis. Suspendisse non quam pretium, ultricies nisl in, vehicula neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut condimentum vel orci efficitur viverra. Praesent posuere molestie lacus at consectetur. Vivamus pharetra, eros vel porta pretium, urna sem sodales nisi, ac tristique massa nisl nec sem. Donec at massa non felis ullamcorper eleifend. Morbi sit amet pharetra orci. Vivamus laoreet viverra tempor. <br/> This journal note is written by Hans Hansen on the 20th of November 2022 after a hospitalisation. <br/> Proin aliquet sit amet justo quis auctor. Integer malesuada tempor purus sit amet dictum. Nulla dictum pharetra erat sit amet faucibus. Fusce porttitor, lectus sed volutpat pulvinar, tortor leo sodales elit, non mattis ligula enim dignissim ex. Donec ornare laoreet elit dapibus maximus. Mauris malesuada enim vitae ligula feugiat, eget rutrum orci auctor. Aenean feugiat volutpat magna ut venenatis. Proin eu ornare metus, in pretium sem. Aenean id bibendum urna. Sed ultricies mauris in erat bibendum rhoncus. Suspendisse ac porttitor tellus. Sed molestie pharetra turpis, pellentesque ultrices tortor sodales sit amet. Integer et nulla luctus, fermentum felis eget, consequat est. Curabitur sed blandit nunc. Etiam cursus neque id diam consequat pharetra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <br/> Nulla vitae lectus ut ipsum lobortis porttitor id eu purus. In finibus erat vitae orci volutpat, in euismod lorem dignissim. Vivamus volutpat orci sit amet velit pulvinar, id elementum lacus placerat. Donec scelerisque ligula at risus auctor venenatis ac et nibh. Donec eget cursus ipsum. Etiam interdum, velit vitae pulvinar egestas, quam risus interdum nisi, ut porta odio magna at diam. Cras dignissim tempor urna id condimentum. Cras molestie sagittis venenatis. Aenean at rutrum tellus, sit amet mollis elit. <br/> Praesent dictum lacinia enim sit amet scelerisque. Proin cursus enim luctus mi fringilla rhoncus. Praesent sagittis, erat vel auctor pretium, elit leo vulputate quam, a tincidunt ante justo sit amet eros. Duis condimentum, dui sed finibus convallis, ipsum neque dictum mauris, quis pulvinar mauris mi feugiat enim. Proin ullamcorper nibh lorem, nec consequat erat rhoncus ut. Praesent nisi ligula, molestie in nulla a, interdum sagittis neque. Nulla viverra elit ac eros mattis ultricies. Pellentesque a iaculis tellus. <br/> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo nibh nulla, sit amet interdum ex condimentum ac. Mauris sodales placerat mollis. Suspendisse non quam pretium, ultricies nisl in, vehicula neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut condimentum vel orci efficitur viverra. Praesent posuere molestie lacus at consectetur. Vivamus pharetra, eros vel porta pretium, urna sem sodales nisi, ac tristique massa nisl nec sem. Donec at massa non felis ullamcorper eleifend. Morbi sit amet pharetra orci. Vivamus laoreet viverra tempor. <br/> This journal note is written by Hans Hansen on the 20th of November 2022 after a hospitalisation. <br/> Proin aliquet sit amet justo quis auctor. Integer malesuada tempor purus sit amet dictum. Nulla dictum pharetra erat sit amet faucibus. Fusce porttitor, lectus sed volutpat pulvinar, tortor leo sodales elit, non mattis ligula enim dignissim ex. Donec ornare laoreet elit dapibus maximus. Mauris malesuada enim vitae ligula feugiat, eget rutrum orci auctor. Aenean feugiat volutpat magna ut venenatis. Proin eu ornare metus, in pretium sem. Aenean id bibendum urna. Sed ultricies mauris in erat bibendum rhoncus. Suspendisse ac porttitor tellus. Sed molestie pharetra turpis, pellentesque ultrices tortor sodales sit amet. Integer et nulla luctus, fermentum felis eget, consequat est. Curabitur sed blandit nunc. Etiam cursus neque id diam consequat pharetra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <br/> Nulla vitae lectus ut ipsum lobortis porttitor id eu purus. In finibus erat vitae orci volutpat, in euismod lorem dignissim. Vivamus volutpat orci sit amet velit pulvinar, id elementum lacus placerat. Donec scelerisque ligula at risus auctor venenatis ac et nibh. Donec eget cursus ipsum. Etiam interdum, velit vitae pulvinar egestas, quam risus interdum nisi, ut porta odio magna at diam. Cras dignissim tempor urna id condimentum. Cras molestie sagittis venenatis. Aenean at rutrum tellus, sit amet mollis elit. <br/> Praesent dictum lacinia enim sit amet scelerisque. Proin cursus enim luctus mi fringilla rhoncus. Praesent sagittis, erat vel auctor pretium, elit leo vulputate quam, a tincidunt ante justo sit amet eros. Duis condimentum, dui sed finibus convallis, ipsum neque dictum mauris, quis pulvinar mauris mi feugiat enim. Proin ullamcorper nibh lorem, nec consequat erat rhoncus ut. Praesent nisi ligula, molestie in nulla a, interdum sagittis neque. Nulla viverra elit ac eros mattis ultricies. Pellentesque a iaculis tellus. <br/> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo nibh nulla, sit amet interdum ex condimentum ac. Mauris sodales placerat mollis. Suspendisse non quam pretium, ultricies nisl in, vehicula neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut condimentum vel orci efficitur viverra. Praesent posuere molestie lacus at consectetur. Vivamus pharetra, eros vel porta pretium, urna sem sodales nisi, ac tristique massa nisl nec sem. Donec at massa non felis ullamcorper eleifend. Morbi sit amet pharetra orci. Vivamus laoreet viverra tempor. <br/> This journal note is written by Hans Hansen on the 20th of November 2022 after a hospitalisation. <br/> Proin aliquet sit amet justo quis auctor. Integer malesuada tempor purus sit amet dictum. Nulla dictum pharetra erat sit amet faucibus. Fusce porttitor, lectus sed volutpat pulvinar, tortor leo sodales elit, non mattis ligula enim dignissim ex. Donec ornare laoreet elit dapibus maximus. Mauris malesuada enim vitae ligula feugiat, eget rutrum orci auctor. Aenean feugiat volutpat magna ut venenatis. Proin eu ornare metus, in pretium sem. Aenean id bibendum urna. Sed ultricies mauris in erat bibendum rhoncus. Suspendisse ac porttitor tellus. Sed molestie pharetra turpis, pellentesque ultrices tortor sodales sit amet. Integer et nulla luctus, fermentum felis eget, consequat est. Curabitur sed blandit nunc. Etiam cursus neque id diam consequat pharetra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. <br/> Nulla vitae lectus ut ipsum lobortis porttitor id eu purus. In finibus erat vitae orci volutpat, in euismod lorem dignissim. Vivamus volutpat orci sit amet velit pulvinar, id elementum lacus placerat. Donec scelerisque ligula at risus auctor venenatis ac et nibh. Donec eget cursus ipsum. Etiam interdum, velit vitae pulvinar egestas, quam risus interdum nisi, ut porta odio magna at diam. Cras dignissim tempor urna id condimentum. Cras molestie sagittis venenatis. Aenean at rutrum tellus, sit amet mollis elit. <br/> Praesent dictum lacinia enim sit amet scelerisque. Proin cursus enim luctus mi fringilla rhoncus. Praesent sagittis, erat vel auctor pretium, elit leo vulputate quam, a tincidunt ante justo sit amet eros. Duis condimentum, dui sed finibus convallis, ipsum neque dictum mauris, quis pulvinar mauris mi feugiat enim. Proin ullamcorper nibh lorem, nec consequat erat rhoncus ut. Praesent nisi ligula, molestie in nulla a, interdum sagittis neque. Nulla viverra elit ac eros mattis ultricies. Pellentesque a iaculis tellus. <br/> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus commodo nibh nulla, sit amet interdum ex condimentum ac. Mauris sodales placerat mollis. Suspendisse non quam pretium, ultricies nisl in, vehicula neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut condimentum vel orci efficitur viverra. Praesent posuere molestie lacus at consectetur. Vivamus pharetra, eros vel porta pretium, urna sem sodales nisi, ac tristique massa nisl nec sem. Donec at massa non felis ullamcorper eleifend. Morbi sit amet pharetra orci. Vivamus laoreet viverra tempor. <br/> This journal note is written by Hans Hansen on the 20th of November 2022 after a hospitalisation. Hilsen Michael, sygeplejerske.",
+            "extension": [
+              {
+                "valueDateTime": "2024-10-15T12:00:00+01:00",
+                "url": "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-datetime-extension"
+              },
+              {
+                "valueIdentifier": {
+                  "assigner": {
+                    "reference": "Organization/de70f14b-0512-4db7-bca6-7a903b264320"
+                  },
+                  "value": "urn:uuid:6c778b87-4a07-4477-8551-9a2e2ee3fc67"
+                },
+                "url": "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-identifier-extension"
+              },
+              {
+                "valueReference": {
+                  "reference": "PractitionerRole/a5fd16ab-63b3-422f-9cf1-1092f1c4bb1d"
+                },
+                "url": "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner-extension"
+              },
+              {
+                "valueContactPoint": {
+                  "value": "38683868",
+                  "system": "phone"
+                },
+                "url": "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-contact-extension"
+              }
+            ]
+          }
+        ],
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication"
+          ]
+        },
+        "resourceType": "Communication",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "carecoordination",
+                "system": "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-careCommunication-categoryCodes"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/e3393fb1-bc8f-4bca-a715-b9332a648d36"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>\n  <p>\n    <b>Generated Narrative: Communication</b>\n    <a name='00485377-a8e6-49ad-909e-ffb4b0d4636c'/>\n  </p>\n  <div style='display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%'>\n    <p style='margin-bottom: 0px'>Resource Communication \"00485377-a8e6-49ad-909e-ffb4b0d4636c\"</p>\n    <p style='margin-bottom: 0px'>Profile:<a href='StructureDefinition-medcom-careCommunication-communication.html'>MedComCareCommunication</a>\n    </p>\n  </div>\n  <p>\n    <b>status</b>: unknown</p>\n  <p>\n    <b>category</b>: Care Coordination<span style='background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki'>(<a href='http://medcomfhir.dk/ig/terminology/1.4.0/CodeSystem-medcom-careCommunication-categoryCodes.html'>MedComCareCommunicationCategories</a>#carecoordination)</span>\n  </p>\n  <p>\n    <b>subject</b>:<a href='#Patient_e3393fb1-bc8f-4bca-a715-b9332a648d36'>See above (Patient/e3393fb1-bc8f-4bca-a715-b9332a648d36)</a>\n  </p>\n  <h3>Payloads</h3>\n  <table class='grid'>\n    <tr>\n      <td style='display: none'>-</td>\n      <td>\n        <b>Extension</b>\n      </td>\n      <td>\n        <b>Content[x]</b>\n      </td>\n    </tr>\n    <tr>\n      <td style='display: none'>*</td>\n      <td>, , ,</td>\n      <td>Regarding the rehabilitation plan, please notice that...</td>\n    </tr>\n  </table>\n</div>"
+        },
+        "id": "00485377-a8e6-49ad-909e-ffb4b0d4636c"
+      },
+      "fullUrl": "Communication/00485377-a8e6-49ad-909e-ffb4b0d4636c"
+    },
+    {
+      "resource": {
+        "practitioner": {
+          "reference": "Practitioner/c44502b8-4958-43f2-ace6-295acb47fe73"
+        },
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole"
+          ]
+        },
+        "resourceType": "PractitionerRole",
+        "code": [
+          {
+            "coding": [
+              {
+                "code": "sygeplejerske",
+                "system": "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesSKSadministrativ"
+              }
+            ]
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>\n  <p>\n    <b>Generated Narrative: PractitionerRole</b>\n    <a name='a5fd16ab-63b3-422f-9cf1-1092f1c4bb1d'/>\n  </p>\n  <div style='display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%'>\n    <p style='margin-bottom: 0px'>Resource PractitionerRole \"a5fd16ab-63b3-422f-9cf1-1092f1c4bb1d\"</p>\n    <p style='margin-bottom: 0px'>Profile:<a href='http://medcomfhir.dk/ig/core/2.2.0/StructureDefinition-medcom-core-practitionerrole.html'>MedComCorePractitionerRole</a>\n    </p>\n  </div>\n  <p>\n    <b>practitioner</b>:<a href='#Practitioner_c44502b8-4958-43f2-ace6-295acb47fe73'>See above (Practitioner/c44502b8-4958-43f2-ace6-295acb47fe73)</a>\n  </p>\n  <p>\n    <b>code</b>: Sygeplejerske<span style='background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki'>(<a href='http://medcomfhir.dk/ig/terminology/1.4.0/CodeSystem-medcom-core-PractitionerRolesSKSadministrativ.html'>MedComCorePractitionerRolesSKSadministrativ</a>#sygeplejerske)</span>\n  </p>\n</div>"
+        },
+        "id": "a5fd16ab-63b3-422f-9cf1-1092f1c4bb1d"
+      },
+      "fullUrl": "PractitionerRole/a5fd16ab-63b3-422f-9cf1-1092f1c4bb1d"
+    },
+    {
+      "resource": {
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner"
+          ]
+        },
+        "resourceType": "Practitioner",
+        "name": [
+          {
+            "family": "Burns",
+            "given": [
+              "Michael"
+            ]
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>\n  <p>\n    <b>Generated Narrative: Practitioner</b>\n    <a name='c44502b8-4958-43f2-ace6-295acb47fe73'/>\n  </p>\n  <div style='display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%'>\n    <p style='margin-bottom: 0px'>Resource Practitioner \"c44502b8-4958-43f2-ace6-295acb47fe73\"</p>\n    <p style='margin-bottom: 0px'>Profile:<a href='http://medcomfhir.dk/ig/core/2.2.0/StructureDefinition-medcom-core-practitioner.html'>MedComCorePractitioner</a>\n    </p>\n  </div>\n  <p>\n    <b>name</b>: Michael Burns</p>\n</div>"
+        },
+        "id": "c44502b8-4958-43f2-ace6-295acb47fe73"
+      },
+      "fullUrl": "Practitioner/c44502b8-4958-43f2-ace6-295acb47fe73"
+    },
+    {
+      "resource": {
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization"
+          ]
+        },
+        "resourceType": "Organization",
+        "name": "Plejecenter Herlev",
+        "identifier": [
+          {
+            "value": "5790001348120",
+            "system": "https://www.gs1.org/gln"
+          },
+          {
+            "value": "953741000016009",
+            "system": "urn:oid:1.2.208.176.1.1"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>\n  <p>\n    <b>Generated Narrative: Organization</b>\n    <a name='8b45d851-681e-415a-a3b9-ae54c58ccb42'/>\n  </p>\n  <div style='display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%'>\n    <p style='margin-bottom: 0px'>Resource Organization \"8b45d851-681e-415a-a3b9-ae54c58ccb42\"</p>\n    <p style='margin-bottom: 0px'>Profile:<a href='http://medcomfhir.dk/ig/messaging/2.0.0/StructureDefinition-medcom-messaging-organization.html'>MedComMessagingOrganization</a>\n    </p>\n  </div>\n  <p>\n    <b>identifier</b>: id: 5790001348120, id: 953741000016009</p>\n  <p>\n    <b>name</b>: Plejecenter Herlev</p>\n</div>"
+        },
+        "id": "8b45d851-681e-415a-a3b9-ae54c58ccb42"
+      },
+      "fullUrl": "Organization/8b45d851-681e-415a-a3b9-ae54c58ccb42"
+    },
+    {
+      "resource": {
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization"
+          ]
+        },
+        "resourceType": "Organization",
+        "name": "Hjerteafdelingen på Herlev og Gentofte hospital",
+        "identifier": [
+          {
+            "value": "5790000209354",
+            "system": "https://www.gs1.org/gln"
+          },
+          {
+            "value": "265161000016000",
+            "system": "urn:oid:1.2.208.176.1.1"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>\n  <p>\n    <b>Generated Narrative: Organization</b>\n    <a name='de70f14b-0512-4db7-bca6-7a903b264320'/>\n  </p>\n  <div style='display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%'>\n    <p style='margin-bottom: 0px'>Resource Organization \"de70f14b-0512-4db7-bca6-7a903b264320\"</p>\n    <p style='margin-bottom: 0px'>Profile:<a href='http://medcomfhir.dk/ig/messaging/2.0.0/StructureDefinition-medcom-messaging-organization.html'>MedComMessagingOrganization</a>\n    </p>\n  </div>\n  <p>\n    <b>identifier</b>: id: 5790000209354, id: 265161000016000</p>\n  <p>\n    <b>name</b>: Hjerteafdelingen på Herlev og Gentofte hospital</p>\n</div>"
+        },
+        "id": "de70f14b-0512-4db7-bca6-7a903b264320"
+      },
+      "fullUrl": "Organization/de70f14b-0512-4db7-bca6-7a903b264320"
+    },
+    {
+      "resource": {
+        "occurredDateTime": "2024-10-15T12:00:00+01:00",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns='http://www.w3.org/1999/xhtml'>\n  <p>\n    <b>Generated Narrative: Provenance</b>\n    <a name='d5c7dabc-2031-4516-9227-569b9024459f'/>\n  </p>\n  <div style='display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%'>\n    <p style='margin-bottom: 0px'>Resource Provenance \"d5c7dabc-2031-4516-9227-569b9024459f\"</p>\n    <p style='margin-bottom: 0px'>Profile:<a href='http://medcomfhir.dk/ig/messaging/2.0.0/StructureDefinition-medcom-messaging-provenance.html'>MedComMessagingProvenance</a>\n    </p>\n  </div>\n  <p>\n    <b>target</b>:<a href='#MessageHeader_5bf0661f-875d-40ae-b5bd-e9b323d6ebc0'>See above (MessageHeader/5bf0661f-875d-40ae-b5bd-e9b323d6ebc0)</a>\n  </p>\n  <p>\n    <b>occurred</b>: 2024-10-15 12:00:00+0100</p>\n  <p>\n    <b>recorded</b>: 1. mar. 2023 12.00.00</p>\n  <p>\n    <b>activity</b>: A new message has been sent<span style='background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki'>(<a href='http://medcomfhir.dk/ig/terminology/1.4.0/CodeSystem-medcom-messaging-activityCodes.html'>MedComMessagingActivityCodes</a>#new-message)</span>\n  </p>\n  <h3>Agents</h3>\n  <table class='grid'>\n    <tr>\n      <td style='display: none'>-</td>\n      <td>\n        <b>Who</b>\n      </td>\n    </tr>\n    <tr>\n      <td style='display: none'>*</td>\n      <td>\n        <a href='#Organization_de70f14b-0512-4db7-bca6-7a903b264320'>See above (Organization/de70f14b-0512-4db7-bca6-7a903b264320)</a>\n      </td>\n    </tr>\n  </table>\n</div>"
+        },
+        "resourceType": "Provenance",
+        "target": [
+          {
+            "reference": "MessageHeader/5bf0661f-875d-40ae-b5bd-e9b323d6ebc0"
+          }
+        ],
+        "recorded": "2024-10-15T12:00:00+01:00",
+        "activity": {
+          "coding": [
+            {
+              "code": "new-message",
+              "system": "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "reference": "Organization/de70f14b-0512-4db7-bca6-7a903b264320"
+            }
+          }
+        ],
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance"
+          ]
+        },
+        "id": "d5c7dabc-2031-4516-9227-569b9024459f"
+      },
+      "fullUrl": "Provenance/d5c7dabc-2031-4516-9227-569b9024459f"
+    }
+  ],
+  "timestamp": "2024-10-15T12:00:00+01:00",
+  "type": "message",
+  "id": "3ed1491b-521e-416a-a215-d3e1fb2da43d"
+}

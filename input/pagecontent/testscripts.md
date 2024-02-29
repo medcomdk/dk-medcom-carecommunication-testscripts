@@ -1,6 +1,6 @@
 The test scripts are created by MedCom for testing in [TouchStone](https://touchstone.aegis.net/touchstone/) during MedCom test and certification. The test scripts may be used locally by vendors in their own testsetup, e.g. during code development or test. 
 
-Test scripts presented in this IG are all based on the [FHIR TestScript resource](https://www.hl7.org/fhir/testscript.html). TouchStone and an application programming interface (API), e.g. Postman, or the system under test (SUT), are used to execute the testscripts. 
+Test scripts presented in this IG are all based on the [FHIR TestScript resource](https://www.hl7.org/fhir/testscript.html). TouchStone and an application programming interface (API), e.g. Postman, or the system under test (SUT), are used to execute the test scripts. 
 
 ### Before getting started
 
@@ -28,37 +28,38 @@ All fixtures are based on the test patient:
 
 #### Operations
 
-**Send:** 
 When sending a CareCommunication, a POST operation is required for all types of messages, and must be used for both the preconditional messages and actual messages being sent. The POST operation should be used from the API or SUT, and each posted message will be validated against the CareCommunication IG. Further, a number of asserts will test for correct concent of the CareCommunication message. The endpoint of the POST operation depends on the setup of the testscript, but it migth be similar to: `http://touchstone.aegis.net:49917/fhir4-0-1/Bundle`
 
-<!-- **Receive:**
-When receiving a CareCommunication, a GET operation must be used from the API or SUT. When using the GET operation a fixture will send from the server, which can be visualized in SUT.
-The endpoint of the GET operation depends on the setup of the testscript, but it will be composed by ther server endpoint, Resource type and Bundle.id. It migth be similar to `http://touchstone.aegis.net:49917/fhir4-0-1/Bundle/b10620cb-e2e6-436e-9185-c35f7e196cea`.
- -->
+When receiving a CareCommunication, which is the cases in some preconditions, a GET operation must be used from the API or SUT. When using the GET operation a fixture will send from the server, which can be visualized in SUT.
+The endpoint of the GET operation depends on the setup of the testscript, but it will be composed by the server endpoint, Resource type and id. It migth be similar to `http://touchstone.aegis.net:49917/fhir4-0-1/Bundle/b10620cb-e2e6-436e-9185-c35f7e196cea`.
 
 ### Send CareCommunication test scripts
-To execute all the test scripts below, both POST and GET operations must be used. Since it is optional to support sending forwarded, modification and retraction of messages, a the test scripts testing these functionalities are marked with *.  
+To execute all the test scripts below, both POST and GET operations must be used. 
 
-When executing some of the send test scripts it is required that SUT has executed one or more use cases in advance by sending a message. These use cases are listed in the 'Precondition' columns in the tables. 
+Since it is optional to support sending forwarded, modification and retraction of messages, a the test scripts testing these functionalities are marked with *.  
+
+When executing some of the send test scripts, it is required that SUT has executed one or more use cases in advance by sending a message. These use cases are listed in the 'Precondition' columns in the tables. 
 
 #### Use Cases
 
-[Test scripts for test of the sending use cases, can be found here in TouchStone.](https://touchstone.aegis.net/touchstone/testdefinitions?selectedTestGrp=/FHIRSandbox/MedCom/CareCommunication/v210-send&activeOnly=false&contentEntry=TEST_SCRIPTS) or or see all receiving test scripts in the [conformance test suite](https://touchstone.aegis.net/touchstone/conformance/current?suite=FHIR4-0-1-CareCommunication-v210-Send-Client), which will be used for test and certification. 
+[Test scripts for test of the sending use cases, can be found here in TouchStone](https://touchstone.aegis.net/touchstone/testdefinitions?selectedTestGrp=/FHIRSandbox/MedCom/CareCommunication/v300-send&activeOnly=false&contentEntry=TEST_SCRIPTS) or see all sending test scripts in the [conformance test suite](https://touchstone.aegis.net/touchstone/conformance/current?suite=FHIR4-0-1-CareCommunication-v300-Send-Client), which will be used for test and certification. The conformance suite provides a great overview of the executed test scripts.
 
 | **Type** | **Use case <br> code** | **Description** | **Activity** | **Precondition use case** |
 |---|---|---|---|---|
 | **New message** |  |  |  |  |
-| [send-new-message](./TestScript-carecommunication-send-new-message) | S1 | Send CareCommunication  | new-message |  |
-| [send-new-attachment](./TestScript-carecommunication-send-new-attachment) | S1.A1 | Send CareCommunication with attached files [^1] | new-message |  |
-| [send-new-topic](./TestScript-carecommunication-send-new-topic) | S1.A2 | Send CareCommunication with topic | new-message |  |
-| [send-new-formatted-text](./TestScript-carecommunication-send-ew-formatted-text)[^2] | S1.A3 | Send CareCommunication with formatted text and table | new-message |  |
-| [send-new-category-other](./TestScript-carecommunication-send-new-category-other) | S1.A5 | Send CareCommunication with category 'Other'| new-message | |
-| [send-new-priority](./TestScript-carecommunication-send-new-priority) | S1.A6 | Send CareCommunication with category 'Regarding referral' <br> and included priority| new-message |  |
+| [send-new-message](./TestScript-carecommunication-send-new-message) | S1 | Send CareCommunication. <br> Receiver is expected to be 'Klinik for Ældresygdomme, AUH, Skejby' with SOR-id: 441211000016000 | new-message |  |
+| [send-new-attachment](./TestScript-carecommunication-send-new-attachment) | S1.A1 | Send CareCommunication with attached files [^1]. <br> Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004 | new-message |  |
+| [send-new-topic](./TestScript-carecommunication-send-new-topic) | S1.A2 | Send CareCommunication with topic. <br> Receiver is expected to be 'Lægeklinik Ølgod' with SOR-id: 1339531000016004 | new-message |  |
+| [send-new-formatted-text](./TestScript-carecommunication-send-new-formatted-text)[^3] | S1.A3 | Send CareCommunication with formatted text and table. <br> Receiver is expected to be 'Anita Thenstrup' with SOR-id: 502191000016006 | new-message |  |
+| [send-new-category-other](./TestScript-carecommunication-send-new-category-other) | S1.A5 | Send CareCommunication with category 'Other'. <br> Receiver is expected to be 'SLB Hjertesygdomme Ambulatorium (Kolding), Kolding Sygehus' with SOR-id: 349061000016004 | new-message | |
+| [send-new-priority](./TestScript-carecommunication-send-new-priority) | S1.A6 | Send CareCommunication with category 'Regarding referral' and included priority. <br> Receiver is expected to be 'Pædagogisk Psykologisk Rådgivning, Aalborg kommune' with SOR-id: 1385391000016002 | new-message |  |
 | **Reply** |  |  |  |  |
 | [send-reply-message](./TestScript-carecommunication-send-reply-message) | S2 | Reply CareCommunication | reply-message | R1 |
 | [send-reply-attachment](./TestScript-carecommunication-send-reply-attachment) | S2.A1 | Reply CareCommunication with attached files [^1] | reply-message | R1 |
+| [send-reply-attachment](./TestScript-carecommunication-send-reply-add-attachment) | S2.A1 | Reply CareCommunication add new attachments [^1] | reply-message | R1 |
 | [send-reply-changecategory](./TestScript-carecommunication-send-reply-changecategory) | S2.A2 | Reply CareCommunication with changed category | reply-message | R1 |
 | [send-reply-changetopic](./TestScript-carecommunication-send-reply-changetopic) | S2.A2 | Reply CareCommunication with changed topic | reply-message | R1 |
+| [send-reply-new](./TestScript-carecommunication-send-reply-new) | S2 | Reply CareCommunication to a CareCommunication send by the replying system | reply-message | S1 |
 | <span style="color: grey;">reply-oioxmlmessage</span> | <span style="color: grey;">S2.A3</span>  | <span style="color: grey;">Reply to OIOXML</span> | <span style="color: grey;">reply-message</span> | <span style="color: grey;">R1 (OIOXML-message)</span> |
 | <span style="color: grey;">reply-fhirmessage</span> | <span style="color: grey;">S2.A3</span>  | <span style="color: grey;">Reply to FHIR message</span> | <span style="color: grey;">reply-message</span> | <span style="color: grey;">R1 (FHIR-message)</span> |
 | **Forward** |  |  |  |  |
@@ -72,7 +73,7 @@ When executing some of the send test scripts it is required that SUT has execute
 | [send-modify-new-category](./TestScript-carecommunication-send-modify-new-category)* | S.CORR | Correct category of a new CareCommunication  | modify-message | S1 |
 | [send-modify-new-topic](./TestScript-carecommunication-send-modify-new-topic)* | S.CORR | Correct topic of a new CareCommunication  | modify-message | S1.A2 |
 | [send-modify-new-attachment](./TestScript-carecommunication-send-modify-new-attachment)* | S.CORR | Correct with attached files of a new CareCommunication | modify-message | S1.A1 |
-| [send-modify-new-formatted-text](./TestScript-carecommunication-send-modify-new-formatted-text)*[^2] | S.CORR | Correct formatted text and table of a new CareCommunication | modify-message | S1.A3 |
+| [send-modify-new-formatted-text](./TestScript-carecommunication-send-modify-new-formatted-text)*[^3] | S.CORR | Correct formatted text and table of a new CareCommunication | modify-message | S1.A3 |
 | [send-modify-new-category-other](./TestScript-carecommunication-send-modify-new-category-other)* | S.CORR | Correct category of a new CareCommunication from 'Other'  | modify-message | S1.A5 |
 | [send-modify-new-priority](./TestScript-carecommunication-send-modify-new-priority)* | S.CORR | Correct category from 'Regarding referral'  | modify-message | S1.A6 |
 | [send-modify-new-to-category-other](./TestScript-carecommunication-send-modify-new-to-category-other)* | S.CORR | Correct category of a new CareCommunication to 'Other'  | modify-message | S1.A5 |
@@ -101,14 +102,14 @@ When executing some of the send test scripts it is required that SUT has execute
 
 #### Technical cases
 
-[Test scripts for test of sending technical cases, can be found here in TouchStone.](https://touchstone.aegis.net/touchstone/)
+[Test scripts for test of sending technical cases, can be found here in TouchStone.](https://touchstone.aegis.net/touchstone/) They are also included in the conformance suite.
 
 | **Type** | **Description** | **Activity/activities** |
 |---|---|---|
 | [send-tec-01](./TestScript-carecommunication-send-tec-01) | Send CareCommunication with sender and recipient | S1 |
 | [send-tec-02](./TestScript-carecommunication-send-tec-02) | Send CareCommunication, where the receive is 'Plejecenter Herlev' with GLN-number '5790001348120' | S1 |
 | <span style="color: grey;">send-tec-03</span> | <span style="color: grey;">Send CareCommunication with the maximum length in the text of the message segment</span> | <span style="color: grey;">S1</span> |
-| [send-tec-04](./TestScript-carecommunication-send-tec-04)[^2] | Send CareCommunication with attachment and an associated structured signature | S1.A1 |
+| [send-tec-04](./TestScript-carecommunication-send-tec-04)* | Send CareCommunication with attachment and an associated structured signature | S1.A1 |
 | [send-tec-05](./TestScript-carecommunication-send-tec-05) | Send CareCommunication with episodeOfCareID | S1 |
 | [send-tec-06](./TestScript-carecommunication-send-tec-06) | Reply to CareCommunication, where episodeOfCare-identifier is correctly transfered in the communication | R1, S2 |
 | [send-tec-07](./TestScript-carecommunication-send-tec-07)* | Cancel CareCommunication which has already been corrected. Expected to cancel the entire thread. | S1, S.CORR, S.CANC |
@@ -118,7 +119,8 @@ When executing some of the send test scripts it is required that SUT has execute
 
 
 [^1]: Include one attachment of each mimetype.
-[^2]: This test script is only relevant, if the system supports the given use case.
+[^2]: This test script is only relevant, if the system supports the user can select a specific part of the CareCommunciation to forward.
+[^3]: This test script is only relevant, if the system supports the entire subset of formatting.
 
 <!-- 
 ### Receive CareCommunication test scripts

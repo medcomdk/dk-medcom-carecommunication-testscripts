@@ -1,4 +1,4 @@
-//tec-01
+/* //tec-01
 Instance: CareCommunication_TestScript_send-tec-01
 InstanceOf: TestScript
 * insert Metadata
@@ -36,7 +36,7 @@ InstanceOf: TestScript
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-tec-03" 
 * name = "CareCommunicationTestScript"
 * insert createInitialMessage(new-message, 01, /Fixtures/CareCommunication-fixture.xml)
-// miss the assert of maxsize */
+// miss the assert of maxsize 
 
 //tec-04
 Instance: CareCommunication_TestScript_send-tec-04
@@ -130,4 +130,4 @@ InstanceOf: TestScript
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-tec-10" 
 * name = "CareCommunicationTestScript"
 * insert createInitialMessage(new-message, 01, /Fixtures/CareCommunication-fixture.xml)
-* insert assertPatientDeceased(true)
+* insert assertPatientDeceased(true) */

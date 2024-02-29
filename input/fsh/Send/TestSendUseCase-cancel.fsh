@@ -1,4 +1,4 @@
-//cancel new - cpr
+/* //cancel new - cpr
 Instance: CareCommunication_TestScript_send-retract-new-cpr
 InstanceOf: TestScript
 * insert Metadata
@@ -169,3 +169,4 @@ InstanceOf: TestScript
 * insert assertCommunicationStatus(unknown)
 * insert assertCancallationReason(entered-in-error, Cancellation due to attachment with content concerning a incorrect CPR-number)
 
+ */

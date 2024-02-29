@@ -3,26 +3,34 @@ The examples presented below are intended to be used in the test protocol for se
 
 #### Test patient/citizens
 All examples include are based on the test patient:
-* Name: Elmer
-* CPR-nr.: 250947-9989
+* Name: Bruno Test Elmer
+* CPR-no.: 2509479989
+and 
+* Name: Peter Unknown
+* E-CPR: 1206550VK9
 
 #### Test examples for sending a CareCommunication
 
 [Download test examples for sending a CareCommunication (.zip)](./TestExamples/CareCommunication_Ex_send.zip)
 
-|  Test example     |     Description     | Used for test of use case |
+|  Test example     |     Description     | 
 |---|---|
-| [send-new-message_A](./Bundle-eb46ca59-3982-4eaf-b5eb-9ac1eaa88a31.html) | A new CareCommunication   | S2 Reply CareCommunication|
-| [send-new-message_B](./Bundle-61da3914-596e-430c-8996-683b2e686e54.html) | A new CareCommunication with attachments  | S2.A1 Reply CareCommunication with attachments|
-| [send-new-message_C](./Bundle-ffdd0aa5-7eb3-4297-b73f-b6dbbf8e1eb6.html) | A new CareCommunication| S2.A2 Reply CareCommunication change category and topic |
-| FHIR_D[^1] | A FHIR message  |  S2.A3 Reply a received FHIR, OIOXML or EDIFACT message with a CareCommunication|
-| OIOXML_D[^2] | An OIOXML message |  S2.A3 Reply a received FHIR, OIOXML or EDIFACT message with a CareCommunication|
-| [send-new-message_E](./Bundle-94ef05ca-fa16-4029-9cb0-f3fd4208815b.html) | A new CareCommunication  | S3 Forward CareCommunication |
-| [send-new-message_F](./Bundle-3ea9d0db-83c6-4730-a806-5abfb56c597e.html) | A new CareCommunication with attachments  | S3.A1 Forward CareCommunication with attachments|
-| [send-new-message_G](./Bundle-96518f3d-4958-40ec-9af6-4ca83a7eebae.html) | A new CareCommunication | S3.A2 Forward CareCommunication change category and topic|
-| [send-reply-message_H](./Bundle-1662dc38-e995-4dd0-ab2a-064b21256acc.html) | A replied message | S3.A3 Forward a selected part of a CareCommunication thread|
+| [CareCommunication_Ex_send-A-new](./Bundle-1932711d-49d0-4ad7-b1ee-61de711892d2.html) | A new CareCommunication. Including long journal note, specifik sender and recipient, topic, prioritet, attachment structured author information.  |
+| [CareCommunication_Ex_send-B-new](./Bundle-720f68cf-21bf-4c40-a90c-a113e00e88a8.html) | A new CareCommunication. ContentString includes escaped signs and without sender and receiver name.| 
+| [CareCommunication_Ex_send-C-new-attachment](./Bundle-683f2782-11e2-490a-9fa5-d5da09cc317a.html) | A new CareCommunication with attachment.  | 
+| [CareCommunication_Ex_send-D-new-attachment](./Bundle-5f85e1bd-03ea-47b9-bfe1-dbde95e69c75.html) | A new CareCommunication with attachment.  | 
+| [CareCommunication_Ex_send-E-new](./Bundle-81b715aa-e993-4e7c-9b8a-4a05c10b540e.html) | A new CareCommunication. | 
+| [CareCommunication_Ex_send-F-new-change](./Bundle-9c2371ff-09a0-4626-9fb9-f70645546361.html) | A new CareCommunication. | 
+| G-EDIFACT[^1] | An EDIFACT message   |
+| G-OIOXML[^2] | An OIOXML message |  
+| [CareCommunication_Ex_send-H-new](./Bundle-.html) | A new CareCommunication. Patient has a replacement CPR (e-CPR).| 
+| [CareCommunication_Ex_send-I-new-attachment](./Bundle-.html) | A new CareCommunication with attachment  | 
+| [CareCommunication_Ex_send-J-new-change](./Bundle-.html) | A new CareCommunication. |
+| [CareCommunication_Ex_send-K-new](./Bundle-.html) | A new CareCommunication. | 
+| [CareCommunication_Ex_send-Tek-A-new-episodeOfCare](./Bundle-.html) | A new CareCommunication with an EpisodeOfCare-identifier. |
+| [CareCommunication_Ex_send-Tek-B-new-episodeOfCare](./Bundle-.html) | A new CareCommunication with an EpisodeOfCare-identifier.  | 
 
-[^1]: Currently no MedCom FHIR message that is relevant to reply exists. An example will be provided when relevant.
+[^1]: Currently, no MedCom FHIR message that is relevant to reply exists. An example will be provided when relevant.
 [^2]: A referal, discharge letter or another relevant OIOXML message may be selected here. 
 
 #### Test examples for receiving a CareCommunication

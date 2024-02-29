@@ -133,7 +133,19 @@ RuleSet: assertStructureEpisodeOfCareID
 RuleSet: assertSenderSOR(hospitalSOR)
 * test[=].action[+].assert.description = "Confirm that the sender SOR number is different from the previous message."
 * test[=].action[=].assert.direction = #request
-* test[=].action[=].assert.expression = "Bundle.entry[0].resource.sender.reference.resolve().identifier.where(system = 'urn:oid:1.2.208.176.1.1').value != ${{hospitalSOR}}"
+* test[=].action[=].assert.expression = "Bundle.entry[0].resource.sender.reference.resolve().identifier.where(system = 'urn:oid:1.2.208.176.1.1').value != ${{hospitalSOR}})"
+* test[=].action[=].assert.warningOnly = false
+
+RuleSet: assertReceiverSOR(receiverSOR)
+* test[=].action[+].assert.description = "Confirm that the receiver SOR-id is {receiverSOR}"
+* test[=].action[=].assert.direction = #request
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(MessageHeader).destination.receiver.reference.resolve().identifier.where(system = 'urn:oid:1.2.208.176.1.1').value = '{receiverSOR}'"
+* test[=].action[=].assert.warningOnly = false
+
+RuleSet: assertReceiverEAN(receiverEAN)
+* test[=].action[+].assert.description = "Confirm that the receiver EAN-number is {receiverEAN}"
+* test[=].action[=].assert.direction = #request
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(MessageHeader).destination.receiver.reference.resolve().identifier.where(system = 'https://www.gs1.org/gln').value = '{receiverEAN}'"
 * test[=].action[=].assert.warningOnly = false
 /* 
 RuleSet: assertSenderGLN(hospitalGLN)

@@ -7,7 +7,7 @@ InstanceOf: TestScript
 * title = "Send CareCommunication. Receiver is expected to be 'Klinik for Ældresygdomme, AUH, Skejby' with SOR-id: 441211000016000."
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-new-message" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
+* insert createInitialMessage(new-message, 01, /Fixtures/CareCommunication-fixture.xml) 
 * insert assertReceiverEAN(5790001987244)
 * insert assertReceiverSOR(441211000016000)
 
@@ -20,7 +20,7 @@ InstanceOf: TestScript
 * title = "Send CareCommunication with attached files. One attachment of each mimetype is exected. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004."
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-new-attachment" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
+* insert createInitialMessage(new-message, 01, /Fixtures/CareCommunication-fixture.xml) 
 * insert assertMimetype(application/pdf)
 * insert assertMimetype(image/gif)
 * insert assertMimetype(image/jpeg)
@@ -38,7 +38,7 @@ InstanceOf: TestScript
 * title = "Send CareCommunication with topic. Receiver is expected to be 'Lægeklinik Ølgod' with SOR-id: 1339531000016004."
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-new-topic" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
+* insert createInitialMessage(new-message, 01, /Fixtures/CareCommunication-fixture.xml) 
 * insert assertTopicIncluded
 * insert assertReceiverEAN(5790002626814)
 * insert assertReceiverSOR(1339531000016004)
@@ -52,7 +52,7 @@ InstanceOf: TestScript
 * title = "Send CareCommunication with formatted text and table. Receiver is expected to be 'Anita Thenstrup' with SOR-id: 502191000016006."
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-new-formatted-text" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
+* insert createInitialMessage(new-message, 01, /Fixtures/CareCommunication-fixture.xml) 
 * insert assertXHTMLCheck
 * insert assertReceiverEAN(5790002003165)
 * insert assertReceiverSOR(502191000016006)
@@ -66,7 +66,7 @@ InstanceOf: TestScript
 * title = "Send CareCommunication with category 'Other'. Receiver is expected to be 'SLB Hjertesygdomme Ambulatorium (Kolding), Kolding Sygehus' with SOR-id: 349061000016004. "
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-new-category-other" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
+* insert createInitialMessage(new-message, 01, /Fixtures/CareCommunication-fixture.xml) 
 * insert assertCategory(other)
 * insert assertTopicIncluded
 * insert assertReceiverEAN(5790002027451)
@@ -81,7 +81,7 @@ InstanceOf: TestScript
 * title = "Send CareCommunication with category 'Regarding referral' and included priority. Receiver is expected to be 'Pædagogisk Psykologisk Rådgivning, Aalborg kommune' with SOR-id: 1385391000016002."
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-new-priority" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
+* insert createInitialMessage(new-message, 01, /Fixtures/CareCommunication-fixture.xml) 
 * insert assertCategory(regarding-referral)
 * insert assertPriorityExists
 * insert assertReceiverEAN(5790002632389)
@@ -97,9 +97,9 @@ InstanceOf: TestScript
 * title = "Reply CareCommunication"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-reply-message" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
-* insert createMessage(reply-message, 02, ../Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, 2) 
+* insert createMessage(reply-message, 02, /Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, 2) 
 
 //Reply attachment
 Instance: CareCommunication_TestScript_send-reply-attachment
@@ -110,9 +110,9 @@ InstanceOf: TestScript
 * title = "Reply CareCommunication with attached files. One attachment of each mimetype is exected."
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-reply-attachment" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
-* insert createMessage(reply-message, 02, ../Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, 7) 
+* insert createMessage(reply-message, 02, /Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, 7) 
 * insert assertMimetype(application/pdf)
 * insert assertMimetype(image/gif)
 * insert assertMimetype(image/jpeg)
@@ -127,9 +127,9 @@ InstanceOf: TestScript
 * title = "Reply CareCommunication add new attachments. One attachment of each mimetype is exected."
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-reply-add-attachment" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
-* insert createMessage(reply-message, 02, ../Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, 7) 
+* insert createMessage(reply-message, 02, /Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, 7) 
 * insert assertMimetype(application/pdf)
 * insert assertMimetype(image/gif)
 * insert assertMimetype(image/jpeg)
@@ -145,9 +145,9 @@ InstanceOf: TestScript
 * title = "Reply CareCommunication with changed category"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-reply-changecategory" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
-* insert createMessage(reply-message, 02, ../Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, 2) 
+* insert createMessage(reply-message, 02, /Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, 2) 
 * insert variableCategorySetup(new-message, 01)
 * insert variableCategory(reply-message, 02)
 
@@ -161,9 +161,9 @@ InstanceOf: TestScript
 * title = "Reply CareCommunication with changed topic"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-reply-changetopic" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
-* insert createMessage(reply-message, 02, ../Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, 2) 
+* insert createMessage(reply-message, 02, /Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, 2) 
 * insert variableTopicSetup(new-message, 01)
 * insert variableTopic(reply-message, 02)
 * insert assertContentChanged(topic-new-message-01, topic-reply-message-02)
@@ -177,9 +177,9 @@ InstanceOf: TestScript
 * title = "Reply to OIOXML"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-reply-oioxmlmessage" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetupNotFHIR(oioxml, 01, ../Fixtures/CareCommunication-fixture-oioxml.xml)
+* insert createInitialMessageSetupNotFHIR(oioxml, 01, /Fixtures/CareCommunication-fixture-oioxml.xml)
 // * insert readMessage(new-message, 01, bundleid-new-message-01)
-* insert createMessage(reply-message, 02, ../Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, 2)  
+* insert createMessage(reply-message, 02, /Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, 2)  
 
 //Reply to a CareCommunication sent by the same system
 Instance: CareCommunication_TestScript_send-reply-new
@@ -190,8 +190,8 @@ InstanceOf: TestScript
 * title = "Reply CareCommunication to a CareCommunication send by the replying system"
 * name = "CareCommunicationTestScript"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-reply-new" 
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture.xml, destinationUri-new-message, bundleid-new-message-01)
-* insert createMessage(reply-message, 02, ../Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, 2) 
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createMessage(reply-message, 02, /Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, 2) 
 
 //Forward message
 Instance: CareCommunication_TestScript_send-forward-message
@@ -202,10 +202,10 @@ InstanceOf: TestScript
 * title = "Forward CareCommunication"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-forward-message" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
 * insert variableHospitalSOR(new-message, 01) 
-* insert createMessage(forward-message, 02, ../Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, 2) 
+* insert createMessage(forward-message, 02, /Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, 2) 
 * insert assertSenderSOR(hospitalSOR-new-message)
 
 //Forward message
@@ -217,10 +217,10 @@ InstanceOf: TestScript
 * title = "Forward CareCommunication with attached files. One attachment of each mimetype is exected."
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-forward-attachment" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
 * insert variableHospitalSOR(new-message, 01) 
-* insert createMessage(forward-message, 02, ../Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, 7) 
+* insert createMessage(forward-message, 02, /Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, 7) 
 * insert assertSenderSOR(hospitalSOR-new-message)
 * insert assertMimetype(application/pdf)
 * insert assertMimetype(image/gif)
@@ -238,10 +238,10 @@ InstanceOf: TestScript
 * title = "Forward CareCommunication with changed category"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-forward-changecategory" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
 * insert variableHospitalSOR(new-message, 01) 
-* insert createMessage(forward-message, 02, ../Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, 2) 
+* insert createMessage(forward-message, 02, /Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, 2) 
 * insert assertSenderSOR(hospitalSOR-new-message)
 * insert variableCategorySetup(new-message, 01)
 * insert variableCategory(forward-message, 02)
@@ -256,10 +256,10 @@ InstanceOf: TestScript
 * title = "Forward CareCommunication with changed topic"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-forward-changetopic" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
 * insert variableHospitalSOR(new-message, 01) 
-* insert createMessage(forward-message, 02, ../Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, 2) 
+* insert createMessage(forward-message, 02, /Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, 2) 
 * insert assertSenderSOR(hospitalSOR-new-message)
 * insert variableTopicSetup(new-message, 01)
 * insert variableTopic(forward-message, 02)
@@ -274,9 +274,9 @@ InstanceOf: TestScript
 * title = "Forward a part of the CareCommunication thread. Only the reply-message is expected to be forwarded."
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-forward-partialthread" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(reply-message, 01, ../Fixtures/CareCommunication-fixture-reply-message.xml, destinationUri-reply-message, bundleid-reply-message-01)
+* insert createInitialMessageSetup(reply-message, 01, /Fixtures/CareCommunication-fixture-reply-message.xml, destinationUri-reply-message, bundleid-reply-message-01)
 * insert readMessage(reply-message, 01, bundleid-reply-message-01)
 * insert variableHospitalSOR(reply-message, 01) 
-* insert createMessage(forward-message, 02, ../Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-reply-message-01, 2, 2) 
+* insert createMessage(forward-message, 02, /Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-reply-message-01, 2, 2) 
 * insert assertSenderSOR(hospitalSOR-reply-message)
  */

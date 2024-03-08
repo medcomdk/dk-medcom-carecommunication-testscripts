@@ -1,0 +1,387 @@
+{
+  "resourceType": "Bundle",
+  "id": "77c771ca-05d6-4efb-9a74-2fc513787f3a",
+  "meta": {
+    "profile": [
+      "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message"
+    ]
+  },
+  "type": "message",
+  "timestamp": "2024-10-19T13:00:00+01:00",
+  "entry": [
+    {
+      "fullUrl": "MessageHeader/3dbffafe-ce3c-45b0-bca7-2c008c478e79",
+      "resource": {
+        "resourceType": "MessageHeader",
+        "id": "3dbffafe-ce3c-45b0-bca7-2c008c478e79",
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader"
+          ]
+        },
+        "eventCoding": {
+          "code": "care-communication-message",
+          "system": "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes"
+        },
+        "destination": [
+          {
+            "extension": [
+              {
+                "url": "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension",
+                "valueCoding": {
+                  "system": "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-destinationUse",
+                  "code": "primary"
+                }
+              }
+            ],
+            "endpoint": "https://sor2.sum.dsdn.dk/#id=1339531000016004",
+            "receiver": {
+              "reference": "Organization/6ea7c7cb-824b-4619-a13e-bc8828afd7e1"
+            }
+          }
+        ],
+        "sender": {
+          "reference": "Organization/7260b118-d744-4396-bbf2-80245933b1dd"
+        },
+        "source": {
+          "endpoint": "https://sor2.sum.dsdn.dk/#id=330461000016004"
+        },
+        "focus": [
+          {
+            "reference": "Communication/e7e596e0-6458-4701-a20f-a9322f85ebe8"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Patient/db2fd52e-9a7a-418f-90d1-b422e07c895d",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "db2fd52e-9a7a-418f-90d1-b422e07c895d",
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient"
+          ]
+        },
+        "name": [
+          {
+            "use": "official",
+            "family": "Elmer"
+          }
+        ],
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.208.176.1.2",
+            "value": "2509479989"
+          }
+        ],
+        "deceasedBoolean": true
+      }
+    },
+    {
+      "fullUrl": "Communication/e7e596e0-6458-4701-a20f-a9322f85ebe8",
+      "resource": {
+        "resourceType": "Communication",
+        "id": "e7e596e0-6458-4701-a20f-a9322f85ebe8",
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication"
+          ]
+        },
+        "payload": [
+          {
+            "extension": [
+              {
+                "url": "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-datetime-extension",
+                "valueDateTime": "2024-10-19T13:00:00+01:00"
+              },
+              {
+                "url": "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-identifier-extension",
+                "valueIdentifier": {
+                  "value": "urn:uuid:954183f4-bc89-4d75-8073-9b397bacd6ec",
+                  "assigner": {
+                    "reference": "Organization/7260b118-d744-4396-bbf2-80245933b1dd"
+                  }
+                }
+              },
+              {
+                "url": "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner-extension",
+                "valueReference": {
+                  "reference": "PractitionerRole/c95dcab1-07af-4127-bb51-c43ed60a37ed"
+                }
+              },
+              {
+                "valueContactPoint": {
+                  "system": "phone",
+                  "value": "85572787"
+                },
+                "url": "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-contact-extension"
+              }
+            ],
+            "contentString": "Til rette vedkommende hos Per Thorsleth. Bruno Elmer er desværre død i nat kl. 4.15. I hans kalender fremgår det, at han vil komme til læge i morgen kl. 11. Det gør han ikke. Mvh. Sygeplejerske K. Jensen"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-datetime-extension",
+                "valueDateTime": "2024-10-19T14:25:00+01:00"
+              },
+              {
+                "url": "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-identifier-extension",
+                "valueIdentifier": {
+                  "value": "urn:uuid:cfc9886a-5f54-463b-9255-99bfaf778d8c",
+                  "assigner": {
+                    "reference": "Organization/7260b118-d744-4396-bbf2-80245933b1dd"
+                  }
+                }
+              },
+              {
+                "url": "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner-extension",
+                "valueReference": {
+                  "reference": "PractitionerRole/c95dcab1-07af-4127-bb51-c43ed60a37ed"
+                }
+              },
+              {
+                "valueContactPoint": {
+                  "system": "phone",
+                  "value": "87875455"
+                },
+                "url": "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-contact-extension"
+              }
+            ],
+            "contentString": "Tak for at rette henvendelse. Vi får slettet hans aftaler og informerer desuden xxx. Mvh. Sygeplejerske K. Jensen"
+          }
+        ],
+        "status": "unknown",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "deceased",
+                "system": "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-careCommunication-categoryCodes"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/db2fd52e-9a7a-418f-90d1-b422e07c895d"
+        },
+        "topic": {
+          "text": "Afgået ved døden"
+        }
+      }
+    },
+    {
+      "fullUrl": "PractitionerRole/1840f077-7ca1-4141-a46b-1bce43065c76",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "id": "1840f077-7ca1-4141-a46b-1bce43065c76",
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole"
+          ]
+        },
+        "practitioner": {
+          "reference": "Practitioner/9ec69637-d91e-491d-a5b2-ec1661b98bc5"
+        },
+        "code": [
+          {
+            "coding": [
+              {
+                "code": "sygeplejerske",
+                "system": "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesSKSadministrativ"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Practitioner/9ec69637-d91e-491d-a5b2-ec1661b98bc5",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "9ec69637-d91e-491d-a5b2-ec1661b98bc5",
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner"
+          ]
+        },
+        "name": [
+          {
+            "given": [
+              "Kim"
+            ],
+            "family": "Jensen"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "PractitionerRole/84eb6a09-63cf-433d-8522-41465d78756a",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "id": "84eb6a09-63cf-433d-8522-41465d78756a",
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole"
+          ]
+        },
+        "practitioner": {
+          "reference": "Practitioner/a7e25289-11d8-4125-a08a-9c1d85cbd950"
+        },
+        "code": [
+          {
+            "coding": [
+              {
+                "code": "laegesekretaer",
+                "system": "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesSKSadministrativ"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Practitioner/a7e25289-11d8-4125-a08a-9c1d85cbd950",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "a7e25289-11d8-4125-a08a-9c1d85cbd950",
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner"
+          ]
+        },
+        "name": [
+          {
+            "given": [
+              "Nancy"
+            ],
+            "family": "Nielsen"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Organization/7260b118-d744-4396-bbf2-80245933b1dd",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "7260b118-d744-4396-bbf2-80245933b1dd",
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://www.gs1.org/gln",
+            "value": "5790001353308"
+          },
+          {
+            "system": "urn:oid:1.2.208.176.1.1",
+            "value": "330461000016004"
+          }
+        ],
+        "name": "Sundhedsplejen, Aabenraa kommune"
+      }
+    },
+    {
+      "fullUrl": "Organization/6ea7c7cb-824b-4619-a13e-bc8828afd7e1",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "6ea7c7cb-824b-4619-a13e-bc8828afd7e1",
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://www.gs1.org/gln",
+            "value": "5790001348250"
+          },
+          {
+            "system": "urn:oid:1.2.208.176.1.1",
+            "value": "1339531000016004"
+          }
+        ],
+        "name": "Per Thorseth"
+      }
+    },
+    {
+      "fullUrl": "Provenance/4e290fa6-0a40-4cc8-abd3-14ac22e0b48b",
+      "resource": {
+        "resourceType": "Provenance",
+        "id": "4e290fa6-0a40-4cc8-abd3-14ac22e0b48b",
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance"
+          ]
+        },
+        "target": [
+          {
+            "reference": "MessageHeader/42fa2844-5020-45dd-bd5f-77137ba5ca1f"
+          }
+        ],
+        "occurredDateTime": "2024-10-19T13:00:00+01:00",
+        "recorded": "2024-10-19T13:00:00+01:00",
+        "activity": {
+          "coding": [
+            {
+              "code": "new-message",
+              "system": "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "reference": "Organization/7260b118-d744-4396-bbf2-80245933b1dd"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Provenance/86b93888-0a2d-4530-a1c2-263394932e11",
+      "resource": {
+        "resourceType": "Provenance",
+        "id": "86b93888-0a2d-4530-a1c2-263394932e11",
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance"
+          ]
+        },
+        "target": [
+          {
+            "reference": "MessageHeader/3dbffafe-ce3c-45b0-bca7-2c008c478e79"
+          }
+        ],
+        "occurredDateTime": "2024-10-19T14:25:00+01:00",
+        "recorded": "2024-10-19T14:25:00+01:00",
+        "activity": {
+          "coding": [
+            {
+              "code": "reply-message",
+              "system": "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "reference": "Organization/6ea7c7cb-824b-4619-a13e-bc8828afd7e1"
+            }
+          }
+        ],
+        "entity": [
+          {
+            "role": "revision",
+            "what": {
+              "reference": "MessageHeader/42fa2844-5020-45dd-bd5f-77137ba5ca1f"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

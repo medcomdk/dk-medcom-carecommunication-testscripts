@@ -16,22 +16,21 @@ and
 |  Test example     |     Description     | 
 |---|---|
 | [CareCommunication_Ex_send-A-new](./Bundle-1932711d-49d0-4ad7-b1ee-61de711892d2.html) | A new CareCommunication. Including long journal note, specifik sender and recipient, topic, prioritet, attachment structured author information.  |
-| [CareCommunication_Ex_send-B-new](./Bundle-720f68cf-21bf-4c40-a90c-a113e00e88a8.html) | A new CareCommunication. ContentString includes escaped signs and without sender and receiver name.| 
-| [CareCommunication_Ex_send-C-new-attachment](./Bundle-683f2782-11e2-490a-9fa5-d5da09cc317a.html) | A new CareCommunication with attachment.  | 
+| [CareCommunication_Ex_send-B-new](./Bundle-720f68cf-21bf-4c40-a90c-a113e00e88a8.html) | A new CareCommunication. ContentString includes escaped signs and without sender and receiver name (Organization.name).| 
+| [CareCommunication_Ex_send-C-new-attachment](./Bundle-683f2782-11e2-490a-9fa5-d5da09cc317a.html) | A new CareCommunication with attachment. ContentString includes XHTML. | 
 | [CareCommunication_Ex_send-D-new-attachment](./Bundle-5f85e1bd-03ea-47b9-bfe1-dbde95e69c75.html) | A new CareCommunication with attachment.  | 
-| [CareCommunication_Ex_send-E-new](./Bundle-81b715aa-e993-4e7c-9b8a-4a05c10b540e.html) | A new CareCommunication. | 
-| [CareCommunication_Ex_send-F-new-change](./Bundle-9c2371ff-09a0-4626-9fb9-f70645546361.html) | A new CareCommunication. | 
+| [CareCommunication_Ex_send-E-new](./Bundle-81b715aa-e993-4e7c-9b8a-4a05c10b540e.html) | A new CareCommunication. The PractitionerRole of the is not from the list of roles. | 
+| [CareCommunication_Ex_send-F-new-change](./Bundle-9c2371ff-09a0-4626-9fb9-f70645546361.html) | A new CareCommunication.  | 
 | G-EDIFACT[^1] | An EDIFACT message   |
-| G-OIOXML[^2] | An OIOXML message |  
-| [CareCommunication_Ex_send-H-new](./Bundle-.html) | A new CareCommunication. Patient has a replacement CPR (e-CPR).| 
-| [CareCommunication_Ex_send-I-new-attachment](./Bundle-.html) | A new CareCommunication with attachment  | 
-| [CareCommunication_Ex_send-J-new-change](./Bundle-.html) | A new CareCommunication. |
-| [CareCommunication_Ex_send-K-new](./Bundle-.html) | A new CareCommunication. | 
-| [CareCommunication_Ex_send-Tek-A-new-episodeOfCare](./Bundle-.html) | A new CareCommunication with an EpisodeOfCare-identifier. |
-| [CareCommunication_Ex_send-Tek-B-new-episodeOfCare](./Bundle-.html) | A new CareCommunication with an EpisodeOfCare-identifier.  | 
+| G-OIOXML[^1] | An OIOXML message |  
+| [CareCommunication_Ex_send-H-new](./Bundle-aca3d03a-febd-4b88-ad53-ac1bc36da615.html) | A new CareCommunication. Patient has a replacement CPR (e-CPR).| 
+| [CareCommunication_Ex_send-I-new-attachment](./Bundle-1e9fdc8f-50f0-4dc3-9879-facdf331a2fe.html) | A new CareCommunication with attachment  | 
+| [CareCommunication_Ex_send-J-new-change](./Bundle-jklfds89r45jklsduf98w487953jkl.jkliuuh.html) | A new CareCommunication. Instance IDs are not UUIDs. ContentString includes XHTML.|
+| [CareCommunication_Ex_send-K-reply](./Bundle-77c771ca-05d6-4efb-9a74-2fc513787f3a.html) | A reply CareCommunication. | 
+| [CareCommunication_Ex_send-Tek-A-new-episodeOfCare](./Bundle-b43146a2-99ec-4b05-bb8f-5b44af4fe424.html) | A new CareCommunication with an EpisodeOfCare-identifier. |
+| [CareCommunication_Ex_send-Tek-B-new-episodeOfCare](./Bundle-98eb081e-a66f-41a2-b2f7-c455782563b0.html) | A new CareCommunication with an EpisodeOfCare-identifier.  | 
 
-[^1]: Currently, no MedCom FHIR message that is relevant to reply exists. An example will be provided when relevant.
-[^2]: A referal, discharge letter or another relevant OIOXML message may be selected here. 
+[^1]: A referal, discharge letter or another relevant OIOXML message may be selected here. 
 
 #### Test examples for receiving a CareCommunication
 

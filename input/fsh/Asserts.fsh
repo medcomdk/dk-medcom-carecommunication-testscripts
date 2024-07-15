@@ -21,7 +21,7 @@ RuleSet: assertResponseNotFound //kan bruges til at bekræfte, at en meddelelse 
 * test[=].action[=].assert.warningOnly = false
 
 RuleSet: assertValidateProfiles
-* test[=].action[+].assert.description = "Validates the bundle against http://medcomfhir.dk/ig/carecommunication/ImplementationGuide/dk.fhir.ig.dk-medcom-carecommunication" 
+* test[=].action[0].assert.description = "Validates the bundle against http://medcomfhir.dk/ig/carecommunication/ImplementationGuide/dk.fhir.ig.dk-medcom-carecommunication" 
 * test[=].action[=].assert.direction = #request
 * test[=].action[=].assert.validateProfileId = "carecommunication"
 * test[=].action[=].assert.warningOnly = false
@@ -147,6 +147,13 @@ RuleSet: assertReceiverEAN(receiverEAN)
 * test[=].action[=].assert.direction = #request
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(MessageHeader).destination.receiver.reference.resolve().identifier.where(system = 'https://www.gs1.org/gln').value = '{receiverEAN}'"
 * test[=].action[=].assert.warningOnly = false
+
+
+RuleSet: assertCommunicationStatus(status)
+* test[=].action[+].assert.description = "Confirm that the value in Communication.status is {status}"
+* test[=].action[=].assert.direction = #request
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).status = '{status}'"
+* test[=].action[=].assert.warningOnly = false
 /* 
 RuleSet: assertSenderGLN(hospitalGLN)
 * test[=].action[+].assert.description = "Confirm that the sender SOR number is different from the previous message."
@@ -202,7 +209,7 @@ RuleSet: assertCategory(category)
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).category.coding.code = '{category}'"
 * test[=].action[=].assert.warningOnly = false
 
-RuleSet: assertContentChanged(info1, info2)
+RuleSet: assertContentChanged(info1 and info2)
 * test[=].action[+].assert.description = "Confirm that the content is different in the two messages"
 * test[=].action[=].assert.direction = #request 
 * test[=].action[=].assert.expression = "'${{info1}}' != '${{info2}}'"
@@ -220,7 +227,7 @@ RuleSet: assertSenderExists
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).extension.where(url = 'http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-sender-extension').exists()"
 * test[=].action[=].assert.warningOnly = false
 
-RuleSet: assertOrganisationIdentifier(orgsystem, orgid)
+RuleSet: assertOrganisationIdentifier(orgsystem and orgid)
 * test[=].action[+].assert.description = "Confirm that the Organization identifier, with system = {orgsystem}, is {orgid}"
 * test[=].action[=].assert.direction = #request 
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(MessageHeader).destination.receiver.reference.resolve().identifier.where(system = '{orgsystem}').value = '{orgid}'"
@@ -258,13 +265,9 @@ RuleSet: assertCommunications(noCommunications)
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).count() = '{noCommunications}'"
 * test[=].action[=].assert.warningOnly = false
 
-RuleSet: assertCommunicationStatus(status)
-* test[=].action[+].assert.description = "Confirm that number of Communication instances is '{status}'"
-* test[=].action[=].assert.direction = #request 
-* test[=].action[=].assert.expression = "Bundle.entry.where(resource.ofType(Communication).status = '{status}').exists()"
-* test[=].action[=].assert.warningOnly = false
 
-RuleSet: assertCancallationReason(status, reason)
+
+RuleSet: assertCancallationReason(status and reason)
 * test[=].action[+].assert.description = "Confirm that the reason for cancellation is '{reason}'. Only gives a warning is false."
 * test[=].action[=].assert.direction = #request 
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).where(status = '{status}').payload.content = '{reason}'"

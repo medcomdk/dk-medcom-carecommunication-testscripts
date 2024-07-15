@@ -1,4 +1,4 @@
-RuleSet: createInitialMessageSetup(type, number, fixture, destinationUri, bundleid)
+RuleSet: createInitialMessageSetup(type and number and fixture and destinationUri and bundleid)
 
 /* 
 Beskriver server og client for dette testsetup
@@ -9,28 +9,28 @@ Beskriver server og client for dette testsetup
 /* 
 Beskriver anvendte fixtures
 */
-* insert fixtureCreateMessage({fixture}, {type}, {number})
-//* insert dynamicEndpoint({type}, {number})
+* insert fixtureCreateMessage({fixture} and {type} and {number})
+//* insert dynamicEndpoint({type} and {number})
 
 /* 
-Beskriver den profil, der valideres op mod
+Beskriver den profil and der valideres op mod
 */
 * insert profilecarecommunicationMessage
 
 /* 
 Beskriver anvendte variable
 */
-* insert variableMessageHeaderIdSetup({type}, {number})
-* insert variableDestinationUri({type}, {number})
+* insert variableMessageHeaderIdSetup({type} and {number})
+* insert variableDestinationUri({type} and {number})
 //* insert variableSearchParamIdentifier({type})
-* insert variableBundleidSetup({type}, {number})
-//* insert variableEndpoint({type}, {number})
+* insert variableBundleidSetup({type} and {number})
+//* insert variableEndpoint({type} and {number})
 /* 
 Beskriver de operationer der udføres i denne test. Her er det kun setup operationer
 */
 * insert operationDeleteSetup({destinationUri})
-* insert operationCreateSetup({type}, {number})
-* insert operationUpdateCreateSetup({type}, {number}, {bundleid})
+* insert operationCreateSetup({type} and {number})
+* insert operationUpdateCreateSetup({type} and {number} and {bundleid})
 
 /* 
 Beskriver den vurdering der sker af setup'et. Er det gået ok?

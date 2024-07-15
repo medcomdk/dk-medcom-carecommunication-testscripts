@@ -8,7 +8,7 @@ RuleSet: operationDeleteSetup(destinationUri)
 //* setup[=].action[=].operation.params = "?message.identifier=${{bundleid}}"
 * setup[=].action[=].operation.params = "?message.destination-uri=${{destinationUri}}"
 
-RuleSet: operationCreateSetup(type, number)
+RuleSet: operationCreateSetup(type and number)
 * setup[=].action[+].operation.type.system = "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
 * setup[=].action[=].operation.type.code = #create
 * setup[=].action[=].operation.resource = #Bundle
@@ -19,7 +19,7 @@ RuleSet: operationCreateSetup(type, number)
 //* setup[=].action[=].operation.responseId = "create-message-{type}"
 * setup[=].action[=].operation.sourceId = "create-{type}-{number}"
 
-RuleSet: operationCreateSetupNotFHIR(type, number)
+RuleSet: operationCreateSetupNotFHIR(type and number)
 * setup[+].action[+].operation.type.system = "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
 * setup[=].action[=].operation.type.code = #create
 * setup[=].action[=].operation.resource = #Bundle
@@ -30,7 +30,7 @@ RuleSet: operationCreateSetupNotFHIR(type, number)
 //* setup[=].action[=].operation.responseId = "create-message-{type}"
 * setup[=].action[=].operation.sourceId = "create-{type}-{number}"
 
-RuleSet: operationCreateMessage(type, number)
+RuleSet: operationCreateMessage(type and number)
 * test[+].id = "carecommunication-create-{type}-{number}" // Update carecommunication
 * test[=].name = "Create a CareCommunication {type} Message {number}" 
 * test[=].description = "Post CareCommunication to the server." 
@@ -41,32 +41,32 @@ RuleSet: operationCreateMessage(type, number)
 * test[=].action[=].operation.destination = 1
 * test[=].action[=].operation.encodeRequestUrl = true
 * test[=].action[=].operation.origin = 1
-* test[=].action[=].operation.requestId = "create-message-{type}-{number}"
-* test[=].action[=].operation.sourceId = "create-{type}-{number}" 
+* test[=].action[=].operation.requestId = "create-message"
+* test[=].action[=].operation.sourceId = "create" 
 
-RuleSet: operationUpdateCreateSetup(type, number, bundleid)
+RuleSet: operationUpdateCreateSetup(type and number and bundleid)
 * setup[=].action[+].operation.type.system = "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
 * setup[=].action[=].operation.type.code = #updateCreate
 * setup[=].action[=].operation.resource = #Bundle
-* setup[=].action[=].operation.description = "Update the Bundle.id in XML format on the destination server, so it corresponds to ${bundleid}."
+* setup[=].action[=].operation.description = "Update the Bundle.id in XML format on the destination server and so it corresponds to ${bundleid}."
 * setup[=].action[=].operation.accept = #xml
 * setup[=].action[=].operation.contentType = #xml
 * setup[=].action[=].operation.encodeRequestUrl = true
 * setup[=].action[=].operation.sourceId = "create-{type}-{number}"
 * setup[=].action[=].operation.params = "/${{bundleid}}"
 
-RuleSet: operationUpdateCreateTest(type, number, bundleid)
+RuleSet: operationUpdateCreateTest(type and number and bundleid)
 * test[=].action[+].operation.type.system = "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
 * test[=].action[=].operation.type.code = #updateCreate
 * test[=].action[=].operation.resource = #Bundle
-* test[=].action[=].operation.description = "Update the Bundle.id in XML format on the destination server, so it corresponds to ${bundleid}."
+* test[=].action[=].operation.description = "Update the Bundle.id in XML format on the destination server and so it corresponds to ${bundleid}."
 * test[=].action[=].operation.accept = #xml
 * test[=].action[=].operation.contentType = #xml
 * test[=].action[=].operation.encodeRequestUrl = true
 * test[=].action[=].operation.sourceId = "create-{type}-{number}"
 * test[=].action[=].operation.params = "/${{bundleid}}"
 
-RuleSet: operationReadMessage(type, number, bundleid)
+RuleSet: operationReadMessage(type and number and bundleid)
 * test[+].id = "message-read-{type}-{number}" // Update Acknowledegment
 * test[=].name = "Get a {type} message {number}"
 * test[=].description = "GET a message. The expected response is a 200(OK) with a payload of the message resource in XML format."

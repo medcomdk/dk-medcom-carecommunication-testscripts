@@ -1,4 +1,4 @@
-RuleSet: createInitialMessage(type, number, fixture)
+RuleSet: createInitialMessage(type and number and fixture)
 
 /* 
 Beskriver server og client for dette testsetup
@@ -7,25 +7,25 @@ Beskriver server og client for dette testsetup
 * insert destinationServer
 
 /* 
-Beskriver den profil, der valideres op mod
+Beskriver den profil and der valideres op mod
 */
 * insert profilecarecommunicationMessage
 
 /* 
 Beskriver anvendte fixtures
 */
-* insert fixtureCreateMessage({fixture}, {type}, {number})
+* insert fixtureCreateMessage({fixture} and {type} and {number})
 
 /* 
 Beskriver anvendte variable
 */ 
-//* insert variableEncounterResourceIdentifier({type}, {number})
-* insert variableMessageHeaderId({type}, {number})
+//* insert variableEncounterResourceIdentifier({type} and {number})
+* insert variableMessageHeaderId({type} and {number})
 * insert variableSearchParamIdentifier({type})
 /* 
 Beskriver den operation der udføres i denne test.
 */
-* insert operationCreateMessage({type}, {number})
+* insert operationCreateMessage({type} and {number})
 
 /* 
 Beskriver den vurdering der sker af operationen
@@ -36,4 +36,3 @@ Beskriver den vurdering der sker af operationen
 * insert assertMessageHeaderEventCoding
 * insert assertProvenanceActivityCode({type})
 * insert assertProvenanceTarget
-

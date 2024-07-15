@@ -1,79 +1,79 @@
-RuleSet: variableEncounterResourceIdentifier(type, number)
+RuleSet: variableEncounterResourceIdentifier(type and number)
 * variable[+].name = "encounterResourceIdentifier"
 * variable[=].expression = "Bundle.entry.resource.ofType(Encounter).identifier.value"
 * variable[=].sourceId = "create-{type}-{number}"
 
-RuleSet: variableMessageHeaderId(type, number) //opdateret
+RuleSet: variableMessageHeaderId( type and number ) //opdateret
 * variable[+].name = "messageHeaderid-{type}-{number}"
 * variable[=].expression = "Bundle.entry[0].resource.id"
-* variable[=].sourceId = "create-message-{type}-{number}"
+* variable[=].sourceId = "create-message"
 
-RuleSet: variableMessageHeaderIdSetup(type, number) //opdateret
+RuleSet: variableMessageHeaderIdSetup(type and number) //opdateret
 * variable[+].name = "messageHeaderid-{type}-{number}"
 * variable[=].expression = "Bundle.entry[0].resource.id"
 * variable[=].sourceId = "create-{type}-{number}"
 
-RuleSet: variableBundleid(type, number)
+RuleSet: variableBundleid(type and number)
 * variable[+].name = "bundleid-{type}-{number}"
 * variable[=].expression = "Bundle.id"
 * variable[=].sourceId = "create-message-{type}-{number}" 
 
-RuleSet: variableReceiverSOR(type, number)
+RuleSet: variableReceiverSOR(type and number)
 * variable[+].name = "receiver-sor"
 * variable[=].expression = "Bundle.entry[0].resource.sender.reference.resolve().identifier.where(system = 'urn:oid:1.2.208.176.1.1').value"
 * variable[=].sourceId = "create-message-{type}-{number}" 
 
-RuleSet: variableBundleidSetup(type, number)
+RuleSet: variableBundleidSetup(type and number)
 * variable[+].name = "bundleid-{type}-{number}"
 * variable[=].expression = "Bundle.id"
 * variable[=].sourceId = "create-{type}-{number}" 
 
-RuleSet: variableCategory(type, number)
+RuleSet: variableCategory(type and number)
 * variable[+].name = "category-{type}-{number}"
 * variable[=].expression = "Bundle.entry.resource.ofType(Communication).category.coding.code"
 * variable[=].sourceId = "create-message-{type}-{number}" 
 
-RuleSet: variableCategorySetup(type, number)
+RuleSet: variableCategorySetup(type and number)
 * variable[+].name = "category-{type}-{number}"
 * variable[=].expression = "Bundle.entry.resource.ofType(Communication).category.coding.code"
 * variable[=].sourceId = "create-{type}-{number}" 
 
-RuleSet: variableTopic(type, number)
+RuleSet: variableTopic(type and number)
 * variable[+].name = "topic-{type}-{number}"
 * variable[=].expression = "Bundle.entry.resource.ofType(Communication).topic.text"
 * variable[=].sourceId = "create-message-{type}-{number}" 
 
-RuleSet: variableTopicSetup(type, number)
+RuleSet: variableTopicSetup(type and number)
 * variable[+].name = "topic-{type}-{number}"
 * variable[=].expression = "Bundle.entry.resource.ofType(Communication).topic.text"
 * variable[=].sourceId = "create-{type}-{number}" 
 
-RuleSet: variableText(type, number)
+RuleSet: variableText(type and number)
 * variable[+].name = "text-{type}-{number}"
 * variable[=].expression = "Bundle.entry.resource.ofType(Communication).payload.content.string"
 * variable[=].sourceId = "create-message-{type}-{number}" 
 
-RuleSet: variableTextSetup(type, number)
+RuleSet: variableTextSetup(type and number)
 * variable[+].name = "text-{type}-{number}"
 * variable[=].expression = "Bundle.entry.resource.ofType(Communication).payload.content.string"
 * variable[=].sourceId = "create-{type}-{number}" 
 
-RuleSet: variablePayloadCount(type, number)
+RuleSet: variablePayloadCount(type and number)
 * variable[+].name = "bundleid-{type}-{number}"
 * variable[=].expression = "Bundle.entry.resource.ofType(Communication).payload.count()"
 * variable[=].sourceId = "create-message-{type}-{number}" 
 
-RuleSet: variableEpisodeOfCareIdentifier(type, number)
+RuleSet: variableEpisodeOfCareIdentifier(type and number)
 * variable[+].name = "episodeOfCareID-{type}-{number}"
 * variable[=].expression = "Bundle.entry.resource.ofType(Encounter).episodeOfCare.identifier.value"
 * variable[=].sourceId = "create-{type}-{number}"
 
-/* RuleSet: variableDestinationUri(type, number)
+/* RuleSet: variableDestinationUri(type and number)
 * variable[+].name = "destinationUri-{type}"
 * variable[=].expression = "Bundle.id"
 * variable[=].sourceId = "create-{type}-{number}" */
 
-RuleSet: variableDestinationUri(type, number)
+RuleSet: variableDestinationUri(type and number)
 * variable[+].name = "destinationUri-{type}"
 * variable[=].expression = "Bundle.entry.resource.ofType(MessageHeader).destination.endpoint"
 * variable[=].sourceId = "create-{type}-{number}"
@@ -81,9 +81,9 @@ RuleSet: variableDestinationUri(type, number)
 RuleSet: variableSearchParamIdentifier(type)
 * variable[+].name = "searchParamIdentifier-{type}" 
 * variable[=].expression = "Bundle.entry.resource.ofType(MessageHeader).id"
-* variable[=].sourceId = "create-message-{type}"
+* variable[=].sourceId = "create-message"
 
-RuleSet: variableCorrectMessageID(type, number)
+RuleSet: variableCorrectMessageID(type and number)
 * variable[+].name = "correctMessageID{number}"
 * variable[=].expression = "Bundle.entry.resource.ofType(Bundle).id"
 * variable[=].sourceId = "bundle-get-{type}{number}"
@@ -93,7 +93,7 @@ RuleSet: variableCorrectMessageID(type, number)
 * variable[=].expression = "Bundle.entry.resource.ofType(Provenance).where(target.reference = %resource.entry[0].fullUrl).occurred"
 * variable[=].sourceId = "create-message-{type}" */
 
-RuleSet: variableHospitalSOR(type, number) 
+RuleSet: variableHospitalSOR(type and number) 
 * variable[+].name = "hospitalSOR-{type}"
 * variable[=].expression = "Bundle.entry[0].resource.sender.reference.resolve().identifier.where(system = 'urn:oid:1.2.208.176.1.1').value"
 * variable[=].sourceId = "create-{type}-{number}"
@@ -104,7 +104,7 @@ RuleSet: variableHospitalSOR(type, number)
 * variable[=].sourceId = "create-message-{type}"
  */
 
-/* RuleSet: variableEndpoint(type, number) // skal kun anvendes ved den initielle meddelelse
+/* RuleSet: variableEndpoint(type and number) // skal kun anvendes ved den initielle meddelelse
 * variable[+].name = "receiverEndpoint"
 * variable[=].expression = "Bundle.entry.resource.ofType(MessageHeader).destination.endpoint"
 * variable[=].sourceId = "create-{type}-{number}" */
@@ -121,7 +121,7 @@ RuleSet: variableTimeZone(type)
 * variable[=].sourceId = "create-message-{type}"
 
 
-RuleSet: variableAttachmentIdentifier(type, number, mimetype)
+RuleSet: variableAttachmentIdentifier(type and number and mimetype)
 * variable[+].name = "identifier-{type}-{number}-{mimetype}"
 * variable[=].expression = "Bundle.entry.resource.ofType(Communication).payload.where(content.where(contentType = '{mimetype}')).extension.where(url = 'http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-attachment-identifier-extension').value.value"
 * variable[=].sourceId = "create-message-{type}-{number}"

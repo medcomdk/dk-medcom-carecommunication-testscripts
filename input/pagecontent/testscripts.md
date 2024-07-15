@@ -50,7 +50,6 @@ When executing some of the send test scripts, it is required that SUT has execut
 | [send-new-message](./TestScript-carecommunication-send-new-message) | S1 | Send CareCommunication. <br> Receiver is expected to be 'Klinik for Ældresygdomme, AUH, Skejby' with SOR-id: 441211000016000 | new-message |  |
 | [send-new-attachment](./TestScript-carecommunication-send-new-attachment) | S1.A1 | Send CareCommunication with attached files [^1]. <br> Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004 | new-message |  |
 | [send-new-topic](./TestScript-carecommunication-send-new-topic) | S1.A2 | Send CareCommunication with topic. <br> Receiver is expected to be 'Lægeklinik Ølgod' with SOR-id: 1339531000016004 | new-message |  |
-| [send-new-formatted-text](./TestScript-carecommunication-send-new-formatted-text)[^3] | S1.A3 | Send CareCommunication with formatted text and table. <br> Receiver is expected to be 'Anita Thenstrup' with SOR-id: 502191000016006 | new-message |  |
 | [send-new-category-other](./TestScript-carecommunication-send-new-category-other) | S1.A5 | Send CareCommunication with category 'Other'. <br> Receiver is expected to be 'SLB Hjertesygdomme Ambulatorium (Kolding), Kolding Sygehus' with SOR-id: 349061000016004 | new-message | |
 | [send-new-priority](./TestScript-carecommunication-send-new-priority) | S1.A6 | Send CareCommunication with category 'Regarding referral' and included priority. <br> Receiver is expected to be 'Pædagogisk Psykologisk Rådgivning, Aalborg kommune' with SOR-id: 1385391000016002 | new-message |  |
 | **Reply** |  |  |  |  |
@@ -68,37 +67,6 @@ When executing some of the send test scripts, it is required that SUT has execut
 | [send-forward-changecategory](./TestScript-carecommunication-send-forward-changecategory)* | S3.A2 | Forward CareCommunication with changed category | forward-message | R1 |
 | [send-forward-changetopic](./TestScript-carecommunication-send-forward-changetopic)* | S3.A2 | Forward CareCommunication with changed topic | forward-message | R1 |
 | [send-forward-partialthread](./TestScript-carecommunication-send-forward-partialthread)*[^2] | S3.A3 | Forward a part of the CareCommunication thread | forward-message | R1 |
-| **Modify** |  |  |  |  |
-| [send-modify-new](./TestScript-carecommunication-send-modify-new)* | S.CORR | Correct text of a new CareCommunication  | modify-message | S1 |
-| [send-modify-new-category](./TestScript-carecommunication-send-modify-new-category)* | S.CORR | Correct category of a new CareCommunication  | modify-message | S1 |
-| [send-modify-new-topic](./TestScript-carecommunication-send-modify-new-topic)* | S.CORR | Correct topic of a new CareCommunication  | modify-message | S1.A2 |
-| [send-modify-new-attachment](./TestScript-carecommunication-send-modify-new-attachment)* | S.CORR | Correct with attached files of a new CareCommunication | modify-message | S1.A1 |
-| [send-modify-new-formatted-text](./TestScript-carecommunication-send-modify-new-formatted-text)*[^3] | S.CORR | Correct formatted text and table of a new CareCommunication | modify-message | S1.A3 |
-| [send-modify-new-category-other](./TestScript-carecommunication-send-modify-new-category-other)* | S.CORR | Correct category of a new CareCommunication from 'Other'  | modify-message | S1.A5 |
-| [send-modify-new-priority](./TestScript-carecommunication-send-modify-new-priority)* | S.CORR | Correct category from 'Regarding referral'  | modify-message | S1.A6 |
-| [send-modify-new-to-category-other](./TestScript-carecommunication-send-modify-new-to-category-other)* | S.CORR | Correct category of a new CareCommunication to 'Other'  | modify-message | S1.A5 |
-| [send-modify-new-to-priority](./TestScript-carecommunication-send-modify-new-to-priority)* | S.CORR | Correct priority of a new CareCommunication to 'Regarding referral'  | modify-message | S1.A6 |
-| [send-modify-reply](./TestScript-carecommunication-send-modify-reply)* | S.CORR | Correct text of a reply CareCommunication | modify-message | R1, S2 |
-| [send-modify-reply-changecategory](./TestScript-carecommunication-send-modify-reply-changecategory)* | S.CORR | Correct category of a reply CareCommunication| modify-message | R1, S2.A2 |
-| [send-modify-reply-changetopic](./TestScript-carecommunication-send-modify-reply-changetopic)* | S.CORR | Correct topic of a reply CareCommunication | modify-message | R1, S2.A2 |
-| [send-modify-reply-attachment](./TestScript-carecommunication-send-modify-reply-attachment)* | S.CORR | Correct attached files of a reply CareCommunication | modify-message | R1, S2.A1 |
-| <span style="color: grey;">modify-reply-oioxmlmessage</span> | <span style="color: grey;">S.CORR</span>  | <span style="color: grey;">Correct reply to OIOXML</span> | <span style="color: grey;">modify-message</span> | <span style="color: grey;">R1 (OIOXML-message), S2.A3</span> |
-| <span style="color: grey;">modify-reply-fhirmessage</span> | <span style="color: grey;">S.CORR</span>  | <span style="color: grey;">Correct reply to FHIR message</span> | <span style="color: grey;">modify-message</span> | <span style="color: grey;">R1 (FHIR-message), S2.A3</span> |
-| [send-modify-forward-message](./TestScript-carecommunication-send-modify-forward-message)* | S.CORR | Correct text of a forward CareCommunication | modify-message | R1, S3 |
-| [send-modify-forward-attachment](./TestScript-carecommunication-send-modify-forward-attachment)* | S.CORR | Correct attaches files of a forward CareCommunication | modify-message | R1, S3.A1 |
-| [send-modify-forward-changecategory](./TestScript-carecommunication-send-modify-forward-changecategory)* | S.CORR |Correct category of a forward CareCommunication | modify-message | R1, S3.A2 |
-| [send-modify-forward-changetopic](./TestScript-carecommunication-send-modify-forward-changetopic)* | S.CORR | Correct topic of a forward CareCommunication | modify-message | R1, S3.A2 |
-| **Retract** |  |  |  |  |
-| [send-retract-new-cpr](./TestScript-carecommunication-send-retract-new-cpr)* | S.CANC | Cancel a new CareCommunication due to incorrect CPR-number | retract-message | S1 |
-| [send-retract-new-receiver](./TestScript-carecommunication-send-retract-new-receiver)* | S.CANC | Cancel a new CareCommunication due to incorrect receiver | retract-message | S1 |
-| [send-retract-new-attachment](./TestScript-carecommunication-send-retract-new-attachment)* | S.CANC | Cancel a new CareCommunication due to attachment with content <br> concerning an incorrect CPR-number | retract-message | S1.A1 |
-| [send-retract-reply-cpr](./TestScript-carecommunication-send-retract-reply-cpr)* | S.CANC | Cancel a reply CareCommunication due to incorrect CPR-number | retract-message | R1, S2 |
-| [send-retract-reply-receiver](./TestScript-carecommunication-send-retract-reply-receiver)* | S.CANC | Cancel a reply CareCommunication due to incorrect receiver | retract-message | R1, S2 |
-| [send-retract-reply-attachment](./TestScript-carecommunication-send-retract-reply-attachment)* | S.CANC | Cancel a reply CareCommunication due to incorrect attachment with content <br>concerning an incorrect CPR-number | retract-message | R1, S2.A1 |
-| [send-retract-forward-cpr](./TestScript-carecommunication-send-retract-forward-cpr)* | S.CANC | Cancel a forward CareCommunication due to incorrect CPR-number| retract-message | R1, S3 |
-| [send-retract-forward-receiver](./TestScript-carecommunication-send-retract-forward-receiver)* | S.CANC | Cancel a forward CareCommunication due to incorrect receiver| retract-message | R1, S3 |
-| [send-retract-forward-attachment](./TestScript-carecommunication-send-retract-forward-attachment) | S.CANC | Cancel a forward CareCommunication due to incorrect attachment with content <br> concerning an incorrect CPR-number | retract-message | R1, S3.A1 |
-
 
 #### Technical cases
 
@@ -112,7 +80,6 @@ When executing some of the send test scripts, it is required that SUT has execut
 | [send-tec-04](./TestScript-carecommunication-send-tec-04)* | Send CareCommunication with attachment and an associated structured signature | S1.A1 |
 | [send-tec-05](./TestScript-carecommunication-send-tec-05) | Send CareCommunication with episodeOfCareID | S1 |
 | [send-tec-06](./TestScript-carecommunication-send-tec-06) | Reply to CareCommunication, where episodeOfCare-identifier is correctly transfered in the communication | R1, S2 |
-| [send-tec-07](./TestScript-carecommunication-send-tec-07)* | Cancel CareCommunication which has already been corrected. Expected to cancel the entire thread. | S1, S.CORR, S.CANC |
 | [send-tec-08](./TestScript-carecommunication-send-tec-08) | Send CareCommunication, send CareCommunication as the first wasn't acknowledged | S1, S1 |
 | [send-tec-09](./TestScript-carecommunication-send-tec-09) | Send CareCommunication, including a messagesegment as a URL to a website | S1|
 | [send-tec-10](./TestScript-carecommunication-send-tec-10) | Send CareCommunication concerning a deceased patient | S1|
@@ -120,7 +87,6 @@ When executing some of the send test scripts, it is required that SUT has execut
 
 [^1]: Include one attachment of each mimetype.
 [^2]: This test script is only relevant, if the system supports the user can select a specific part of the CareCommunciation to forward.
-[^3]: This test script is only relevant, if the system supports the entire subset of formatting.
 
 <!-- 
 ### Receive CareCommunication test scripts

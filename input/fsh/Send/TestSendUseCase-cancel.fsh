@@ -7,10 +7,10 @@ InstanceOf: TestScript
 * title = "Cancel a new CareCommunication due to incorrect CPR-number"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-retract-new-cpr" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessage(new-message, 01, /Fixtures/CareCommunication-fixture.xml) 
+* insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
 * insert variableDestinationUri(new-message, 01)
 * insert variableBundleidSetup(new-message, 01)
-* insert createMessage(retract-message, 02, /Fixtures/CareCommunication-fixture.xml, removal, messageHeaderid-new-message-01, 2, 2) 
+* insert createMessage(retract-message, 02, ../Fixtures/CareCommunication-fixture.xml, removal, messageHeaderid-new-message-01, 2, 2) 
 * insert assertCommunications(2)
 * insert assertCommunicationStatus(entered-in-error)
 * insert assertCommunicationStatus(unknown)
@@ -26,10 +26,10 @@ InstanceOf: TestScript
 * title = "Cancel a new CareCommunication due to incorrect receiver"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-retract-new-receiver" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessage(new-message, 01, /Fixtures/CareCommunication-fixture.xml) 
+* insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
 * insert variableDestinationUri(new-message, 01)
 * insert variableBundleidSetup(new-message, 01)
-* insert createMessage(retract-message, 02, /Fixtures/CareCommunication-fixture.xml, removal, messageHeaderid-new-message-01, 2, 2) 
+* insert createMessage(retract-message, 02, ../Fixtures/CareCommunication-fixture.xml, removal, messageHeaderid-new-message-01, 2, 2) 
 * insert assertCommunications(2)
 * insert assertCommunicationStatus(entered-in-error)
 * insert assertCommunicationStatus(unknown)
@@ -45,10 +45,10 @@ InstanceOf: TestScript
 * title = "Cancel a new CareCommunication due to attachment with content concerning an incorrect CPR-number"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-retract-new-attachment" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessage(new-message, 01, /Fixtures/CareCommunication-fixture.xml) 
+* insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
 * insert variableDestinationUri(new-message, 01)
 * insert variableBundleidSetup(new-message, 01)
-* insert createMessage(retract-message, 02, /Fixtures/CareCommunication-fixture.xml, removal, messageHeaderid-new-message-01, 2, 2) 
+* insert createMessage(retract-message, 02, ../Fixtures/CareCommunication-fixture.xml, removal, messageHeaderid-new-message-01, 2, 2) 
 * insert assertCommunications(2)
 * insert assertCommunicationStatus(entered-in-error)
 * insert assertCommunicationStatus(unknown)
@@ -64,10 +64,10 @@ InstanceOf: TestScript
 * title = "Cancel a reply CareCommunication due to incorrect CPR-number"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-retract-reply-cpr" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
-* insert createMessage(reply-message, 02, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
-* insert createMessage(retract-message, 03, /Fixtures/CareCommunication-fixture.xml, removal, messageHeaderid-reply-message-02, 3, 3) 
+* insert createMessage(reply-message, 02, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
+* insert createMessage(retract-message, 03, ../Fixtures/CareCommunication-fixture.xml, removal, messageHeaderid-reply-message-02, 3, 3) 
 * insert assertCommunications(2)
 * insert assertCommunicationStatus(entered-in-error)
 * insert assertCommunicationStatus(unknown)
@@ -83,10 +83,10 @@ InstanceOf: TestScript
 * title = "Cancel a reply CareCommunication due to incorrect receiver"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-retract-reply-receiver" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
-* insert createMessage(reply-message, 02, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
-* insert createMessage(retract-message, 03, /Fixtures/CareCommunication-fixture.xml, removal, messageHeaderid-reply-message-02, 3, 3) 
+* insert createMessage(reply-message, 02, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
+* insert createMessage(retract-message, 03, ../Fixtures/CareCommunication-fixture.xml, removal, messageHeaderid-reply-message-02, 3, 3) 
 * insert assertCommunications(2)
 * insert assertCommunicationStatus(entered-in-error)
 * insert assertCommunicationStatus(unknown)
@@ -102,10 +102,10 @@ InstanceOf: TestScript
 * title = "Cancel a reply CareCommunication due to attachment with content concerning an incorrect CPR-number"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-retract-reply-attachment" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
-* insert createMessage(reply-message, 02, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
-* insert createMessage(retract-message, 03, /Fixtures/CareCommunication-fixture.xml, removal, messageHeaderid-reply-message-02, 3, 3) 
+* insert createMessage(reply-message, 02, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
+* insert createMessage(retract-message, 03, ../Fixtures/CareCommunication-fixture.xml, removal, messageHeaderid-reply-message-02, 3, 3) 
 * insert assertCommunications(2)
 * insert assertCommunicationStatus(entered-in-error)
 * insert assertCommunicationStatus(unknown)
@@ -122,10 +122,10 @@ InstanceOf: TestScript
 * title = "Cancel a forward CareCommunication due to incorrect CPR-number"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-retract-forward-cpr" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
-* insert createMessage(forward-message, 02, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
-* insert createMessage(retract-message, 03, /Fixtures/CareCommunication-fixture.xml, removal, messageHeaderid-forward-message-02, 3, 3) 
+* insert createMessage(forward-message, 02, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
+* insert createMessage(retract-message, 03, ../Fixtures/CareCommunication-fixture.xml, removal, messageHeaderid-forward-message-02, 3, 3) 
 * insert assertCommunications(2)
 * insert assertCommunicationStatus(entered-in-error)
 * insert assertCommunicationStatus(unknown)
@@ -141,10 +141,10 @@ InstanceOf: TestScript
 * title = "Cancel a forward CareCommunication due to incorrect receiver"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-retract-forward-receiver" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
-* insert createMessage(forward-message, 02, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
-* insert createMessage(retract-message, 03, /Fixtures/CareCommunication-fixture.xml, removal, messageHeaderid-forward-message-02, 3, 3) 
+* insert createMessage(forward-message, 02, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
+* insert createMessage(retract-message, 03, ../Fixtures/CareCommunication-fixture.xml, removal, messageHeaderid-forward-message-02, 3, 3) 
 * insert assertCommunications(2)
 * insert assertCommunicationStatus(entered-in-error)
 * insert assertCommunicationStatus(unknown)
@@ -160,10 +160,10 @@ InstanceOf: TestScript
 * title = "Cancel a forward CareCommunication due to attachment with content concerning an incorrect CPR-number"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-retract-forward-attachment" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
-* insert createMessage(forward-message, 02, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
-* insert createMessage(retract-message, 03, /Fixtures/CareCommunication-fixture.xml, removal, messageHeaderid-forward-message-02, 3, 3) 
+* insert createMessage(forward-message, 02, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2) 
+* insert createMessage(retract-message, 03, ../Fixtures/CareCommunication-fixture.xml, removal, messageHeaderid-forward-message-02, 3, 3) 
 * insert assertCommunications(2)
 * insert assertCommunicationStatus(entered-in-error)
 * insert assertCommunicationStatus(unknown)

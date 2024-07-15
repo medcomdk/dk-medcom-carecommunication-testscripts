@@ -109,11 +109,25 @@ RuleSet: assertProvenanceEntityRole(role)
 * test[=].action[=].assert.warningOnly = false
 
 RuleSet: assertPatientDeceased(deceased)
-* test[=].action[+].assert.description = "Confirm that the patient.deceased is set to {deceased}"
+* test[=].action[+].assert.description = "Confirm that the Patient.deceased is set to {deceased}"
 * test[=].action[=].assert.direction = #request
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Patient).deceased"
 * test[=].action[=].assert.operator = #equals
 * test[=].action[=].assert.value = "{deceased}"
+* test[=].action[=].assert.warningOnly = false
+
+RuleSet: assertPatientIdentifier(system)
+* test[=].action[+].assert.description = "Confirm that the system of the patient.identifier is {system}"
+* test[=].action[=].assert.direction = #request
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Patient).identifier.system"
+* test[=].action[=].assert.operator = #equals
+* test[=].action[=].assert.value = "{system}"
+* test[=].action[=].assert.warningOnly = false
+
+RuleSet: assertPatientIdentifierDiff(system)
+* test[=].action[+].assert.description = "Confirm that the system of the patient.identifier is {system}"
+* test[=].action[=].assert.direction = #request
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Patient).identifier.system != '{system}'"
 * test[=].action[=].assert.warningOnly = false
 
 
@@ -189,6 +203,30 @@ RuleSet: assertMimetype(mimetype)
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).payload.content.where(contentType = '{mimetype}').data.exists()"
 * test[=].action[=].assert.warningOnly = false
 
+RuleSet: assertAttachmentCount
+* test[=].action[+].assert.description = "Confirm that multiple attachments are included"
+* test[=].action[=].assert.direction = #request 
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).payload.content.data.count() > 1"
+* test[=].action[=].assert.warningOnly = false
+
+RuleSet: assertAttachmentExactCount(noAttachments)
+* test[=].action[+].assert.description = "Confirm that {noAttachments} attachments are included"
+* test[=].action[=].assert.direction = #request 
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).payload.content.data.count() = {noAttachments}"
+* test[=].action[=].assert.warningOnly = false
+
+RuleSet: assertAttachmentCreationTime
+* test[=].action[+].assert.description = "Confirm that creation time for the attachment is included"
+* test[=].action[=].assert.direction = #request 
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).payload.content.creation.exists()"
+* test[=].action[=].assert.warningOnly = false
+
+RuleSet: assertCommunicationIdentifier
+* test[=].action[+].assert.description = "Confirm that the Communication.identifier is a UUID v4."
+* test[=].action[=].assert.direction = #request 
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).identifier.value.matches('urn:uuid:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}')"
+* test[=].action[=].assert.warningOnly = false
+
 RuleSet: assertAttachmentURL
 * test[=].action[+].assert.description = "Confirm that an attachment with a link is included"
 * test[=].action[=].assert.direction = #request 
@@ -209,10 +247,16 @@ RuleSet: assertCategory(category)
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).category.coding.code = '{category}'"
 * test[=].action[=].assert.warningOnly = false
 
-RuleSet: assertContentChanged(info1 and info2)
+RuleSet: assertContentChanged(info1, info2)
 * test[=].action[+].assert.description = "Confirm that the content is different in the two messages"
 * test[=].action[=].assert.direction = #request 
 * test[=].action[=].assert.expression = "'${{info1}}' != '${{info2}}'"
+* test[=].action[=].assert.warningOnly = false
+
+RuleSet: assertContentAlike(info1, info2)
+* test[=].action[+].assert.description = "Confirm that the content is the same in the two messages"
+* test[=].action[=].assert.direction = #request 
+* test[=].action[=].assert.expression = "'${{info1}}' = '${{info2}}'"
 * test[=].action[=].assert.warningOnly = false
 
 RuleSet: assertPriorityExists
@@ -227,7 +271,7 @@ RuleSet: assertSenderExists
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).extension.where(url = 'http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-sender-extension').exists()"
 * test[=].action[=].assert.warningOnly = false
 
-RuleSet: assertOrganisationIdentifier(orgsystem and orgid)
+RuleSet: assertOrganisationIdentifier(orgsystem, orgid)
 * test[=].action[+].assert.description = "Confirm that the Organization identifier, with system = {orgsystem}, is {orgid}"
 * test[=].action[=].assert.direction = #request 
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(MessageHeader).destination.receiver.reference.resolve().identifier.where(system = '{orgsystem}').value = '{orgid}'"
@@ -235,7 +279,7 @@ RuleSet: assertOrganisationIdentifier(orgsystem and orgid)
 
 
 RuleSet: assertStructuredSignatur 
-* test[=].action[+].assert.description = "Confirm that {sign} is included in the message text"
+* test[=].action[+].assert.description = "Confirm that structured author information is included"
 * test[=].action[=].assert.direction = #request 
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).payload.where(content.data.exists()).extention(url = 'http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-author-extension')"
 * test[=].action[=].assert.warningOnly = false
@@ -267,7 +311,7 @@ RuleSet: assertCommunications(noCommunications)
 
 
 
-RuleSet: assertCancallationReason(status and reason)
+RuleSet: assertCancallationReason(status, reason)
 * test[=].action[+].assert.description = "Confirm that the reason for cancellation is '{reason}'. Only gives a warning is false."
 * test[=].action[=].assert.direction = #request 
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).where(status = '{status}').payload.content = '{reason}'"

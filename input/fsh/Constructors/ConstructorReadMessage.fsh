@@ -1,4 +1,4 @@
-RuleSet: readMessage(type and number and bundleid)
+RuleSet: readMessage(type, number, bundleid)
 
 /* 
 Beskriver server og client for dette testsetup
@@ -7,14 +7,14 @@ Beskriver server og client for dette testsetup
 * insert destinationServer
 
 /* 
-Beskriver den profil and der valideres op mod
+Beskriver den profil, der valideres op mod
 */
 * insert profilecarecommunicationMessage
 
 /* 
 Beskriver de operationer der udføres i denne test. Her er det kun setup operationer
 */
-* insert operationReadMessage({type} and {number} and {bundleid})
+* insert operationReadMessage({type}, {number}, {bundleid})
 
 /* 
 Beskriver den vurdering der sker af testen. Er det gået ok?

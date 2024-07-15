@@ -48,22 +48,32 @@ When executing some of the send test scripts, it is required that SUT has execut
 |---|---|---|---|---|
 | **New message** |  |  |  |  |
 | [send-new-message](./TestScript-carecommunication-send-new-message) | S1 | Send CareCommunication. <br> Receiver is expected to be 'Klinik for Ældresygdomme, AUH, Skejby' with SOR-id: 441211000016000 | new-message |  |
-| [send-new-attachment](./TestScript-carecommunication-send-new-attachment) | S1.A1 | Send CareCommunication with attached files [^1]. <br> Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004 | new-message |  |
+| [send-new-attachment-pdf](./TestScript-carecommunication-send-new-attachment-pdf) | S1.A1 | Send CareCommunication with a pdf as an attached file . <br> Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004 | new-message |  |
+| [send-new-attachment-png](./TestScript-carecommunication-send-new-attachment-png) | S1.A1 | Send CareCommunication with a png as an attached file . <br> Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004 | new-message |  |
+| [send-new-attachment-bmp](./TestScript-carecommunication-send-new-attachment-bmp) | S1.A1 | Send CareCommunication with a bmp as an attached file . <br> Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004 | new-message |  |
+| [send-new-attachment-jpeg](./TestScript-carecommunication-send-new-attachment-jepg) | S1.A1 | Send CareCommunication with a jpeg as an attached file . <br> Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004 | new-message |  |
+| [send-new-attachment-tiff](./TestScript-carecommunication-send-new-attachment-tiff) | S1.A1 | Send CareCommunication with a tiff as an attached file . <br> Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004 | new-message |  |
+| [send-new-attachment-gif](./TestScript-carecommunication-send-new-attachment-gif) | S1.A1 | Send CareCommunication with a gif as an attached file . <br> Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004 | new-message |  |
+| [send-new-attachment-link](./TestScript-carecommunication-send-new-attachment-link) | S1.A1 | Send CareCommunication with a link as an attachment . <br> Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004 | new-message |  |
+| [send-new-attachment-multiple](./TestScript-carecommunication-send-new-attachment-multiple) | S1.A1 | Send CareCommunication with multiple attached files . <br> Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004 | new-message |  |
+| [send-new-attachment-author](./TestScript-carecommunication-send-new-attachment) | S1.A1 | Send CareCommunication with attached files and structured author information; author name and role, and creation date . <br> Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004 | new-message |  |
 | [send-new-topic](./TestScript-carecommunication-send-new-topic) | S1.A2 | Send CareCommunication with topic. <br> Receiver is expected to be 'Lægeklinik Ølgod' with SOR-id: 1339531000016004 | new-message |  |
 | [send-new-category-other](./TestScript-carecommunication-send-new-category-other) | S1.A5 | Send CareCommunication with category 'Other'. <br> Receiver is expected to be 'SLB Hjertesygdomme Ambulatorium (Kolding), Kolding Sygehus' with SOR-id: 349061000016004 | new-message | |
 | [send-new-priority](./TestScript-carecommunication-send-new-priority) | S1.A6 | Send CareCommunication with category 'Regarding referral' and included priority. <br> Receiver is expected to be 'Pædagogisk Psykologisk Rådgivning, Aalborg kommune' with SOR-id: 1385391000016002 | new-message |  |
 | **Reply** |  |  |  |  |
 | [send-reply-message](./TestScript-carecommunication-send-reply-message) | S2 | Reply CareCommunication | reply-message | R1 |
-| [send-reply-attachment](./TestScript-carecommunication-send-reply-attachment) | S2.A1 | Reply CareCommunication with attached files [^1] | reply-message | R1 |
-| [send-reply-attachment](./TestScript-carecommunication-send-reply-add-attachment) | S2.A1 | Reply CareCommunication add new attachments [^1] | reply-message | R1 |
+| [send-reply-attachment](./TestScript-carecommunication-send-reply-attachment) | S2.A1 | Reply CareCommunication where the new message includes attached files | reply-message | R1 |
+| [send-reply-add-attachment](./TestScript-carecommunication-send-reply-add-attachment) | S2.A1 | Reply CareCommunication add new attachments. More than one attachment is expected  | reply-message | R1 |
 | [send-reply-changecategory](./TestScript-carecommunication-send-reply-changecategory) | S2.A2 | Reply CareCommunication with changed category | reply-message | R1 |
 | [send-reply-changetopic](./TestScript-carecommunication-send-reply-changetopic) | S2.A2 | Reply CareCommunication with changed topic | reply-message | R1 |
 | [send-reply-new](./TestScript-carecommunication-send-reply-new) | S2 | Reply CareCommunication to a CareCommunication send by the replying system | reply-message | S1 |
+| [send-reply-new](./TestScript-carecommunication-send-reply-new) | S2 | Reply CareCommunication to a CareCommunication that has been forwarded | reply-message | S1 |
 | <span style="color: grey;">reply-oioxmlmessage</span> | <span style="color: grey;">S2.A3</span>  | <span style="color: grey;">Reply to OIOXML</span> | <span style="color: grey;">reply-message</span> | <span style="color: grey;">R1 (OIOXML-message)</span> |
 | <span style="color: grey;">reply-fhirmessage</span> | <span style="color: grey;">S2.A3</span>  | <span style="color: grey;">Reply to FHIR message</span> | <span style="color: grey;">reply-message</span> | <span style="color: grey;">R1 (FHIR-message)</span> |
 | **Forward** |  |  |  |  |
 | [send-forward-message](./TestScript-carecommunication-send-forward-message)* | S3 | Forward CareCommunication | forward-message | R1 |
-| [send-forward-attachment](./TestScript-carecommunication-send-forward-attachment)* | S3.A1 | Forward CareCommunication with attached files [^1] | forward-message | R1 |
+| [send-forward-attachment](./TestScript-carecommunication-send-forward-attachment)* | S3.A1 | Forward CareCommunication where the new message includes attached files | forward-message | R1 |
+| [send-forward-add-attachment](./TestScript-carecommunication-send-forward-attachment)* | S3.A1 | Forward CareCommunication and add an attached file  | forward-message | R1 |
 | [send-forward-changecategory](./TestScript-carecommunication-send-forward-changecategory)* | S3.A2 | Forward CareCommunication with changed category | forward-message | R1 |
 | [send-forward-changetopic](./TestScript-carecommunication-send-forward-changetopic)* | S3.A2 | Forward CareCommunication with changed topic | forward-message | R1 |
 | [send-forward-partialthread](./TestScript-carecommunication-send-forward-partialthread)*[^2] | S3.A3 | Forward a part of the CareCommunication thread | forward-message | R1 |
@@ -74,18 +84,15 @@ When executing some of the send test scripts, it is required that SUT has execut
 
 | **Type** | **Description** | **Activity/activities** |
 |---|---|---|
-| [send-tec-01](./TestScript-carecommunication-send-tec-01) | Send CareCommunication with sender and recipient | S1 |
-| [send-tec-02](./TestScript-carecommunication-send-tec-02) | Send CareCommunication, where the receive is 'Plejecenter Herlev' with GLN-number '5790001348120' | S1 |
-| <span style="color: grey;">send-tec-03</span> | <span style="color: grey;">Send CareCommunication with the maximum length in the text of the message segment</span> | <span style="color: grey;">S1</span> |
-| [send-tec-04](./TestScript-carecommunication-send-tec-04)* | Send CareCommunication with attachment and an associated structured signature | S1.A1 |
+| [send-tec-01](./TestScript-carecommunication-send-tec-01) | Send CareCommunication concerning a deceased patient | S1|
+| [send-tec-02](./TestScript-carecommunication-send-tec-02) | Send CareCommunication with sender and recipient | S1 |
+| [send-tec-03](./TestScript-carecommunication-send-tec-03) | Send CareCommunication where the patient has a CPR-number as identifier | S1 |
+| [send-tec-04](./TestScript-carecommunication-send-tec-04) | Send CareCommunication where the patient has a replacement-CPR-number as identifier | S1 |
 | [send-tec-05](./TestScript-carecommunication-send-tec-05) | Send CareCommunication with episodeOfCareID | S1 |
 | [send-tec-06](./TestScript-carecommunication-send-tec-06) | Reply to CareCommunication, where episodeOfCare-identifier is correctly transfered in the communication | R1, S2 |
-| [send-tec-08](./TestScript-carecommunication-send-tec-08) | Send CareCommunication, send CareCommunication as the first wasn't acknowledged | S1, S1 |
-| [send-tec-09](./TestScript-carecommunication-send-tec-09) | Send CareCommunication, including a messagesegment as a URL to a website | S1|
-| [send-tec-10](./TestScript-carecommunication-send-tec-10) | Send CareCommunication concerning a deceased patient | S1|
+| [send-tec-07](./TestScript-carecommunication-send-tec-07) | Reply to CareCommunication, that includes all content | R1, S2 |
 
 
-[^1]: Include one attachment of each mimetype.
 [^2]: This test script is only relevant, if the system supports the user can select a specific part of the CareCommunciation to forward.
 
 <!-- 
@@ -100,7 +107,7 @@ When receiving a CareCommunication, a GET operation is required for all messages
 |---|---|---|---|---|
 | **New message** |  |  |  |  |
 | [receive-new-message](./TestScript-carecommunication-receive-new-message) | R1 | Receive new CareCommunication  | new-message | S1 |
-| [receive-new-attachment](./TestScript-carecommunication-receive-new-attachment) | R1 | Receive new CareCommunication with attached files [^1] | new-message | S1.A1 |
+| [receive-new-attachment](./TestScript-carecommunication-receive-new-attachment) | R1 | Receive new CareCommunication with attached files  | new-message | S1.A1 |
 | [receive-new-topic](./TestScript-carecommunication-receive-new-topic) | R1 | Receive new CareCommunication with topic | new-message | S1.A2 |
 | [receive-new-formatted-text](./TestScript-carecommunication-receive-new-formatted-text)[^2] | R1 | Receive new CareCommunication with formatted text and table | new-message | S1.A3 |
 | [receive-new-category-other](./TestScript-carecommunication-receive-new-category-other) | R1 | Receive new CareCommunication with category 'Other'| new-message | S1.A5 |

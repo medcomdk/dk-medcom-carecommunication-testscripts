@@ -223,7 +223,7 @@
       <Provenance>
         <id value="c0499c96-d85b-4807-85d2-0f0f1a9d2df0"/>
         <meta>
-          <profile value="http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance"/>
+          <profile value="http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-provenance"/>
         </meta>
         <text>
           <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Provenance_c0499c96-d85b-4807-85d2-0f0f1a9d2df0"> </a><p class="res-header-id"><b>Generated Narrative: Provenance c0499c96-d85b-4807-85d2-0f0f1a9d2df0</b></p><a name="c0499c96-d85b-4807-85d2-0f0f1a9d2df0"> </a><a name="hcc0499c96-d85b-4807-85d2-0f0f1a9d2df0"> </a><a name="c0499c96-d85b-4807-85d2-0f0f1a9d2df0-da-DK"> </a><p>Provenance for <a href="MessageHeader-d3339011-1a71-4c5c-a743-bf7d782ac7ae.html">MessageHeader: event[x] = Care Communication Message (MedComMessagingEventCodes#care-communication-message); definition = http://medcomfhir.dk/ig/carecommunication/medcom-careCommunication-message-definition|4.0.0</a></p><p>Summary</p><table class="grid"><tr><td>Occurrence</td><td>2024-08-19 13:00:00+0100</td></tr><tr><td>Recorded</td><td>2024-08-19 13:00:00+0100</td></tr><tr><td>Activity</td><td><span title="Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes new-message}">A new message has been sent</span></td></tr></table><p><b>Agents</b></p><table class="grid"><tr><td><b>who</b></td></tr><tr><td><a href="Organization-d3b21860-e8a9-44ba-8db4-10521975ef34.html">Organization Klinik for Ældresygdomme, AUH, Skejby</a></td></tr></table></div>

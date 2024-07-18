@@ -220,7 +220,7 @@
       "resourceType" : "Provenance",
       "id" : "jfkdls7jz1hnjkzlzal.klasa-klaoi",
       "meta" : {
-        "profile" : ["http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance"]
+        "profile" : ["http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-provenance"]
       },
       "text" : {
         "status" : "generated",

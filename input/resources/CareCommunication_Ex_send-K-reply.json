@@ -314,7 +314,7 @@
       "resourceType" : "Provenance",
       "id" : "4e290fa6-0a40-4cc8-abd3-14ac22e0b48b",
       "meta" : {
-        "profile" : ["http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance"]
+        "profile" : ["http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-provenance"]
       },
       "text" : {
         "status" : "generated",
@@ -352,7 +352,7 @@
       "resourceType" : "Provenance",
       "id" : "86b93888-0a2d-4530-a1c2-263394932e11",
       "meta" : {
-        "profile" : ["http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance"]
+        "profile" : ["http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-provenance"]
       },
       "text" : {
         "status" : "generated",

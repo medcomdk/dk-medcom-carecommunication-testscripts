@@ -242,7 +242,7 @@
       "resourceType" : "Provenance",
       "id" : "9b044b9b-c617-4861-b5e4-96b46fd14b22",
       "meta" : {
-        "profile" : ["http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-provenance"]
+        "profile" : ["http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-provenance"]
       },
       "text" : {
         "status" : "generated",

@@ -4,6 +4,8 @@
   "path": "http://medcomfhir.dk/ig/carecommunicationtestscripts/4.0.0",
   "status": "release",
   "sequence": "Release",
+  "first" : true,
+  "ci-build" : "https://build.fhir.org/ig/medcomdk/dk-medcom-carecommunication-testscripts",
   "milestone" : true,
   "title": "CareCommunication Testscripts",
   "category": "MedCom CareCommunication Testscripts",

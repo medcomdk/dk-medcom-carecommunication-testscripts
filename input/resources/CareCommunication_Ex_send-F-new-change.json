@@ -5,7 +5,7 @@
     "profile" : ["http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message"]
   },
   "type" : "message",
-  "timestamp" : "2024-08-16T11:30:00+02:00",
+  "timestamp" : "2024-08-16T11:30:00+01:00",
   "entry" : [{
     "fullUrl" : "https://medcomfhir.dk/ig/carecommunication/https://medcomfhir.dk/ig/carecommunication/MessageHeader/d2b81c34-ec5d-4c5f-9380-1b5aa507544b",
     "resource" : {
@@ -102,7 +102,7 @@
       "payload" : [{
         "extension" : [{
           "url" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-datetime-extension",
-          "valueDateTime" : "2024-08-15T15:20:00+02:00"
+          "valueDateTime" : "2024-08-15T15:20:00+01:00"
         },
         {
           "url" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-identifier-extension",
@@ -324,8 +324,8 @@
       "target" : [{
         "reference" : "MessageHeader/d2b81c34-ec5d-4c5f-9380-1b5aa507544b"
       }],
-      "occurredDateTime" : "2024-08-16T11:30:00+02:00",
-      "recorded" : "2024-08-16T11:30:00+02:00",
+      "occurredDateTime" : "2024-08-16T11:30:00+01:00",
+      "recorded" : "2024-08-16T11:30:00+01:00",
       "activity" : {
         "coding" : [{
           "system" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes",

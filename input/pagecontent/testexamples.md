@@ -20,7 +20,7 @@ and
 | [CareCommunication_Ex_send-C-new-attachment](./Bundle-683f2782-11e2-490a-9fa5-d5da09cc317a.html) | A new CareCommunication with attachment. | 
 | [CareCommunication_Ex_send-D-new](./Bundle-5f85e1bd-03ea-47b9-bfe1-dbde95e69c75.html) | A new CareCommunication. ContentString includes escaped signs and without sender and receiver name (Organization.name). | 
 | [CareCommunication_Ex_send-E-new](./Bundle-81b715aa-e993-4e7c-9b8a-4a05c10b540e.html) | A new CareCommunication. The PractitionerRole of the is not from the list of roles. | 
-| [CareCommunication_Ex_send-F-new-change](./Bundle-8352b67a-23b2-44c5-b43a-725270a90722.html) | A new CareCommunication.  | 
+| [CareCommunication_Ex_send-F-new-change](./Bundle-9c2371ff-09a0-4626-9fb9-f70645546361.html) | A new CareCommunication.  | 
 | G-EDIFACT[^1] | An EDIFACT message   |
 | G-OIOXML[^1] | An OIOXML message |  
 | [CareCommunication_Ex_send-H-new](./Bundle-aca3d03a-febd-4b88-ad53-ac1bc36da615.html) | A new CareCommunication. Patient has a replacement CPR (e-CPR).| 
@@ -44,7 +44,7 @@ and
 | [CareCommunication_Ex_receive_D-TEK_new_priority](./Bundle-0c8dddf2-c882-4b00-8870-5035279e7d01.html) | A new CareCommunication. Including priority, escapet signs and line breaks in the message text. | R1 Receive a CareCommunication and sending an Acknowledgement |
 | [CareCommunication_Ex_receive_E-tek-new-noOrgName](./Bundle-68f5c0f8-e33e-4302-89b0-cdea52801ec9.html) | A new CareCommunication without name included for the sender and receiver organization. No role for the practitioner is available. |R1 Receive a CareCommunication |
 | [CareCommunication_Ex_receive_F-tek-new-xml](./Bundle-4f6ee254-6953-4a57-a68e-a5907a5761dc.html) | A new CareCommunication in xml. The PractitionerRole of the is not from the list of roles. | R1 Receive a CareCommunication |
-| [CareCommunication_Ex_receive_G-tek-new-json](./Bundle-ddc3894e-6139-4ce7-a090-2c0c4871f341.html) | A new CareCommunication in json. The instance id's are not UUID. | R1 Receive a CareCommunication |
+| [CareCommunication_Ex_receive_G-tek-new-json](./Bundle-jklfds89r78jklsduf98w487953jkl.jkliuuh.html) | A new CareCommunication in json. The instance id's are not UUID. | R1 Receive a CareCommunication |
 | [CareCommunication_Ex_receive_H-tek-new-parallel](./Bundle-c1edf6f3-2554-4b72-b58b-0f030ee555ba.html) | A new CareCommunication. | R1 Receive a CareCommunication |
 | [CareCommunication_Ex_receive_I-tek-reply-parallel](./Bundle-0e2864ad-a6a1-4e84-a9dc-aeacee63f981.html) | A reply CareCommunication. | R1 Receive a CareCommunication |
 | [CareCommunication_Ex_receive_J-tek-new](./Bundle-20fcbedb-ced8-4949-9edf-a145e0bb9b09.html) | A new CareCommunication. Patient is deceased. | R1 Receive a CareCommunication |

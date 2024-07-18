@@ -1,1 +1,1 @@
-Include a description of the release. This will be presented on the history page
+Initial publication of CareCommunication test scripts.

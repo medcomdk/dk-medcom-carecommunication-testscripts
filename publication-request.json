@@ -1,11 +1,11 @@
 {
   "package-id": "medcom.fhir.dk.carecommunicationtestscripts",
-  "version": "2.1.0",
-  "path": "http://medcomfhir.dk/ig/carecommunicationtestscripts/2.1.0",
+  "version": "4.0.0",
+  "path": "http://medcomfhir.dk/ig/carecommunicationtestscripts/4.0.0",
   "status": "release",
   "sequence": "Release",
   "milestone" : true,
-  "title": "carecommunication Testscripts",
+  "title": "CareCommunication Testscripts",
   "category": "MedCom CareCommunication Testscripts",
   "introduction": "The MedCom CareCommunication Testscripts Implementation Guide",
   "descmd": "@release-notes.md"

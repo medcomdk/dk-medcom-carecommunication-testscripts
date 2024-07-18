@@ -6,43 +6,41 @@ Test scripts presented in this IG are all based on the [FHIR TestScript resource
 
 Use cases described in the [use case document](https://medcomdk.github.io/dk-medcom-carecommunication/#12-use-cases) will be referenced throughout this IG and they are the foundation for the tests. 
 
-In addition to test scripts based on the use cases, test scripts testing the technical aspects are included. They will focus on the technical tests within the boundaries of the CareCommunication standard and governance. All tests are used to support the test protocols for sending and receiving CareCommunications. 
+In addition to test scripts based on the use cases, test scripts testing the technical aspects are included. They will focus on the technical tests within the boundaries of the CareCommunication standard and governance. All tests are used to support the test protocols for sending CareCommunications. 
 
 #### TouchStone and API
 Before getting started with test script execution, it is necessary to have an account, be a member of MedComs Org Group, and to create a test system in TouchStone. Please follow [this guide to setup an account and test system](https://medcomdk.github.io/MedComLandingPage/assets/documents/TouchStoneGettingStarted.html).
 
 #### Test script naming
-**Use cases:** The name of the test scripts is constituted by CareCommunication_TestScript_[send/receive]-[type], describing the type of messages being sent or received, for instance CareCommunication_TestScript_send-new-message. 'CareCommunication_TestScript_' is not shown in the tables below.
+**Use cases:** The name of the test scripts is constituted by CareCommunication_TestScript_[send]-[type], describing the type of messages being sent, for instance CareCommunication_TestScript_send-new-message. 'CareCommunication_TestScript_' is not shown in the tables below.
 
-**Technical cases:** The name of the test scripts is constituted by CareCommunication_TestScript_[send/receive]-[tec]-[number]. For instance CareCommunication_Testscript_send-tec-02. 'CareCommunication_TestScript_' is not shown in the tables below. 
+**Technical cases:** The name of the test scripts is constituted by CareCommunication_TestScript_[send]-[tec]-[number]. For instance CareCommunication_Testscript_send-tec-02. 'CareCommunication_TestScript_' is not shown in the tables below. 
 
 #### Test examples 
 
-Test examples are, in TouchStone testing, called fixtures. When testing the CareCommunication standard, the fixtures are previously sent CareCommunications. The fixtures are already uploaded to TouchStone. During setup of a test, all relevant fixtures will automatically be uploaded to the server that is used during test. From an API it is possible to request relevant fixtures. 
-
-Timestamps in fixtures are sent between the 2023-03-01 and 2023-03-02. All corerctions and cancellation messages are sent within an one hour after the initial message.
+Test examples are, in TouchStone testing, called fixtures. When testing the CareCommunication standard, the fixtures are previously sent CareCommunications. The fixtures are already uploaded to TouchStone. During setup of a test, all relevant fixtures will automatically be uploaded to the server that is used during test. From an API it is possible to request relevant fixtures. Timestamps in fixtures are defined to be added to the fixture when the test is executed. 
 
 All fixtures are based on the test patient:
-* Family name: Elmer
+* Name: Bruno Test Elmer
 * CPR-nr.: 250947-9989 
 
 #### Operations
 
 When sending a CareCommunication, a POST operation is required for all types of messages, and must be used for both the preconditional messages and actual messages being sent. The POST operation should be used from the API or SUT, and each posted message will be validated against the CareCommunication IG. Further, a number of asserts will test for correct concent of the CareCommunication message. The endpoint of the POST operation depends on the setup of the testscript, but it migth be similar to: `http://touchstone.aegis.net:49917/fhir4-0-1/Bundle`
 
-When receiving a CareCommunication, which is the cases in some preconditions, a GET operation must be used from the API or SUT. When using the GET operation a fixture will send from the server, which can be visualized in SUT.
+When receiving a CareCommunication, which is the cases is a precondition, a GET operation must be used from the API or SUT. When using the GET operation a fixture will send from the server, which can be visualized in SUT.
 The endpoint of the GET operation depends on the setup of the testscript, but it will be composed by the server endpoint, Resource type and id. It migth be similar to `http://touchstone.aegis.net:49917/fhir4-0-1/Bundle/b10620cb-e2e6-436e-9185-c35f7e196cea`.
 
 ### Send CareCommunication test scripts
 To execute all the test scripts below, both POST and GET operations must be used. 
 
-Since it is optional to support sending forwarded, modification and retraction of messages, a the test scripts testing these functionalities are marked with *.  
+Since it is optional to support sending forwarded CareCommunication, a the test scripts testing these functionalities are marked with * in the tables below.  
 
 When executing some of the send test scripts, it is required that SUT has executed one or more use cases in advance by sending a message. These use cases are listed in the 'Precondition' columns in the tables. 
 
 #### Use Cases
 
-[Test scripts for test of the sending use cases, can be found here in TouchStone](https://touchstone.aegis.net/touchstone/testdefinitions?selectedTestGrp=/FHIRSandbox/MedCom/CareCommunication/v300-send&activeOnly=false&contentEntry=TEST_SCRIPTS) or see all sending test scripts in the [conformance test suite](https://touchstone.aegis.net/touchstone/conformance/current?suite=FHIR4-0-1-CareCommunication-v300-Send-Client), which will be used for test and certification. The conformance suite provides a great overview of the executed test scripts.
+[Test scripts for test of the sending use cases, can be found here in TouchStone](https://touchstone.aegis.net/touchstone/testdefinitions?selectedTestGrp=/FHIRSandbox/MedCom/CareCommunication/v400-send&activeOnly=false&contentEntry=TEST_SCRIPTS) or see all sending test scripts in the [conformance test suite](https://touchstone.aegis.net/touchstone/conformance/suites?name=FHIR4-0-1-CareCommunication-send-Client), which will be used for test and certification. The conformance suite provides a great overview of the executed test scripts.
 
 | **Type** | **Use case <br> code** | **Description** | **Activity** | **Precondition use case** |
 |---|---|---|---|---|

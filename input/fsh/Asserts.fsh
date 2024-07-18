@@ -21,7 +21,7 @@ RuleSet: assertResponseNotFound //kan bruges til at bekræfte, at en meddelelse 
 * test[=].action[=].assert.warningOnly = false
 
 RuleSet: assertValidateProfiles
-* test[=].action[0].assert.description = "Validates the bundle against http://medcomfhir.dk/ig/carecommunication/ImplementationGuide/dk.fhir.ig.dk-medcom-carecommunication" 
+* test[=].action[+].assert.description = "Validates the bundle against http://medcomfhir.dk/ig/carecommunication/ImplementationGuide/dk.fhir.ig.dk-medcom-carecommunication" 
 * test[=].action[=].assert.direction = #request
 * test[=].action[=].assert.validateProfileId = "carecommunication"
 * test[=].action[=].assert.warningOnly = false

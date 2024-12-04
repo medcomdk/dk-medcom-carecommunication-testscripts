@@ -9,7 +9,7 @@ name: CareCommunication Test scripts
 title: CareCommunication Test scripts
 description: Test scripts for CareCommunication v. 4.0
 status: active # draft | active | retired | unknown # choose 'active' before release
-version: 4.0.0
+version: 4.0.1
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2022+
 releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use

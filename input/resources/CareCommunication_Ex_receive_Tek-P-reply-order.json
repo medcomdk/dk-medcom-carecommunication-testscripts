@@ -1,22 +1,22 @@
 {
   "resourceType" : "Bundle",
-  "id" : "7c5a0cc0-f0f8-4a2e-9de9-d9293598bf94",
+  "id" : "3e047a9d-c86a-4828-b686-6a80403df5eb",
   "meta" : {
     "profile" : ["http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message"]
   },
   "type" : "message",
-  "timestamp" : "2024-08-24T12:00:00+01:00",
+  "timestamp" : "2024-05-02T11:30:00+02:00",
   "entry" : [{
-    "fullUrl" : "https://medcomfhir.dk/ig/carecommunication/MessageHeader/8f537c84-17f9-4fd1-a3d6-3d4008d6c6ec",
+    "fullUrl" : "https://medcomfhir.dk/ig/carecommunication/MessageHeader/2414b445-665f-41af-9ecd-b97c0b58c081",
     "resource" : {
       "resourceType" : "MessageHeader",
-      "id" : "8f537c84-17f9-4fd1-a3d6-3d4008d6c6ec",
+      "id" : "2414b445-665f-41af-9ecd-b97c0b58c081",
       "meta" : {
         "profile" : ["http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader"]
       },
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MessageHeader_8f537c84-17f9-4fd1-a3d6-3d4008d6c6ec\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MessageHeader 8f537c84-17f9-4fd1-a3d6-3d4008d6c6ec</b></p><a name=\"8f537c84-17f9-4fd1-a3d6-3d4008d6c6ec\"> </a><a name=\"hc8f537c84-17f9-4fd1-a3d6-3d4008d6c6ec\"> </a><a name=\"8f537c84-17f9-4fd1-a3d6-3d4008d6c6ec-da-DK\"> </a><p><b>event</b>: <a href=\"http://medcomfhir.dk/ig/terminology/1.7.0/CodeSystem-medcom-messaging-eventCodes.html#medcom-messaging-eventCodes-care-communication-message\">MedComMessagingEventCodes</a> care-communication-message: Care Communication Message</p><h3>Destinations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Endpoint</b></td><td><b>Receiver</b></td></tr><tr><td style=\"display: none\">*</td><td/><td><a href=\"https://sor2.sum.dsdn.dk/#id=953741000016009\">https://sor2.sum.dsdn.dk/#id=953741000016009</a></td><td><a href=\"Organization-966bc46d-f02f-4be3-a44a-d47ebdf4fdad.html\">Organization Plejecenter Herlev</a></td></tr></table><p><b>sender</b>: <a href=\"Organization-55b3ef79-9e10-4b52-9d94-6c97ff5a0999.html\">Organization Hjerteafdelingen på Herlev og Gentofte hospital</a></p><h3>Sources</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Endpoint</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"https://sor2.sum.dsdn.dk/#id=265161000016000\">https://sor2.sum.dsdn.dk/#id=265161000016000</a></td></tr></table><p><b>focus</b>: <a href=\"Communication-26bc9e59-e225-4330-9a0c-e6f06785846d.html\">Communication: identifier = urn:uuid:d6d721a1-f4ec-4906-8946-ef808525bef1; status = unknown; category = Examination Results; topic = </a></p><p><b>definition</b>: <code>http://medcomfhir.dk/ig/carecommunication/medcom-careCommunication-message-definition|4.0.0</code></p></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"MessageHeader_2414b445-665f-41af-9ecd-b97c0b58c081\"> </a><p class=\"res-header-id\"><b>Generated Narrative: MessageHeader 2414b445-665f-41af-9ecd-b97c0b58c081</b></p><a name=\"2414b445-665f-41af-9ecd-b97c0b58c081\"> </a><a name=\"hc2414b445-665f-41af-9ecd-b97c0b58c081\"> </a><a name=\"2414b445-665f-41af-9ecd-b97c0b58c081-da-DK\"> </a><p><b>event</b>: <a href=\"http://medcomfhir.dk/ig/terminology/1.7.0/CodeSystem-medcom-messaging-eventCodes.html#medcom-messaging-eventCodes-care-communication-message\">MedComMessagingEventCodes care-communication-message</a>: Care Communication Message</p><h3>Destinations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>Endpoint</b></td><td><b>Receiver</b></td></tr><tr><td style=\"display: none\">*</td><td/><td><a href=\"https://sor2.sum.dsdn.dk/#id=265161000016000\">https://sor2.sum.dsdn.dk/#id=265161000016000</a></td><td><a href=\"Organization-55b3ef79-9e10-4b52-9d94-6c97ff5a0999.html\">Organization Hjerteafdelingen på Herlev og Gentofte hospital</a></td></tr></table><p><b>sender</b>: <a href=\"Organization-966bc46d-f02f-4be3-a44a-d47ebdf4fdad.html\">Organization Plejecenter Herlev</a></p><h3>Sources</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Endpoint</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"https://sor2.sum.dsdn.dk/#id=953741000016009\">https://sor2.sum.dsdn.dk/#id=953741000016009</a></td></tr></table><p><b>focus</b>: <a href=\"Communication-9e829a72-32b2-4810-a56e-1e8f3a81e888.html\">Communication: identifier = urn:uuid:d6d721a1-f4ec-4906-8946-ef808525bef1; status = unknown; category = Examination Results; topic = </a></p><p><b>definition</b>: <code>http://medcomfhir.dk/ig/carecommunication/medcom-careCommunication-message-definition|4.0.0</code></p></div>"
       },
       "eventCoding" : {
         "system" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes",
@@ -30,19 +30,19 @@
             "code" : "primary"
           }
         }],
-        "endpoint" : "https://sor2.sum.dsdn.dk/#id=953741000016009",
+        "endpoint" : "https://sor2.sum.dsdn.dk/#id=265161000016000",
         "receiver" : {
-          "reference" : "Organization/966bc46d-f02f-4be3-a44a-d47ebdf4fdad"
+          "reference" : "Organization/55b3ef79-9e10-4b52-9d94-6c97ff5a0999"
         }
       }],
       "sender" : {
-        "reference" : "Organization/55b3ef79-9e10-4b52-9d94-6c97ff5a0999"
+        "reference" : "Organization/966bc46d-f02f-4be3-a44a-d47ebdf4fdad"
       },
       "source" : {
-        "endpoint" : "https://sor2.sum.dsdn.dk/#id=265161000016000"
+        "endpoint" : "https://sor2.sum.dsdn.dk/#id=953741000016009"
       },
       "focus" : [{
-        "reference" : "Communication/26bc9e59-e225-4330-9a0c-e6f06785846d"
+        "reference" : "Communication/9e829a72-32b2-4810-a56e-1e8f3a81e888"
       }],
       "definition" : "http://medcomfhir.dk/ig/carecommunication/medcom-careCommunication-message-definition|4.0.0"
     }
@@ -71,16 +71,16 @@
     }
   },
   {
-    "fullUrl" : "https://medcomfhir.dk/ig/carecommunication/Communication/26bc9e59-e225-4330-9a0c-e6f06785846d",
+    "fullUrl" : "https://medcomfhir.dk/ig/carecommunication/Communication/9e829a72-32b2-4810-a56e-1e8f3a81e888",
     "resource" : {
       "resourceType" : "Communication",
-      "id" : "26bc9e59-e225-4330-9a0c-e6f06785846d",
+      "id" : "9e829a72-32b2-4810-a56e-1e8f3a81e888",
       "meta" : {
         "profile" : ["http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication"]
       },
       "text" : {
-        "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Communication_26bc9e59-e225-4330-9a0c-e6f06785846d\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Communication 26bc9e59-e225-4330-9a0c-e6f06785846d</b></p><a name=\"26bc9e59-e225-4330-9a0c-e6f06785846d\"> </a><a name=\"hc26bc9e59-e225-4330-9a0c-e6f06785846d\"> </a><a name=\"26bc9e59-e225-4330-9a0c-e6f06785846d-da-DK\"> </a><p><b>identifier</b>: urn:uuid:d6d721a1-f4ec-4906-8946-ef808525bef1</p><p><b>status</b>: Unknown</p><p><b>category</b>: <span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-careCommunication-categoryCodes examination-results}\">Examination Results</span></p><p><b>subject</b>: <a href=\"Patient-b7fed758-bfdd-4c21-bfca-bb0b4b7081a0.html\">Peter Hansen (official) (no stated gender), DoB Unknown ( urn:oid:1.2.208.176.1.6.1.1#0703921VJ5)</a></p><p><b>topic</b>: <span title=\"Codes:\">Forspørgsel på seneste resultater</span></p><blockquote><p><b>payload</b></p><p><b>content</b>: Til rette vedkommende. Vi ønsker information om de seneste undersøgelser udført på Bruno. På forhånd tak. Hilsen Michael, sygeplejerske.</p></blockquote></div>"
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Communication_9e829a72-32b2-4810-a56e-1e8f3a81e888\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Communication 9e829a72-32b2-4810-a56e-1e8f3a81e888</b></p><a name=\"9e829a72-32b2-4810-a56e-1e8f3a81e888\"> </a><a name=\"hc9e829a72-32b2-4810-a56e-1e8f3a81e888\"> </a><a name=\"9e829a72-32b2-4810-a56e-1e8f3a81e888-da-DK\"> </a><p><b>identifier</b>: urn:uuid:d6d721a1-f4ec-4906-8946-ef808525bef1</p><p><b>status</b>: Unknown</p><p><b>category</b>: <span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-careCommunication-categoryCodes examination-results}\">Examination Results</span></p><p><b>subject</b>: <a href=\"Patient-b7fed758-bfdd-4c21-bfca-bb0b4b7081a0.html\">Peter Hansen (official) (no stated gender), DoB Unknown ( urn:oid:1.2.208.176.1.6.1.1#0703921VJ5)</a></p><p><b>topic</b>: <span title=\"Codes:\">Forspørgsel på seneste resultater</span></p><blockquote><p><b>payload</b></p><p><b>DateTimeExtension</b>: 2024-08-24 12:00:00+0200</p><p><b>IdentifierExtension</b>: urn:uuid:67ebe566-c20e-4885-8fff-5552875ef74c</p><p><b>PractitionerExtension</b>: <a href=\"PractitionerRole-569a1bff-55a1-4868-a7b4-80fedb2066e3.html\">PractitionerRole Sygeplejerske</a></p><p><b>ContactExtension</b>: ph: 38683868</p><p><b>content</b>: Til rette vedkommende. Vi ønsker information om de seneste undersøgelser udført på Bruno. På forhånd tak. Hilsen Michael, sygeplejerske.</p></blockquote><blockquote><p><b>payload</b></p><p><b>DateTimeExtension</b>: 2024-05-02 11:30:00+0200</p><p><b>IdentifierExtension</b>: urn:uuid:ac353781-0e43-447d-80f4-d090028abcc1</p><p><b>PractitionerExtension</b>: <a href=\"PractitionerRole-8bf63050-5504-11ed-bdc3-0242ac120002.html\">PractitionerRole Sygeplejerske</a></p><p><b>ContactExtension</b>: ph: 44527000</p><p><b>content</b>: Hej Michael, Resultaterne for undersøgelsen kommer her. Blodtryk 130/95 mmHg, vægt: 83 kg og højde: 179 cm. Blodprøven påviste ikke tegn på sukkersyge eller vitaminmangel. Se mere i den vedhæftede pdf. Mvh. Emma</p></blockquote></div>"
       },
       "identifier" : [{
         "value" : "urn:uuid:d6d721a1-f4ec-4906-8946-ef808525bef1"
@@ -101,7 +101,7 @@
       "payload" : [{
         "extension" : [{
           "url" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-datetime-extension",
-          "valueDateTime" : "2024-08-24T12:00:00+01:00"
+          "valueDateTime" : "2024-08-24T12:00:00+02:00"
         },
         {
           "url" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-identifier-extension",
@@ -126,6 +126,76 @@
           }
         }],
         "contentString" : "Til rette vedkommende. Vi ønsker information om de seneste undersøgelser udført på Bruno. På forhånd tak. Hilsen Michael, sygeplejerske."
+      },
+      {
+        "extension" : [{
+          "url" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-datetime-extension",
+          "valueDateTime" : "2024-05-02T11:30:00+02:00"
+        },
+        {
+          "url" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-identifier-extension",
+          "valueIdentifier" : {
+            "value" : "urn:uuid:ac353781-0e43-447d-80f4-d090028abcc1",
+            "assigner" : {
+              "reference" : "Organization/966bc46d-f02f-4be3-a44a-d47ebdf4fdad"
+            }
+          }
+        },
+        {
+          "url" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner-extension",
+          "valueReference" : {
+            "reference" : "PractitionerRole/8bf63050-5504-11ed-bdc3-0242ac120002"
+          }
+        },
+        {
+          "url" : "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-contact-extension",
+          "valueContactPoint" : {
+            "system" : "phone",
+            "value" : "44527000"
+          }
+        }],
+        "contentString" : "Hej Michael, Resultaterne for undersøgelsen kommer her. Blodtryk 130/95 mmHg, vægt: 83 kg og højde: 179 cm. Blodprøven påviste ikke tegn på sukkersyge eller vitaminmangel. Se mere i den vedhæftede pdf. Mvh. Emma"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "https://medcomfhir.dk/ig/carecommunication/PractitionerRole/8bf63050-5504-11ed-bdc3-0242ac120002",
+    "resource" : {
+      "resourceType" : "PractitionerRole",
+      "id" : "8bf63050-5504-11ed-bdc3-0242ac120002",
+      "meta" : {
+        "profile" : ["http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"PractitionerRole_8bf63050-5504-11ed-bdc3-0242ac120002\"> </a><p class=\"res-header-id\"><b>Generated Narrative: PractitionerRole 8bf63050-5504-11ed-bdc3-0242ac120002</b></p><a name=\"8bf63050-5504-11ed-bdc3-0242ac120002\"> </a><a name=\"hc8bf63050-5504-11ed-bdc3-0242ac120002\"> </a><a name=\"8bf63050-5504-11ed-bdc3-0242ac120002-da-DK\"> </a><p><b>practitioner</b>: <a href=\"Practitioner-7ffff970-5504-11ed-bdc3-0242ac120002.html\">Practitioner Emma Waters </a></p><p><b>code</b>: <span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesSKSadministrativ sygeplejerske}\">Sygeplejerske</span></p></div>"
+      },
+      "practitioner" : {
+        "reference" : "Practitioner/7ffff970-5504-11ed-bdc3-0242ac120002"
+      },
+      "code" : [{
+        "coding" : [{
+          "system" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesSKSadministrativ",
+          "code" : "sygeplejerske"
+        }]
+      }]
+    }
+  },
+  {
+    "fullUrl" : "https://medcomfhir.dk/ig/carecommunication/Practitioner/7ffff970-5504-11ed-bdc3-0242ac120002",
+    "resource" : {
+      "resourceType" : "Practitioner",
+      "id" : "7ffff970-5504-11ed-bdc3-0242ac120002",
+      "meta" : {
+        "profile" : ["http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_7ffff970-5504-11ed-bdc3-0242ac120002\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner 7ffff970-5504-11ed-bdc3-0242ac120002</b></p><a name=\"7ffff970-5504-11ed-bdc3-0242ac120002\"> </a><a name=\"hc7ffff970-5504-11ed-bdc3-0242ac120002\"> </a><a name=\"7ffff970-5504-11ed-bdc3-0242ac120002-da-DK\"> </a><p><b>name</b>: Emma Waters </p></div>"
+      },
+      "name" : [{
+        "family" : "Waters",
+        "given" : ["Emma"]
       }]
     }
   },
@@ -217,6 +287,50 @@
     }
   },
   {
+    "fullUrl" : "https://medcomfhir.dk/ig/carecommunication/Provenance/61f5b1c7-c342-48c7-b7ee-81fcf6f01f0e",
+    "resource" : {
+      "resourceType" : "Provenance",
+      "id" : "61f5b1c7-c342-48c7-b7ee-81fcf6f01f0e",
+      "meta" : {
+        "profile" : ["http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-provenance"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Provenance_61f5b1c7-c342-48c7-b7ee-81fcf6f01f0e\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Provenance 61f5b1c7-c342-48c7-b7ee-81fcf6f01f0e</b></p><a name=\"61f5b1c7-c342-48c7-b7ee-81fcf6f01f0e\"> </a><a name=\"hc61f5b1c7-c342-48c7-b7ee-81fcf6f01f0e\"> </a><a name=\"61f5b1c7-c342-48c7-b7ee-81fcf6f01f0e-da-DK\"> </a><p>Provenance for <a href=\"MessageHeader-2414b445-665f-41af-9ecd-b97c0b58c081.html\">MessageHeader: event[x] = Care Communication Message (MedComMessagingEventCodes#care-communication-message); definition = http://medcomfhir.dk/ig/carecommunication/medcom-careCommunication-message-definition|4.0.0</a></p><p>Summary</p><table class=\"grid\"><tr><td>Occurrence</td><td>2024-05-02 11:30:00+0200</td></tr><tr><td>Recorded</td><td>2024-05-02 11:30:00+0200</td></tr><tr><td>Activity</td><td><span title=\"Codes:{http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes reply-message}\">A message has been replied to</span></td></tr></table><p><b>Agents</b></p><table class=\"grid\"><tr><td><b>who</b></td></tr><tr><td><a href=\"Organization-966bc46d-f02f-4be3-a44a-d47ebdf4fdad.html\">Organization Plejecenter Herlev</a></td></tr></table></div>"
+      },
+      "target" : [{
+        "reference" : "MessageHeader/2414b445-665f-41af-9ecd-b97c0b58c081"
+      }],
+      "occurredDateTime" : "2024-05-02T11:30:00+02:00",
+      "recorded" : "2024-05-02T11:30:00+02:00",
+      "activity" : {
+        "coding" : [{
+          "system" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes",
+          "code" : "reply-message"
+        }]
+      },
+      "agent" : [{
+        "who" : {
+          "reference" : "Organization/966bc46d-f02f-4be3-a44a-d47ebdf4fdad"
+        }
+      }],
+      "entity" : [{
+        "role" : "source",
+        "what" : {
+          "identifier" : {
+            "value" : "urn:uuid:ac353781-0e43-447d-80f4-d090028abcc1"
+          }
+        }
+      },
+      {
+        "role" : "revision",
+        "what" : {
+          "reference" : "MessageHeader/8f537c84-17f9-4fd1-a3d6-3d4008d6c6ec"
+        }
+      }]
+    }
+  },
+  {
     "fullUrl" : "https://medcomfhir.dk/ig/carecommunication/Provenance/0696ca09-5213-4b6c-98e6-0d7c05c16080",
     "resource" : {
       "resourceType" : "Provenance",
@@ -231,8 +345,8 @@
       "target" : [{
         "reference" : "MessageHeader/8f537c84-17f9-4fd1-a3d6-3d4008d6c6ec"
       }],
-      "occurredDateTime" : "2024-08-24T12:00:00+01:00",
-      "recorded" : "2024-08-24T12:00:00+01:00",
+      "occurredDateTime" : "2024-08-24T12:00:00+02:00",
+      "recorded" : "2024-08-24T12:00:00+02:00",
       "activity" : {
         "coding" : [{
           "system" : "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes",

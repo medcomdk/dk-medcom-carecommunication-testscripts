@@ -46,14 +46,14 @@ and
 | [CareCommunication_Ex_receive_B-reply](./Bundle-91b4b79a-520f-48cb-bb9a-9c3e27301968.html) | A reply message. The reply contains an attachment. | R2 Receive a replied CareCommunication |
 | [CareCommunication_Ex_receive_C-forward](./Bundle-8352b67a-23b2-44c5-b43a-725270a90722.html) | A forwarded message | R3 Receive a forwarded CareCommunication|
 | [CareCommunication_Ex_receive_Tek-A_new_priority](./Bundle-0c8dddf2-c882-4b00-8870-5035279e7d01.html) | A new CareCommunication. Including priority, escapet signs and line breaks in the message text. | R1 Receive a CareCommunication |
-| [CareCommunication_Ex_receive_Tek-B_new_attachment](./Bundle-ee22cec7-aad7-4bfe-ab1b-5ada3f59e676.html) | A new CareCommunication. Including one of each type of attachment. |
-| [CareCommunication_Ex_receive_Tek-C-new_zulutime](./Bundle-6e5d7a74-a88a-47a3-8362-20396e9db332.html) | A new CareCommunication. The timezone is zulutime. |
-| [CareCommunication_Ex_receive_Tek-D_new_timezone](./Bundle-82875f08-4b9e-4a23-b81a-e23ec1251334.html) | A new CareCommunication. A timezone is included. |
-| [CareCommunication_Ex_receive_Tek-E_new_EpisodeOfCare-identifier](./Bundle-d000e12e-4b0c-477e-9cb7-80b2a3b3adc0.html) | A new CareCommunication. EpisodeOfCare-identifers are included. |
-| [CareCommunication_Ex_receive_Tek-F_new_deceased](./Bundle-bed699de-ae44-4fa4-8208-10a35b025476.html) | A new CareCommunication. The test patient is deceased. |
-| [CareCommunication_Ex_receive_Tek-G_new_replacementCPR](./Bundle-abfcb7c7-1381-4dba-b4b7-cc1c3713e515.html) | A new CareCommunication. The test patient has a replacement CPR. |
-| [CareCommunication_Ex_receive_Tek-H_new_ID](./Bundle-33ee6434-a9cc-4679-8bb8-4f940bd63e30.html) | A new CareCommunication. The instances in the message doesn't have UUIDs. |
-| [CareCommunication_Ex_receive_Tek-I_new_moreInfo](./Bundle-5d29cc7d-dcf7-4b50-81b1-a8d971973ff6.html) | A new CareCommunication. More information than specified in the CareCommunication standard is included. |
+| [CareCommunication_Ex_receive_Tek-B_new_attachment](./Bundle-ee22cec7-aad7-4bfe-ab1b-5ada3f59e676.html) | A new CareCommunication. Including one of each type of attachment. | R1 Receive a CareCommunication |
+| [CareCommunication_Ex_receive_Tek-C-new_zulutime](./Bundle-6e5d7a74-a88a-47a3-8362-20396e9db332.html) | A new CareCommunication. The timezone is zulutime. | R1 Receive a CareCommunication |
+| [CareCommunication_Ex_receive_Tek-D_new_timezone](./Bundle-82875f08-4b9e-4a23-b81a-e23ec1251334.html) | A new CareCommunication. A timezone is included. | R1 Receive a CareCommunication |
+| [CareCommunication_Ex_receive_Tek-E_new_EpisodeOfCare-identifier](./Bundle-d000e12e-4b0c-477e-9cb7-80b2a3b3adc0.html) | A new CareCommunication. EpisodeOfCare-identifers are included. | R1 Receive a CareCommunication |
+| [CareCommunication_Ex_receive_Tek-F_new_deceased](./Bundle-bed699de-ae44-4fa4-8208-10a35b025476.html) | A new CareCommunication. The test patient is deceased. | R1 Receive a CareCommunication |
+| [CareCommunication_Ex_receive_Tek-G_new_replacementCPR](./Bundle-abfcb7c7-1381-4dba-b4b7-cc1c3713e515.html) | A new CareCommunication. The test patient has a replacement CPR. | R1 Receive a CareCommunication |
+| [CareCommunication_Ex_receive_Tek-H_new_ID](./Bundle-33ee6434-a9cc-4679-8bb8-4f940bd63e30.html) | A new CareCommunication. The instances in the message doesn't have UUIDs. | R1 Receive a CareCommunication |
+| [CareCommunication_Ex_receive_Tek-I_new_moreInfo](./Bundle-5d29cc7d-dcf7-4b50-81b1-a8d971973ff6.html) | A new CareCommunication. More information than specified in the CareCommunication standard is included. | R1 Receive a CareCommunication |
 | [CareCommunication_Ex_receive_Tek-J-new-noOrgName](./Bundle-68f5c0f8-e33e-4302-89b0-cdea52801ec9.html) | A new CareCommunication without name included for the sender and receiver organization. No role for the practitioner is available. |R1 Receive a CareCommunication |
 | [CareCommunication_Ex_receive_Tek-K-new-xml](./Bundle-4f6ee254-6953-4a57-a68e-a5907a5761dc.html) | A new CareCommunication in xml. The PractitionerRole of the is not from the list of roles. | R1 Receive a CareCommunication |
 | [CareCommunication_Ex_receive_Tek-L-new-json](./Bundle-6280ec98-0799-4a3a-8a66-c426207d93f1.html) | A new CareCommunication in json. The instance id's are not UUID. | R1 Receive a CareCommunication |

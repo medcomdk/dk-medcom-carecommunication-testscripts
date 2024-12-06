@@ -1,6 +1,6 @@
 {
   "resourceType" : "Bundle",
-  "id" : "jklfds89r45jklsduf98w487953jkl.jkliuuh",
+  "id" : "517f89c3-c18c-47d3-b627-8c039a7756b1",
   "meta" : {
     "profile" : ["http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message"]
   },

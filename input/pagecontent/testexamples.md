@@ -29,7 +29,7 @@ and
 | G-OIOXML[^1] | An OIOXML message |  
 | [CareCommunication_Ex_send-H-new](./Bundle-aca3d03a-febd-4b88-ad53-ac1bc36da615.html) | A new CareCommunication. Patient has a replacement CPR (e-CPR).| 
 | [CareCommunication_Ex_send-I-new-attachment](./Bundle-1e9fdc8f-50f0-4dc3-9879-facdf331a2fe.html) | A new CareCommunication with attachment. Patient is deceased. | 
-| [CareCommunication_Ex_send-J-new-change](./Bundle-jklfds89r45jklsduf98w487953jkl.jkliuuh.html) | A new CareCommunication. Instance IDs are not UUIDs. ContentString includes line breaks (<br/>).|
+| [CareCommunication_Ex_send-J-new-change](./Bundle-517f89c3-c18c-47d3-b627-8c039a7756b1.html) | A new CareCommunication. Instance IDs are not UUIDs. ContentString includes line breaks (< br/ >).|
 | [CareCommunication_Ex_send-K-forward](./Bundle-77c771ca-05d6-4efb-9a74-2fc513787f3a.html) | A forward CareCommunication. | 
 | [CareCommunication_Ex_send-Tek-A-new-episodeOfCare](./Bundle-b43146a2-99ec-4b05-bb8f-5b44af4fe424.html) | A new CareCommunication with an EpisodeOfCare-identifier. |
 | [CareCommunication_Ex_send-Tek-B-new-episodeOfCare](./Bundle-98eb081e-a66f-41a2-b2f7-c455782563b0.html) | A new CareCommunication with an EpisodeOfCare-identifier.  | 

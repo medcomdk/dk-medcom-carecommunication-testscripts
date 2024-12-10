@@ -22,7 +22,7 @@ and
 | [CareCommunication_Ex_send-A-new](./Bundle-1932711d-49d0-4ad7-b1ee-61de711892d2.html) | A new CareCommunication. Including long journal note, specifik sender and recipient, topic, prioritet, attachment with structured author information.|
 | [CareCommunication_Ex_send-B-new-attachment](./Bundle-720f68cf-21bf-4c40-a90c-a113e00e88a8.html) | A new CareCommunication with attachment.| 
 | [CareCommunication_Ex_send-C-new-attachment](./Bundle-683f2782-11e2-490a-9fa5-d5da09cc317a.html) | A new CareCommunication with attachment. | 
-| [CareCommunication_Ex_send-D-new](./Bundle-5f85e1bd-03ea-47b9-bfe1-dbde95e69c75.html) | A new CareCommunication. ContentString includes escaped signs and without sender and receiver name (Organization.name). | 
+| [CareCommunication_Ex_send-D-new](./Bundle-5f85e1bd-03ea-47b9-bfe1-dbde95e69c75.html) | A new CareCommunication. ContentString includes escape signs and without sender and receiver name (Organization.name). | 
 | [CareCommunication_Ex_send-E-new](./Bundle-81b715aa-e993-4e7c-9b8a-4a05c10b540e.html) | A new CareCommunication. The PractitionerRole is not from the structured list of roles. | 
 | [CareCommunication_Ex_send-F-new-change](./Bundle-9c2371ff-09a0-4626-9fb9-f70645546361.html) | A new CareCommunication.  | 
 | G-EDIFACT[^1] | An EDIFACT message   |
@@ -45,7 +45,7 @@ and
 | [CareCommunication_Ex_receive_A-new](./Bundle-b10f940e-2000-4ec8-9e0b-a3fb60fc5bb5.html) | A new CareCommunication. Including long journal note, specifik sender and recipient, topic, the category 'other', attachment and associated structured author information. | 
 | [CareCommunication_Ex_receive_B-reply](./Bundle-91b4b79a-520f-48cb-bb9a-9c3e27301968.html) | A reply message. The reply contains an attachment. | 
 | [CareCommunication_Ex_receive_C-forward](./Bundle-8352b67a-23b2-44c5-b43a-725270a90722.html) | A forwarded message | 
-| [CareCommunication_Ex_receive_Tek-A_new_priority](./Bundle-0c8dddf2-c882-4b00-8870-5035279e7d01.html) | A new CareCommunication. Including priority, escapet signs and line breaks in the message text. | 
+| [CareCommunication_Ex_receive_Tek-A_new_priority](./Bundle-0c8dddf2-c882-4b00-8870-5035279e7d01.html) | A new CareCommunication. Including priority, escape signs and line breaks in the message text. | 
 | [CareCommunication_Ex_receive_Tek-B_new_attachment](./Bundle-ee22cec7-aad7-4bfe-ab1b-5ada3f59e676.html) | A new CareCommunication. Including one of each type of attachment. | 
 | [CareCommunication_Ex_receive_Tek-C-new_zulutime](./Bundle-6e5d7a74-a88a-47a3-8362-20396e9db332.html) | A new CareCommunication. The timezone is zulutime. | 
 | [CareCommunication_Ex_receive_Tek-D_new_timezone](./Bundle-82875f08-4b9e-4a23-b81a-e23ec1251334.html) | A new CareCommunication. A timezone is included. | 

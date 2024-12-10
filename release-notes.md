@@ -1,1 +1,1 @@
-Initial publication of CareCommunication test scripts.
+Updated test examples.

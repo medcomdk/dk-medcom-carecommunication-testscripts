@@ -1,0 +1,284 @@
+{
+  "resourceType": "Bundle",
+  "id": "3d1149cd-d3e3-421a-ae31-4860decb4272",
+  "meta": {
+    "profile": [
+      "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message"
+    ]
+  },
+  "type": "message",
+  "timestamp": "2024-11-10T15:20:00+01:00",
+  "entry": [
+    {
+      "fullUrl": "https://medcomfhir.dk/ig/carecommunication/MessageHeader/5c2cdf2c-bcbd-4c15-adce-6b862a84249c",
+      "resource": {
+        "resourceType": "MessageHeader",
+        "id": "5c2cdf2c-bcbd-4c15-adce-6b862a84249c",
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader"
+          ]
+        },
+        "eventCoding": {
+          "code": "care-communication-message",
+          "system": "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-eventCodes"
+        },
+        "definition": "http://medcomfhir.dk/ig/carecommunication/medcom-careCommunication-message-definition|4.0.0",
+        "destination": [
+          {
+            "extension": [
+              {
+                "url": "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-destinationUseExtension",
+                "valueCoding": {
+                  "system": "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-destinationUse",
+                  "code": "primary"
+                }
+              }
+            ],
+            "endpoint": "https://sor2.sum.dsdn.dk/#id=441211000016000",
+            "receiver": {
+              "reference": "Organization/409b87d3-398e-44cb-9246-35b47ff75cc4"
+            }
+          }
+        ],
+        "sender": {
+          "reference": "Organization/6e7761cb-2dc9-48c7-8fd4-b49d46dd9c05"
+        },
+        "source": {
+          "endpoint": "https://sor2.sum.dsdn.dk/#id=1339531000016004"
+        },
+        "focus": [
+          {
+            "reference": "Communication/4a003dce-060c-4d9d-b5d6-7513323049d1"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://medcomfhir.dk/ig/carecommunication/Patient/64610edb-bb86-4248-87ae-28c1385c3c23",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "64610edb-bb86-4248-87ae-28c1385c3c23",
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient"
+          ]
+        },
+        "name": [
+          {
+            "use": "official",
+            "given": [
+              "Bruno",
+              "Test"
+            ],
+            "family": "Elmer"
+          }
+        ],
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.208.176.1.2",
+            "value": "2509479989"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://medcomfhir.dk/ig/carecommunication/Communication/4a003dce-060c-4d9d-b5d6-7513323049d1",
+      "resource": {
+        "resourceType": "Communication",
+        "id": "4a003dce-060c-4d9d-b5d6-7513323049d1",
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication"
+          ]
+        },
+        "status": "unknown",
+        "payload": [
+          {
+            "extension": [
+              {
+                "url": "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-datetime-extension",
+                "valueDateTime": "2024-11-10T15:20:00+01:00"
+              },
+              {
+                "url": "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-identifier-extension",
+                "valueIdentifier": {
+                  "value": "urn:uuid:6abbaeaf-0c35-4212-9fc2-48d7b520ac69",
+                  "assigner": {
+                    "reference": "Organization/409b87d3-398e-44cb-9246-35b47ff75cc4"
+                  }
+                }
+              },
+              {
+                "url": "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner-extension",
+                "valueReference": {
+                  "reference": "PractitionerRole/bb760c55-95b0-4f74-9b16-794e7780d5f2"
+                }
+              },
+              {
+                "valueContactPoint": {
+                  "system": "phone",
+                  "value": "004512345789"
+                },
+                "url": "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-contact-extension"
+              }
+            ]
+          }
+        ],
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "examination-results",
+                "system": "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-careCommunication-categoryCodes"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/64610edb-bb86-4248-87ae-28c1385c3c23"
+        },
+        "identifier": [
+          {
+            "value": "urn:uuid:c4a7575c-c3d7-4f34-a120-6f1ea28f9c12"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://medcomfhir.dk/ig/carecommunication/PractitionerRole/bb760c55-95b0-4f74-9b16-794e7780d5f2",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "id": "bb760c55-95b0-4f74-9b16-794e7780d5f2",
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole"
+          ]
+        },
+        "practitioner": {
+          "reference": "Practitioner/1d301fb6-9d72-4f72-9182-1f60656df133"
+        },
+        "code": [
+          {
+            "coding": [
+              {
+                "code": "sygehuslaege",
+                "system": "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-core-PractitionerRolesSKSadministrativ"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://medcomfhir.dk/ig/carecommunication/Practitioner/1d301fb6-9d72-4f72-9182-1f60656df133",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "1d301fb6-9d72-4f72-9182-1f60656df133",
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner"
+          ]
+        },
+        "name": [
+          {
+            "given": [
+              "Henrik"
+            ],
+            "family": "Elderly"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://medcomfhir.dk/ig/carecommunication/Organization/409b87d3-398e-44cb-9246-35b47ff75cc4",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "409b87d3-398e-44cb-9246-35b47ff75cc4",
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://www.gs1.org/gln",
+            "value": "5790001987244"
+          },
+          {
+            "system": "urn:oid:1.2.208.176.1.1",
+            "value": "441211000016000"
+          }
+        ],
+        "name": "Klinik for Ældresygdomme, AUH, Skejby"
+      }
+    },
+    {
+      "fullUrl": "https://medcomfhir.dk/ig/carecommunication/Organization/6e7761cb-2dc9-48c7-8fd4-b49d46dd9c05",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "6e7761cb-2dc9-48c7-8fd4-b49d46dd9c05",
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://www.gs1.org/gln",
+            "value": "5790002626814"
+          },
+          {
+            "system": "urn:oid:1.2.208.176.1.1",
+            "value": "1339531000016004"
+          }
+        ],
+        "name": "Lægeklinik Ølgod"
+      }
+    },
+    {
+      "fullUrl": "https://medcomfhir.dk/ig/carecommunication/Provenance/69620f44-c01b-4c8f-9bfe-97b00639a770",
+      "resource": {
+        "resourceType": "Provenance",
+        "id": "69620f44-c01b-4c8f-9bfe-97b00639a770",
+        "meta": {
+          "profile": [
+            "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-provenance"
+          ]
+        },
+        "entity": [
+          {
+            "role": "source",
+            "what": {
+              "identifier": {
+                "value": "urn:uuid:6abbaeaf-0c35-4212-9fc2-48d7b520ac69"
+              }
+            }
+          }
+        ],
+        "target": [
+          {
+            "reference": "MessageHeader/5c2cdf2c-bcbd-4c15-adce-6b862a84249c"
+          }
+        ],
+        "occurredDateTime": "2024-11-10T15:20:00+01:00",
+        "recorded": "2024-11-10T15:20:00+01:00",
+        "activity": {
+          "coding": [
+            {
+              "code": "new-message",
+              "system": "http://medcomfhir.dk/ig/terminology/CodeSystem/medcom-messaging-activityCodes"
+            }
+          ]
+        },
+        "agent": [
+          {
+            "who": {
+              "reference": "Organization/409b87d3-398e-44cb-9246-35b47ff75cc4"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

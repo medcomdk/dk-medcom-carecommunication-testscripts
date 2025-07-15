@@ -4,6 +4,7 @@ RuleSet: operationDeleteSetup(destinationUri)
 * setup[=].action[=].operation.resource = #Bundle
 * setup[=].action[=].operation.description = "System-generated search, delete operations from conditional delete on Bundle MessageHeader.destination.endpoint"
 * setup[=].action[=].operation.accept = #xml
+* setup[=].action[=].operation.destination = 1 // RICHARD: tilføj denne
 * setup[=].action[=].operation.encodeRequestUrl = true
 //* setup[=].action[=].operation.params = "?message.identifier=${{bundleid}}"
 * setup[=].action[=].operation.params = "?message.destination-uri=${{destinationUri}}"
@@ -41,16 +42,17 @@ RuleSet: operationCreateMessage(type, number)
 * test[=].action[=].operation.destination = 1
 * test[=].action[=].operation.encodeRequestUrl = true
 * test[=].action[=].operation.origin = 1
-* test[=].action[=].operation.requestId = "create-message-{type}-{number}"
+//* test[=].action[=].operation.requestId = "create-message-{type}-{number}" //RICHARD: Tror denne skal udkommenteres
 * test[=].action[=].operation.sourceId = "create-{type}-{number}" 
 
 RuleSet: operationUpdateCreateSetup(type, number, bundleid)
 * setup[=].action[+].operation.type.system = "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
 * setup[=].action[=].operation.type.code = #updateCreate
 * setup[=].action[=].operation.resource = #Bundle
-* setup[=].action[=].operation.description = "Update the Bundle.id in XML format on the destination server, so it corresponds to ${bundleid}."
+* setup[=].action[=].operation.description = "Create or Update the Bundle.id in XML format on the destination server, so it corresponds to ${bundleid}."
 * setup[=].action[=].operation.accept = #xml
 * setup[=].action[=].operation.contentType = #xml
+* setup[=].action[=].operation.destination = 1
 * setup[=].action[=].operation.encodeRequestUrl = true
 * setup[=].action[=].operation.sourceId = "create-{type}-{number}"
 * setup[=].action[=].operation.params = "/${{bundleid}}"

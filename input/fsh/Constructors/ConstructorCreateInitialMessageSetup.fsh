@@ -29,7 +29,7 @@ Beskriver anvendte variable
 Beskriver de operationer der udføres i denne test. Her er det kun setup operationer
 */
 * insert operationDeleteSetup({destinationUri})
-* insert operationCreateSetup({type}, {number})
+//* insert operationCreateSetup({type}, {number})
 * insert operationUpdateCreateSetup({type}, {number}, {bundleid})
 
 /* 

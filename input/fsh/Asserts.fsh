@@ -43,7 +43,7 @@ RuleSet: assertPayload
 RuleSet: assertMessageHeaderEventCoding
 * test[=].action[+].assert.description = "Confirm that the request resource contains the expected eventCoding.code."
 * test[=].action[=].assert.direction = #request
-* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(MessageHeader).event.as(Coding).select(code = 'care-communication-message').allTrue()"
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(MessageHeader).event.as(Coding).code = 'care-communication-message'"
 * test[=].action[=].assert.warningOnly = false
 
 RuleSet: assertProvenanceActivityCode(type)

@@ -27,9 +27,11 @@ RuleSet: assertValidateProfiles
 * test[=].action[=].assert.warningOnly = false
 
 RuleSet: assertMessageHeaderid(messageHeaderid)
-* test[=].action[+].assert.description = "Confirm that the previous MessageHeader.id is identical to Provenance.entity.what" 
+* test[=].action[+].assert.description = "Confirm that the previous MessageHeader.id is referenced in Provenance.target.reference" 
 * test[=].action[=].assert.direction = #request
-* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Provenance).where(entity.what.reference.contains('${{messageHeaderid}}')).exists()"
+//* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Provenance).where(entity.what.reference.contains('${{messageHeaderid}}')).exists()"
+//* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Provenance).target.reference.contains (MessageHeader/ + %resource.entry.resource.ofType('MessageHeader').id).exists()" // tror denne skal bruges i stedet for og indsættes.
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Provenance).where(target.reference.contains('MessageHeader/${{messageHeaderid}}')).exists()"
 * test[=].action[=].assert.warningOnly = false
 
 RuleSet: assertPayload
@@ -147,7 +149,8 @@ RuleSet: assertStructureEpisodeOfCareID
 RuleSet: assertSenderSOR(hospitalSOR)
 * test[=].action[+].assert.description = "Confirm that the sender SOR number is different from the previous message."
 * test[=].action[=].assert.direction = #request
-* test[=].action[=].assert.expression = "Bundle.entry[0].resource.sender.reference.resolve().identifier.where(system = 'urn:oid:1.2.208.176.1.1').value != ${{hospitalSOR}})"
+//* test[=].action[=].assert.expression = "Bundle.entry[0].resource.sender.reference.resolve().identifier.where(system = 'urn:oid:1.2.208.176.1.1').value != ${{hospitalSOR}})"
+* test[=].actino[=].assert.expression = "Bundle.entry[0].resource.sender.resolve().identifier.where(system = 'urn:oid:1.2.208.176.1.1').value.first() != ${{hospitalSOR}}"
 * test[=].action[=].assert.warningOnly = false
 
 RuleSet: assertReceiverSOR(receiverSOR)
@@ -281,7 +284,7 @@ RuleSet: assertOrganisationIdentifier(orgsystem, orgid)
 RuleSet: assertStructuredSignatur 
 * test[=].action[+].assert.description = "Confirm that structured author information is included"
 * test[=].action[=].assert.direction = #request 
-* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).payload.where(content.data.exists()).extention(url = 'http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-author-extension')"
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).payload.where(content.data.exists()).extension(url = 'http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-author-extension')"
 * test[=].action[=].assert.warningOnly = false
 
 RuleSet: assertXHTMLCheck

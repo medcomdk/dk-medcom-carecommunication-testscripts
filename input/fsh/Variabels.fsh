@@ -105,7 +105,7 @@ RuleSet: variableCorrectMessageID(type, number)
 
 RuleSet: variableHospitalSOR(type, number) 
 * variable[+].name = "hospitalSOR-{type}-{number}"
-* variable[=].expression = "Bundle.entry[0].resource.sender.reference.resolve().identifier.where(system = 'urn:oid:1.2.208.176.1.1').value"
+* variable[=].expression = "Bundle.entry.resource.ofType(MessageHeader).source.endpoint"
 * variable[=].sourceId = "create-{type}-{number}"
 
 /* RuleSet: variableHospitalGLN(type) 
@@ -137,3 +137,43 @@ RuleSet: variableAttachmentIdentifier(type, number, mimetype)
 * variable[=].sourceId = "create-{type}-{number}"
 
 
+//Variable som skal bruges til at holde identifiers i alle ressourcer
+RuleSet: variableEncounterIdentifier(type, number)
+* variable[+].name = "Encounter-identifier-{type}-{number}"
+* variable[=].expression = "Bundle.entry.resource.ofType(Encounter).identifier.value"
+* variable[=].sourceId = "create-{type}-{number}" 
+
+RuleSet: variableEncounterIdentifierSetup(type, number)
+* variable[+].name = "Encounter-identifier-{type}-{number}"
+* variable[=].expression = "Bundle.entry.resource.ofType(Encounter).identifier.value"
+* variable[=].sourceId = "create-{type}-{number}" 
+
+RuleSet: variablePractitionerIdentifier(type, number)
+* variable[+].name = "Practitioner-identifier-{type}-{number}"
+* variable[=].expression = "Bundle.entry.resource.ofType(Practitioner).identifier.value"
+* variable[=].sourceId = "create-{type}-{number}" 
+
+RuleSet: variablePractitionerIdentifierSetup(type, number)
+* variable[+].name = "Practitioner-identifier-{type}-{number}"
+* variable[=].expression = "Bundle.entry.resource.ofType(Practitioner).identifier.value"
+* variable[=].sourceId = "create-{type}-{number}" 
+
+RuleSet: variablePractitionerRoleIdentifier(type, number)
+* variable[+].name = "PractitionerRole-identifier-{type}-{number}"
+* variable[=].expression = "Bundle.entry.resource.ofType(PractitionerRole).identifier.value"
+* variable[=].sourceId = "create-{type}-{number}" 
+
+RuleSet: variablePractitionerRoleIdentifierSetup(type, number)
+* variable[+].name = "PractitionerRole-identifier-{type}-{number}"
+* variable[=].expression = "Bundle.entry.resource.ofType(PractitionerRole).identifier.value"
+* variable[=].sourceId = "create-{type}-{number}" 
+
+RuleSet: variableCareTeamIdentifier(type, number)
+* variable[+].name = "CareTeam-identifier-{type}-{number}"
+* variable[=].expression = "Bundle.entry.resource.ofType(CareTeam).identifier.value"
+* variable[=].sourceId = "create-{type}-{number}" 
+
+RuleSet: variableCareTeamIdentifierSetup(type, number)
+* variable[+].name = "CareTeam-identifier-{type}-{number}"
+* variable[=].expression = "Bundle.entry.resource.ofType(CareTeam).identifier.value"
+* variable[=].sourceId = "create-{type}-{number}" 

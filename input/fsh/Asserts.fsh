@@ -27,11 +27,9 @@ RuleSet: assertValidateProfiles
 * test[=].action[=].assert.warningOnly = false
 
 RuleSet: assertMessageHeaderid(messageHeaderid)
-* test[=].action[+].assert.description = "Confirm that the previous MessageHeader.id is referenced in Provenance.target.reference" 
+* test[=].action[+].assert.description = "Confirm that the previous MessageHeader.id is referenced in Provenance.entity.what" 
 * test[=].action[=].assert.direction = #request
-//* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Provenance).where(entity.what.reference.contains('${{messageHeaderid}}')).exists()"
-//* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Provenance).target.reference.contains (MessageHeader/ + %resource.entry.resource.ofType('MessageHeader').id).exists()" // tror denne skal bruges i stedet for og indsættes.
-* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Provenance).where(target.reference.contains('MessageHeader/${{messageHeaderid}}')).exists()"
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Provenance).where(entity.what.reference.contains('${{messageHeaderid}}')).exists()"
 * test[=].action[=].assert.warningOnly = false
 
 RuleSet: assertPayload
@@ -132,7 +130,6 @@ RuleSet: assertPatientIdentifierDiff(system)
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Patient).identifier.system != '{system}'"
 * test[=].action[=].assert.warningOnly = false
 
-
 RuleSet: assertEpisodeOfCareID(episodeOfCareID)
 * test[=].action[+].assert.description = "Confirm that the episodeOfCare-identifier is {episodeOfCareID}"
 * test[=].action[=].assert.direction = #request
@@ -145,13 +142,20 @@ RuleSet: assertStructureEpisodeOfCareID
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Encounter).episodeOfCare.identifier.value.matches('^[0-9(a-f|A-F)]{8}-[0-9(a-f|A-F)]{4}-4[0-9(a-f|A-F)]{3}-[89ab][0-9(a-f|A-F)]{3}-[0-9(a-f|A-F)]{12}$') or Bundle.entry.resource.ofType(Encounter).episodeOfCare.identifier.system = 'https://www.esundhed.dk/Registre/Landspatientregisteret'"
 * test[=].action[=].assert.warningOnly = false
 
-
-RuleSet: assertSenderSOR(hospitalSOR)
+/*RuleSet: assertSenderSOR(hospitalSOR) //denne virker ikke, har derfor ændret den til den assert nedenfor
+* test[+].name = "AssertSenderSOR"
 * test[=].action[+].assert.description = "Confirm that the sender SOR number is different from the previous message."
 * test[=].action[=].assert.direction = #request
-//* test[=].action[=].assert.expression = "Bundle.entry[0].resource.sender.reference.resolve().identifier.where(system = 'urn:oid:1.2.208.176.1.1').value != ${{hospitalSOR}})"
-* test[=].actino[=].assert.expression = "Bundle.entry[0].resource.sender.resolve().identifier.where(system = 'urn:oid:1.2.208.176.1.1').value.first() != ${{hospitalSOR}}"
+* test[=].action[=].assert.expression = "Bundle.entry[0].resource.sender.resolve().identifier.where(system = 'urn:oid:1.2.208.176.1.1').value.first() != ${{hospitalSOR}}"
 * test[=].action[=].assert.warningOnly = false
+*/
+
+RuleSet: assertSenderSOR(variable)
+* test[=].action[+].assert.description = "Confirm that the sender SOR number (source.endpoint) is different from the previous message."
+* test[=].action[=].assert.direction = #request
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(MessageHeader).source.endpoint != '${{variable}}'"
+* test[=].action[=].assert.warningOnly = false
+
 
 RuleSet: assertReceiverSOR(receiverSOR)
 * test[=].action[+].assert.description = "Confirm that the receiver SOR-id is {receiverSOR}"
@@ -165,7 +169,6 @@ RuleSet: assertReceiverEAN(receiverEAN)
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(MessageHeader).destination.receiver.reference.resolve().identifier.where(system = 'https://www.gs1.org/gln').value = '{receiverEAN}'"
 * test[=].action[=].assert.warningOnly = false
 
-
 RuleSet: assertCommunicationStatus(status)
 * test[=].action[+].assert.description = "Confirm that the value in Communication.status is {status}"
 * test[=].action[=].assert.direction = #request
@@ -178,13 +181,11 @@ RuleSet: assertSenderGLN(hospitalGLN)
 * test[=].action[=].assert.expression = "Bundle.entry.where(fullUrl = %resource.entry.resource[0].sender.reference).resource.identifier.where(system = 'https://www.gs1.org/gln').value != ${{hospitalGLN}}"
 * test[=].action[=].assert.warningOnly = true */
 
-
 RuleSet: assertCompareTimeZone(encounterTimeZone)
 * test[=].action[+].assert.description = "Confirm that Encounter.period.start and Encounter.period.end has different timezones."
 * test[=].action[=].assert.direction = #request
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Encounter).period.end.(substring(19,3) = '${{encounterTimeZone}}').exists().not"
 * test[=].action[=].assert.warningOnly = false
-
 
 RuleSet: assertEncounterLeapYear
 * test[=].action[+].assert.description = "Confirm that Encounter.period.start is on the 29th of Febuary 2024."
@@ -236,13 +237,11 @@ RuleSet: assertAttachmentURL
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).payload.content.url.exists()"
 * test[=].action[=].assert.warningOnly = false
 
-
 RuleSet: assertTopicIncluded
 * test[=].action[+].assert.description = "Confirm that the topic is included"
 * test[=].action[=].assert.direction = #request 
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).topic.exists()"
 * test[=].action[=].assert.warningOnly = false
-
 
 RuleSet: assertCategory(category)
 * test[=].action[+].assert.description = "Confirm that the category is '{category}'"
@@ -256,10 +255,31 @@ RuleSet: assertContentChanged(info1, info2)
 * test[=].action[=].assert.expression = "'${{info1}}' != '${{info2}}'"
 * test[=].action[=].assert.warningOnly = false
 
-RuleSet: assertContentAlike(info1, info2)
-* test[=].action[+].assert.description = "Confirm that the content is the same in the two messages"
+RuleSet: assertChangedTopic
+* test[=].action[+].assert.description = "Confirm topic is changed"
+* test[=].action[=].assert.sourceId = "create-reply-message-02"
+* test[=].action[=].assert.compareToSourceId = "create-new-message-01"
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).topic.text[0]"
+* test[=].action[=].assert.compareToSourceExpression = "Bundle.entry.resource.ofType(Communication).topic.text[0]"
+* test[=].action[=].assert.operator = #notEquals
+* test[=].action[=].assert.warningOnly = false
+
+RuleSet: assertCommunicationIdentifierAlike(variable)
+* test[=].action[+].assert.description = "Confirm that the communication.identifier is held the same in the two messages"
 * test[=].action[=].assert.direction = #request 
-* test[=].action[=].assert.expression = "'${{info1}}' = '${{info2}}'"
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).identifier.value = '${{variable}}'" //ændret til at sammenligne en expression med en variabel i stedet for to tekststrenge. Det betyder eksempelvis at: Sammenlign Bundle.entry.resource.ofType(Communication).identifier.value (fra requesten) med værdien gemt i variablen identifier-new-message-01.
+* test[=].action[=].assert.warningOnly = false
+
+RuleSet: assertCommunicationIdentifierNotAlike(variable)
+* test[=].action[+].assert.description = "Confirm that the communication.identifier is different in the the two messages"
+* test[=].action[=].assert.direction = #request 
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).identifier.value != '${{variable}}'" //ændret til at sammenligne en expression med en variabel i stedet for to tekststrenge. Det betyder eksempelvis at: Sammenlign Bundle.entry.resource.ofType(Communication).identifier.value (fra requesten) med værdien gemt i variablen identifier-new-message-01.
+* test[=].action[=].assert.warningOnly = false
+
+RuleSet: assertCommunicationCategoryNotAlike(variable)
+* test[=].action[+].assert.description = "Confirm that the communication.category changed in the reply"
+* test[=].action[=].assert.direction = #request
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).category.coding.code != '${{variable}}'"
 * test[=].action[=].assert.warningOnly = false
 
 RuleSet: assertPriorityExists
@@ -280,11 +300,10 @@ RuleSet: assertOrganisationIdentifier(orgsystem, orgid)
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(MessageHeader).destination.receiver.reference.resolve().identifier.where(system = '{orgsystem}').value = '{orgid}'"
 * test[=].action[=].assert.warningOnly = false
 
-
 RuleSet: assertStructuredSignatur 
 * test[=].action[+].assert.description = "Confirm that structured author information is included"
 * test[=].action[=].assert.direction = #request 
-* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).payload.where(content.data.exists()).extension(url = 'http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-author-extension')"
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).payload.where(content.data.exists() and extension.where(url = 'http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner-extension').exists())"
 * test[=].action[=].assert.warningOnly = false
 
 RuleSet: assertXHTMLCheck
@@ -299,7 +318,6 @@ RuleSet: assertRecipientExists
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).recipient.exists()"
 * test[=].action[=].assert.warningOnly = false
 
-
 RuleSet: assertPayloadCount(noCommunicationPayloads)
 * test[=].action[+].assert.description = "Confirm that number of payloads is '{noCommunicationPayloads}'"
 * test[=].action[=].assert.direction = #request 
@@ -312,10 +330,58 @@ RuleSet: assertCommunications(noCommunications)
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).count() = '{noCommunications}'"
 * test[=].action[=].assert.warningOnly = false
 
-
-
 RuleSet: assertCancallationReason(status, reason)
 * test[=].action[+].assert.description = "Confirm that the reason for cancellation is '{reason}'. Only gives a warning is false."
 * test[=].action[=].assert.direction = #request 
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).where(status = '{status}').payload.content = '{reason}'"
 * test[=].action[=].assert.warningOnly = true
+
+// Rulesets som tester at identifers holdes i alle ressourcer. 
+RuleSet: assertEncounterIdentifierAlike(variable)
+* test[=].action[+].assert.description = "Confirm that the Encounter.identifier i held the same in the two messages"
+* test[=].action[=].assert.direction = #request 
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Encounter).identifier.value = '${{variable}}'" 
+* test[=].action[=].assert.warningOnly = false
+
+RuleSet: assertCareTeamIdentifierAlike(variable)
+* test[=].action[+].assert.description = "Confirm that the Careteam.identifier i held the same in the two messages"
+* test[=].action[=].assert.direction = #request 
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(CareTeam).identifier.value = '${{variable}}'" 
+* test[=].action[=].assert.warningOnly = false
+
+RuleSet: assertPractitionerRoleIdentifierAlike(variable)
+* test[=].action[+].assert.description = "Confirm that the PractitionerRole.identifier i held the same in the two messages"
+* test[=].action[=].assert.direction = #request 
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(PractitionerRole).identifier.value = '${{variable}}'" 
+* test[=].action[=].assert.warningOnly = false
+
+RuleSet: assertPractitionerIdentifierAlike(variable)
+* test[=].action[+].assert.description = "Confirm that the Practitioner.identifier i held the same in the two messages"
+* test[=].action[=].assert.direction = #request 
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Practitioner).identifier.value = '${{variable}}'" 
+* test[=].action[=].assert.warningOnly = false
+
+//Rulesets som tester at identifers skifter ved videresendelse
+RuleSet: assertEncounterIdentifierNotAlike(variable)
+* test[=].action[+].assert.description = "Confirm that the Encounter.identifier i held the same in the two messages"
+* test[=].action[=].assert.direction = #request 
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Encounter).identifier.value != '${{variable}}'" 
+* test[=].action[=].assert.warningOnly = false
+
+RuleSet: assertCareTeamIdentifierNotAlike(variable)
+* test[=].action[+].assert.description = "Confirm that the Careteam.identifier i held the same in the two messages"
+* test[=].action[=].assert.direction = #request 
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(CareTeam).identifier.value != '${{variable}}'" 
+* test[=].action[=].assert.warningOnly = false
+
+RuleSet: assertPractitionerRoleIdentifierNotAlike(variable)
+* test[=].action[+].assert.description = "Confirm that the PractitionerRole.identifier i held the same in the two messages"
+* test[=].action[=].assert.direction = #request 
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(PractitionerRole).identifier.value != '${{variable}}'" 
+* test[=].action[=].assert.warningOnly = false
+
+RuleSet: assertPractitionerIdentifierNotAlike(variable)
+* test[=].action[+].assert.description = "Confirm that the Practitioner.identifier i held the same in the two messages"
+* test[=].action[=].assert.direction = #request 
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Practitioner).identifier.value != '${{variable}}'" 
+* test[=].action[=].assert.warningOnly = false

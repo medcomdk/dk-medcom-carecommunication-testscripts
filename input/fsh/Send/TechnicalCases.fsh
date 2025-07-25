@@ -8,7 +8,7 @@ InstanceOf: TestScript
 * title = " Send CareCommunication concerning a deceased patient"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-tec-01" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessage(new-message, 01, /Fixtures/CareCommunication-fixture.xml)
+* insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml)
 * insert assertPatientDeceased(true)
 
 //tec-01
@@ -20,7 +20,7 @@ InstanceOf: TestScript
 * title = "Send CareCommunication with sender and recipient"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-tec-02" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessage(new-message, 01, /Fixtures/CareCommunication-fixture.xml) 
+* insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
 * insert assertSenderExists
 * insert assertRecipientExists
 
@@ -32,7 +32,7 @@ InstanceOf: TestScript
 * title = "Send CareCommunication where the patient has a CPR-number as identifier"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-tec-03" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessage(new-message, 01, /Fixtures/CareCommunication-fixture.xml) 
+* insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
 * insert assertPatientIdentifier(urn:oid:1.2.208.176.1.2)
 
 Instance: CareCommunication_TestScript_send-tec-04
@@ -43,7 +43,7 @@ InstanceOf: TestScript
 * title = "Send CareCommunication where the patient has a replacement-CPR-number as identifier"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-tec-04" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessage(new-message, 01, /Fixtures/CareCommunication-fixture.xml) 
+* insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
 * insert assertPatientIdentifierDiff(urn:oid:1.2.208.176.1.2)
 
 //tec-05
@@ -55,7 +55,7 @@ InstanceOf: TestScript
 * title = "Send CareCommunication with a episodeOfCare-identifier"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-tec-05" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessage(new-message, 01, /Fixtures/CareCommunication-fixture.xml) 
+* insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
 * insert assertStructureEpisodeOfCareID
 
 //tec-07
@@ -67,9 +67,9 @@ InstanceOf: TestScript
 * title = "Reply to CareCommunication, where episodeOfCare-identifier is correctly transfered in the communication"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-tec-06" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message-episodeOfCareID.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message-episodeOfCareID.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
-* insert createMessage(reply-message, 02, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2)
+* insert createMessage(reply-message, 02, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2)
 * insert assertEpisodeOfCareID(episodeOfCareID-new-message-01)
 * insert variableEpisodeOfCareIdentifier(new-message, 01)
 
@@ -82,9 +82,9 @@ InstanceOf: TestScript
 * title = "Reply to CareCommunication, that includes all content."
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-tec-07" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, /Fixtures/CareCommunication-fixture-new-message-all.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message-all.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
-* insert createMessage(reply-message, 02, /Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2)
+* insert createMessage(reply-message, 02, ../Fixtures/CareCommunication-fixture.xml, revision, messageHeaderid-new-message-01, 2, 2)
 * insert assertEpisodeOfCareID(episodeOfCareID-new-message-01)
 * insert variableEpisodeOfCareIdentifier(new-message, 01)
 /* 	

@@ -7,7 +7,7 @@ RuleSet: operationDeleteSetup(destinationUri)
 * setup[=].action[=].operation.destination = 1 // RICHARD: tilføj denne
 * setup[=].action[=].operation.encodeRequestUrl = true
 //* setup[=].action[=].operation.params = "?message.identifier=${{bundleid}}"
-* setup[=].action[=].operation.params = "?message.destination-uri=${{destinationUri}}"
+* setup[=].action[=].operation.params = "?message.destination-uri=${destinationUri}"
 
 RuleSet: operationCreateSetup(type, number)
 * setup[=].action[+].operation.type.system = "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"

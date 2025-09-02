@@ -214,6 +214,9 @@ InstanceOf: TestScript
 * insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
 * insert createMessage(reply-message, 02, ../Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, ) 
+* insert variableCommunicationIdentifierSetup(new-message, 01)
+* insert variableCommunicationIdentifier(reply-message, 02)
+* insert assertCommunicationIdentifierAlike(identifier-new-message-01)
 
 
 Instance: CareCommunication_TestScript_send-reply-add-attachment
@@ -227,6 +230,9 @@ InstanceOf: TestScript
 * insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-attachment.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
 * insert createMessage(reply-message, 02, ../Fixtures/CareCommunication-fixture-empty.xml,revision, messageHeaderid-new-message-01, 2, 5) 
+* insert variableCommunicationIdentifierSetup(new-message, 01)
+* insert variableCommunicationIdentifier(reply-message, 02)
+* insert assertCommunicationIdentifierAlike(identifier-new-message-01)
 * insert assertAttachmentExactCount(3)
 
 
@@ -329,7 +335,6 @@ InstanceOf: TestScript
 * insert assertSenderSOR(hospitalSOR-new-message-01)
 * insert variableCommunicationIdentifierSetup(new-message, 01)
 * insert variableCommunicationIdentifier(forward-message, 02)
-//* insert assertContentChanged(identifier-new-message-01, identifier-forward-message-02)
 * insert assertCommunicationIdentifierNotAlike(identifier-new-message-01)
 
 //Forward message
@@ -348,7 +353,6 @@ InstanceOf: TestScript
 * insert assertSenderSOR(hospitalSOR-new-message-01)
 * insert variableCommunicationIdentifierSetup(new-message, 01)
 * insert variableCommunicationIdentifier(forward-message, 02)
-//* insert assertContentChanged(identifier-new-message-01, identifier-forward-message-02)
 * insert assertCommunicationIdentifierNotAlike(identifier-new-message-01)
 
 //Forward message
@@ -368,7 +372,6 @@ InstanceOf: TestScript
 * insert assertAttachmentExactCount(3)
 * insert variableCommunicationIdentifierSetup(new-message, 01)
 * insert variableCommunicationIdentifier(forward-message, 02)
-//* insert assertContentChanged(identifier-new-message-01, identifier-forward-message-02)
 * insert assertCommunicationIdentifierNotAlike(identifier-new-message-01)
 
 //Forward changecategory
@@ -390,7 +393,6 @@ InstanceOf: TestScript
 * insert variableCommunicationIdentifierSetup(new-message, 01)
 * insert variableCommunicationIdentifier(forward-message, 02)
 * insert assertCommunicationCategoryNotAlike(category-new-message-01)
-//* insert assertContentChanged(category-new-message-01, category-forward-message-02)
 * insert assertCommunicationIdentifierNotAlike(identifier-new-message-01)
 
 //Forward changetopic
@@ -426,6 +428,9 @@ InstanceOf: TestScript
 * insert variableHospitalSOR(new-message, 01) 
 * insert createMessage(forward-message, 02, ../Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, 2) 
 * insert assertSenderSOR(hospitalSOR-new-message)
+* insert variableCommunicationIdentifierSetup(new-message, 01)
+* insert variableCommunicationIdentifier(forward-message, 02)
+* insert assertCommunicationIdentifierNotAlike(identifier-new-message-01)
 
 
 

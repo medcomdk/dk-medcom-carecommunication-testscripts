@@ -361,7 +361,7 @@ RuleSet: assertPractitionerIdentifierAlike(variable)
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Practitioner).identifier.value = '${{variable}}'" 
 * test[=].action[=].assert.warningOnly = false
 
-//Rulesets som tester at identifers skifter ved videresendelse
+//Rulesets som tester at identifers skifter
 RuleSet: assertEncounterIdentifierNotAlike(variable)
 * test[=].action[+].assert.description = "Confirm that the Encounter.identifier i held the same in the two messages"
 * test[=].action[=].assert.direction = #request 

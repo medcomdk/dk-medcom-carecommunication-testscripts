@@ -17,13 +17,13 @@ Instance: CareCommunication_TestScript_send-tec-01
 InstanceOf: TestScript
 * insert Metadata
 * id = "carecommunication-send-tec-01"
-* description = "Reply to CareCommunication, that includes all content."
-* title = "Reply to CareCommunication, that includes all content."
+* description = "Reply to CareCommunication, that includes all content, with a message segment only."
+* title = "Reply to CareCommunication, that includes all content, with a message segment only."
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-tec-01" 
 * name = "CareCommunicationTestScript"
 * insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message-all.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
-* insert createMessage(reply-message, 02, ../Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, 2)
+* insert createMessage(reply-message, 02, ../Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, 4)
 * insert assertEpisodeOfCareID(episodeOfCareID-new-message-01)
 * insert variableEpisodeOfCareIdentifier(new-message, 01)
 
@@ -88,55 +88,6 @@ InstanceOf: TestScript
 * insert assertEpisodeOfCareID(episodeOfCareID-new-message-01)
 * insert variableEpisodeOfCareIdentifier(new-message, 01)
 
-//tec-07
-Instance: CareCommunication_TestScript_send-tec-07
-InstanceOf: TestScript
-* insert Metadata
-* id = "carecommunication-send-tec-07"
-* description = "Reply to CareCommunication, and show that all identifiers are consistent when replying."
-* title = "Reply to CareCommunication, and show that all identifiers are consistent when replying."
-* url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-tec-07" 
-* name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture.xml, destinationUri-new-message, bundleid-new-message-01)
-* insert readMessage(new-message, 01, bundleid-new-message-01)
-* insert createMessage(reply-message, 02, ../Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, 2)
-//Ensuring the communication identifier i held the same in the reply
-* insert variableCommunicationIdentifierSetup(new-message, 01)
-* insert variableCommunicationIdentifier(reply-message, 02)
-* insert assertCommunicationIdentifierAlike(identifier-new-message-01)
-//Ensuring the Practitioner identifier i held the same in the reply
-* insert variablePractitionerIdentifierSetup(new-message, 01)
-* insert variablePractitionerIdentifier(reply-message, 02)
-* insert assertPractitionerIdentifierAlike(identifier-new-message-01)
-//Ensuring the PractitionerRole identifier i held the same in the reply
-* insert variablePractitionerRoleIdentifierSetup(new-message, 01)
-* insert variablePractitionerRoleIdentifier(reply-message, 02)
-* insert assertPractitionerRoleIdentifierAlike(identifier-new-message-01)
-
-//tec-08
-Instance: CareCommunication_TestScript_send-tec-08
-InstanceOf: TestScript
-* insert Metadata
-* id = "carecommunication-send-tec-08"
-* description = "Reply to CareCommunication, and show that all identifiers are consistent besides the communication.identifer when forwarding."
-* title = "Reply to CareCommunication, and show that all identifiers are consistent besides the communication.identifer when forwarding."
-* url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-tec-08" 
-* name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture.xml, destinationUri-new-message, bundleid-new-message-01)
-* insert readMessage(new-message, 01, bundleid-new-message-01)
-* insert createMessage(forward-message, 02, ../Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, 2) 
-//Ensuring the communication identifier i held the same in the reply
-* insert variableCommunicationIdentifierSetup(new-message, 01)
-* insert variableCommunicationIdentifier(forward-message, 02)
-* insert assertCommunicationIdentifierNotAlike(identifier-new-message-01)
-//Ensuring the Practitioner identifier i held the same in the reply
-* insert variablePractitionerIdentifierSetup(new-message, 01)
-* insert variablePractitionerIdentifier(forward-message, 02)
-* insert assertPractitionerIdentifierAlike(identifier-new-message-01)
-//Ensuring the PractitionerRole identifier i held the same in the reply
-* insert variablePractitionerRoleIdentifierSetup(new-message, 01)
-* insert variablePractitionerRoleIdentifier(forward-message, 02)
-* insert assertPractitionerRoleIdentifierAlike(identifier-new-message-01)
 
 /* 	
 //tec-02

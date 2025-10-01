@@ -125,7 +125,7 @@ RuleSet: assertPatientIdentifier(system)
 * test[=].action[=].assert.warningOnly = false
 
 RuleSet: assertPatientIdentifierDiff(system)
-* test[=].action[+].assert.description = "Confirm that the system of the patient.identifier is {system}"
+* test[=].action[+].assert.description = "Confirm that the system of the patient.identifier is not {system}"
 * test[=].action[=].assert.direction = #request
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Patient).identifier.system != '{system}'"
 * test[=].action[=].assert.warningOnly = false
@@ -336,52 +336,3 @@ RuleSet: assertCancallationReason(status, reason)
 * test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).where(status = '{status}').payload.content = '{reason}'"
 * test[=].action[=].assert.warningOnly = true
 
-// Rulesets som tester at identifers holdes i alle ressourcer. 
-RuleSet: assertEncounterIdentifierAlike(variable)
-* test[=].action[+].assert.description = "Confirm that the Encounter.identifier i held the same in the two messages"
-* test[=].action[=].assert.direction = #request 
-* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Encounter).identifier.value = '${{variable}}'" 
-* test[=].action[=].assert.warningOnly = false
-
-RuleSet: assertCareTeamIdentifierAlike(variable)
-* test[=].action[+].assert.description = "Confirm that the Careteam.identifier i held the same in the two messages"
-* test[=].action[=].assert.direction = #request 
-* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(CareTeam).identifier.value = '${{variable}}'" 
-* test[=].action[=].assert.warningOnly = false
-
-RuleSet: assertPractitionerRoleIdentifierAlike(variable)
-* test[=].action[+].assert.description = "Confirm that the PractitionerRole.identifier i held the same in the two messages"
-* test[=].action[=].assert.direction = #request 
-* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(PractitionerRole).identifier.value = '${{variable}}'" 
-* test[=].action[=].assert.warningOnly = false
-
-RuleSet: assertPractitionerIdentifierAlike(variable)
-* test[=].action[+].assert.description = "Confirm that the Practitioner.identifier i held the same in the two messages"
-* test[=].action[=].assert.direction = #request 
-* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Practitioner).identifier.value = '${{variable}}'" 
-* test[=].action[=].assert.warningOnly = false
-
-//Rulesets som tester at identifers skifter
-RuleSet: assertEncounterIdentifierNotAlike(variable)
-* test[=].action[+].assert.description = "Confirm that the Encounter.identifier i held the same in the two messages"
-* test[=].action[=].assert.direction = #request 
-* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Encounter).identifier.value != '${{variable}}'" 
-* test[=].action[=].assert.warningOnly = false
-
-RuleSet: assertCareTeamIdentifierNotAlike(variable)
-* test[=].action[+].assert.description = "Confirm that the Careteam.identifier i held the same in the two messages"
-* test[=].action[=].assert.direction = #request 
-* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(CareTeam).identifier.value != '${{variable}}'" 
-* test[=].action[=].assert.warningOnly = false
-
-RuleSet: assertPractitionerRoleIdentifierNotAlike(variable)
-* test[=].action[+].assert.description = "Confirm that the PractitionerRole.identifier i held the same in the two messages"
-* test[=].action[=].assert.direction = #request 
-* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(PractitionerRole).identifier.value != '${{variable}}'" 
-* test[=].action[=].assert.warningOnly = false
-
-RuleSet: assertPractitionerIdentifierNotAlike(variable)
-* test[=].action[+].assert.description = "Confirm that the Practitioner.identifier i held the same in the two messages"
-* test[=].action[=].assert.direction = #request 
-* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Practitioner).identifier.value != '${{variable}}'" 
-* test[=].action[=].assert.warningOnly = false

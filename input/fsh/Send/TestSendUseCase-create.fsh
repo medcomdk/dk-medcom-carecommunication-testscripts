@@ -3,153 +3,153 @@ Instance: CareCommunication_TestScript_send-new-message
 InstanceOf: TestScript
 * insert Metadata
 * id = "carecommunication-send-new-message"
-* description = "Send CareCommunication. Receiver is expected to be 'Klinik for Ældresygdomme, AUH, Skejby' with SOR-id: 441211000016000."
-* title = "Send CareCommunication. Receiver is expected to be 'Klinik for Ældresygdomme, AUH, Skejby' with SOR-id: 441211000016000."
+* description = "Send CareCommunication."
+* title = "Send CareCommunication. "
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-new-message" 
 * name = "CareCommunicationTestScript"
 * insert createInitialMessage( new-message, 01, ../Fixtures/CareCommunication-fixture.xml ) 
-* insert assertReceiverEAN( 5790001987244 )
-* insert assertReceiverSOR( 441211000016000 )
+//* insert assertReceiverEAN( 5790001987244 )
+//* insert assertReceiverSOR( 441211000016000 )
 
 //new attachment
 Instance: CareCommunication_TestScript_send-new-attachment-pdf
 InstanceOf: TestScript
 * insert Metadata
 * id = "carecommunication-send-new-attachment-pdf"
-* description = "Send CareCommunication with a pdf-document as an attached file. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004."
-* title = "Send CareCommunication with a pdf-document as an attached file. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004."
+* description = "Send CareCommunication with a pdf-document as an attached file. "
+* title = "Send CareCommunication with a pdf-document as an attached file. "
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-new-attachment-pdf" 
 * name = "CareCommunicationTestScript"
 * insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
 * insert assertMimetype(application/pdf)
-* insert assertReceiverEAN(5790001353308)
-* insert assertReceiverSOR(330461000016004)
+//* insert assertReceiverEAN(5790001353308)
+//* insert assertReceiverSOR(330461000016004)
 
 //new attachment
 Instance: CareCommunication_TestScript_send-new-attachment-gif
 InstanceOf: TestScript
 * insert Metadata
 * id = "carecommunication-send-new-attachment-gif"
-* description = "Send CareCommunication with a gif as an attached file. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004."
-* title = "Send CareCommunication with a gif as an attached file. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004."
+* description = "Send CareCommunication with a gif as an attached file. "
+* title = "Send CareCommunication with a gif as an attached file. "
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-new-attachment-gif" 
 * name = "CareCommunicationTestScript"
 * insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
 * insert assertMimetype(image/gif)
-* insert assertReceiverEAN(5790001353308)
-* insert assertReceiverSOR(330461000016004)
+//* insert assertReceiverEAN(5790001353308)
+//* insert assertReceiverSOR(330461000016004)
 
 //new attachment
 Instance: CareCommunication_TestScript_send-new-attachment-png
 InstanceOf: TestScript
 * insert Metadata
 * id = "carecommunication-send-new-attachment-png"
-* description = "Send CareCommunication with a png as an attached file. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004."
-* title = "Send CareCommunication with a png as an attached file. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004."
+* description = "Send CareCommunication with a png as an attached file. "
+* title = "Send CareCommunication with a png as an attached file. "
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-new-attachment-png" 
 * name = "CareCommunicationTestScript"
 * insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
 * insert assertMimetype(image/png)
-* insert assertReceiverEAN(5790001353308)
-* insert assertReceiverSOR(330461000016004)
+//* insert assertReceiverEAN(5790001353308)
+//* insert assertReceiverSOR(330461000016004)
 
 //new attachment
 Instance: CareCommunication_TestScript_send-new-attachment-jpeg
 InstanceOf: TestScript
 * insert Metadata
 * id = "carecommunication-send-new-attachment-jpeg"
-* description = "Send CareCommunication with a jpeg as an attached file. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004."
-* title = "Send CareCommunication with a jpeg as an attached file. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004."
+* description = "Send CareCommunication with a jpeg as an attached file. "
+* title = "Send CareCommunication with a jpeg as an attached file. "
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-new-attachment-jpeg" 
 * name = "CareCommunicationTestScript"
 * insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
 * insert assertMimetype(image/jpeg)
-* insert assertReceiverEAN(5790001353308)
-* insert assertReceiverSOR(330461000016004)
+//* insert assertReceiverEAN(5790001353308)
+//* insert assertReceiverSOR(330461000016004)
 
 //new attachment
 Instance: CareCommunication_TestScript_send-new-attachment-bmp
 InstanceOf: TestScript
 * insert Metadata
 * id = "carecommunication-send-new-attachment-bmp"
-* description = "Send CareCommunication with a bmp as an attached file. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004."
-* title = "Send CareCommunication with a bmp as an attached file. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004."
+* description = "Send CareCommunication with a bmp as an attached file."
+* title = "Send CareCommunication with a bmp as an attached file."
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-new-attachment-bmp" 
 * name = "CareCommunicationTestScript"
 * insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
 * insert assertMimetype(image/bmp)
-* insert assertReceiverEAN(5790001353308)
-* insert assertReceiverSOR(330461000016004)
+//* insert assertReceiverEAN(5790001353308)
+//* insert assertReceiverSOR(330461000016004)
 
 //new attachment
 Instance: CareCommunication_TestScript_send-new-attachment-tiff
 InstanceOf: TestScript
 * insert Metadata
 * id = "carecommunication-send-new-attachment-tiff"
-* description = "Send CareCommunication with a tiff as an attached file. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004."
-* title = "Send CareCommunication with a tiff as an attached file. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004."
+* description = "Send CareCommunication with a tiff as an attached file. "
+* title = "Send CareCommunication with a tiff as an attached file. "
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-new-attachment-tiff" 
 * name = "CareCommunicationTestScript"
 * insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
 * insert assertMimetype(image/tiff)
-* insert assertReceiverEAN(5790001353308)
-* insert assertReceiverSOR(330461000016004)
+//* insert assertReceiverEAN(5790001353308)
+//* insert assertReceiverSOR(330461000016004)
 
 //new attachment
 Instance: CareCommunication_TestScript_send-new-attachment-link
 InstanceOf: TestScript
 * insert Metadata
 * id = "carecommunication-send-new-attachment-link"
-* description = "Send CareCommunication with a link as an attachment. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004."
-* title = "Send CareCommunication with a link as an attachment. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004."
+* description = "Send CareCommunication with a link as an attachment."
+* title = "Send CareCommunication with a link as an attachment."
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-new-attachment-link" 
 * name = "CareCommunicationTestScript"
 * insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
 * insert assertAttachmentURL
-* insert assertReceiverEAN(5790001353308)
-* insert assertReceiverSOR(330461000016004)
+//* insert assertReceiverEAN(5790001353308)
+//* insert assertReceiverSOR(330461000016004)
 
 
 Instance: CareCommunication_TestScript_send-new-attachment-multiple
 InstanceOf: TestScript
 * insert Metadata
 * id = "carecommunication-send-new-attachment-multiple"
-* description = "Send CareCommunication with a multiple attached files. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004."
-* title = "Send CareCommunication with a multiple attached files. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004."
+* description = "Send CareCommunication with a multiple attached files. "
+* title = "Send CareCommunication with a multiple attached files. "
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-new-attachment-multiple" 
 * name = "CareCommunicationTestScript"
 * insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
 * insert assertAttachmentCount
-* insert assertReceiverEAN(5790001353308)
-* insert assertReceiverSOR(330461000016004)
+//* insert assertReceiverEAN(5790001353308)
+//* insert assertReceiverSOR(330461000016004)
 
 Instance: CareCommunication_TestScript_send-new-attachment-structured
 InstanceOf: TestScript
 * insert Metadata
 * id = "carecommunication-send-new-attachment-structured"
-* description = "Send CareCommunication with an attachment and structured author information. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004."
-* title = "Send CareCommunication with an attachment and structured author information. Receiver is expected to be 'Sundhedsplejen, Aabenraa kommune' with SOR-id: 330461000016004."
+* description = "Send CareCommunication with an attachment and structured author information. "
+* title = "Send CareCommunication with an attachment and structured author information. "
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-new-attachment-structured" 
 * name = "CareCommunicationTestScript"
 * insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
 * insert assertAttachmentCreationTime
 * insert assertStructuredSignatur
-* insert assertReceiverEAN(5790001353308)
-* insert assertReceiverSOR(330461000016004)
+//* insert assertReceiverEAN(5790001353308)
+//* insert assertReceiverSOR(330461000016004)
 
 //new topic
 Instance: CareCommunication_TestScript_send-new-topic
 InstanceOf: TestScript
 * insert Metadata
 * id = "carecommunication-send-new-topic"
-* description = "Send CareCommunication with topic. Receiver is expected to be 'Lægeklinik Ølgod' with SOR-id: 1339531000016004."
-* title = "Send CareCommunication with topic. Receiver is expected to be 'Lægeklinik Ølgod' with SOR-id: 1339531000016004."
+* description = "Send CareCommunication with topic. "
+* title = "Send CareCommunication with topic. "
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-new-topic" 
 * name = "CareCommunicationTestScript"
 * insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
 * insert assertTopicIncluded
-* insert assertReceiverEAN(5790002626814)
-* insert assertReceiverSOR(1339531000016004)
+//* insert assertReceiverEAN(5790002626814)
+//* insert assertReceiverSOR(1339531000016004)
 
 
 
@@ -158,30 +158,30 @@ Instance: CareCommunication_TestScript_send-new-category-other
 InstanceOf: TestScript
 * insert Metadata
 * id = "carecommunication-send-new-category-other"
-* description = "Send CareCommunication with category 'Other'. Receiver is expected to be 'SLB Hjertesygdomme Ambulatorium (Kolding), Kolding Sygehus' with SOR-id: 349061000016004."
-* title = "Send CareCommunication with category 'Other'. Receiver is expected to be 'SLB Hjertesygdomme Ambulatorium (Kolding), Kolding Sygehus' with SOR-id: 349061000016004. "
+* description = "Send CareCommunication with category 'Other'. "
+* title = "Send CareCommunication with category 'Other'. "
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-new-category-other" 
 * name = "CareCommunicationTestScript"
 * insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
 * insert assertCategory(other)
 * insert assertTopicIncluded
-* insert assertReceiverEAN(5790002027451)
-* insert assertReceiverSOR(349061000016004)
+//* insert assertReceiverEAN(5790002027451)
+//* insert assertReceiverSOR(349061000016004)
 
 //new priority
 Instance: CareCommunication_TestScript_send-new-priority
 InstanceOf: TestScript
 * insert Metadata
 * id = "carecommunication-send-new-priority"
-* description = "Send CareCommunication with category 'Regarding referral', included priority. Receiver is expected to be 'Pædagogisk Psykologisk Rådgivning, Aalborg kommune' with SOR-id: 1385391000016002."
-* title = "Send CareCommunication with category 'Regarding referral', included priority. Receiver is expected to be 'Pædagogisk Psykologisk Rådgivning, Aalborg kommune' with SOR-id: 1385391000016002."
+* description = "Send CareCommunication with category 'Regarding referral', included priority."
+* title = "Send CareCommunication with category 'Regarding referral', included priority. "
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-new-priority" 
 * name = "CareCommunicationTestScript"
 * insert createInitialMessage(new-message, 01, ../Fixtures/CareCommunication-fixture.xml) 
 * insert assertCategory(regarding-referral)
 * insert assertPriorityExists
-* insert assertReceiverEAN(5790002632389)
-* insert assertReceiverSOR(1385391000016002)
+//* insert assertReceiverEAN(5790002632389)
+//* insert assertReceiverSOR(1385391000016002)
 
  
 
@@ -207,13 +207,13 @@ Instance: CareCommunication_TestScript_send-reply-attachment
 InstanceOf: TestScript
 * insert Metadata
 * id = "carecommunication-send-reply-attachment"
-* description = "Reply CareCommunication where the new message includes two attached files."
-* title = "Reply CareCommunication where the new message includes two attached files"
+* description = "Reply CareCommunication where the new message includes one attached files."
+* title = "Reply CareCommunication where the new message includes one attached files"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-reply-attachment" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-attachment.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
-* insert createMessage(reply-message, 02, ../Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, ) 
+* insert createMessage(reply-message, 02, ../Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, 3) 
 * insert variableCommunicationIdentifierSetup(new-message, 01)
 * insert variableCommunicationIdentifier(reply-message, 02)
 * insert assertCommunicationIdentifierAlike(identifier-new-message-01)

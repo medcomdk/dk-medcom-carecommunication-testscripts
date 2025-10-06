@@ -42,6 +42,7 @@ Title: "PractitionerRole with a role and reference to a practitioner"
 Description: "PractitionerRole with a role and reference to a practitioner"
 * practitioner = Reference(3f7389fd-44fb-458c-831e-f2c3995c3dd3)
 * code = $PractitionerRole#sygeplejerske
+* organization = Reference(3d079530-8c63-4c5c-a6f9-825279aef4d2)
 
 
 Instance: 7b4803a9-a048-4551-9f61-c3143dba3786
@@ -78,12 +79,13 @@ Description: "Simple practitioner with a name"
 * name.given = "Michael"
 * name.family = "Burns"
 
-Instance: fd823675-9a45-4cf6-9348-5b9806e8385f
+Instance: fd823675-9a45-4cf6-9348-5b9806e8385f //modatger
 InstanceOf: MedComCorePractitionerRole
 Title: "PractitionerRole with a role and reference to a practitioner"
 Description: "PractitionerRole with a role and reference to a practitioner"
 * practitioner = Reference(4d528261-ef8c-4f83-ab61-deb5b5e6823e)
 * code = $PractitionerRole#sygeplejerske
+* organization = Reference(5007be8f-49dd-48ae-9808-66270aef1865)
 
 // CareCommunication reply example
 Instance: 8daf0286-2477-4766-8ed2-cc76970e44b1

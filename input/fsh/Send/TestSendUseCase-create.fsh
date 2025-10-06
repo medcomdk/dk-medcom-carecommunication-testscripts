@@ -217,6 +217,7 @@ InstanceOf: TestScript
 * insert variableCommunicationIdentifierSetup(new-message, 01)
 * insert variableCommunicationIdentifier(reply-message, 02)
 * insert assertCommunicationIdentifierAlike(identifier-new-message-01)
+* insert assertAttachmentExactCount(1)
 
 
 Instance: CareCommunication_TestScript_send-reply-add-attachment

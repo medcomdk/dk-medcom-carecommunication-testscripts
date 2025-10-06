@@ -82,7 +82,7 @@ InstanceOf: TestScript
 * title = "Reply to CareCommunication, where episodeOfCare-identifier is correctly transfered in the communication"
 * url = "http://medcomfhir.dk/ig/carecommunicationtestscript/carecommunication-send-tec-06" 
 * name = "CareCommunicationTestScript"
-* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message-episodeOfCareID.xml, destinationUri-new-message, bundleid-new-message-01)
+* insert createInitialMessageSetup(new-message, 01, ../Fixtures/CareCommunication-fixture-new-message-all.xml, destinationUri-new-message, bundleid-new-message-01)
 * insert readMessage(new-message, 01, bundleid-new-message-01)
 * insert createMessage(reply-message, 02, ../Fixtures/CareCommunication-fixture-empty.xml, revision, messageHeaderid-new-message-01, 2, 2)
 * insert assertEpisodeOfCareID(episodeOfCareID-new-message-01)

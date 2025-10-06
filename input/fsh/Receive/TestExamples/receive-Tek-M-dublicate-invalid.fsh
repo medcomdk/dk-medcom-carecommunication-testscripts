@@ -47,7 +47,7 @@ Usage: #example
 * identifier.value = "urn:uuid:f3eb2617-5388-4210-ad77-fc1da77f9108"
 * payload.contentString = "Jeg håber denne besked er korrekt, hvis ikke, send da en negativ kvittering, tak. Vi ønsker information om de seneste undersøgelser udført på Bruno.\nPå forhånd tak.\nHilsen Michael Burns\nLægesekretær"
 * payload.extension[date].valueDateTime = 2024-08-27T15:20:00+02:00
-//* payload.extension[identifier].valueIdentifier.value = "urn:uuid:84a28362-d870-440e-bdf6-7a0102b8f2f6"
+* payload.extension[identifier].valueIdentifier.value = "urn:uuid:84a28362-d870-440e-bdf6-7a0102b8f2f6"
 * payload.extension[identifier].valueIdentifier.assigner = Reference(fe92c210-7725-4749-8045-37ed53878f26)
 * payload.extension[author].valueReference = Reference(fb1abc8a-3238-4292-97dc-327291bf8573)
 * payload.extension[authorContact].valueContactPoint.system = #phone 

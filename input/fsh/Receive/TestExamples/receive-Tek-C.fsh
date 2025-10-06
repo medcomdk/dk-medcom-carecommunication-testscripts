@@ -29,10 +29,10 @@ Description: "Receive_Tek-C - MessageHeader"
 Usage: #example
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
-* destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=1053231000016001"
-* destination[primary].receiver = Reference(89a4dee7-145b-4d09-abaf-24529cb12f15)
-* sender = Reference(efb6250c-1ba5-4856-b7e7-d9e830d58c09)
-* source.endpoint = "https://sor2.sum.dsdn.dk/#id=330461000016004"
+* destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=330461000016004"
+* destination[primary].receiver = Reference(efb6250c-1ba5-4856-b7e7-d9e830d58c09)
+* sender = Reference(89a4dee7-145b-4d09-abaf-24529cb12f15)
+* source.endpoint = "https://sor2.sum.dsdn.dk/#id=1053231000016001"
 * focus = Reference(435427fb-84c4-496e-ba55-4234091e83cc)
 * definition = "http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition|5.0"
 
@@ -73,7 +73,6 @@ Description: "Receive_Tek-C - Patient"
 * telecom[=].value = "hej@med.dig"
 * telecom[=].use = #work
 * gender = #male 
-* managingOrganization = Reference(89a4dee7-145b-4d09-abaf-24529cb12f15)
 * maritalStatus = http://hl7.dk/fhir/core/CodeSystem/dk-marital-status#P
 
 // Sender instance - new message for attachement
@@ -81,22 +80,21 @@ Instance: 89a4dee7-145b-4d09-abaf-24529cb12f15
 InstanceOf: MedComMessagingOrganization // 
 Title: "Receive_Tek-C - Sender"
 Description: "Receive_Tek-C - Sender"
-* identifier[0].use = #official
-* identifier[=].type.text = "SOR"
-* identifier[=].value = "1053231000016001"
-* identifier[=].system = "urn:oid:1.2.208.176.1.1"
-* identifier[+].use = #official
-* identifier[=].type.text = "EAN"
-* identifier[=].value = "5790002508240"
-* identifier[=].system = "https://www.gs1.org/gln"
-* identifier[+].use = #usual
-* identifier[=].type.text = "MASTER_EAF"
-* identifier[=].value = "11469610"
-* identifier[=].system = "urn:oid:1.2.840.114350.1.13.416.3.7.5.737384.158"
-* identifier[+].use = #usual
-* identifier[=].type.text = "DENMARK"
-* identifier[=].value = "219"
-* identifier[=].system = "urn:oid:1.2.840.114350.1.13.416.3.7.5.737384.168"
+* identifier[SOR-ID].use = #official
+* identifier[SOR-ID].type.text = "SOR"
+* identifier[SOR-ID].value = "1053231000016001"
+* identifier[SOR-ID].system = "urn:oid:1.2.208.176.1.1"
+* identifier[EAN-ID].use = #official
+* identifier[EAN-ID].type.text = "EAN"
+* identifier[EAN-ID].value = "5790002508240"
+* identifier[EAN-ID].system = "https://www.gs1.org/gln"
+//* identifier[KOMBIT-ORG-ID].type.text = "MASTER_EAF"
+//* identifier[KOMBIT-ORG-ID].value = "11469610"
+//* identifier[KOMBIT-ORG-ID].system = "https://kombit.dk/sts/organisation"
+* identifier[Ydernummer].use = #usual
+* identifier[Ydernummer].type.text = "DENMARK"
+* identifier[Ydernummer].value = "219"
+* identifier[Ydernummer].system = "urn:oid:1.2.208.176.1.4"
 * name = "Sygehusadviser, Hillerød"
 * telecom[0].system = #phone
 * telecom[=].value = "72 32 00 00"
@@ -116,14 +114,14 @@ Instance: efb6250c-1ba5-4856-b7e7-d9e830d58c09
 InstanceOf: MedComMessagingOrganization // 
 Title: "Receive_Tek-C - Receiver"
 Description: "Receive_Tek-C - Receiver"
-* identifier[0].use = #official
-* identifier[=].type.text = "SOR"
-* identifier[=].value = "330461000016004"
-* identifier[=].system = "urn:oid:1.2.208.176.1.1"
-* identifier[+].use = #official
-* identifier[=].type.text = "EAN"
-* identifier[=].value = "5790001353308"
-* identifier[=].system = "https://www.gs1.org/gln"
+* identifier[SOR-ID].use = #official
+* identifier[SOR-ID].type.text = "SOR"
+* identifier[SOR-ID].value = "330461000016004"
+* identifier[SOR-ID].system = "urn:oid:1.2.208.176.1.1"
+* identifier[EAN-ID].use = #official
+* identifier[EAN-ID].type.text = "EAN"
+* identifier[EAN-ID].value = "5790001353308"
+* identifier[EAN-ID].system = "https://www.gs1.org/gln"
 * name = "Sundhedsplejen, Aabenraa kommune"
 * telecom[0].system = #phone
 * telecom[=].value = "01 02 03 04"

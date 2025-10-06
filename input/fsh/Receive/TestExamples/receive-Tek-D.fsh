@@ -94,7 +94,7 @@ InstanceOf: MedComCorePractitionerRole
 Title: "Receive_Tek-D - practitionerRole"
 Description: "Receive_Tek-D - practitionerRole"
 * practitioner = Reference(48dc7a52-19f5-42c6-ba7c-48ebed7c6cc9)
-* code = http://terminology.hl7.org/CodeSystem/v3-NullFlavor#NAVU
+* code.text = "jordarbejder"
 
 // CareCommunication example - new message
 Instance: 0fc624e5-3455-4272-bf97-e018817156b5

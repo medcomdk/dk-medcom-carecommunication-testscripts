@@ -95,10 +95,10 @@ Description: "receive_B-reply"
 Usage: #example
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
-* destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=265161000016000"
+* destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=382871000016004"
 * destination[primary].receiver = Reference(5007be8f-49dd-48ae-9808-66270aef1865)
 * sender = Reference(3d079530-8c63-4c5c-a6f9-825279aef4d2)
-* source.endpoint = "https://sor2.sum.dsdn.dk/#id=382871000016004"
+* source.endpoint = "https://sor2.sum.dsdn.dk/#id=265161000016000"
 * focus = Reference(9c4ff4b0-093c-4111-8c29-3ae2b04a16db)
 * definition = "http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition|5.0"
 

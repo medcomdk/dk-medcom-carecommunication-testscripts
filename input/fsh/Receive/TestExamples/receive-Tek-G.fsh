@@ -29,10 +29,10 @@ Description: "receive-Tek-G - MessageHeader"
 Usage: #example
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
-* destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=330461000016004"
-* destination[primary].receiver = Reference(aea5f134-5cc9-44b1-b5db-7155e45717ee)
-* sender = Reference(d8ca8b48-565a-46c8-a1c8-e781c498626a)
-* source.endpoint = "https://sor2.sum.dsdn.dk/#id=1017421000016003"
+* destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=1017421000016003"
+* destination[primary].receiver = Reference(d8ca8b48-565a-46c8-a1c8-e781c498626a)
+* sender = Reference(aea5f134-5cc9-44b1-b5db-7155e45717ee)
+* source.endpoint = "https://sor2.sum.dsdn.dk/#id=330461000016004"
 * focus = Reference(930876e5-8cf8-40f0-bd6c-3e38520d61de)
 * definition = "http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition|5.0"
 

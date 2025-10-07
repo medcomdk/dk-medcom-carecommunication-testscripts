@@ -95,6 +95,20 @@ Usage: #example
 * agent.who = Reference(9a74ae38-1f8f-43de-ac8d-01647bb4c5b4)
 * entity[payload][+].role = #source
 * entity[payload][=].what.identifier.value = "urn:uuid:21ee7617-5e47-406e-83bd-347ba6a7a872"
+* entity[payload][+].role = #source
+* entity[payload][=].what.identifier.value = "urn:uuid:cd422e42-5bad-11ed-9b6a-0242ac120002"
+* entity[payload][+].role = #source
+* entity[payload][=].what.identifier.value = "urn:uuid:2ac9fe09-d11f-487f-b272-203e02def82c"
+* entity[payload][+].role = #source
+* entity[payload][=].what.identifier.value = "urn:uuid:c515d35f-89c8-4c7d-b7fe-e6e9fd5e9f31"
+* entity[payload][+].role = #source
+* entity[payload][=].what.identifier.value = "urn:uuid:a2203076-5b17-40ad-8374-a53eadb3bcfa"
+* entity[payload][+].role = #source
+* entity[payload][=].what.identifier.value = "urn:uuid:cc9f6d87-ad74-4dc0-9c79-a3ec80707b00"
+* entity[payload][+].role = #source
+* entity[payload][=].what.identifier.value = "urn:uuid:b3a937ac-82bc-4f96-9692-c72c2ae307ee"
+* entity[payload][+].role = #source
+* entity[payload][=].what.identifier.value = "urn:uuid:fcdc0fe5-07b0-444f-a172-1fa44df2e93c"
 
 Instance: ca0f5d0c-cb2a-4ad5-a08a-e7dbd2092b13
 InstanceOf: MedComCoreEncounter
@@ -103,10 +117,10 @@ Description: "Example of a simple MedCom Core Encounter"
 * status = $StatusCodes#in-progress 
 * class = $ActCodes#IMP 
 * subject = Reference(ae4abfb5-b0f6-443c-a420-0c0649cbe0c0)
-* episodeOfCare.identifier.value = "urn:uuid:39e3e169-9ece-4ba4-bd24-2e0fbeebc333" 
-* episodeOfCare.identifier.system = "https://sor2.sum.dsdn.dk/#id=441211000016000" // SOR id for afsender/serviceProvider
-* episodeOfCare.identifier.value = "urn:uuid:fc60e762-b13b-5773-865e-67f3907bdcc7" 
-* episodeOfCare.identifier.system = "https://www.esundhed.dk/Registre/Landspatientregisteret" 
+* episodeOfCare[+].identifier.value = "urn:uuid:39e3e169-9ece-4ba4-bd24-2e0fbeebc333" 
+* episodeOfCare[=].identifier.system = "https://sor2.sum.dsdn.dk/#id=441211000016000" // SOR id for afsender/serviceProvider
+* episodeOfCare[+].identifier.value = "urn:uuid:fc60e762-b13b-5773-865e-67f3907bdcc7" 
+* episodeOfCare[=].identifier.system = "https://www.esundhed.dk/Registre/Landspatientregisteret" 
 
 Instance: 2595f801-1211-4578-86f5-c7ad3a860e27
 InstanceOf: MedComCareCommunication

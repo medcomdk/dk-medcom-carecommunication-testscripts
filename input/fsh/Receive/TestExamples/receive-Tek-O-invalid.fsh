@@ -32,10 +32,10 @@ Description: "receive-Tek-O-invalid - MessageHeader"
 Usage: #example
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
-* destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=441211000016000"
-* destination[primary].receiver = Reference(409b87d3-398e-44cb-9246-35b47ff75cc4)
-* sender = Reference(6e7761cb-2dc9-48c7-8fd4-b49d46dd9c05)
-* source.endpoint = "https://sor2.sum.dsdn.dk/#id=330461000016004"
+* destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=330461000016004"
+* destination[primary].receiver = Reference(6e7761cb-2dc9-48c7-8fd4-b49d46dd9c05)
+* sender = Reference(409b87d3-398e-44cb-9246-35b47ff75cc4)
+* source.endpoint = "https://sor2.sum.dsdn.dk/#id=441211000016000"
 * focus = Reference(4a003dce-060c-4d9d-b5d6-7513323049d1)
 * definition = "http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition|5.0"
 

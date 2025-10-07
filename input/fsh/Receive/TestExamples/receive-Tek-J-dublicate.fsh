@@ -29,10 +29,10 @@ Description: "receive-Tek-J-duplicate - MessageHeader"
 Usage: #example
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
-* destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=441211000016000"
-* destination[primary].receiver = Reference(2aa3877e-d446-4c24-b497-399baaba894c)
-* sender = Reference(7add7867-7f93-421b-9b93-41597c3433cb)
-* source.endpoint = "https://sor2.sum.dsdn.dk/#id=330461000016004"
+* destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=330461000016004"
+* destination[primary].receiver = Reference(7add7867-7f93-421b-9b93-41597c3433cb)
+* sender = Reference(2aa3877e-d446-4c24-b497-399baaba894c)
+* source.endpoint = "https://sor2.sum.dsdn.dk/#id=441211000016000"
 * focus = Reference(5cf35f62-e56a-4eb1-ada4-1abb6ea0dda0)
 * definition = "http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition|5.0"
 

@@ -29,10 +29,10 @@ Description: "receive-Tek-M-new-dublicate-inv - MessageHeader"
 Usage: #example
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
-* destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=441211000016000"
-* destination[primary].receiver = Reference(fe92c210-7725-4749-8045-37ed53878f26)
-* sender = Reference(74fb6fce-089e-444d-bca3-7d2673c6901f)
-* source.endpoint = "https://sor2.sum.dsdn.dk/#id=330461000016004"
+* destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=330461000016004"
+* destination[primary].receiver = Reference(74fb6fce-089e-444d-bca3-7d2673c6901f)
+* sender = Reference(fe92c210-7725-4749-8045-37ed53878f26)
+* source.endpoint = "https://sor2.sum.dsdn.dk/#id=441211000016000"
 * focus = Reference(bc0c3901-87d3-4d90-ba32-9b02cc631de8)
 * definition = "http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition|5.0"
 

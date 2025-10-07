@@ -29,10 +29,10 @@ Description: "Receive_Tek-B - MessageHeader"
 Usage: #example
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
-* destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=441211000016000"
-* destination[primary].receiver = Reference(dfhjkshertu6787bjbsjnmbdf-.hfjdks7.)
-* sender = Reference(ghjghgh)
-* source.endpoint = "https://sor2.sum.dsdn.dk/#id=330461000016004"
+* destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=330461000016004"
+* destination[primary].receiver = Reference(ghjghgh)
+* sender = Reference(dfhjkshertu6787bjbsjnmbdf-.hfjdks7.)
+* source.endpoint = "https://sor2.sum.dsdn.dk/#id=4412110000160004"
 * focus = Reference(45645.hfjksr7.klklj)
 * definition = "http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition|5.0"
 

@@ -105,10 +105,10 @@ Description: "receive_C-forward"
 Usage: #example
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
-* destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=953751000016007"
-* destination[primary].receiver = Reference(8b67e42d-fc9b-45c4-8313-86b9c7416445)
-* sender = Reference(a81d6555-94d9-4704-a6b7-8dea0bcd3dac)
-* source.endpoint = "https://sor2.sum.dsdn.dk/#id=382871000016004"
+* destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=330461000016004"
+* destination[primary].receiver = Reference(a81d6555-94d9-4704-a6b7-8dea0bcd3dac)
+* sender = Reference(ca5a7c53-fc3a-4565-b419-a443c3bc6870)
+* source.endpoint = "https://sor2.sum.dsdn.dk/#id=328081000016004"
 * focus = Reference(e37c9933-1fc6-48e0-9819-66bc026cf3d4)
 * definition = "http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition|5.0"
 

@@ -86,7 +86,7 @@ InstanceOf: MedComCorePractitionerRole
 Title: "Send-A-new - practitionerRole"
 Description: "Send-A-new - practitionerRole"
 * practitioner = Reference(b19a6a37-ec37-4dbb-95ca-1e0c92378c7e)
-* code = $PractitionerRole#sygeplejerske
+* code = $PractitionerRole#socialogsundhedsmedhjaelper
 
 // CareCommunication example - new message
 Instance: 3534b272-253d-47ce-ba7b-19ec946d95a2
@@ -126,7 +126,7 @@ Title: "Send-A-new - specifik Receiver practitionerRole"
 Description: "Send-A-new - specifik Receiver practitionerRole"
 * practitioner = Reference(c2984887-1df7-4e43-8621-22bd6bac37c8)
 * organization = Reference(26bfb2de-a811-4744-9883-9a50c59e710d)
-* code = $PractitionerRole#afdelingslaege
+* code.text = "Visitator"
 
 Instance: b2819bfe-07d1-4c26-94a3-a45a702a04a0
 InstanceOf: MedComCareCommunication
@@ -134,7 +134,7 @@ Title: "Send-A-new - Communication"
 Description: "Send-A-new - Communication"
 Usage: #example
 * status = $EventStatus#unknown
-* category = $CategoryCodes#regarding-referral
+* category = $CategoryCodes#acute-ambulant
 * priority = $PriorityCode#asap
 * topic.text = "Kritisk tilstand"
 * identifier.value = "urn:uuid:b2eb3d0e-5de5-4de9-b2a3-0ff321ad1c3a"

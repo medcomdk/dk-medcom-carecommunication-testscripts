@@ -66,7 +66,7 @@ Description: "Send-Tek-A-new - Encounter"
 * status = $StatusCodes#finished 
 * class = $ActCodes#IMP 
 * subject = Reference(2f6d23d0-239c-44bb-9033-acab45416029)
-* episodeOfCare.identifier.value = "d3779c52-1fc9-4d96-93dc-693a4faab338" 
+* episodeOfCare.identifier.value = "urn:uuid:d3779c52-1fc9-4d96-93dc-693a4faab338" 
 * episodeOfCare.identifier.system = "https://sor2.sum.dsdn.dk/#id=1385391000016002" // SOR id for afsender/serviceProvider
 
 Instance: 2f6d23d0-239c-44bb-9033-acab45416029

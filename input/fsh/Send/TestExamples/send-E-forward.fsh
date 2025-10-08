@@ -62,7 +62,7 @@ Usage: #example
 * payload[0].extension[author].valueReference = Reference(84eb6a09-63cf-433d-8522-41465d78756a)
 * payload[0].extension[authorContact].valueContactPoint.system = #phone 
 * payload[0].extension[authorContact].valueContactPoint.value = "85572787"
-* payload[1].contentString = "Jeg videresender hermed beskeden fra Kim, så I er orienteret.\nHilsen Kim Jensen\nSygeplejerske"
+* payload[1].contentString = "Tak for informationen. Jeg videresender beskeden til Brunos læge.\nHilsen Kim Jensen\nSygeplejerske"
 * payload[1].extension[date].valueDateTime = 2024-09-14T14:25:00+02:00
 * payload[1].extension[identifier].valueIdentifier.value = "urn:uuid:cfc9886a-5f54-463b-9255-99bfaf778d8c"
 * payload[1].extension[identifier].valueIdentifier.assigner = Reference(d2ac69eb-568e-4201-b29d-2af8d3126518)

@@ -52,6 +52,7 @@ Description: "Send-A-new - Patient"
 * identifier[cpr].system = "urn:oid:1.2.208.176.1.2"
 * identifier[cpr].value = "2509479989"
 * name[official].use = #official
+* name[official].given = "Bruno"
 * name[official].family = "Elmer"
 
 // Sender instance - new message for attachement

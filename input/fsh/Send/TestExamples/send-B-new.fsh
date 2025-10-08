@@ -43,7 +43,8 @@ Title: "Send-B-new - Communication"
 Description: "Send-B-new - Communication"
 Usage: #example
 * status = $EventStatus#unknown
-* category = $CategoryCodes#training
+* category = $CategoryCodes#regarding-referral
+* priority = $PriorityCode#asap
 * subject = Reference(2bc74be8-a622-4422-98c9-894b7c245d70)
 * identifier.value = "urn:uuid:a036001b-7c8f-4f10-8aa1-cc8711223eee"
 * payload.contentString = "Til rette vedkommende. Som aftalt pr.tlf. dd. vedrørende ovenstående patient: Vi vurderer at funktionsevnen for Spise og for Drikke skal ændres til Moderat.\nHilsen Kim Petersen\nOverlæge"

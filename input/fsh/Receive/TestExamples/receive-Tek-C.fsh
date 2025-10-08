@@ -57,8 +57,8 @@ Instance: 83949bef-2b75-429c-ada7-ca3998fb046a
 InstanceOf: MedComCorePatient
 Title: "Receive_Tek-C - Patient"
 Description: "Receive_Tek-C - Patient"
-* identifier[cpr].system = "urn:oid:1.2.208.176.1.6.1.3.177"
-* identifier[cpr].value = "0107290WQ5"
+* identifier[cpr].system = "urn:oid:1.2.208.176.1.2"
+* identifier[cpr].value = "2509479989"
 * name[official].use = #official
 * name[official].given[0] = "Bruno"
 * name[official].given[1] = "Test"

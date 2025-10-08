@@ -200,4 +200,4 @@ Usage: #inline
 * activity.coding = $ActivityCode#new-message
 * agent.who = Reference(5007be8f-49dd-48ae-9808-66270aef1865)
 * entity[payload][+].role = #source
-* entity[payload][=].what.identifier.value = "urn:uuid:24d01288-ad36-4af2-96a8-fd1432dadee1" //Her har jeg rettet således at den peger på den rigtige payload, før pegede den på en payload som ikke fandtes i filen
+* entity[payload][=].what.identifier.value = "urn:uuid:24d01288-ad36-4af2-96a8-fd1432dadee1"

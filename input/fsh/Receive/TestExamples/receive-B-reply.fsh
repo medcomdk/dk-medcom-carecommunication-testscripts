@@ -79,7 +79,7 @@ Description: "Simple practitioner with a name"
 * name.given = "Michael"
 * name.family = "Burns"
 
-Instance: fd823675-9a45-4cf6-9348-5b9806e8385f //modatger
+Instance: fd823675-9a45-4cf6-9348-5b9806e8385f
 InstanceOf: MedComCorePractitionerRole
 Title: "PractitionerRole with a role and reference to a practitioner"
 Description: "PractitionerRole with a role and reference to a practitioner"

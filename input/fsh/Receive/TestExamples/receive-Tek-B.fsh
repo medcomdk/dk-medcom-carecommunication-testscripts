@@ -15,8 +15,8 @@ Usage: #example
 * entry[=].resource = j.k.k.67843274je
 * entry[+].fullUrl = "https://medcomfhir.dk/ig/carecommunication/Practitioner/hfkjsu574783yhfjdx67-hjk"
 * entry[=].resource = hfkjsu574783yhfjdx67-hjk
-* entry[+].fullUrl = "https://medcomfhir.dk/ig/carecommunication/Organization/dfhjkshertu6787bjbsjnmbdf-.hfjdks7."
-* entry[=].resource = dfhjkshertu6787bjbsjnmbdf-.hfjdks7.
+* entry[+].fullUrl = "https://medcomfhir.dk/ig/carecommunication/Organization/dfhjkshertu6787bjbsjnmbdf-hfjdks7"
+* entry[=].resource = dfhjkshertu6787bjbsjnmbdf-hfjdks7
 * entry[+].fullUrl = "https://medcomfhir.dk/ig/carecommunication/Organization/ghjghgh"
 * entry[=].resource = ghjghgh
 * entry[+].fullUrl = "https://medcomfhir.dk/ig/carecommunication/Provenance/hfdjks887.8.89frkdshjf778"
@@ -31,7 +31,7 @@ Usage: #example
 * eventCoding = $MessageEvents#care-communication-message
 * destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=330461000016004"
 * destination[primary].receiver = Reference(ghjghgh)
-* sender = Reference(dfhjkshertu6787bjbsjnmbdf-.hfjdks7.)
+* sender = Reference(dfhjkshertu6787bjbsjnmbdf-hfjdks7)
 * source.endpoint = "https://sor2.sum.dsdn.dk/#id=4412110000160004"
 * focus = Reference(45645.hfjksr7.klklj)
 * definition = "http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition|5.0"
@@ -49,7 +49,7 @@ Usage: #example
 * payload[0].contentString = "Til rette vedkommende. Har I mon vist det rigtige tidspunkt?\nHilsen Michael Burns\nSygeplejerske"
 * payload[0].extension[date].valueDateTime = 2024-11-02T08:00:00+01:00
 * payload[0].extension[identifier].valueIdentifier.value = "urn:uuid:729e63f5-a691-441e-84fe-953594b801b2"
-* payload[0].extension[identifier].valueIdentifier.assigner = Reference(dfhjkshertu6787bjbsjnmbdf-.hfjdks7.)
+* payload[0].extension[identifier].valueIdentifier.assigner = Reference(dfhjkshertu6787bjbsjnmbdf-hfjdks7)
 * payload[0].extension[author].valueReference = Reference(j.k.k.67843274je)
 * payload[0].extension[authorContact].valueContactPoint.system = #phone 
 * payload[0].extension[authorContact].valueContactPoint.value = "+4512345789"
@@ -68,7 +68,7 @@ Description: "Receive_Tek-B - Patient"
 * gender = #male
 
 // Sender instance - new message for attachement
-Instance: dfhjkshertu6787bjbsjnmbdf-.hfjdks7.
+Instance: dfhjkshertu6787bjbsjnmbdf-hfjdks7
 InstanceOf: MedComMessagingOrganization // 
 Title: "Receive_Tek-B - Sender"
 Description: "Receive_Tek-B - Sender"
@@ -111,6 +111,6 @@ Usage: #example
 * occurredDateTime = 2024-11-02T08:00:00+01:00
 * recorded = 2024-11-02T08:00:00+01:00
 * activity.coding = $ActivityCode#new-message
-* agent.who = Reference(dfhjkshertu6787bjbsjnmbdf-.hfjdks7.)
+* agent.who = Reference(dfhjkshertu6787bjbsjnmbdf-hfjdks7)
 * entity[payload][+].role = #source
 * entity[payload][=].what.identifier.value = "urn:uuid:729e63f5-a691-441e-84fe-953594b801b2"

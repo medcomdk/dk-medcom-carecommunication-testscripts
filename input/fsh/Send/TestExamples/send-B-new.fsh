@@ -29,10 +29,10 @@ Description: "Send-B-new - MessageHeader"
 Usage: #example
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
-* destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=330461000016004"
-* destination[primary].receiver = Reference(630bbfae-6b43-46f8-9b51-98cdea34e46d)
-* sender = Reference(585e0101-8450-4126-b049-19b19c42e2dd)
-* source.endpoint = "https://sor2.sum.dsdn.dk/#id=1017421000016003"
+* destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=1017421000016003"
+* destination[primary].receiver = Reference(585e0101-8450-4126-b049-19b19c42e2dd)
+* sender = Reference(630bbfae-6b43-46f8-9b51-98cdea34e46d)
+* source.endpoint = "https://sor2.sum.dsdn.dk/#id=330461000016004"
 * focus = Reference(d0c09c24-42bb-44eb-807e-6b3b22f6dbfc)
 * definition = "http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition|5.0"
 

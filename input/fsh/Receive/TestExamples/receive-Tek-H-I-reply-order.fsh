@@ -136,6 +136,10 @@ Usage: #example
 * entry[=].resource = 61f5b1c7-c342-48c7-b7ee-81fcf6f01f0e
 * entry[+].fullUrl = "https://medcomfhir.dk/ig/carecommunication/Provenance/0696ca09-5213-4b6c-98e6-0d7c05c16080"
 * entry[=].resource = 0696ca09-5213-4b6c-98e6-0d7c05c16080
+* entry[+].fullUrl = "https://medcomfhir.dk/ig/carecommunication/PractitionerRole/d4f0bfb0-06c7-4c52-948f-6cda9ba17a0a"
+* entry[=].resource = d4f0bfb0-06c7-4c52-948f-6cda9ba17a0a
+* entry[+].fullUrl = "https://medcomfhir.dk/ig/carecommunication/Practitioner/72ef9b22-ea18-4222-8f13-7e79b0d76257"
+* entry[=].resource = 72ef9b22-ea18-4222-8f13-7e79b0d76257
 
 
 
@@ -170,6 +174,20 @@ Usage: #inline
 * entity[payload][+].role = #source
 * entity[payload][=].what.identifier.value = "urn:uuid:ac353781-0e43-447d-80f4-d090028abcc1"
 
+// Practitioners - reply message - same organization, different practitioner
+Instance: 72ef9b22-ea18-4222-8f13-7e79b0d76257
+InstanceOf: MedComCorePractitioner
+Title: "Simple practitioner with a name"
+Description: "Simple practitioner with a name"
+* name.given = "Eva"
+* name.family = "Petersen"
+
+Instance: d4f0bfb0-06c7-4c52-948f-6cda9ba17a0a
+InstanceOf: MedComCorePractitionerRole
+Title: "PractitionerRole with a role and reference to a practitioner"
+Description: "PractitionerRole with a role and reference to a practitioner"
+* practitioner = Reference(72ef9b22-ea18-4222-8f13-7e79b0d76257)
+* code = $PractitionerRole#socialogsundhedsmedhjaelper
 
 // CareCommunication reply example
 Instance: 9e829a72-32b2-4810-a56e-1e8f3a81e888
@@ -185,7 +203,7 @@ Description: "receive-Tek-H - Content of care communication message. Valid only 
 * payload[1].extension[date].valueDateTime = 2024-08-24T12:30:00+02:00
 * payload[1].extension[identifier].valueIdentifier.value = "urn:uuid:ac353781-0e43-447d-80f4-d090028abcc1"
 * payload[1].extension[identifier].valueIdentifier.assigner = Reference(55b3ef79-9e10-4b52-9d94-6c97ff5a0999)
-* payload[1].extension[author].valueReference = Reference(569a1bff-55a1-4868-a7b4-80fedb2066e3) 
+* payload[1].extension[author].valueReference = Reference(d4f0bfb0-06c7-4c52-948f-6cda9ba17a0a) 
 * payload[1].extension[authorContact].valueContactPoint.system = #phone 
 * payload[1].extension[authorContact].valueContactPoint.value = "38683868"
 * payload[0].contentString = "Til rette vedkommende. Vi ønsker information om de seneste undersøgelser udført på Bruno. På forhånd tak.\nHilsen Michael Burns\nSygeplejerske"

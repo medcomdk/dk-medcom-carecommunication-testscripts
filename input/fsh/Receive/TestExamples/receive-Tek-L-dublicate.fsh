@@ -4,7 +4,7 @@ Title: "receive_Tek-L-dublicate"
 Description: "receive_Tek-L-dublicate"
 Usage: #example
 * type = $BundleType#message
-* timestamp = 2024-08-28T15:20:00+02:00
+* timestamp = 2024-08-28T16:25:00+02:00
 * entry[+].fullUrl = "https://medcomfhir.dk/ig/carecommunication/MessageHeader/559e4be0-e1f2-4371-969d-29bbbd5ca9d1"
 * entry[=].resource = 559e4be0-e1f2-4371-969d-29bbbd5ca9d1
 * entry[+].fullUrl = "https://medcomfhir.dk/ig/carecommunication/Patient/283b6471-3134-4b7e-9d48-b6fad32e6384"

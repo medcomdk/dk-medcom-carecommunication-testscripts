@@ -64,7 +64,6 @@ Description: "receive-Tek-G - Patient"
 * identifier[cpr].value = "2509479989"
 * name[official].use = #official
 * name[official].family = "Elmer"
-* deceasedBoolean = true
 
 // Sender instance - new message for attachement
 Instance: aea5f134-5cc9-44b1-b5db-7155e45717ee

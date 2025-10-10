@@ -38,9 +38,9 @@ Usage: #example
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
 * destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=1017421000016003"
-* destination[primary].receiver = Reference(d2ac69eb-568e-4201-b29d-2af8d3126518)
-* sender = Reference(7260b118-d744-4396-bbf2-80245933b1dd)
-* source.endpoint = "https://sor2.sum.dsdn.dk/#id=330461000016004"
+* destination[primary].receiver = Reference(6ea7c7cb-824b-4619-a13e-bc8828afd7e1)
+* sender = Reference(d2ac69eb-568e-4201-b29d-2af8d3126518)
+* source.endpoint = "https://sor2.sum.dsdn.dk/#id=953751000016007"
 * focus = Reference(e7e596e0-6458-4701-a20f-a9322f85ebe8)
 * definition = "http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition|5.0"
 

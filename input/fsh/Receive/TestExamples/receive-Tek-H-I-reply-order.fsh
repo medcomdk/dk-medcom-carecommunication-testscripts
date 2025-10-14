@@ -199,7 +199,7 @@ Description: "receive-Tek-H - Content of care communication message. Valid only 
 * category = $CategoryCodes#examination-results
 * topic.text = "Forspørgsel på seneste resultater"
 * subject = Reference(b7fed758-bfdd-4c21-bfca-bb0b4b7081a0)
-* payload[1].contentString = "Jeg glemte lige at skrive, at der også skulle være udført en røntgenundersøgelse som vi også ønsker informationer om.\nVh. Michael\nSygeplejerske"
+* payload[1].contentString = "Michael glemte lige at skrive, at der også skulle være udført en røntgenundersøgelse som vi også ønsker informationer om.\nVh. Eva\nSocial og sundhedshjælper"
 * payload[1].extension[date].valueDateTime = 2024-08-24T12:30:00+02:00
 * payload[1].extension[identifier].valueIdentifier.value = "urn:uuid:ac353781-0e43-447d-80f4-d090028abcc1"
 * payload[1].extension[identifier].valueIdentifier.assigner = Reference(55b3ef79-9e10-4b52-9d94-6c97ff5a0999)

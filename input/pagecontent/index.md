@@ -10,7 +10,7 @@ The purpose of the CareCommunication standard is to support digital communicatio
 The following pages contains important information when implementing CareCommunications, as they contain relevant information:
 * [GitHub-pages for CareCommunications](https://medcomdk.github.io/dk-medcom-carecommunication)
   * [Testprotocol for sending and receiving CareCommunications](https://medcomdk.github.io/dk-medcom-carecommunication/#2-test-and-certification)
-* [Implementation Guide for CareCommunication v. 4.0](https://medcomfhir.dk/ig/carecommunication/3.0.0)
+* [Implementation Guide for CareCommunication](https://medcomfhir.dk/ig/carecommunication)
 * [Governance for MedCom FHIR messaging](https://medcomdk.github.io/MedCom-FHIR-Communication/)
   * [Governance for CareCommunication](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/documents/governance-for-careCommunication.html)
 

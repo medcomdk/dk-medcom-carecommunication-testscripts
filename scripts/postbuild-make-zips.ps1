@@ -3,6 +3,7 @@
 #   - ReceiveExamples.zip  (Bundle-R-*)
 #   - SendExamples.zip     (Bundle-S-*)
 # Vælger skiftevis JSON og XML per basisnavn. Fallback hvis et format mangler (dette er for at sikre at leverandørerene testes i begge formater).
+# for at køre scriptet 1. åben powershell terminal 2. skriv "cd" et mellemrum og et "s" tryk på tab, så den autoudfylder "".\scripts\" og tryk inter, 3. skriv "p" og tryk på tab,og tryk inter.   
 
 $ErrorActionPreference = "Stop"
 
@@ -40,7 +41,7 @@ function Get-AltSelection {
   $byBase = $files | Group-Object { $_.BaseName } | Sort-Object Name
 
   $selected = New-Object System.Collections.Generic.List[System.IO.FileInfo]
-  $takeJson = $true  # start med JSON, skift for hver gruppe
+  $takeJson = $true  
 
   foreach ($grp in $byBase) {
     $json = $grp.Group | Where-Object { $_.Extension -ieq ".json" } | Sort-Object FullName | Select-Object -First 1
@@ -48,10 +49,10 @@ function Get-AltSelection {
 
     if ($takeJson) {
       if ($json) { $selected.Add($json) }
-      elseif ($xml) { $selected.Add($xml) }  # fallback
+      elseif ($xml) { $selected.Add($xml) } 
     } else {
       if ($xml) { $selected.Add($xml) }
-      elseif ($json) { $selected.Add($json) } # fallback
+      elseif ($json) { $selected.Add($json) }
     }
 
     $takeJson = -not $takeJson

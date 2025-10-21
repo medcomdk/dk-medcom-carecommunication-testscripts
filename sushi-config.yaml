@@ -50,7 +50,7 @@ dependencies:
 menu:
   IG Home: index.html
   Test scripts used in TouchStone: testscripts.html
-  Test examples for test protocols: testexamples.html # if relevant
+  Test examples for test protocols: testexamples.html
   Artifacts Summary: artifacts.html
   Download: downloads.html
 

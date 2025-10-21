@@ -79,7 +79,7 @@ Description: "Simple practitioner with a name"
 * name.given = "Michael"
 * name.family = "Burns"
 
-Instance: fd823675-9a45-4cf6-9348-5b9806e8385f //modatger
+Instance: fd823675-9a45-4cf6-9348-5b9806e8385f
 InstanceOf: MedComCorePractitionerRole
 Title: "PractitionerRole with a role and reference to a practitioner"
 Description: "PractitionerRole with a role and reference to a practitioner"
@@ -131,8 +131,8 @@ Description: "receive_B-reply"
 * category = $CategoryCodes#examination-results
 * topic.text = "Forespørgsel på seneste resultater"
 * subject = Reference(7b4803a9-a048-4551-9f61-c3143dba3786)
-* recipient = Reference(fd823675-9a45-4cf6-9348-5b9806e8385f) //Specifik modtager indsat 2025-04-07
-* extension[sender].valueReference = Reference(9461158c-801b-4664-ab92-150d86841aee) //Specifik sender indsat 2025-04-07
+* recipient = Reference(fd823675-9a45-4cf6-9348-5b9806e8385f)
+* extension[sender].valueReference = Reference(9461158c-801b-4664-ab92-150d86841aee)
 * payload[2].contentAttachment.contentType = $bcp13#application/pdf
 * payload[2].contentAttachment.title = "Blodprøveresultater" 
 * payload[2].extension[date].valueDateTime = 2024-08-12T11:30:00+02:00
@@ -154,40 +154,6 @@ Description: "receive_B-reply"
 * payload[0].extension[authorContact].valueContactPoint.system = #phone 
 * payload[0].extension[authorContact].valueContactPoint.value = "38683868"
 
-/* // CareCommunication new example
-Instance: 42cb9200-f421-4d08-8391-7d51a2503cb4
-InstanceOf: MedComCareCommunicationMessageHeader
-Title: "receive_B-reply"
-Description: "receive_B-reply"
-Usage: #example
-* destination[primary].extension[use].valueCoding = $Use#primary
-* eventCoding = $MessageEvents#care-communication-message
-* destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=382871000016004"
-* destination[primary].receiver = Reference(3d079530-8c63-4c5c-a6f9-825279aef4d2)
-* sender = Reference(5007be8f-49dd-48ae-9808-66270aef1865)
-* source.endpoint = "https://sor2.sum.dsdn.dk/#id=265161000016000"
-* focus = Reference(94e65db8-2f0c-4a2c-a7c9-06a160d59a12)
-* definition = "http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition|5.0"
-
-
-// CareCommunication new example
-Instance: 94e65db8-2f0c-4a2c-a7c9-06a160d59a12
-InstanceOf: MedComCareCommunication
-Title: "receive_B-reply"
-Description: "receive_B-reply"
-* status = $EventStatus#unknown
-* identifier.value = "urn:uuid:b2eb3d0e-5de5-4de9-b2a3-0ff321ad1c3a"
-* category = $CategoryCodes#examination-results
-* topic.text = "Forspørgsel på seneste resultater"
-* subject = Reference(7b4803a9-a048-4551-9f61-c3143dba3786)
-* payload.contentString = "Til rette vedkommende. Vi ønsker information om de seneste undersøgelser udført på Bruno. På forhånd tak. Hilsen Michael, sygeplejerske."
-* payload.extension[date].valueDateTime = 2024-08-11T12:00:00+02:00
-* payload.extension[identifier].valueIdentifier.value = "urn:uuid:24d01288-ad36-4af2-96a8-fd1432dadee1"
-* payload.extension[identifier].valueIdentifier.assigner = Reference(5007be8f-49dd-48ae-9808-66270aef1865)
-* payload.extension[author].valueReference = Reference(fd823675-9a45-4cf6-9348-5b9806e8385f)
-* payload.extension[authorContact].valueContactPoint.system = #phone 
-* payload.extension[authorContact].valueContactPoint.value = "38683868" */
-
 // CareCommunication example - new message
 Instance: 30e15db8-3c33-43c1-87cb-7e8a902e8003
 InstanceOf: MedComCareCommunicationProvenance
@@ -200,4 +166,4 @@ Usage: #inline
 * activity.coding = $ActivityCode#new-message
 * agent.who = Reference(5007be8f-49dd-48ae-9808-66270aef1865)
 * entity[payload][+].role = #source
-* entity[payload][=].what.identifier.value = "urn:uuid:24d01288-ad36-4af2-96a8-fd1432dadee1" //Her har jeg rettet således at den peger på den rigtige payload, før pegede den på en payload som ikke fandtes i filen
+* entity[payload][=].what.identifier.value = "urn:uuid:24d01288-ad36-4af2-96a8-fd1432dadee1"

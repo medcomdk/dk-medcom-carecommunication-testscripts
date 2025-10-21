@@ -85,9 +85,24 @@ Usage: #example
 * occurredDateTime = 2024-08-15T15:20:00+02:00
 * recorded = 2024-08-15T15:20:00+02:00
 * activity.coding = $ActivityCode#new-message
-* agent.who = Reference(ca5a7c53-fc3a-4565-b419-a443c3bc6870) 
+* agent.who = Reference(8b67e42d-fc9b-45c4-8313-86b9c7416445) 
 * entity[payload][+].role = #source
 * entity[payload][=].what.identifier.value = "urn:uuid:d189f0c2-8397-4cae-b62c-0d0958b4899a"
+
+Instance: fdb3c81c-e1b3-4cee-866a-334360c162a0
+InstanceOf: MedComCareCommunicationProvenance
+Title: "receive_C-forward"
+Description: "receive_C-forward"
+Usage: #inline
+* target = Reference(d2b81c34-ec5d-4c5f-9380-1b5aa507544b)
+* occurredDateTime = 2024-08-16T11:30:00+02:00
+* recorded = 2024-08-16T11:30:00+02:00
+* activity.coding = $ActivityCode#forward-message
+* agent.who = Reference(ca5a7c53-fc3a-4565-b419-a443c3bc6870)
+* entity[preceedingMessage].role = #revision
+* entity[preceedingMessage].what = Reference(42fa2844-5020-45dd-bd5f-77137ba5ca1f)
+* entity[payload][+].role = #source
+* entity[payload][=].what.identifier.value = "urn:uuid:4fa05d8d-66e7-46dd-8029-428d44d33f53"
 
 Instance: 8b67e42d-fc9b-45c4-8313-86b9c7416445
 InstanceOf: MedComMessagingOrganization 
@@ -113,20 +128,7 @@ Usage: #example
 * definition = "http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition|5.0"
 
 
-Instance: fdb3c81c-e1b3-4cee-866a-334360c162a0
-InstanceOf: MedComCareCommunicationProvenance
-Title: "receive_C-forward"
-Description: "receive_C-forward"
-Usage: #inline
-* target = Reference(d2b81c34-ec5d-4c5f-9380-1b5aa507544b)
-* occurredDateTime = 2024-08-16T11:30:00+02:00
-* recorded = 2024-08-16T11:30:00+02:00
-* activity.coding = $ActivityCode#forward-message
-* agent.who = Reference(a81d6555-94d9-4704-a6b7-8dea0bcd3dac)
-* entity[preceedingMessage].role = #revision
-* entity[preceedingMessage].what = Reference(42fa2844-5020-45dd-bd5f-77137ba5ca1f)
-* entity[payload][+].role = #source
-* entity[payload][=].what.identifier.value = "urn:uuid:4fa05d8d-66e7-46dd-8029-428d44d33f53"
+
 
 //Practitioner - reply message
 Instance: d0d09ee7-ac4c-4beb-839c-85763d50c7a4

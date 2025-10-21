@@ -29,10 +29,10 @@ Description: "Send-B-new - MessageHeader"
 Usage: #example
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
-* destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=330461000016004"
-* destination[primary].receiver = Reference(630bbfae-6b43-46f8-9b51-98cdea34e46d)
-* sender = Reference(585e0101-8450-4126-b049-19b19c42e2dd)
-* source.endpoint = "https://sor2.sum.dsdn.dk/#id=1017421000016003"
+* destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=1017421000016003"
+* destination[primary].receiver = Reference(585e0101-8450-4126-b049-19b19c42e2dd)
+* sender = Reference(630bbfae-6b43-46f8-9b51-98cdea34e46d)
+* source.endpoint = "https://sor2.sum.dsdn.dk/#id=330461000016004"
 * focus = Reference(d0c09c24-42bb-44eb-807e-6b3b22f6dbfc)
 * definition = "http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition|5.0"
 
@@ -43,7 +43,8 @@ Title: "Send-B-new - Communication"
 Description: "Send-B-new - Communication"
 Usage: #example
 * status = $EventStatus#unknown
-* category = $CategoryCodes#training
+* category = $CategoryCodes#regarding-referral
+* priority = $PriorityCode#asap
 * subject = Reference(2bc74be8-a622-4422-98c9-894b7c245d70)
 * identifier.value = "urn:uuid:a036001b-7c8f-4f10-8aa1-cc8711223eee"
 * payload.contentString = "Til rette vedkommende. Som aftalt pr.tlf. dd. vedrørende ovenstående patient: Vi vurderer at funktionsevnen for Spise og for Drikke skal ændres til Moderat.\nHilsen Kim Petersen\nOverlæge"

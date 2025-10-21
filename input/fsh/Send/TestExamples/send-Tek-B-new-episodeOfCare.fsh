@@ -31,10 +31,10 @@ Description: "Send-Tek-B-new - MessageHeader"
 Usage: #example
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
-* destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=328081000016004"
-* destination[primary].receiver = Reference(454aafa3-8ecb-4c0b-9696-eee6cce6c498)
-* sender = Reference(0e804dff-95f7-40fe-bb96-561363715869)
-* source.endpoint = "https://sor2.sum.dsdn.dk/#id=1017421000016003"
+* destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=1017421000016003"
+* destination[primary].receiver = Reference(0e804dff-95f7-40fe-bb96-561363715869)
+* sender = Reference(454aafa3-8ecb-4c0b-9696-eee6cce6c498)
+* source.endpoint = "https://sor2.sum.dsdn.dk/#id=328081000016004"
 * focus = Reference(e6907e11-f007-4e2c-a98d-a543229a10c2)
 * definition = "http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition|5.0"
 

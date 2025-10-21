@@ -31,10 +31,10 @@ Description: "Send-Tek-A-new - MessageHeader"
 Usage: #example
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
-* destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=1385391000016002"
-* destination[primary].receiver = Reference(674cb75e-4a5c-4609-b740-8b09e06b0e42)
-* sender = Reference(c0347f2c-f11e-440f-99f6-a1ebf3b53e74)
-* source.endpoint = "https://sor2.sum.dsdn.dk/#id=1017421000016003"
+* destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=1017421000016003"
+* destination[primary].receiver = Reference(c0347f2c-f11e-440f-99f6-a1ebf3b53e74)
+* sender = Reference(674cb75e-4a5c-4609-b740-8b09e06b0e42)
+* source.endpoint = "https://sor2.sum.dsdn.dk/#id=1385391000016002"
 * focus = Reference(2678d1b2-0a76-4663-a216-b1a14e72aafa)
 * definition = "http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition|5.0"
 
@@ -66,7 +66,7 @@ Description: "Send-Tek-A-new - Encounter"
 * status = $StatusCodes#finished 
 * class = $ActCodes#IMP 
 * subject = Reference(2f6d23d0-239c-44bb-9033-acab45416029)
-* episodeOfCare.identifier.value = "d3779c52-1fc9-4d96-93dc-693a4faab338" 
+* episodeOfCare.identifier.value = "urn:uuid:d3779c52-1fc9-4d96-93dc-693a4faab338" 
 * episodeOfCare.identifier.system = "https://sor2.sum.dsdn.dk/#id=1385391000016002" // SOR id for afsender/serviceProvider
 
 Instance: 2f6d23d0-239c-44bb-9033-acab45416029

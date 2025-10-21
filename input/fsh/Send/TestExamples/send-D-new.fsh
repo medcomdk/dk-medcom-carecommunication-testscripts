@@ -1,7 +1,7 @@
 Instance: S-D-new-1e9fdc8f-50f0-4dc3-9879-facdf331a2fe
 InstanceOf: MedComCareCommunicationMessage
-Title: "Send-D-new"
-Description: "Send-D-new"
+Title: "S-D-new"
+Description: "S-D-new"
 Usage: #example
 * type = $BundleType#message
 * timestamp = 2024-09-12T16:00:00+02:00
@@ -24,23 +24,23 @@ Usage: #example
 
 Instance: 3480293d-1e3b-4132-ac19-ee3b9a0bd19b
 InstanceOf: MedComCareCommunicationMessageHeader
-Title: "Send-D-new - MessageHeader"
-Description: "Send-D-new - MessageHeader"
+Title: "S-D-new - MessageHeader"
+Description: "S-D-new - MessageHeader"
 Usage: #example
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
-* destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=330461000016004"
+* destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=1017421000016003"
 * destination[primary].receiver = Reference(4b56eb00-9f9b-4f6e-92ce-2bd779759895)
 * sender = Reference(c9de18c4-0991-47fe-88ab-d55b0bd09374)
-* source.endpoint = "https://sor2.sum.dsdn.dk/#id=1017421000016003"
+* source.endpoint = "https://sor2.sum.dsdn.dk/#id=330461000016004"
 * focus = Reference(223f08f9-f104-436e-bbdf-0422d51c309b)
 * definition = "http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition|5.0"
 
 
 Instance: 223f08f9-f104-436e-bbdf-0422d51c309b
 InstanceOf: MedComCareCommunication
-Title: "Send-D-new - Communication"
-Description: "Send-D-new - Communication"
+Title: "S-D-new - Communication"
+Description: "S-D-new - Communication"
 Usage: #example
 * status = $EventStatus#unknown
 * category = $CategoryCodes#decease
@@ -63,8 +63,8 @@ Usage: #example
 
 Instance: 535087d0-04ec-4795-93c4-0b216acb6091
 InstanceOf: MedComCorePatient
-Title: "Send-D-new - Patient"
-Description: "Send-D-new - Patient"
+Title: "S-D-new - Patient"
+Description: "S-D-new - Patient"
 * identifier[cpr].system = "urn:oid:1.2.208.176.1.2"
 * identifier[cpr].value = "2509479989"
 * name[official].use = #official
@@ -74,8 +74,8 @@ Description: "Send-D-new - Patient"
 // Sender instance - new message for attachement
 Instance: c9de18c4-0991-47fe-88ab-d55b0bd09374
 InstanceOf: MedComMessagingOrganization // 
-Title: "Send-D-new - Sender"
-Description: "Send-D-new - Sender"
+Title: "S-D-new - Sender"
+Description: "S-D-new - Sender"
 * identifier[SOR-ID].value = "330461000016004" 
 * identifier[EAN-ID].value = "5790001353308" 
 * name = "Sundhedsplejen, Aabenraa kommune"
@@ -83,8 +83,8 @@ Description: "Send-D-new - Sender"
 // Reciever instance - new message for attachement
 Instance: 4b56eb00-9f9b-4f6e-92ce-2bd779759895
 InstanceOf: MedComMessagingOrganization // 
-Title: "Send-D-new - Receiver"
-Description: "Send-D-new - Receiver"
+Title: "S-D-new - Receiver"
+Description: "S-D-new - Receiver"
 * identifier[SOR-ID].value = "1017421000016003" 
 * identifier[EAN-ID].value = "5790002408496" 
 * name = "2100 Lægehuset Østerbro"
@@ -93,23 +93,23 @@ Description: "Send-D-new - Receiver"
 // Practitioners - new message with attachment
 Instance: f84733d0-3868-498c-a86d-11707958bf47
 InstanceOf: MedComCorePractitioner
-Title: "Send-D-new - practitioner"
-Description: "Send-D-new - practitioner"
+Title: "S-D-new - practitioner"
+Description: "S-D-new - practitioner"
 * name.given = "Kim"
 * name.family = "Jensen"
 
 Instance: a81ae208-3de0-4fb8-b802-841be9b05325
 InstanceOf: MedComCorePractitionerRole
-Title: "Send-D-new - practitionerRole"
-Description: "Send-D-new - practitionerRole"
+Title: "S-D-new - practitionerRole"
+Description: "S-D-new - practitionerRole"
 * practitioner = Reference(f84733d0-3868-498c-a86d-11707958bf47)
 * code = $PractitionerRole#overlaege
 
 // CareCommunication example - new message
 Instance: 9b044b9b-c617-4861-b5e4-96b46fd14b22
 InstanceOf: MedComCareCommunicationProvenance
-Title: "Send-D-new - Provenance"
-Description: "Send-D-new - Provenance"
+Title: "S-D-new - Provenance"
+Description: "S-D-new - Provenance"
 Usage: #example
 * target = Reference(3480293d-1e3b-4132-ac19-ee3b9a0bd19b)
 * occurredDateTime = 2024-09-12T16:00:00+02:00

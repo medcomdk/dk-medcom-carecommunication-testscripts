@@ -51,6 +51,7 @@ Description: "receive_A-new - Patient"
 * identifier[cpr].system = "urn:oid:1.2.208.176.1.2"
 * identifier[cpr].value = "2509479989"
 * name[official].use = #official
+* name[official].given = "Bruno"
 * name[official].family = "Elmer"
 
 // Sender instance - new message for attachement
@@ -85,7 +86,7 @@ InstanceOf: MedComCorePractitionerRole
 Title: "receive_A-new - practitionerRole"
 Description: "receive_A-new - practitionerRole"
 * practitioner = Reference(071dbe72-0365-4347-bc6d-7584f7ae897d)
-* code = $PractitionerRole#sygeplejerske
+* code = $PractitionerRole#socialogsundhedsmedhjaelper
 
 // CareCommunication example - new message
 Instance: 0a3c00aa-36ef-4b2e-b746-4f6eb612ecb8
@@ -125,7 +126,7 @@ Title: "receive_A-new - specifik Receiver practitionerRole"
 Description: "receive_A-new - specifik Receiver practitionerRole"
 * practitioner = Reference(4b350c2d-1114-4cc5-a9ba-58bf3692d515)
 * organization = Reference(7279446d-9cc9-49bf-b2a2-990eb2d9f942)
-* code = $PractitionerRole#afdelingslaege
+* code.text = "Visitator"
 
 Instance: f7283d2f-a244-42cc-acb1-55af85b50107
 InstanceOf: MedComCareCommunication
@@ -133,7 +134,7 @@ Title: "receive_A-new - Communication"
 Description: "receive_A-new - Communication"
 Usage: #example
 * status = $EventStatus#unknown
-* category = $CategoryCodes#other
+* category = $CategoryCodes#extended-care-responsibility
 * topic.text = "Kritisk tilstand"
 * identifier.value = "urn:uuid:7d14612c-5f58-4621-928d-267846f948c7"
 * subject = Reference(c4909be8-2684-4dc7-87ec-3e91eb8c0ac6)

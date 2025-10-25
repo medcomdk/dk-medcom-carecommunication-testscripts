@@ -291,7 +291,7 @@ RuleSet: assertPriorityExists
 RuleSet: assertSenderExists
 * test[=].action[+].assert.description = "Confirm that a specific sender is included"
 * test[=].action[=].assert.direction = #request 
-* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).extension.where(url = 'http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-carecommunication-sender-extension').exists()"
+* test[=].action[=].assert.expression = "Bundle.entry.resource.ofType(Communication).extension.where(url = 'http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-sender-extension').exists()"
 * test[=].action[=].assert.warningOnly = false
 
 RuleSet: assertOrganisationIdentifier(orgsystem, orgid)

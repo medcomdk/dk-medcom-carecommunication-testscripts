@@ -1,7 +1,7 @@
 RuleSet: Metadata
 * meta.profile = "http://touchstone.aegis.net/touchstone/fhir/testing/StructureDefinition/testscript"
 * status = #active
-* date = 2024-07-15
+* date = 2025-10-15
 * publisher = "MedCom"
 * contact.name = "MedCom"
 * contact.telecom[+].system = #email

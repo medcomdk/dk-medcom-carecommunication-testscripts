@@ -25,13 +25,20 @@ parameters:
   apply-publisher: true
   apply-contact: true
   show-inherited-invariants: false
+  pin-canonicals: pin-multiples
+  excludettl: true
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  medcom.fhir.dk.carecommunication: 4.0.1
+  medcom.fhir.dk.carecommunication: 5.0.0-trial-use
+  medcom.fhir.dk.messaging: 4.0.0-trial-use
+  medcom.fhir.dk.core: 3.0.0
+  medcom.fhir.dk.terminology: 2.0.0
+  medcom.fhir.dk.messagedefinitions: 1.0.0
+  hl7.fhir.dk.core: 3.4.0
 #   hl7.fhir.us.mcode:
 #     id: mcode
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
@@ -43,7 +50,7 @@ dependencies:
 menu:
   IG Home: index.html
   Test scripts used in TouchStone: testscripts.html
-  Test examples for test protocols: testexamples.html # if relevant
+  Test examples for test protocols: testexamples.html
   Artifacts Summary: artifacts.html
   Download: downloads.html
 

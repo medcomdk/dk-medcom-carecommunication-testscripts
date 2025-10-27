@@ -136,7 +136,6 @@ Description: "Send-A-new - Communication"
 Usage: #example
 * status = $EventStatus#unknown
 * category = $CategoryCodes#acute-ambulant
-* priority = $PriorityCode#asap
 * topic.text = "Kritisk tilstand"
 * identifier.value = "urn:uuid:b2eb3d0e-5de5-4de9-b2a3-0ff321ad1c3a"
 * subject = Reference(9fcf448a-4628-45e1-9098-0dd8de0e7e76)

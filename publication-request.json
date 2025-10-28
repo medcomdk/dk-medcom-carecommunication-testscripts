@@ -1,9 +1,9 @@
 {
   "package-id": "medcom.fhir.dk.carecommunicationtestscripts",
-  "version": "4.0.1",
-  "path": "http://medcomfhir.dk/ig/carecommunicationtestscripts/4.0.1",
+  "version": "5.0.0",
+  "path": "http://medcomfhir.dk/ig/carecommunicationtestscripts/5.0.0",
   "status": "release",
-  "sequence": "Release",
+  "sequence": "Release 5.x.x",
   "first" : false,
   "ci-build" : "https://build.fhir.org/ig/medcomdk/dk-medcom-carecommunication-testscripts",
   "milestone" : true,

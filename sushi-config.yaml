@@ -7,14 +7,13 @@ id: medcom.fhir.dk.carecommunicationtestscripts
 canonical: http://medcomfhir.dk/ig/carecommunicationtestscripts 
 name: CareCommunication Test scripts
 title: CareCommunication Test scripts
-description: Test scripts for CareCommunication v. 4.0
+description: Test scripts for CareCommunication v. 5.0
 status: active # draft | active | retired | unknown # choose 'active' before release
-version: 4.0.1
+version: 5.0.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
-copyrightYear: 2022+
+copyrightYear: 2025+
 releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
-license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
-# jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
+jurisdiction: urn:iso:std:iso:3166#DK "Denmark"
 publisher: MedCom
 contact:
   - name: MedCom
@@ -33,8 +32,8 @@ parameters:
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  medcom.fhir.dk.carecommunication: 5.0.0-trial-use
-  medcom.fhir.dk.messaging: 4.0.0-trial-use
+  medcom.fhir.dk.carecommunication: 5.0.0
+  medcom.fhir.dk.messaging: 4.0.0
   medcom.fhir.dk.core: 3.0.0
   medcom.fhir.dk.terminology: 2.0.0
   medcom.fhir.dk.messagedefinitions: 1.0.0

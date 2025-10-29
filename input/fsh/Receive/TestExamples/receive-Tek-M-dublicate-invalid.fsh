@@ -3,6 +3,7 @@ InstanceOf: MedComCareCommunicationMessage
 Title: "receive-Tek-M-new-dublicate-inv"
 Description: "receive-Tek-M-new-dublicate-inv"
 Usage: #example
+* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message|5.0.1"
 * type = $BundleType#message
 * timestamp = 2024-08-27T15:20:00+02:00
 * entry[+].fullUrl = "https://medcomfhir.dk/ig/carecommunication/MessageHeader/6550cb10-06e1-44fa-a66d-72f3f60c7c55"
@@ -27,6 +28,7 @@ InstanceOf: MedComCareCommunicationMessageHeader
 Title: "receive-Tek-M-new-dublicate-inv - MessageHeader"
 Description: "receive-Tek-M-new-dublicate-inv - MessageHeader"
 Usage: #example
+* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader|5.0.1"
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
 * destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=330461000016004"
@@ -41,6 +43,7 @@ InstanceOf: MedComCareCommunication
 Title: "receive-Tek-M-new-dublicate-inv - Communication"
 Description: "receive-Tek-M-new-dublicate-inv - Communication"
 Usage: #example
+* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication|5.0.1"
 * status = $EventStatus#unknown
 * category = $CategoryCodes#examination-results
 * subject = Reference(aa6fad12-1876-4c7d-a955-06b78f85eb52)
@@ -57,6 +60,7 @@ Instance: aa6fad12-1876-4c7d-a955-06b78f85eb52
 InstanceOf: MedComCorePatient
 Title: "receive-Tek-M-new-dublicate-inv - Patient"
 Description: "receive-Tek-M-new-dublicate-inv - Patient"
+* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient|3.0.1"
 * identifier[cpr].system = "urn:oid:1.2.208.176.1.2"
 * identifier[cpr].value = "2509479989"
 * name[official].use = #official
@@ -75,6 +79,7 @@ Instance: fe92c210-7725-4749-8045-37ed53878f26
 InstanceOf: MedComMessagingOrganization // 
 Title: "receive-Tek-M-new-dublicate-inv - Sender"
 Description: "receive-Tek-M-new-dublicate-inv - Sender"
+* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
 * identifier[SOR-ID].value = "441211000016000" 
 * identifier[EAN-ID].value = "5790001987244" 
 * name = "Klinik for Ældresygdomme, AUH, Skejby"
@@ -84,6 +89,7 @@ Instance: 74fb6fce-089e-444d-bca3-7d2673c6901f
 InstanceOf: MedComMessagingOrganization // 
 Title: "receive-Tek-M-new-dublicate-inv - Receiver"
 Description: "receive-Tek-M-new-dublicate-inv - Receiver"
+* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
 * identifier[SOR-ID].value = "330461000016004" 
 * identifier[EAN-ID].value = "5790001353308" 
 * name = "Sundhedsplejen, Aabenraa kommune"
@@ -94,6 +100,7 @@ Instance: 3835f51b-869e-4b52-b76d-ab2f906bdbe9
 InstanceOf: MedComCorePractitioner
 Title: "receive-Tek-M-new-dublicate-inv - practitioner"
 Description: "receive-Tek-M-new-dublicate-inv - practitioner"
+* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner|3.0.1"
 * name.given = "Michael"
 * name.family = "Burns"
 
@@ -101,6 +108,7 @@ Instance: fb1abc8a-3238-4292-97dc-327291bf8573
 InstanceOf: MedComCorePractitionerRole
 Title: "receive-Tek-M-new-dublicate-inv - practitionerRole"
 Description: "receive-Tek-M-new-dublicate-inv - practitionerRole"
+* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|3.0.1"
 * practitioner = Reference(3835f51b-869e-4b52-b76d-ab2f906bdbe9)
 * code = $PractitionerRole#laegesekretaer
 

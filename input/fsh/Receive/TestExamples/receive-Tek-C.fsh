@@ -3,6 +3,7 @@ InstanceOf: MedComCareCommunicationMessage
 Title: "Receive_Tek-C"
 Description: "Receive_Tek-C"
 Usage: #example
+* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message|5.0.1"
 * type = $BundleType#message
 * timestamp = 2024-11-08T08:00:00+01:00
 * entry[+].fullUrl = "https://medcomfhir.dk/ig/carecommunication/MessageHeader/53f20992-c926-466a-b5f5-ac6f80fc88d6"
@@ -27,6 +28,7 @@ InstanceOf: MedComCareCommunicationMessageHeader
 Title: "Receive_Tek-C - MessageHeader"
 Description: "Receive_Tek-C - MessageHeader"
 Usage: #example
+* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader|5.0.1"
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
 * destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=330461000016004"
@@ -41,6 +43,7 @@ InstanceOf: MedComCareCommunication
 Title: "Receive_Tek-C - Communication"
 Description: "Receive_Tek-C - Communication"
 Usage: #example
+* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication|5.0.1"
 * status = $EventStatus#unknown
 * category = $CategoryCodes#training
 * subject = Reference(83949bef-2b75-429c-ada7-ca3998fb046a)
@@ -57,6 +60,7 @@ Instance: 83949bef-2b75-429c-ada7-ca3998fb046a
 InstanceOf: MedComCorePatient
 Title: "Receive_Tek-C - Patient"
 Description: "Receive_Tek-C - Patient"
+* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient|3.0.1"
 * identifier[cpr].system = "urn:oid:1.2.208.176.1.2"
 * identifier[cpr].value = "2509479989"
 * name[official].use = #official
@@ -80,6 +84,7 @@ Instance: 89a4dee7-145b-4d09-abaf-24529cb12f15
 InstanceOf: MedComMessagingOrganization // 
 Title: "Receive_Tek-C - Sender"
 Description: "Receive_Tek-C - Sender"
+* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
 * identifier[SOR-ID].use = #official
 * identifier[SOR-ID].type.text = "SOR"
 * identifier[SOR-ID].value = "1053231000016001"
@@ -111,6 +116,7 @@ Instance: efb6250c-1ba5-4856-b7e7-d9e830d58c09
 InstanceOf: MedComMessagingOrganization // 
 Title: "Receive_Tek-C - Receiver"
 Description: "Receive_Tek-C - Receiver"
+* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
 * identifier[SOR-ID].use = #official
 * identifier[SOR-ID].type.text = "SOR"
 * identifier[SOR-ID].value = "330461000016004"
@@ -135,6 +141,7 @@ Instance: 940b514b-938d-4186-85f6-96477ec5b5dd
 InstanceOf: MedComCorePractitioner
 Title: "Receive_Tek-C - practitioner"
 Description: "Receive_Tek-C - practitioner"
+* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner|3.0.1"
 * name.given = "Michael"
 * name.family = "Burns"
 
@@ -142,6 +149,7 @@ Instance: e2eb406c-3a28-4509-baba-2d0a0f6db759
 InstanceOf: MedComCorePractitionerRole
 Title: "Receive_Tek-C - practitionerRole"
 Description: "Receive_Tek-C - practitionerRole"
+* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|3.0.1"
 * practitioner = Reference(940b514b-938d-4186-85f6-96477ec5b5dd)
 * code = $PractitionerRole#ledendelaegesekretaer
 

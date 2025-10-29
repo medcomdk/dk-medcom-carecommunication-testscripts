@@ -29,6 +29,7 @@ InstanceOf: MedComCareCommunicationMessage
 Title: "receive-Tek-K-dublicate"
 Description: "receive-Tek-K-dublicate"
 Usage: #example
+* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message|5.0.1"
 * type = $BundleType#message
 * timestamp = 2024-08-28T15:20:00+02:00
 * entry[+].fullUrl = "https://medcomfhir.dk/ig/carecommunication/MessageHeader/559e4be0-e1f2-4371-969d-29bbbd5ca9d1"

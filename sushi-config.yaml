@@ -32,10 +32,10 @@ parameters:
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  medcom.fhir.dk.carecommunication: 5.0.0
-  medcom.fhir.dk.messaging: 4.0.0
-  medcom.fhir.dk.core: 3.0.0
-  medcom.fhir.dk.terminology: 2.0.0
+  medcom.fhir.dk.carecommunication: 5.0.1
+  medcom.fhir.dk.messaging: 4.0.1
+  medcom.fhir.dk.core: 3.0.1
+  medcom.fhir.dk.terminology: 2.0.1
   medcom.fhir.dk.messagedefinitions: 1.0.0
   hl7.fhir.dk.core: 3.4.0
 #   hl7.fhir.us.mcode:

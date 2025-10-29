@@ -3,6 +3,7 @@ InstanceOf: MedComCareCommunicationMessage
 Title: "Send-E-forward"
 Description: "Send-E-forward"
 Usage: #example
+* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message|5.0.1"
 * type = $BundleType#message
 * timestamp = 2024-09-14T13:00:00+02:00
 * entry[+].fullUrl = "https://medcomfhir.dk/ig/carecommunication/MessageHeader/3dbffafe-ce3c-45b0-bca7-2c008c478e79"
@@ -35,6 +36,7 @@ InstanceOf: MedComCareCommunicationMessageHeader
 Title: "Send-E-forward - MessageHeader"
 Description: "Send-E-forward - MessageHeader"
 Usage: #example
+* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader|5.0.1"
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
 * destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=1017421000016003"
@@ -50,6 +52,7 @@ InstanceOf: MedComCareCommunication
 Title: "Send-E-forward - Communication"
 Description: "Send-E-forward - Communication"
 Usage: #example
+* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication|5.0.1"
 * status = $EventStatus#unknown
 * category = $CategoryCodes#decease
 * subject = Reference(db2fd52e-9a7a-418f-90d1-b422e07c895d)
@@ -74,6 +77,7 @@ Instance: db2fd52e-9a7a-418f-90d1-b422e07c895d
 InstanceOf: MedComCorePatient
 Title: "Send-E-forward - Patient"
 Description: "Send-E-forward - Patient"
+* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient|3.0.1"
 * identifier[cpr].system = "urn:oid:1.2.208.176.1.2"
 * identifier[cpr].value = "2509479989"
 * name[official].use = #official
@@ -85,6 +89,7 @@ Instance: 7260b118-d744-4396-bbf2-80245933b1dd
 InstanceOf: MedComMessagingOrganization // 
 Title: "Send-E-forward - Sender"
 Description: "Send-E-forward - Sender"
+* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
 * identifier[SOR-ID].value = "330461000016004" 
 * identifier[EAN-ID].value = "5790001353308" 
 * name = "Sundhedsplejen, Aabenraa kommune"
@@ -93,6 +98,7 @@ Instance: d2ac69eb-568e-4201-b29d-2af8d3126518
 InstanceOf: MedComMessagingOrganization 
 Title: "Send-F-new"
 Description: "Send-F-new"
+* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
 * identifier[SOR-ID].value = "953751000016007" 
 * identifier[EAN-ID].value = "5790001387419" 
 
@@ -101,6 +107,7 @@ Instance: 6ea7c7cb-824b-4619-a13e-bc8828afd7e1
 InstanceOf: MedComMessagingOrganization // 
 Title: "Send-E-forward - Receiver"
 Description: "Send-E-forward - Receiver"
+* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
 * identifier[SOR-ID].value = "1017421000016003" 
 * identifier[EAN-ID].value = "5790002408496" 
 * name = "2100 Lægehuset Østerbro"
@@ -110,6 +117,7 @@ Instance: 9ec69637-d91e-491d-a5b2-ec1661b98bc5
 InstanceOf: MedComCorePractitioner
 Title: "Send-E-forward - practitioner"
 Description: "Send-E-forward - practitioner"
+* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner|3.0.1"
 * name.given = "Kim"
 * name.family = "Jensen"
 
@@ -117,6 +125,7 @@ Instance: 1840f077-7ca1-4141-a46b-1bce43065c76
 InstanceOf: MedComCorePractitionerRole
 Title: "Send-E-forward - practitionerRole"
 Description: "Send-E-forward - practitionerRole"
+* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|3.0.1"
 * practitioner = Reference(9ec69637-d91e-491d-a5b2-ec1661b98bc5)
 * code = $PractitionerRole#sygeplejerske
 
@@ -126,6 +135,7 @@ Instance: a7e25289-11d8-4125-a08a-9c1d85cbd950
 InstanceOf: MedComCorePractitioner
 Title: "Send-E-forward - practitioner"
 Description: "Send-E-forward - practitioner"
+* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner|3.0.1"
 * name.given = "Nancy"
 * name.family = "Nielsen"
 
@@ -133,6 +143,7 @@ Instance: 84eb6a09-63cf-433d-8522-41465d78756a
 InstanceOf: MedComCorePractitionerRole
 Title: "Send-E-forward - practitionerRole"
 Description: "Send-E-forward - practitionerRole"
+* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|3.0.1"
 * practitioner = Reference(a7e25289-11d8-4125-a08a-9c1d85cbd950)
 * code = $PractitionerRole#laegesekretaer
 
@@ -171,6 +182,7 @@ InstanceOf: MedComCareCommunicationMessageHeader
 Title: "Send-E-forward - MessageHeader"
 Description: "Send-E-forward - MessageHeader"
 Usage: #example
+* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader|5.0.1"
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
 * destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=330461000016004"

@@ -3,6 +3,7 @@ InstanceOf: MedComCareCommunicationMessage
 Title: "receive_B-reply"
 Description: "receive_B-reply"
 Usage: #example
+* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message|5.0.1"
 * type = $BundleType#message
 * timestamp = 2024-08-12T11:30:00+02:00
 * entry[+].fullUrl = "https://medcomfhir.dk/ig/carecommunication/MessageHeader/8daf0286-2477-4766-8ed2-cc76970e44b1"
@@ -33,6 +34,7 @@ Instance: 3f7389fd-44fb-458c-831e-f2c3995c3dd3
 InstanceOf: MedComCorePractitioner
 Title: "Simple practitioner with a name"
 Description: "Simple practitioner with a name"
+* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner|3.0.1"
 * name.given = "Emma"
 * name.family = "Waters"
 
@@ -40,6 +42,7 @@ Instance: 9461158c-801b-4664-ab92-150d86841aee
 InstanceOf: MedComCorePractitionerRole
 Title: "PractitionerRole with a role and reference to a practitioner"
 Description: "PractitionerRole with a role and reference to a practitioner"
+* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|3.0.1"
 * practitioner = Reference(3f7389fd-44fb-458c-831e-f2c3995c3dd3)
 * code = $PractitionerRole#sygeplejerske
 * organization = Reference(3d079530-8c63-4c5c-a6f9-825279aef4d2)
@@ -49,6 +52,7 @@ Instance: 7b4803a9-a048-4551-9f61-c3143dba3786
 InstanceOf: MedComCorePatient
 Title: "1st message - Bruno Test Elmer"
 Description: "1st message - Patient described with minimal information. Valid only if used in a Bundle."
+* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient|3.0.1"
 * identifier[cpr].system = "urn:oid:1.2.208.176.1.2"
 * identifier[cpr].value = "2509479989"
 * name[official].use = #official
@@ -59,6 +63,7 @@ Instance: 3d079530-8c63-4c5c-a6f9-825279aef4d2
 InstanceOf: MedComMessagingOrganization 
 Title: "1st message - Example of a sender organization with a SOR and an EAN identifier."
 Description: "1st message - Example of an organization with a SOR and an EAN identifier."
+* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
 * identifier[SOR-ID].value = "265161000016000" 
 * identifier[EAN-ID].value = "5790000209354" 
 * name = "Hjerteafdelingen på Herlev og Gentofte hospital"
@@ -67,6 +72,7 @@ Instance: 5007be8f-49dd-48ae-9808-66270aef1865
 InstanceOf: MedComMessagingOrganization 
 Title: "1st message - Example of a reciever organization with a SOR and an EAN identifier."
 Description: "1st message - Example of an organization with a SOR and an EAN identifier."
+* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
 * identifier[SOR-ID].value = "382871000016004" 
 * identifier[EAN-ID].value = "5790001387419" 
 * name = "Arden Lægehus"
@@ -76,6 +82,7 @@ Instance: 4d528261-ef8c-4f83-ab61-deb5b5e6823e
 InstanceOf: MedComCorePractitioner
 Title: "Simple practitioner with a name"
 Description: "Simple practitioner with a name"
+* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner|3.0.1"
 * name.given = "Michael"
 * name.family = "Burns"
 
@@ -83,6 +90,7 @@ Instance: fd823675-9a45-4cf6-9348-5b9806e8385f
 InstanceOf: MedComCorePractitionerRole
 Title: "PractitionerRole with a role and reference to a practitioner"
 Description: "PractitionerRole with a role and reference to a practitioner"
+* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|3.0.1"
 * practitioner = Reference(4d528261-ef8c-4f83-ab61-deb5b5e6823e)
 * code = $PractitionerRole#sygeplejerske
 * organization = Reference(5007be8f-49dd-48ae-9808-66270aef1865)
@@ -93,6 +101,7 @@ InstanceOf: MedComCareCommunicationMessageHeader
 Title: "receive_B-reply"
 Description: "receive_B-reply"
 Usage: #example
+* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader|5.0.1"
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
 * destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=382871000016004"
@@ -126,6 +135,7 @@ Instance: 9c4ff4b0-093c-4111-8c29-3ae2b04a16db
 InstanceOf: MedComCareCommunication
 Title: "receive_B-reply"
 Description: "receive_B-reply"
+* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication|5.0.1"
 * status = $EventStatus#unknown
 * identifier.value = "urn:uuid:18fa94f2-d40d-46a6-b50d-4086c8e184ad"
 * category = $CategoryCodes#examination-results

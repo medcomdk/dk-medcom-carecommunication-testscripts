@@ -3,6 +3,7 @@ InstanceOf: MedComCareCommunicationMessage
 Title: "send-Tek-CPR-2 - New CareCommunication message"
 Description: "send-Tek-CPR-2 - New CareCommunication message"
 Usage: #example
+* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message|5.0.1"
 * type = $BundleType#message
 * timestamp = 2025-09-29T09:00:00+02:00
 * entry[+].fullUrl = "https://medcomfhir.dk/ig/carecommunication/MessageHeader/855bee22-ca86-4ac4-99f9-7981aeced68b"
@@ -27,6 +28,7 @@ InstanceOf: MedComCareCommunicationMessageHeader
 Title: "send-Tek-CPR-2 - Example of MessageHeader"
 Description: "send-Tek-CPR-2 - Example of MessageHeader"
 Usage: #example
+* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader|5.0.1"
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
 * destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=325251000016005"
@@ -42,6 +44,7 @@ InstanceOf: MedComCareCommunication
 Title: "send-Tek-CPR-2 - Example of Communication"
 Description: "send-Tek-CPR-2 - Example of Communication"
 Usage: #example
+* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication|5.0.1"
 * status = $EventStatus#unknown
 * category = $CategoryCodes#telemedicine
 * subject = Reference(06c62382-cd69-438f-acc7-971a3c47ecea)
@@ -59,6 +62,7 @@ Instance: 06c62382-cd69-438f-acc7-971a3c47ecea
 InstanceOf: MedComCorePatient
 Title: "send-Tek-CPR-2 - Example of Patient"
 Description: "send-Tek-CPR-2 - Example of Patient"
+* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient|3.0.1"
 * identifier[x-ecpr].system = "urn:oid:1.2.208.176.1.6.1.1"
 * identifier[x-ecpr].value = "0703921VJ5"
 * identifier[d-ecpr].system = "urn:oid:1.2.208.176.1.6.1.3"
@@ -76,6 +80,7 @@ Instance: b7402e44-e37b-4a9e-8d1c-daf509fd6cb8
 InstanceOf: MedComMessagingOrganization // 
 Title: "send-Tek-CPR-2 - Example of a sender organization with a SOR and an EAN identifier."
 Description: "send-Tek-CPR-2 - Example of an organization with a SOR and an EAN identifier."
+* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
 * identifier[SOR-ID].value = "325371000016006" 
 * identifier[EAN-ID].value = "5790000120314" 
 * name = "MedCom FDIS91"
@@ -85,6 +90,7 @@ Instance: 293c5fc4-dd72-4136-b83e-c88b317c4c00
 InstanceOf: MedComMessagingOrganization  
 Title: "send-Tek-CPR-2 - Example of a receiver organization with a SOR and an EAN identifier."
 Description: "send-Tek-CPR-2 - Example of an organization with a SOR and an EAN identifier."
+* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
 * identifier[SOR-ID].value = "325251000016005" 
 * identifier[EAN-ID].value = "5790000121526" 
 * name = "MedCom XDIS91"
@@ -95,6 +101,7 @@ Instance: 91381294-6a76-41b3-be9b-024e2a4593f1
 InstanceOf: MedComCorePractitioner
 Title: "send-Tek-CPR-2 - Example of practitioner"
 Description: "send-Tek-CPR-2 - practitioner"
+* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner|3.0.1"
 * name.given = "Michael"
 * name.family = "Burns"
 
@@ -102,6 +109,7 @@ Instance: b48a8137-95da-4344-9491-0133ddbf6559
 InstanceOf: MedComCorePractitionerRole
 Title: "send-Tek-CPR-2 - Example of practitionerRole"
 Description: "send-Tek-CPR-2 - practitionerRole"
+* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|3.0.1"
 * practitioner = Reference(91381294-6a76-41b3-be9b-024e2a4593f1)
 * code = $PractitionerRole#sygeplejerske
 

@@ -1,4 +1,4 @@
-Instance: receive-Tek-CPR-1-06326cfc-5cfc-4bb1-bcd0-c49b8f8033e6
+Instance: R-Tek-CPR-1-06326cfc-5cfc-4bb1-bcd0-c49b8f8033e6
 InstanceOf: MedComCareCommunicationMessage
 Title: "receive-Tek-CPR-1 - New CareCommunication message"
 Description: "receive-Tek-CPR-1 - New CareCommunication message"

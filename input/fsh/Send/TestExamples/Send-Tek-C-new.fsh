@@ -1,4 +1,4 @@
-Instance: Send-Tek-C-new-7be9d2ba-6026-4f19-850c-896de206f2c2
+Instance: S-Tek-C-new-7be9d2ba-6026-4f19-850c-896de206f2c2
 InstanceOf: MedComCareCommunicationMessage
 Title: "Send-Tek-C-new"
 Description: "Send-Tek-C-new"

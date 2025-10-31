@@ -1,4 +1,4 @@
-Instance: send-Tek-CPR-3-77ff05d0-9eca-4a59-b436-fe1b97673817
+Instance: S-Tek-CPR-3-77ff05d0-9eca-4a59-b436-fe1b97673817
 InstanceOf: MedComCareCommunicationMessage
 Title: "send-Tek-CPR-3 - New CareCommunication message"
 Description: "send-Tek-CPR-3 - New CareCommunication message"

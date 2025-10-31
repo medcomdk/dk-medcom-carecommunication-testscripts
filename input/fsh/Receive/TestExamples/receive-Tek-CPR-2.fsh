@@ -1,4 +1,4 @@
-Instance: receive-Tek-CPR-2-e678c36a-0e2e-4831-a739-3cfc1225691d
+Instance: R-Tek-CPR-2-e678c36a-0e2e-4831-a739-3cfc1225691d
 InstanceOf: MedComCareCommunicationMessage
 Title: "receive-Tek-CPR-2 - New CareCommunication message"
 Description: "receive-Tek-CPR-2 - New CareCommunication message"

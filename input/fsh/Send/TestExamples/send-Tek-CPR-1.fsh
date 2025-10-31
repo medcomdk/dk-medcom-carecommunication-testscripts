@@ -3,7 +3,7 @@ InstanceOf: MedComCareCommunicationMessage
 Title: "send-Tek-CPR-1 - New CareCommunication message"
 Description: "send-Tek-CPR-1 - New CareCommunication message"
 Usage: #example
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message|5.0.1"
+* meta.profile[+] = $CareCommunicationMessage
 * type = $BundleType#message
 * timestamp = 2025-09-29T09:00:00+02:00
 * entry[+].fullUrl = "https://medcomfhir.dk/ig/carecommunication/MessageHeader/ea9d2910-fe51-416f-bd92-3e8a23c22c59"
@@ -28,7 +28,7 @@ InstanceOf: MedComCareCommunicationMessageHeader
 Title: "send-Tek-CPR-1 - Example of MessageHeader"
 Description: "send-Tek-CPR-1 - Example of MessageHeader"
 Usage: #example
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader|5.0.1"
+* meta.profile[+] = $CareCommunicationMessageheader
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
 * destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=325251000016005"
@@ -44,7 +44,7 @@ InstanceOf: MedComCareCommunication
 Title: "send-Tek-CPR-1 - Example of Communication"
 Description: "send-Tek-CPR-1 - Example of Communication"
 Usage: #example
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication|5.0.1"
+* meta.profile[+] = $CareCommunicationCommunication
 * status = $EventStatus#unknown
 * category = $CategoryCodes#examination-results
 * subject = Reference(938544b6-721d-4d14-9e61-016e726ae180)
@@ -62,7 +62,7 @@ Instance: 938544b6-721d-4d14-9e61-016e726ae180
 InstanceOf: MedComCorePatient
 Title: "send-Tek-CPR-1 - Example of Patient"
 Description: "send-Tek-CPR-1 - Example of Patient"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient|3.0.1"
+* meta.profile[+] = $MedComCorePatient
 * identifier[x-ecpr].system = "urn:oid:1.2.208.176.1.6.1.1"
 * identifier[x-ecpr].value = "0703921VJ4" // dette CPR Er taget fra CC_12
 * identifier[cpr].system = "urn:oid:1.2.208.176.1.2"
@@ -78,7 +78,7 @@ Instance: f6494a29-1837-4f64-b903-da0d46e5da69
 InstanceOf: MedComMessagingOrganization // 
 Title: "send-Tek-CPR-1 - Example of a sender organization with a SOR and an EAN identifier."
 Description: "send-Tek-CPR-1 - Example of an organization with a SOR and an EAN identifier."
-* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
+* meta.profile[+] = $MedComMessagingOrganzation
 * identifier[SOR-ID].value = "325371000016006" 
 * identifier[EAN-ID].value = "5790000120314" 
 * name = "MedCom FDIS91"
@@ -88,7 +88,7 @@ Instance: cb801931-b871-418d-bdc5-912893096dea
 InstanceOf: MedComMessagingOrganization  
 Title: "send-Tek-CPR-1 - Example of a receiver organization with a SOR and an EAN identifier."
 Description: "send-Tek-CPR-1 - Example of an organization with a SOR and an EAN identifier."
-* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
+* meta.profile[+] = $MedComMessagingOrganzation
 * identifier[SOR-ID].value = "325251000016005" 
 * identifier[EAN-ID].value = "5790000121526" 
 * name = "MedCom XDIS91"
@@ -99,7 +99,7 @@ Instance: 3b21aecc-4a82-4e2d-ab6c-6cabb4df1ad9
 InstanceOf: MedComCorePractitioner
 Title: "send-Tek-CPR-1 - Example of practitioner"
 Description: "send-Tek-CPR-1 - practitioner"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner|3.0.1"
+* meta.profile[+] = $MedComCorePractitioner
 * name.given = "Michael"
 * name.family = "Burns"
 
@@ -107,7 +107,7 @@ Instance: aa97d8ad-4fdf-47ac-9a63-c50446c46bdf
 InstanceOf: MedComCorePractitionerRole
 Title: "send-Tek-CPR-1 - Example of practitionerRole"
 Description: "send-Tek-CPR-1 - practitionerRole"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|3.0.1"
+* meta.profile[+] = $MedComCorePractitionerRole
 * practitioner = Reference(3b21aecc-4a82-4e2d-ab6c-6cabb4df1ad9)
 * code = $PractitionerRole#sygeplejerske
 

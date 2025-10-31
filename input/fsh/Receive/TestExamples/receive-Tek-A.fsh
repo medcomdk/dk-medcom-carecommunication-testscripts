@@ -3,7 +3,7 @@ InstanceOf: MedComCareCommunicationMessage
 Title: "Receive_Tek-A"
 Description: "Receive_Tek-A"
 Usage: #example
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message|5.0.1"
+* meta.profile[+] = $CareCommunicationMessage
 * type = $BundleType#message
 * timestamp = 2024-08-17T14:00:00Z
 * entry[+].fullUrl = "https://medcomfhir.dk/ig/carecommunication/MessageHeader/4e60a233-2980-4d0f-9d7b-e38853be77ab"
@@ -30,7 +30,7 @@ InstanceOf: MedComCareCommunicationMessageHeader
 Title: "Receive_Tek-A - MessageHeader"
 Description: "Receive_Tek-A - MessageHeader"
 Usage: #example
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader|5.0.1"
+* meta.profile[+] = $CareCommunicationMessageheader
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
 * destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=330461000016004"
@@ -45,7 +45,7 @@ Instance: ae4abfb5-b0f6-443c-a420-0c0649cbe0c0
 InstanceOf: MedComCorePatient
 Title: "Receive_Tek-A - Patient"
 Description: "Receive_Tek-A - Patient"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient|3.0.1"
+* meta.profile[+] = $MedComCorePatient
 * identifier[cpr].system = "urn:oid:1.2.208.176.1.2"
 * identifier[cpr].value = "2509479989"
 * name[official].use = #official
@@ -56,7 +56,7 @@ Instance: 9a74ae38-1f8f-43de-ac8d-01647bb4c5b4
 InstanceOf: MedComMessagingOrganization 
 Title: "Receive_Tek-A - Sender"
 Description: "Receive_Tek-A - Sender"
-* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
+* meta.profile[+] = $MedComMessagingOrganzation
 * identifier[SOR-ID].value = "441211000016000" 
 * identifier[EAN-ID].value = "5790001987244" 
 * name = "Klinik for Ældresygdomme, AUH, Skejby"
@@ -66,7 +66,7 @@ Instance: 99c5abc9-6956-4fb2-b888-90138ff951e0
 InstanceOf: MedComMessagingOrganization 
 Title: "Receive_Tek-A - Receiver"
 Description: "Receive_Tek-A - Receiver"
-* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
+* meta.profile[+] = $MedComMessagingOrganzation
 * identifier[SOR-ID].value = "330461000016004" 
 * identifier[EAN-ID].value = "5790001353308" 
 * name = "Sundhedsplejen, Aabenraa kommune"
@@ -77,7 +77,7 @@ Instance: 7d252548-bf05-4151-bf1f-86ad706f1c1b
 InstanceOf: MedComCorePractitioner
 Title: "Receive_Tek-A - practitioner"
 Description: "Receive_Tek-A - practitioner"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner|3.0.1"
+* meta.profile[+] = $MedComCorePractitioner
 * name.given = "Michael"
 * name.family = "Burns"
 
@@ -85,7 +85,7 @@ Instance: bbe737f3-f1a9-435d-ab7f-d96798952a75
 InstanceOf: MedComCorePractitionerRole
 Title: "Receive_Tek-A - practitionerRole"
 Description: "Receive_Tek-A - practitionerRole"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|3.0.1"
+* meta.profile[+] = $MedComCorePractitionerRole
 * practitioner = Reference(7d252548-bf05-4151-bf1f-86ad706f1c1b)
 * code = $PractitionerRole#sygeplejerske
 
@@ -121,7 +121,7 @@ Instance: ca0f5d0c-cb2a-4ad5-a08a-e7dbd2092b13
 InstanceOf: MedComCoreEncounter
 Title: "MedCom Core Encounter"
 Description: "Example of a simple MedCom Core Encounter"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-encounter|3.0.1"
+* meta.profile[+] = $MedComCoreEncounter
 * status = $StatusCodes#in-progress 
 * class = $ActCodes#IMP 
 * subject = Reference(ae4abfb5-b0f6-443c-a420-0c0649cbe0c0)
@@ -135,7 +135,7 @@ InstanceOf: MedComCareCommunication
 Title: "Receive_Tek-A - Communication"
 Description: "Receive_Tek-A - Communication"
 Usage: #example
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication|5.0.1"
+* meta.profile[+] = $CareCommunicationCommunication
 * status = $EventStatus#unknown
 * category = $CategoryCodes#regarding-referral
 * priority = $PriorityCode#asap

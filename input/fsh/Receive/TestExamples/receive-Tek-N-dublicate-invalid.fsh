@@ -3,7 +3,7 @@ InstanceOf: MedComCareCommunicationMessage
 Title: "receive-Tek-N-dublicate-invalid"
 Description: "receive-Tek-N-dublicate-invalid"
 Usage: #example
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message|5.0.1"
+* meta.profile[+] = $CareCommunicationMessage
 * type = $BundleType#message
 * timestamp = 2024-08-27T16:25:00+02:00
 * entry[+].fullUrl = "https://medcomfhir.dk/ig/carecommunication/MessageHeader/6550cb10-06e1-44fa-a66d-72f3f60c7c55"

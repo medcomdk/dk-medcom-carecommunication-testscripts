@@ -3,7 +3,7 @@ InstanceOf: MedComCareCommunicationMessage
 Title: "Receive_Tek-B"
 Description: "Receive_Tek-B"
 Usage: #example
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message|5.0.1"
+* meta.profile[+] = $CareCommunicationMessage
 * type = $BundleType#message
 * timestamp = 2024-11-02T08:00:00+01:00
 * entry[+].fullUrl = "https://medcomfhir.dk/ig/carecommunication/MessageHeader/ejklfdsio8klakfd.hjfkdshfjk-hfjkdshfj89432n7f"
@@ -28,7 +28,7 @@ InstanceOf: MedComCareCommunicationMessageHeader
 Title: "Receive_Tek-B - MessageHeader"
 Description: "Receive_Tek-B - MessageHeader"
 Usage: #example
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader|5.0.1"
+* meta.profile[+] = $CareCommunicationMessageheader
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
 * destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=330461000016004"
@@ -44,7 +44,7 @@ InstanceOf: MedComCareCommunication
 Title: "Receive_Tek-B - Communication"
 Description: "Receive_Tek-B - Communication"
 Usage: #example
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication|5.0.1"
+* meta.profile[+] = $CareCommunicationCommunication
 * status = $EventStatus#unknown
 * category = $CategoryCodes#assistive-devices
 * subject = Reference(fdsgjhfrgeu567485-.fdsf)
@@ -62,7 +62,7 @@ Instance: fdsgjhfrgeu567485-.fdsf
 InstanceOf: MedComCorePatient
 Title: "Receive_Tek-B - Patient"
 Description: "Receive_Tek-B - Patient"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient|3.0.1"
+* meta.profile[+] = $MedComCorePatient
 * identifier.system = #urn:oid:1.2.208.176.1.6.1.3.177
 * identifier.value = "1206550VK9"
 * name[official].use = #official
@@ -76,7 +76,7 @@ Instance: dfhjkshertu6787bjbsjnmbdf-hfjdks7
 InstanceOf: MedComMessagingOrganization // 
 Title: "Receive_Tek-B - Sender"
 Description: "Receive_Tek-B - Sender"
-* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
+* meta.profile[+] = $MedComMessagingOrganzation
 * identifier[SOR-ID].value = "441211000016000" 
 * identifier[EAN-ID].value = "5790001987244" 
 * name = "Klinik for Ældresygdomme, AUH, Skejby"
@@ -86,7 +86,7 @@ Instance: ghjghgh
 InstanceOf: MedComMessagingOrganization // 
 Title: "Receive_Tek-B - Receiver"
 Description: "Receive_Tek-B - Receiver"
-* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
+* meta.profile[+] = $MedComMessagingOrganzation
 * identifier[SOR-ID].value = "330461000016004" 
 * identifier[EAN-ID].value = "5790001353308" 
 * name = "Sundhedsplejen, Aabenraa kommune"
@@ -97,7 +97,7 @@ Instance: hfkjsu574783yhfjdx67-hjk
 InstanceOf: MedComCorePractitioner
 Title: "Receive_Tek-B - practitioner"
 Description: "Receive_Tek-B - practitioner"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner|3.0.1"
+* meta.profile[+] = $MedComCorePractitioner
 * name.given = "Michael"
 * name.family = "Burns"
 
@@ -105,7 +105,7 @@ Instance: j.k.k.67843274je
 InstanceOf: MedComCorePractitionerRole
 Title: "Receive_Tek-B - practitionerRole"
 Description: "Receive_Tek-B - practitionerRole"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|3.0.1"
+* meta.profile[+] = $MedComCorePractitionerRole
 * practitioner = Reference(hfkjsu574783yhfjdx67-hjk)
 * code = $PractitionerRole#sygeplejerske
 

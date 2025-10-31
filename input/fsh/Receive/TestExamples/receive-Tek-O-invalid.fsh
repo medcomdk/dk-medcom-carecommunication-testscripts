@@ -6,7 +6,7 @@ InstanceOf: MedComCareCommunicationMessage
 Title: "receive-Tek-O-invalid"
 Description: "receive-Tek-O-invalid"
 Usage: #example
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message|5.0.1"
+* meta.profile[+] = $CareCommunicationMessage
 * type = $BundleType#message
 * timestamp = 2024-11-10T15:20:00+01:00
 * entry[+].fullUrl = "https://medcomfhir.dk/ig/carecommunication/MessageHeader/5c2cdf2c-bcbd-4c15-adce-6b862a84249c"
@@ -31,7 +31,7 @@ InstanceOf: MedComCareCommunicationMessageHeader
 Title: "receive-Tek-O-invalid - MessageHeader"
 Description: "receive-Tek-O-invalid - MessageHeader"
 Usage: #example
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader|5.0.1"
+* meta.profile[+] = $CareCommunicationMessageheader
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
 * destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=330461000016004"
@@ -47,7 +47,7 @@ InstanceOf: MedComCareCommunication
 Title: "receive-Tek-O-invalid - Communication"
 Description: "receive-Tek-O-invalid - Communication"
 Usage: #example
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication|5.0.1"
+* meta.profile[+] = $CareCommunicationCommunication
 * status = $EventStatus#unknown
 * category = $CategoryCodes#examination-results
 * subject = Reference(64610edb-bb86-4248-87ae-28c1385c3c23)
@@ -65,7 +65,7 @@ Instance: 64610edb-bb86-4248-87ae-28c1385c3c23
 InstanceOf: MedComCorePatient
 Title: "receive-Tek-O-invalid - Patient"
 Description: "receive-Tek-O-invalid - Patient"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient|3.0.1"
+* meta.profile[+] = $MedComCorePatient
 * identifier[cpr].system = "urn:oid:1.2.208.176.1.2"
 * identifier[cpr].value = "2509479989"
 * name[official].use = #official
@@ -78,7 +78,7 @@ Instance: 409b87d3-398e-44cb-9246-35b47ff75cc4
 InstanceOf: MedComMessagingOrganization // 
 Title: "receive-Tek-O-invalid - Sender"
 Description: "receive-Tek-O-invalid - Sender"
-* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
+* meta.profile[+] = $MedComMessagingOrganzation
 * identifier[SOR-ID].value = "441211000016000" 
 * identifier[EAN-ID].value = "5790001987244" 
 * name = "Klinik for Ældresygdomme, AUH, Skejby"
@@ -88,7 +88,7 @@ Instance: 6e7761cb-2dc9-48c7-8fd4-b49d46dd9c05
 InstanceOf: MedComMessagingOrganization // 
 Title: "receive-Tek-O-invalid - Receiver"
 Description: "receive-Tek-O-invalid - Receiver"
-* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
+* meta.profile[+] = $MedComMessagingOrganzation
 * identifier[SOR-ID].value = "330461000016004" 
 * identifier[EAN-ID].value = "5790001353308" 
 * name = "Sundhedsplejen, Aabenraa kommune"
@@ -99,7 +99,7 @@ Instance: 1d301fb6-9d72-4f72-9182-1f60656df133
 InstanceOf: MedComCorePractitioner
 Title: "receive-Tek-O-invalid - practitioner"
 Description: "receive-Tek-O-invalid - practitioner"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner|3.0.1"
+* meta.profile[+] = $MedComCorePractitioner
 * name.given = "Henrik"
 * name.family = "Elderly"
 
@@ -107,7 +107,7 @@ Instance: bb760c55-95b0-4f74-9b16-794e7780d5f2
 InstanceOf: MedComCorePractitionerRole
 Title: "receive-Tek-O-invalid - practitionerRole"
 Description: "receive-Tek-O-invalid - practitionerRole"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|3.0.1"
+* meta.profile[+] = $MedComCorePractitionerRole
 * practitioner = Reference(1d301fb6-9d72-4f72-9182-1f60656df133)
 * code = $PractitionerRole#sygehuslaege
 

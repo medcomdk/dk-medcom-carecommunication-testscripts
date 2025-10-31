@@ -3,7 +3,7 @@ InstanceOf: MedComCareCommunicationMessage
 Title: "S-D-new"
 Description: "S-D-new"
 Usage: #example
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message|5.0.1"
+* meta.profile[+] = $CareCommunicationMessage
 * type = $BundleType#message
 * timestamp = 2024-09-12T16:00:00+02:00
 * entry[+].fullUrl = "https://medcomfhir.dk/ig/carecommunication/MessageHeader/3480293d-1e3b-4132-ac19-ee3b9a0bd19b"
@@ -28,7 +28,7 @@ InstanceOf: MedComCareCommunicationMessageHeader
 Title: "S-D-new - MessageHeader"
 Description: "S-D-new - MessageHeader"
 Usage: #example
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader|5.0.1"
+* meta.profile[+] = $CareCommunicationMessageheader
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
 * destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=1017421000016003"
@@ -44,7 +44,7 @@ InstanceOf: MedComCareCommunication
 Title: "S-D-new - Communication"
 Description: "S-D-new - Communication"
 Usage: #example
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication|5.0.1"
+* meta.profile[+] = $CareCommunicationCommunication
 * status = $EventStatus#unknown
 * category = $CategoryCodes#decease
 * subject = Reference(535087d0-04ec-4795-93c4-0b216acb6091)
@@ -68,7 +68,7 @@ Instance: 535087d0-04ec-4795-93c4-0b216acb6091
 InstanceOf: MedComCorePatient
 Title: "S-D-new - Patient"
 Description: "S-D-new - Patient"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient|3.0.1"
+* meta.profile[+] = $MedComCorePatient
 * identifier[cpr].system = "urn:oid:1.2.208.176.1.2"
 * identifier[cpr].value = "2509479989"
 * name[official].use = #official
@@ -80,7 +80,7 @@ Instance: c9de18c4-0991-47fe-88ab-d55b0bd09374
 InstanceOf: MedComMessagingOrganization // 
 Title: "S-D-new - Sender"
 Description: "S-D-new - Sender"
-* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
+* meta.profile[+] = $MedComMessagingOrganzation
 * identifier[SOR-ID].value = "330461000016004" 
 * identifier[EAN-ID].value = "5790001353308" 
 * name = "Sundhedsplejen, Aabenraa kommune"
@@ -90,7 +90,7 @@ Instance: 4b56eb00-9f9b-4f6e-92ce-2bd779759895
 InstanceOf: MedComMessagingOrganization // 
 Title: "S-D-new - Receiver"
 Description: "S-D-new - Receiver"
-* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
+* meta.profile[+] = $MedComMessagingOrganzation
 * identifier[SOR-ID].value = "1017421000016003" 
 * identifier[EAN-ID].value = "5790002408496" 
 * name = "2100 Lægehuset Østerbro"
@@ -101,7 +101,7 @@ Instance: f84733d0-3868-498c-a86d-11707958bf47
 InstanceOf: MedComCorePractitioner
 Title: "S-D-new - practitioner"
 Description: "S-D-new - practitioner"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner|3.0.1"
+* meta.profile[+] = $MedComCorePractitioner
 * name.given = "Kim"
 * name.family = "Jensen"
 
@@ -109,7 +109,7 @@ Instance: a81ae208-3de0-4fb8-b802-841be9b05325
 InstanceOf: MedComCorePractitionerRole
 Title: "S-D-new - practitionerRole"
 Description: "S-D-new - practitionerRole"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|3.0.1"
+* meta.profile[+] = $MedComCorePractitionerRole
 * practitioner = Reference(f84733d0-3868-498c-a86d-11707958bf47)
 * code = $PractitionerRole#overlaege
 

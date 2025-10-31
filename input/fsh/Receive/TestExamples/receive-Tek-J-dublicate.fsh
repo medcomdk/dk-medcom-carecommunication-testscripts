@@ -3,7 +3,7 @@ InstanceOf: MedComCareCommunicationMessage
 Title: "receive-Tek-J-duplicate"
 Description: "receive-Tek-J-duplicate"
 Usage: #example
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message|5.0.1"
+* meta.profile[+] = $CareCommunicationMessage
 * type = $BundleType#message
 * timestamp = 2024-08-25T15:20:00+02:00
 * entry[+].fullUrl = "https://medcomfhir.dk/ig/carecommunication/MessageHeader/7784a5ff-0293-4a54-aaf1-974714807fb3"
@@ -28,7 +28,7 @@ InstanceOf: MedComCareCommunicationMessageHeader
 Title: "receive-Tek-J-duplicate - MessageHeader"
 Description: "receive-Tek-J-duplicate - MessageHeader"
 Usage: #example
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader|5.0.1"
+* meta.profile[+] = $CareCommunicationMessageheader
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
 * destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=330461000016004"
@@ -44,7 +44,7 @@ InstanceOf: MedComCareCommunication
 Title: "receive-Tek-J-duplicate - Communication"
 Description: "receive-Tek-J-duplicate - Communication"
 Usage: #example
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication|5.0.1"
+* meta.profile[+] = $CareCommunicationCommunication
 * status = $EventStatus#unknown
 * category = $CategoryCodes#outpatient
 * subject = Reference(5986ec2e-05a4-4e30-8d2f-f09fb09eb832)
@@ -62,7 +62,7 @@ Instance: 5986ec2e-05a4-4e30-8d2f-f09fb09eb832
 InstanceOf: MedComCorePatient
 Title: "receive-Tek-J-duplicate - Patient"
 Description: "receive-Tek-J-duplicate - Patient"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient|3.0.1"
+* meta.profile[+] = $MedComCorePatient
 * identifier[cpr].system = "urn:oid:1.2.208.176.1.2"
 * identifier[cpr].value = "2509479989"
 * name[official].use = #official
@@ -75,7 +75,7 @@ Instance: 2aa3877e-d446-4c24-b497-399baaba894c
 InstanceOf: MedComMessagingOrganization // 
 Title: "receive-Tek-J-duplicate - Sender"
 Description: "receive-Tek-J-duplicate - Sender"
-* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
+* meta.profile[+] = $MedComMessagingOrganzation
 * identifier[SOR-ID].value = "441211000016000" 
 * identifier[EAN-ID].value = "5790001987244" 
 * name = "Klinik for Ældresygdomme, AUH, Skejby"
@@ -85,7 +85,7 @@ Instance: 7add7867-7f93-421b-9b93-41597c3433cb
 InstanceOf: MedComMessagingOrganization // 
 Title: "receive-Tek-J-duplicate - Receiver"
 Description: "receive-Tek-J-duplicate - Receiver"
-* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
+* meta.profile[+] = $MedComMessagingOrganzation
 * identifier[SOR-ID].value = "330461000016004" 
 * identifier[EAN-ID].value = "5790001353308" 
 * name = "Sundhedsplejen, Aabenraa kommune"
@@ -96,7 +96,7 @@ Instance: 881a94fd-8fc5-4d60-be50-8dac03c63fb7
 InstanceOf: MedComCorePractitioner
 Title: "receive-Tek-J-duplicate - practitioner"
 Description: "receive-Tek-J-duplicate - practitioner"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner|3.0.1"
+* meta.profile[+] = $MedComCorePractitioner
 * name.given = "Henrik"
 * name.family = "Elderly"
 
@@ -104,7 +104,7 @@ Instance: dfd68df4-1cd1-45a8-a5df-4cc9e78ea0ec
 InstanceOf: MedComCorePractitionerRole
 Title: "receive-Tek-J-duplicate - practitionerRole"
 Description: "receive-Tek-J-duplicate - practitionerRole"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|3.0.1"
+* meta.profile[+] = $MedComCorePractitionerRole
 * practitioner = Reference(881a94fd-8fc5-4d60-be50-8dac03c63fb7)
 * code = $PractitionerRole#sygehuslaege
 

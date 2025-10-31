@@ -3,7 +3,7 @@ InstanceOf: MedComCareCommunicationMessage
 Title: "Receive_Tek-E-new-parallel - New CareCommunication message."
 Description: "Receive_Tek-E-new-parallel - Example of a CareCommunication new message."
 Usage: #example
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message|5.0.1"
+* meta.profile[+] = $CareCommunicationMessage
 * type = $BundleType#message
 * timestamp = 2024-08-21T12:00:00+02:00
 * entry[+].fullUrl = "https://medcomfhir.dk/ig/carecommunication/MessageHeader/9db30fd5-f443-4c7f-8e1a-e8da7e758f0a"
@@ -27,7 +27,7 @@ Instance: e6dd7d8c-5744-440a-8347-d932a8f65a6b
 InstanceOf: MedComMessagingOrganization // 
 Title: "Receive_Tek-E-new-parallel - Example of a sender organization with a SOR and an EAN identifier."
 Description: "Receive_Tek-E-new-parallel - Example of an organization with a SOR and an EAN identifier."
-* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
+* meta.profile[+] = $MedComMessagingOrganzation
 * identifier[SOR-ID].value = "265161000016000" 
 * identifier[EAN-ID].value = "5790000209354" 
 * name = "Hjerteafdelingen på Herlev og Gentofte hospital"
@@ -36,7 +36,7 @@ Instance: b349d429-8041-485c-b0ba-e08b2ed8bfd7
 InstanceOf: MedComMessagingOrganization // 
 Title: "Receive_Tek-E-new-parallel - Example of a reciever organization with a SOR and an EAN identifier."
 Description: "Receive_Tek-E-new-parallel - Example of an organization with a SOR and an EAN identifier."
-* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
+* meta.profile[+] = $MedComMessagingOrganzation
 * identifier[SOR-ID].value = "382871000016004" 
 * identifier[EAN-ID].value = "5790001387419" 
 * name = "Arden Lægehus"
@@ -46,7 +46,7 @@ Instance: e169f935-8fe2-4821-8fbf-b0324a8975e3
 InstanceOf: MedComCorePractitioner
 Title: "Simple practitioner with a name"
 Description: "Simple practitioner with a name"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner|3.0.1"
+* meta.profile[+] = $MedComCorePractitioner
 * name.given = "Michael"
 * name.family = "Burns"
 
@@ -54,7 +54,7 @@ Instance: 704020b9-44ea-4454-bbf8-e892d42d2149
 InstanceOf: MedComCorePractitionerRole
 Title: "PractitionerRole with a role and reference to a practitioner"
 Description: "PractitionerRole with a role and reference to a practitioner"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|3.0.1"
+* meta.profile[+] = $MedComCorePractitionerRole
 * practitioner = Reference(e169f935-8fe2-4821-8fbf-b0324a8975e3)
 * code = $PractitionerRole#sygeplejerske
 
@@ -62,7 +62,7 @@ Instance: d4344858-bd8f-42fb-9f84-50b2b66a5ed1
 InstanceOf: MedComCorePatient
 Title: "Receive_Tek-E-new-parallel - Bruno Test Elmer"
 Description: "Receive_Tek-E-new-parallel - Patient described with minimal information. Valid only if used in a Bundle."
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient|3.0.1"
+* meta.profile[+] = $MedComCorePatient
 * identifier[cpr].system = "urn:oid:1.2.208.176.1.2"
 * identifier[cpr].value = "2509479989"
 * name[official].use = #official
@@ -74,7 +74,7 @@ Instance: 7ffff970-5504-11ed-bdc3-0242ac120002
 InstanceOf: MedComCorePractitioner
 Title: "Simple practitioner with a name"
 Description: "Simple practitioner with a name"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner|3.0.1"
+* meta.profile[+] = $MedComCorePractitioner
 * name.given = "Emma"
 * name.family = "Waters"
 
@@ -82,7 +82,7 @@ Instance: 8bf63050-5504-11ed-bdc3-0242ac120002
 InstanceOf: MedComCorePractitionerRole
 Title: "PractitionerRole with a role and reference to a practitioner"
 Description: "PractitionerRole with a role and reference to a practitioner"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|3.0.1"
+* meta.profile[+] = $MedComCorePractitionerRole
 * practitioner = Reference(7ffff970-5504-11ed-bdc3-0242ac120002)
 * code = $PractitionerRole#sygeplejerske
 
@@ -93,7 +93,7 @@ InstanceOf: MedComCareCommunicationMessageHeader
 Title: "Receive_Tek-E-new-parallel - Instance of a MessageHeader resource used in a new message."
 Description: "Receive_Tek-E-new-parallel - Example of a MessageHeader in a new CareCommunication message. Valid only if used in a bundle (message)."
 Usage: #example
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader|5.0.1"
+* meta.profile[+] = $CareCommunicationMessageheader
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
 * destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=382871000016004"
@@ -109,7 +109,7 @@ Instance: 726561c2-b521-4c0e-bff7-d9cbe9153a4c
 InstanceOf: MedComCareCommunication
 Title: "Receive_Tek-E-new-parallel - Instance of Communication resource used in a new message."
 Description: "Receive_Tek-E-new-parallel - Content of care communication message. Valid only if used in a bundle (message) - new message"
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication|5.0.1"
+* meta.profile[+] = $CareCommunicationCommunication
 * status = $EventStatus#unknown
 * identifier.value = "urn:uuid:1b1cf143-519a-44f9-b471-05f34fce0670"
 * category = $CategoryCodes#nursing
@@ -143,7 +143,7 @@ InstanceOf: MedComCareCommunicationMessage
 Title: "Receive_Tek-F-reply-parallel - Reply CareCommunication message"
 Description: "Receive_Tek-F-reply-parallel - Example of a reply to a CareCommunication message."
 Usage: #example
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message|5.0.1"
+* meta.profile[+] = $CareCommunicationMessage
 * type = $BundleType#message
 * timestamp = 2024-08-22T11:30:00+02:00
 * entry[+].fullUrl = "https://medcomfhir.dk/ig/carecommunication/MessageHeader/cecb42e9-4909-4287-a66e-992f6bd1b17f"
@@ -177,7 +177,7 @@ InstanceOf: MedComCareCommunicationMessageHeader
 Title: "Receive_Tek-F-reply-parallel - Instance of a MessageHeader resource used in a reply message."
 Description: "Receive_Tek-F-reply-parallel - Example of a MessageHeader in a reply CareCommunication message. Valid only if used in a bundle (message)."
 Usage: #example
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader|5.0.1"
+* meta.profile[+] = $CareCommunicationMessageheader
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
 * destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=382871000016004"
@@ -211,7 +211,7 @@ Instance: 8ac16b4c-4d32-424d-bf0b-1e2eed87eef1
 InstanceOf: MedComCareCommunication
 Title: "Receive_Tek-F-reply-parallel - Instance of Communication resource used in a reply message."
 Description: "Receive_Tek-F-reply-parallel - Content of care communication message. Valid only if used in a bundle (message) - reply message"
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication|5.0.1"
+* meta.profile[+] = $CareCommunicationCommunication
 * status = $EventStatus#unknown
 * identifier.value = "urn:uuid:1b1cf143-519a-44f9-b471-05f34fce0670"
 * category = $CategoryCodes#examination-results

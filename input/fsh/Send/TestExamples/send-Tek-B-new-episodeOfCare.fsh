@@ -3,7 +3,7 @@ InstanceOf: MedComCareCommunicationMessage
 Title: "Send-Tek-B-new"
 Description: "Send-Tek-B-new"
 Usage: #example
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message|5.0.1"
+* meta.profile[+] = $CareCommunicationMessage
 * type = $BundleType#message
 * timestamp = 2024-09-16T08:30:00+02:00
 * entry[+].fullUrl = "https://medcomfhir.dk/ig/carecommunication/MessageHeader/7969a2b7-3ff4-4802-9246-8ed74102ed73"
@@ -30,7 +30,7 @@ InstanceOf: MedComCareCommunicationMessageHeader
 Title: "Send-Tek-B-new - MessageHeader"
 Description: "Send-Tek-B-new - MessageHeader"
 Usage: #example
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader|5.0.1"
+* meta.profile[+] = $CareCommunicationMessageheader
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
 * destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=1017421000016003"
@@ -46,7 +46,7 @@ InstanceOf: MedComCareCommunication
 Title: "Send-Tek-B-new - Communication"
 Description: "Send-Tek-B-new - Communication"
 Usage: #example
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication|5.0.1"
+* meta.profile[+] = $CareCommunicationCommunication
 * status = $EventStatus#unknown
 * category = $CategoryCodes#examination-results
 * subject = Reference(b670ed56-9a4f-4903-ad51-65773a327d93)
@@ -66,7 +66,7 @@ Instance: ede7ee60-4541-438c-922d-1898a14fa3b1
 InstanceOf: MedComCoreEncounter
 Title: "Send-Tek-B-new - Encounter"
 Description: "Send-Tek-B-new - Encounter"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-encounter|3.0.1"
+* meta.profile[+] = $MedComCoreEncounter
 * status = $StatusCodes#finished 
 * class = $ActCodes#IMP 
 * subject = Reference(b670ed56-9a4f-4903-ad51-65773a327d93)
@@ -80,7 +80,7 @@ Instance: b670ed56-9a4f-4903-ad51-65773a327d93
 InstanceOf: MedComCorePatient
 Title: "Send-Tek-B-new - Patient"
 Description: "Send-Tek-B-new - Patient"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient|3.0.1"
+* meta.profile[+] = $MedComCorePatient
 * identifier[cpr].system = "urn:oid:1.2.208.176.1.2"
 * identifier[cpr].value = "2509479989"
 * name[official].use = #official
@@ -93,7 +93,7 @@ Instance: 454aafa3-8ecb-4c0b-9696-eee6cce6c498
 InstanceOf: MedComMessagingOrganization // 
 Title: "Send-Tek-B-new - Sender"
 Description: "Send-Tek-B-new - Sender"
-* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
+* meta.profile[+] = $MedComMessagingOrganzation
 * identifier[SOR-ID].value = "328081000016004" 
 * identifier[EAN-ID].value = "5790000121786" 
 * name = "Hjemmesygeplejen, Aalborg kommune"
@@ -103,7 +103,7 @@ Instance: 0e804dff-95f7-40fe-bb96-561363715869
 InstanceOf: MedComMessagingOrganization // 
 Title: "Send-Tek-B-new - Receiver"
 Description: "Send-Tek-B-new - Receiver"
-* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
+* meta.profile[+] = $MedComMessagingOrganzation
 * identifier[SOR-ID].value = "1017421000016003" 
 * identifier[EAN-ID].value = "5790002408496" 
 * name = "2100 Lægehuset Østerbro"
@@ -114,7 +114,7 @@ Instance: 1236e5b1-40cf-4d40-b44a-0ae8e8931121
 InstanceOf: MedComCorePractitioner
 Title: "Send-Tek-B-new - practitioner"
 Description: "Send-Tek-B-new - practitioner"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner|3.0.1"
+* meta.profile[+] = $MedComCorePractitioner
 * name.given[0] = "Michael"
 * name.given[1] = "Magnus"
 * name.family = "Burns"
@@ -123,7 +123,7 @@ Instance: edccec4f-0d3e-46be-9f66-97f459f6bafe
 InstanceOf: MedComCorePractitionerRole
 Title: "Send-Tek-B-new - practitionerRole"
 Description: "Send-Tek-B-new - practitionerRole"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|3.0.1"
+* meta.profile[+] = $MedComCorePractitionerRole
 * practitioner = Reference(1236e5b1-40cf-4d40-b44a-0ae8e8931121)
 * code = $PractitionerRole#sygeplejerske
 

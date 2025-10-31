@@ -3,7 +3,7 @@ InstanceOf: MedComCareCommunicationMessage
 Title: "receive-C-forward-receive_C-forward"
 Description: "receive_C-forward"
 Usage: #example
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message|5.0.1"
+* meta.profile[+] = $CareCommunicationMessage
 * type = $BundleType#message
 * timestamp = 2024-08-16T11:30:00+02:00
 * entry[+].fullUrl = "https://medcomfhir.dk/ig/carecommunication/MessageHeader/d2b81c34-ec5d-4c5f-9380-1b5aa507544b"
@@ -35,7 +35,7 @@ Instance: 1c4dbd72-4af3-41f9-a9b5-dacd8d62f994
 InstanceOf: MedComCorePatient
 Title: "receive_C-forward - Patient"
 Description: "receive_C-forward - Patient"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient|3.0.1"
+* meta.profile[+] = $MedComCorePatient
 * identifier[cpr].system = "urn:oid:1.2.208.176.1.2"
 * identifier[cpr].value = "2509479989"
 * name[official].use = #official
@@ -48,7 +48,7 @@ Instance: ca5a7c53-fc3a-4565-b419-a443c3bc6870
 InstanceOf: MedComMessagingOrganization // 
 Title: "receive_C-forward - Sender"
 Description: "receive_C-forward - Sender"
-* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
+* meta.profile[+] = $MedComMessagingOrganzation
 * identifier[SOR-ID].value = "328081000016004" 
 * identifier[EAN-ID].value = "5790000121786" 
 * name = "Hjemmesygeplejen, Aalborg kommune"
@@ -58,7 +58,7 @@ Instance: a81d6555-94d9-4704-a6b7-8dea0bcd3dac
 InstanceOf: MedComMessagingOrganization // 
 Title: "receive_C-forward - Receiver"
 Description: "receive_C-forward - Receiver"
-* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
+* meta.profile[+] = $MedComMessagingOrganzation
 * identifier[SOR-ID].value = "330461000016004" 
 * identifier[EAN-ID].value = "5790001353308" 
 * name = "Sundhedsplejen, Aabenraa kommune"
@@ -69,7 +69,7 @@ Instance: 06d61404-9502-4579-9475-4e3ddd071bc5
 InstanceOf: MedComCorePractitioner
 Title: "receive_C-forward - practitioner"
 Description: "receive_C-forward - practitioner"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner|3.0.1"
+* meta.profile[+] = $MedComCorePractitioner
 * name.given[0] = "Emma"
 * name.family = "Waters"
 
@@ -77,7 +77,7 @@ Instance: 6666a833-8621-475a-9fc5-a34b1a043a03
 InstanceOf: MedComCorePractitionerRole
 Title: "receive_C-forward - practitionerRole"
 Description: "receive_C-forward - practitionerRole"
-* meta.profile[+] = "http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|3.0.1"
+* meta.profile[+] = $MedComCorePractitionerRole
 * practitioner = Reference(06d61404-9502-4579-9475-4e3ddd071bc5)
 * code = $PractitionerRole#optiker
 
@@ -114,7 +114,7 @@ Instance: 8b67e42d-fc9b-45c4-8313-86b9c7416445
 InstanceOf: MedComMessagingOrganization 
 Title: "receive_C-forward"
 Description: "receive_C-forward"
-* meta.profile[+] = "http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1"
+* meta.profile[+] = $MedComMessagingOrganzation
 * identifier[SOR-ID].value = "953751000016007"
 * identifier[EAN-ID].value = "5790001387419" 
 //* name = "Sundhed og Ældre, Herlev"
@@ -125,7 +125,7 @@ InstanceOf: MedComCareCommunicationMessageHeader
 Title: "receive_C-forward"
 Description: "receive_C-forward"
 Usage: #example
-* meta.profile[+] = "http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader|5.0.1"
+* meta.profile[+] = $CareCommunicationMessageheader
 * destination[primary].extension[use].valueCoding = $Use#primary
 * eventCoding = $MessageEvents#care-communication-message
 * destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=330461000016004"

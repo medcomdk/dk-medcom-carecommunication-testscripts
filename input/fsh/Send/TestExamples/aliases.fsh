@@ -17,12 +17,12 @@ Alias: $PractitionerRole = http://medcomfhir.dk/ig/terminology/CodeSystem/medcom
 Alias: $CareCommunicationActivities = http://medcomfhir.dk/ig/terminology/ValueSet/medcom-careCommunication-messagingActivities
 
 /////// Alias til version af forskellige profiler 
-Alias: $CareCommunicationCommunication = http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication|5.0.1
-Alias: $CareCommunicationMessageheader = http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader|5.0.1
-Alias: $CareCommunicationMessage = http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message|5.0.1
-Alias: $MedComMessagingOrganzation = http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization|4.0.1
-Alias: $MedComCorePractitioner = http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner|3.0.1
-Alias: $MedComCorePractitionerRole = http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole|3.0.1
-Alias: $MedComCorePatient = http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient|3.0.1
-Alias: $MedComCoreCareTeam = http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-careteam|3.0.1
-Alias: $MedComCoreEncounter = http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-encounter|3.0.1
+Alias: $CareCommunicationCommunication = http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-communication
+Alias: $CareCommunicationMessageheader = http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-messageHeader
+Alias: $CareCommunicationMessage = http://medcomfhir.dk/ig/carecommunication/StructureDefinition/medcom-careCommunication-message
+Alias: $MedComMessagingOrganzation = http://medcomfhir.dk/ig/messaging/StructureDefinition/medcom-messaging-organization
+Alias: $MedComCorePractitioner = http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitioner
+Alias: $MedComCorePractitionerRole = http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-practitionerrole
+Alias: $MedComCorePatient = http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-patient
+Alias: $MedComCoreCareTeam = http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-careteam
+Alias: $MedComCoreEncounter = http://medcomfhir.dk/ig/core/StructureDefinition/medcom-core-encounter

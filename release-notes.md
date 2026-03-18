@@ -1,5 +1,5 @@
-Updated all test examples for CareCommunication v. 5.0. 
+Updated all profile definitions to not include pipe, as it restricts the small patch changes
 
-Updated testscripts to comply with CareCommunication v. 5.0,
+Updated dependencies
 
-Changed layout of the pages in the IG. 
+Updated the zip-folders to include the updated test files 

@@ -9,7 +9,7 @@ name: CareCommunication Test scripts
 title: CareCommunication Test scripts
 description: Test scripts for CareCommunication v. 5.0
 status: active # draft | active | retired | unknown # choose 'active' before release
-version: 5.0.0
+version: 5.0.1
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
 releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -32,8 +32,8 @@ parameters:
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  medcom.fhir.dk.carecommunication: 5.0.1
-  medcom.fhir.dk.messaging: 4.0.1
+  medcom.fhir.dk.carecommunication: 5.0.2
+  medcom.fhir.dk.messaging: 4.0.2
   medcom.fhir.dk.core: 3.0.1
   medcom.fhir.dk.terminology: 2.0.1
   medcom.fhir.dk.messagedefinitions: 1.0.0

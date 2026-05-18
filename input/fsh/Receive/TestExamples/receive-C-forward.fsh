@@ -115,8 +115,8 @@ InstanceOf: MedComMessagingOrganization
 Title: "receive_C-forward"
 Description: "receive_C-forward"
 * meta.profile[+] = $MedComMessagingOrganzation
-* identifier[SOR-ID].value = "953751000016007"
-* identifier[EAN-ID].value = "5790001387419" 
+* identifier[SOR-ID].value = "1382601000016006"
+* identifier[EAN-ID].value = "5790002631818" 
 //* name = "Sundhed og Ældre, Herlev"
 
 // CareCommunication reply example

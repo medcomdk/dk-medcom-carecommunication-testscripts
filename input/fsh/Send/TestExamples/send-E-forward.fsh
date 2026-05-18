@@ -42,7 +42,7 @@ Usage: #example
 * destination[primary].endpoint = "https://sor2.sum.dsdn.dk/#id=1017421000016003"
 * destination[primary].receiver = Reference(6ea7c7cb-824b-4619-a13e-bc8828afd7e1)
 * sender = Reference(d2ac69eb-568e-4201-b29d-2af8d3126518)
-* source.endpoint = "https://sor2.sum.dsdn.dk/#id=953751000016007"
+* source.endpoint = "https://sor2.sum.dsdn.dk/#id=1382601000016006"
 * focus = Reference(e7e596e0-6458-4701-a20f-a9322f85ebe8)
 * definition = "http://medcomfhir.dk/ig/messagedefinitions/MessageDefinition/MedComCareCommunicationMessageDefinition|5.0"
 
@@ -99,8 +99,8 @@ InstanceOf: MedComMessagingOrganization
 Title: "Send-F-new"
 Description: "Send-F-new"
 * meta.profile[+] = $MedComMessagingOrganzation
-* identifier[SOR-ID].value = "953751000016007" 
-* identifier[EAN-ID].value = "5790001387419" 
+* identifier[SOR-ID].value = "1382601000016006" 
+* identifier[EAN-ID].value = "5790002631818" 
 
 // Reciever instance - new message for attachement
 Instance: 6ea7c7cb-824b-4619-a13e-bc8828afd7e1

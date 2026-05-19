@@ -123,8 +123,6 @@ Usage: #inline
 * entity[preceedingMessage].role = #revision
 * entity[preceedingMessage].what = Reference(0ebb6284-eb20-45eb-8113-6620d2d08608)
 * entity[payload][+].role = #source
-* entity[payload][=].what.identifier.value = "urn:uuid:231b0921-59b4-474c-8ca8-aee33611d140"
-* entity[payload][+].role = #source
 * entity[payload][=].what.identifier.value = "urn:uuid:ace97a0b-269f-4c67-a9e6-a5b7f20e160e"
 
 

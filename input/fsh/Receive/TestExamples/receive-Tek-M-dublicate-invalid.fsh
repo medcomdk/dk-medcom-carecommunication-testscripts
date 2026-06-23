@@ -45,7 +45,7 @@ Description: "receive-Tek-M-new-dublicate-inv - Communication"
 Usage: #example
 * meta.profile[+] = $CareCommunicationCommunication
 * status = $EventStatus#unknown
-* category = $CategoryCodes#examination-results
+* category = $CategoryCodes#examination-results //fjern categori inden filerne samles i mapper.
 * subject = Reference(aa6fad12-1876-4c7d-a955-06b78f85eb52)
 * identifier.value = "urn:uuid:f3eb2617-5388-4210-ad77-fc1da77f9108"
 * payload.contentString = "Jeg håber denne besked er korrekt, hvis ikke, send da en negativ kvittering, tak. Vi ønsker information om de seneste undersøgelser udført på Bruno.\nPå forhånd tak.\nHilsen Michael"
@@ -124,4 +124,4 @@ Usage: #example
 * activity.coding = $ActivityCode#new-message
 * agent.who = Reference(fe92c210-7725-4749-8045-37ed53878f26)
 * entity[payload][+].role = #source
-* entity[payload][=].what.identifier.value = "urn:uuid:69badd84-ec6d-475f-bedf-d6671b11865d"
+* entity[payload][=].what.identifier.value = "urn:uuid:84a28362-d870-440e-bdf6-7a0102b8f2f6"

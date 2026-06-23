@@ -49,7 +49,7 @@ Usage: #example
 * category = $CategoryCodes#examination-results
 * subject = Reference(938544b6-721d-4d14-9e61-016e726ae180)
 * identifier.value = "urn:uuid:eca85df4-e6c9-41d7-88c0-7e6fb79029b9"
-* payload[0].contentString = "Dette er en korrespondancemeddelelse med et almindeligt CPR-nummer men også et erstatnings-CPR.\nHilsen Michael, sygeplejerske."
+* payload[0].contentString = "Dette er en korrespondancemeddelelse med et almindeligt CPR-nummer men også et erstatnings-CPR.\nHilsen."
 * payload[0].extension[date].valueDateTime = 2025-09-29T09:00:00+02:00
 * payload[0].extension[identifier].valueIdentifier.value = "urn:uuid:a7c9e37e-0a5f-4607-939b-7abf11e0c85f"
 * payload[0].extension[identifier].valueIdentifier.assigner = Reference(f6494a29-1837-4f64-b903-da0d46e5da69)

@@ -49,7 +49,7 @@ Usage: #example
 * category = $CategoryCodes#telemedicine
 * subject = Reference(06c62382-cd69-438f-acc7-971a3c47ecea)
 * identifier.value = "urn:uuid:eca85df4-e6c9-41d7-88c0-7e6fb79029b9"
-* payload[0].contentString = "Dette er en korrespondancemeddelelse med to almidelige-CPR numre, for at tjekke om det ene sættes ned i tekststrengen og det andet i det relevant tag.\nHilsen Michael, sygeplejerske."
+* payload[0].contentString = "Dette er en korrespondancemeddelelse med to almidelige-CPR numre, for at tjekke om det ene sættes ned i tekststrengen og det andet i det relevant tag.\nHilsen Michael."
 * payload[0].extension[date].valueDateTime = 2025-09-29T09:00:00+02:00
 * payload[0].extension[identifier].valueIdentifier.value = "urn:uuid:19bb04e9-a3af-4384-9fc5-877f253e2283"
 * payload[0].extension[identifier].valueIdentifier.assigner = Reference(b7402e44-e37b-4a9e-8d1c-daf509fd6cb8)

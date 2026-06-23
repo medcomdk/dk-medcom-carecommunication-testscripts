@@ -137,14 +137,14 @@ Description: "receive_B-reply"
 * category = $CategoryCodes#examination-results
 * topic.text = "Forespørgsel på seneste resultater"
 * subject = Reference(0a709ba8-090b-4c03-8040-a23601d0b15a)
-* payload[1].contentString = "Hej Michael, Resultaterne for undersøgelsen kommer her. Blodtryk 130/95 mmHg, vægt: 83 kg og højde: 179 cm. Blodprøven påviste ikke tegn på sukkersyge eller vitaminmangel. Se mere i den vedhæftede pdf.\nMed venlig hilsen\nEmma Waters\nSygeplejerske"
+* payload[1].contentString = "Hej Michael, Resultaterne for undersøgelsen kommer her. Blodtryk 130/95 mmHg, vægt: 83 kg og højde: 179 cm. Blodprøven påviste ikke tegn på sukkersyge eller vitaminmangel. Se mere i den vedhæftede pdf.\nMed venlig hilsen\nEmma"
 * payload[1].extension[date].valueDateTime = 2024-08-12T11:30:00+02:00
 * payload[1].extension[identifier].valueIdentifier.value = "urn:uuid:ace97a0b-269f-4c67-a9e6-a5b7f20e160e"
 * payload[1].extension[identifier].valueIdentifier.assigner = Reference(48038043-9a8c-402e-9828-2bb4f4b74d24)
 * payload[1].extension[author].valueReference = Reference(ad8bf8c0-6626-43cf-8d5a-1fa925c3c401) 
 * payload[1].extension[authorContact].valueContactPoint.system = #phone 
 * payload[1].extension[authorContact].valueContactPoint.value = "44527000"
-* payload[0].contentString = "Til rette vedkommende. Vi ønsker information om de seneste undersøgelser udført på Bruno.\nPå forhånd tak.\nHilsen Michael Burns\nSygeplejerske"
+* payload[0].contentString = "Til rette vedkommende. Vi ønsker information om de seneste undersøgelser udført på Bruno.\nPå forhånd tak.\nHilsen Michael"
 * payload[0].extension[date].valueDateTime = 2024-08-11T12:00:00+02:00
 * payload[0].extension[identifier].valueIdentifier.value = "urn:uuid:24d01288-ad36-4af2-96a8-fd1432dadee1"
 * payload[0].extension[identifier].valueIdentifier.assigner = Reference(46037d39-bd84-4419-b132-fa9d9e9c6134)

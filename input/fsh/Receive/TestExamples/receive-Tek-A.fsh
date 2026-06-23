@@ -144,7 +144,7 @@ Usage: #example
 * encounter = Reference(ca0f5d0c-cb2a-4ad5-a08a-e7dbd2092b13)
 * subject = Reference(ae4abfb5-b0f6-443c-a420-0c0649cbe0c0)
 // Beskedsegment inkl linebreaks og specialkarakterer
-* payload[0].contentString = "Til rette vedkommende.\nVi vil med denne korrespondance gerne \"prøve\" på 'nogle' særlige <tegn>; til test & certificering @ ^ *\n\n\nDette er linje 1\nDette er linje 2\n\nDette er linje 4, med en 'usynlig' linje ovenfor.\nHilsen Michael Burns\nSygeplejerske"
+* payload[0].contentString = "Til rette vedkommende.\nVi vil med denne korrespondance gerne \"prøve\" på 'nogle' særlige <tegn>; til test & certificering @ ^ *\n\n\nDette er linje 1\nDette er linje 2\n\nDette er linje 4, med en 'usynlig' linje ovenfor.\nHilsen Michael"
 * payload[0].extension[date].valueDateTime = 2024-08-17T14:00:00Z
 * payload[0].extension[identifier].valueIdentifier.value = "urn:uuid:21ee7617-5e47-406e-83bd-347ba6a7a872"
 * payload[0].extension[identifier].valueIdentifier.assigner = Reference(9a74ae38-1f8f-43de-ac8d-01647bb4c5b4)
@@ -202,4 +202,4 @@ Usage: #example
 * payload[=].extension[identifier].valueIdentifier.value = "urn:uuid:fcdc0fe5-07b0-444f-a172-1fa44df2e93c"
 * payload[=].extension[identifier].valueIdentifier.assigner = Reference(9a74ae38-1f8f-43de-ac8d-01647bb4c5b4)
 * payload[=].contentAttachment.url = "https://medcom.dk/"
-* payload[=].contentAttachment.title = "Link-testOfTitle-noCreationDate"
+* payload[=].contentAttachment.title = "Link til MedComs hjemmeside"

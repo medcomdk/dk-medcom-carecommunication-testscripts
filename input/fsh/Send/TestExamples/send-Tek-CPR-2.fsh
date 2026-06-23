@@ -66,7 +66,7 @@ Description: "send-Tek-CPR-2 - Example of Patient"
 * identifier[x-ecpr].system = "urn:oid:1.2.208.176.1.6.1.1"
 * identifier[x-ecpr].value = "0703921VJ5"
 * identifier[d-ecpr].system = "urn:oid:1.2.208.176.1.6.1.3"
-* identifier[d-ecpr].value = "1206550VK9"
+* identifier[d-ecpr].value = "1206550VK8"
 * identifier[cpr].system = "urn:oid:1.2.208.176.1.2"
 * identifier[cpr].value = "2509479989" 
 * name[official].use = #official

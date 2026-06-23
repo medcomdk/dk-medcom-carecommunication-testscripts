@@ -64,7 +64,7 @@ Title: "send-Tek-CPR-3 - Example of Patient"
 Description: "send-Tek-CPR-3 - Example of Patient"
 * meta.profile[+] = $MedComCorePatient
 * identifier[x-ecpr].system = "urn:oid:1.2.208.176.1.6.1.1"
-* identifier[x-ecpr].value = "0703921VJ5"
+* identifier[x-ecpr].value = "0703921VJ6"
 * identifier[d-ecpr].system = "urn:oid:1.2.208.176.1.6.1.3"
 * identifier[d-ecpr].value = "1206550VK9"
 * name[official].use = #official

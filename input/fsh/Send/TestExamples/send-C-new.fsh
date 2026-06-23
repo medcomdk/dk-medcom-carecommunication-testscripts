@@ -64,11 +64,10 @@ InstanceOf: MedComCorePatient
 Title: "Send-C-new - Patient"
 Description: "Send-C-new - Patient"
 * meta.profile[+] = $MedComCorePatient
-* identifier.system = "urn:oid:1.2.208.176.1.6.1.1"
-* identifier.value = "0703921VJ5"
+* identifier[cpr].system = "urn:oid:1.2.208.176.1.2"
+* identifier[cpr].value = "2509479989"
 * name[official].use = #official
-* name[official].given = "Peter"
-* name[official].family = "Hansen"
+* name[official].family = "Elmer"
 
 
 // Sender instance - new message for attachement

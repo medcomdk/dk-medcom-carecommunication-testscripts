@@ -137,7 +137,7 @@ Title: "receive_B-reply"
 Description: "receive_B-reply"
 * meta.profile[+] = $CareCommunicationCommunication
 * status = $EventStatus#unknown
-* identifier.value = "urn:uuid:18fa94f2-d40d-46a6-b50d-4086c8e184ad"
+* identifier.value = "urn:uuid:5da4dcca-3b7b-4fce-b54a-e670f0c6a17f"
 * category = $CategoryCodes#examination-results
 * topic.text = "Forespørgsel på seneste resultater"
 * subject = Reference(7b4803a9-a048-4551-9f61-c3143dba3786)

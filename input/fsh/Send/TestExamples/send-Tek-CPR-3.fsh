@@ -48,7 +48,7 @@ Usage: #example
 * status = $EventStatus#unknown
 * category = $CategoryCodes#examination-results
 * subject = Reference(e1ada6b9-0782-4e18-b2e1-85ab642018a9)
-* identifier.value = "urn:uuid:eca85df4-e6c9-41d7-88c0-7e6fb79029b9"
+* identifier.value = "urn:uuid:077f79ff-f338-4754-af9d-aa1a3e4da6a9"
 * payload[0].contentString = "Dette er en korrespondancemeddelelse med to erstatnings-CPR numre, af hver sin type.\nHilsen Michael"
 * payload[0].extension[date].valueDateTime = 2025-09-29T09:00:00+02:00
 * payload[0].extension[identifier].valueIdentifier.value = "urn:uuid:1d881c60-609f-4dac-9b17-cac3959cd01d"

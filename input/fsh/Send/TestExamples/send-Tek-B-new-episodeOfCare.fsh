@@ -53,7 +53,7 @@ Usage: #example
 * topic.text = "Resultater fra hjemmesygeplejen"
 * encounter = Reference(ede7ee60-4541-438c-922d-1898a14fa3b1)
 * identifier.value = "urn:uuid:a6be8e47-43a0-4a34-8041-083d41eba038"
-* payload.contentString = "Til rette vedkommende. Hermed fremsendes undersøgelsesresultater fra seneste besøg af hjemmesygeplejen. Denne meddelelse ligner til Tek-B-new, men er det ikke.\nHilsen Michael Magnus Burns\nSygeplejerske"
+* payload.contentString = "Til rette vedkommende. Hermed fremsendes undersøgelsesresultater fra seneste besøg af hjemmesygeplejen. Denne meddelelse ligner til Tek-B-new, men er det ikke.\nHilsen Michael"
 * payload.extension[date].valueDateTime = 2024-09-16T08:30:00+02:00
 * payload.extension[identifier].valueIdentifier.value = "urn:uuid:dc9665dd-b9c3-4349-af08-e9dd61d0e211"
 * payload.extension[identifier].valueIdentifier.assigner = Reference(454aafa3-8ecb-4c0b-9696-eee6cce6c498)

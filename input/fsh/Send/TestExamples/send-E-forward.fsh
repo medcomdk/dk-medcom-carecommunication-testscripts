@@ -58,14 +58,14 @@ Usage: #example
 * subject = Reference(db2fd52e-9a7a-418f-90d1-b422e07c895d)
 * topic.text = "Afgået ved døden"
 * identifier.value = "urn:uuid:06a106f9-df1c-4064-9031-b6a4cb841e85"
-* payload[0].contentString = "Til rette vedkommende hos Per Thorsleth. Bruno Elmer er desværre død i nat kl. 4.15. I hans kalender fremgår det, at han vil komme til læge i morgen kl. 11. Det gør han ikke.\nHilsen Nancy Jensen\nLægesekretær"
+* payload[0].contentString = "Til rette vedkommende hos Per Thorsleth. Bruno Elmer er desværre død i nat kl. 4.15. I hans kalender fremgår det, at han vil komme til læge i morgen kl. 11. Det gør han ikke.\nHilsen Nancy"
 * payload[0].extension[date].valueDateTime = 2024-09-14T13:00:00+02:00
 * payload[0].extension[identifier].valueIdentifier.value = "urn:uuid:954183f4-bc89-4d75-8073-9b397bacd6ec"
 * payload[0].extension[identifier].valueIdentifier.assigner = Reference(7260b118-d744-4396-bbf2-80245933b1dd)
 * payload[0].extension[author].valueReference = Reference(84eb6a09-63cf-433d-8522-41465d78756a)
 * payload[0].extension[authorContact].valueContactPoint.system = #phone 
 * payload[0].extension[authorContact].valueContactPoint.value = "85572787"
-* payload[1].contentString = "Tak for informationen. Jeg videresender beskeden til Brunos læge.\nHilsen Kim Jensen\nSygeplejerske"
+* payload[1].contentString = "Tak for informationen. Jeg videresender beskeden til Brunos læge.\nHilsen Kim"
 * payload[1].extension[date].valueDateTime = 2024-09-14T14:25:00+02:00
 * payload[1].extension[identifier].valueIdentifier.value = "urn:uuid:cfc9886a-5f54-463b-9255-99bfaf778d8c"
 * payload[1].extension[identifier].valueIdentifier.assigner = Reference(d2ac69eb-568e-4201-b29d-2af8d3126518)
